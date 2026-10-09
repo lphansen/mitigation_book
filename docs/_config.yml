@@ -36,9 +36,9 @@ html:
 #######################################################################################
 # Launch button settings
 repository:
-  url                       : https://github.com/zhaoyang8/mitigation_book
+  url                       : https://github.com/lphansen/mitigation_book
   path_to_book              : docs
-  branch                    : live
+  branch                    : main
 
 launch_buttons:
   notebook_interface        : classic  # The interface interactive links will activate ["classic", "jupyterlab"]

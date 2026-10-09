@@ -16,7 +16,7 @@ The latest version of the paper can be found <a href = "https://larspeterhansen.
 2. [Worst-case distributions](notebooks/02_worstcase_distributions.ipynb)
 3. [Stochastic simulation](notebooks/03_stochastic_simulation.ipynb)
 4. [Value decomposition](notebooks/04_value_decomposition.ipynb)
-4. [Real options application](notebooks/05_real_options.ipynb)
+5. [Real options application](notebooks/05_real_options.ipynb)
 
 
 

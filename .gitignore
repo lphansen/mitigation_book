@@ -50,3 +50,5 @@ job-outs/
 
 __pycache__/
 *.pyc
+## Symlink (or copy) of the paper repo used by tools/sync_tables_from_tex.py
+/paper

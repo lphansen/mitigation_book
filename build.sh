@@ -18,6 +18,12 @@ if [ "${CONDA_DEFAULT_ENV:-}" != "jb015" ] && command -v conda >/dev/null 2>&1; 
   fi
 fi
 
+# On Mercury, fall back to the shared venv in /project/lhansen
+# (source /project/lhansen/jupyterbook.sh does the same by hand).
+if ! command -v jupyter-book >/dev/null 2>&1 && [ -f /project/lhansen/jupyterbook.sh ]; then
+  source /project/lhansen/jupyterbook.sh
+fi
+
 jb_cmd="jupyter-book"
 if command -v jb >/dev/null 2>&1; then
   jb_cmd="jb"
@@ -34,9 +40,11 @@ case "$version" in
 esac
 
 # Regenerate docs/_static/table/*.md from the paper tex when it is present.
-# The tex lives outside docs/ (so Sphinx never publishes it) and is gitignored;
-# without it, fall back to the committed generated tables so the book still builds.
-if [ -f paper/mitigation_7-4.tex ]; then
+# paper/ is a symlink (or copy) of the Overleaf clone holding mitigation_main.tex
+# and mitigation_appendix.tex. It lives outside docs/ (so Sphinx never publishes
+# it) and is gitignored; without it, fall back to the committed generated tables
+# so the book still builds.
+if [ -f paper/mitigation_main.tex ] && [ -f paper/mitigation_appendix.tex ]; then
   echo "Syncing tables from paper tex"
   python tools/sync_tables_from_tex.py
 else
