@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>4. Value Decomposition &#8212; mitigation project</title>
   
@@ -28,47 +29,51 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=47c1c39d" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/04_value_decomposition';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="icon" href="../_static/mfr.png"/>
+    <link rel="shortcut icon" href="../_static/mfr.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Real Options Application" href="05_real_options.html" />
+    <link rel="next" title="5. Application in real options theory" href="05_real_options.html" />
     <link rel="prev" title="3. Stochastic Simulation" href="03_stochastic_simulation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -166,18 +171,7 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Uncertainty, Social Valuation, and Climate Change Policy</span></p>
 <ul class="current nav bd-sidenav">
@@ -185,7 +179,7 @@
 <li class="toctree-l1"><a class="reference internal" href="02_worstcase_distributions.html">2. Worst-case distributions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_stochastic_simulation.html">3. Stochastic Simulation</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Value Decomposition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_real_options.html">5. Real Options Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_real_options.html">5. Application in real options theory <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/appendix_illustrations.py" rel="noopener" target="_blank"></a></a></li>
 </ul>
 
     </div>
@@ -215,9 +209,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -240,16 +234,16 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/zhaoyang8/mitigation_book/live?urlpath=tree/docs/notebooks/04_value_decomposition.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/lphansen/mitigation_book/main?urlpath=tree/docs/notebooks/04_value_decomposition.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch on Binder"
+   title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+    <img src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -258,16 +252,16 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/zhaoyang8/mitigation_book/blob/live/docs/notebooks/04_value_decomposition.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/lphansen/mitigation_book/blob/main/docs/notebooks/04_value_decomposition.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch on Colab"
+   title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+    <img src="../_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -307,7 +301,7 @@
       
       
       
-      <li><a href="https://github.com/zhaoyang8/mitigation_book" target="_blank"
+      <li><a href="https://github.com/lphansen/mitigation_book" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -324,7 +318,7 @@
       
       
       
-      <li><a href="https://github.com/zhaoyang8/mitigation_book/edit/live/docs/notebooks/04_value_decomposition.ipynb" target="_blank"
+      <li><a href="https://github.com/lphansen/mitigation_book/edit/main/docs/notebooks/04_value_decomposition.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -341,7 +335,7 @@
       
       
       
-      <li><a href="https://github.com/zhaoyang8/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/04_value_decomposition.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/lphansen/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/04_value_decomposition.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -442,9 +436,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -466,9 +460,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-formulation">4.1. Mathematical Formulation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-contributions-to-the-social-value-of-r-d">4.2. Flow contributions to the social value of R&amp;D <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/python/FeymannKacs_simulate_NewPlug.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-contributions-to-the-social-value-of-r-d">4.3. State contributions to the social value of R&amp;D <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/python/FeymannKacs_simulate_NewPlug.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-monotonic-impact-of-xi-on-the-social-value-of-r-d">4.4. Non-monotonic impact of <span class="math notranslate nohighlight">\(\xi\)</span> on the Social Value of R&amp;D <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/python/FeymannKacs_prepare_NewPlug.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-contributions-to-the-social-value-of-r-d-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a">4.2. Flow contributions to the social value of R&amp;D <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_simulate.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-contributions-to-the-social-value-of-r-d-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a">4.3. State contributions to the social value of R&amp;D <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_simulate.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-monotonic-impact-of-xi-m-on-the-social-value-of-r-d-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-prepare-py-class-code-link-target-blank-rel-noopener-a">4.4. Non-monotonic impact of <span class="math notranslate nohighlight">\(\xi_m\)</span> on the Social Value of R&amp;D <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_prepare.py" rel="noopener" target="_blank"></a></a></li>
 </ul>
             </nav>
         </div>
@@ -481,43 +475,95 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="value-decomposition">
-<h1><span class="section-number">4. </span>Value Decomposition<a class="headerlink" href="#value-decomposition" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">4. </span>Value Decomposition<a class="headerlink" href="#value-decomposition" title="Permalink to this heading">#</a></h1>
 <section id="mathematical-formulation">
-<h2><span class="section-number">4.1. </span>Mathematical Formulation<a class="headerlink" href="#mathematical-formulation" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.1. </span>Mathematical Formulation<a class="headerlink" href="#mathematical-formulation" title="Permalink to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
-\frac {\partial V}{\partial x}(X_0) \cdot \Lambda_0  =   \widetilde{\mathbb E} \left[ \int_0^\infty  Dis_t \left(\Lambda_t \cdot Scf_t \right)  \mid X_0, \Lambda_0 \right]
+\frac{\partial V}{\partial x}(X_0)\cdot\Lambda_0
+=
+\widetilde{\mathbb E}
+\left[
+\int_0^\infty
+Dis_t\left(\Lambda_t\cdot Scf_t\right)\,dt
+\mid X_0,\Lambda_0
+\right].
 \]</div>
 <p>where</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
-Dis_t &amp;\overset{\mathrm{def}}{=} \exp\left( - \int_0^t \left[\delta + \sum_{\ell = 1}^L g^{*\ell}(X_\tau){\mathcal J}^\ell (X_\tau) \right] d \tau \right)\\
-Scf_t &amp;= \textrm{flow i} + \textrm{flow ii} + \textrm{flow iii}\\
-\textrm{flow i} &amp;\overset{\mathrm{def}}{=} \delta  \left( \frac {\partial \log c} {\partial x} -  \frac {\partial {\hat n}}{\partial x}\right)(X_t) \\
-\textrm{flow ii} &amp;\overset{\mathrm{def}}{=} \xi  \sum_{\ell=1}^L \frac {\partial {\mathcal J}^\ell}{\partial x}  \left( 1 -    \exp \left[ - {\frac{1}{\xi}} \left( V^\ell - V \right) \right] \right)\\
-\textrm{flow iii} &amp;\overset{\mathrm{def}}{=} \xi  \sum_{\ell=1} ^L {\mathcal J}^\ell g^{*\ell}  \frac {\partial V^\ell} {\partial x}
-\end{align*}\\
+Dis_t
+&amp;\overset{\mathrm{def}}{=}
+\exp\left(
+-\int_0^t
+\left[
+\delta+
+\sum_{\ell=1}^{L}
+G_\tau^{*\ell}\mathcal J^\ell(X_\tau)
+\right]d\tau
+\right),\\
+Scf_t
+&amp;=
+\text{flow i}
++\text{flow ii}
++\text{flow iii},\\
+\text{flow i}
+&amp;\overset{\mathrm{def}}{=}
+\delta
+\left(
+\frac{\partial\log c}{\partial x}
+-
+\frac{\partial\hat n}{\partial x}
+\right)(X_t),\\
+\text{flow ii}
+&amp;\overset{\mathrm{def}}{=}
+\xi_m
+\sum_{\ell=1}^{L}
+\mathcal J^\ell(X_t)
+\left(
+1-\exp\left[
+-\frac{V^\ell(X_t)-V(X_t)}{\xi_m}
+\right]
+\right)
+\frac{\partial\log\mathcal J^\ell}{\partial x}(X_t),\\
+\text{flow iii}
+&amp;\overset{\mathrm{def}}{=}
+\sum_{\ell=1}^{L}
+g^{*\ell}(X_t)\mathcal J^\ell(X_t)
+\frac{\partial V^\ell}{\partial x}(X_t),
+\end{align*}
 \end{split}\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[
+G_t^{*\ell}=g^{*\ell}(X_t),
+\qquad
+g^{*\ell}(X_t)
+=
+\exp\left[
+-\frac{V^\ell(X_t)-V(X_t)}{\xi_m}
+\right].
+\]</div>
 </section>
-<section id="flow-contributions-to-the-social-value-of-r-d">
-<h2><span class="section-number">4.2. </span>Flow contributions to the social value of R&amp;D <a href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/python/FeymannKacs_simulate_NewPlug.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#flow-contributions-to-the-social-value-of-r-d" title="Link to this heading">#</a></h2>
+<section id="flow-contributions-to-the-social-value-of-r-d-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a">
+<h2><span class="section-number">4.2. </span>Flow contributions to the social value of R&amp;D <a href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_simulate.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#flow-contributions-to-the-social-value-of-r-d-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a" title="Permalink to this heading">#</a></h2>
 <p>With</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initial distribution for Lambda</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initial stochastic response vector for the R&amp;D knowledge stock</span>
 <span class="n">Lambda_0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 
-<span class="c1"># Initial state vector X0</span>
+<span class="c1"># Initial state vector: [log K_0, Y_0, log R_0]</span>
 <span class="n">X0</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">85</span> <span class="o">/</span> <span class="mf">0.115</span><span class="p">),</span>   <span class="c1"># Log ratio of two values</span>
-    <span class="mf">1.1</span><span class="p">,</span>                  <span class="c1"># Exogenous constant</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">11.2</span> <span class="o">*</span> <span class="mf">0.8</span><span class="p">),</span>   <span class="c1"># Log of product</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">85</span> <span class="o">/</span> <span class="mf">0.115</span><span class="p">),</span>  <span class="c1"># Log productive capital: K_0 = 739.13</span>
+    <span class="mf">1.1</span><span class="p">,</span>                 <span class="c1"># Initial temperature anomaly</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">13.1</span><span class="p">),</span>        <span class="c1"># Log R&amp;D knowledge stock</span>
 <span class="p">]</span>
 </pre></div>
 </div>
 <p>we have:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p></p></th>
+<tr class="row-odd"><th class="head text-right"><p><span class="math notranslate nohighlight">\(\xi_m\)</span></p></th>
 <th class="head text-right"><p>flow i</p></th>
 <th class="head text-right"><p>flow ii</p></th>
 <th class="head text-right"><p>flow iii</p></th>
@@ -527,59 +573,62 @@ Scf_t &amp;= \textrm{flow i} + \textrm{flow ii} + \textrm{flow iii}\\
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>more aversion</strong></p></td>
-<td class="text-right"><p>15.0 (16 %)</p></td>
-<td class="text-right"><p>59.9 (64 %)</p></td>
-<td class="text-right"><p>18.7 (20 %)</p></td>
-<td class="text-right"><p>93.6</p></td>
-<td class="text-right"><p>0.0284</p></td>
-<td class="text-right"><p>0.750</p></td>
+<tr class="row-even"><td class="text-right"><p><span class="math notranslate nohighlight">\(\infty\)</span> baseline</p></td>
+<td class="text-right"><p>0.45</p></td>
+<td class="text-right"><p>2.90</p></td>
+<td class="text-right"><p>0.96</p></td>
+<td class="text-right"><p>4.32</p></td>
+<td class="text-right"><p>0.0079</p></td>
+<td class="text-right"><p>0.771</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>less aversion</strong></p></td>
-<td class="text-right"><p>9.3 (14 %)</p></td>
-<td class="text-right"><p>41.0 (63 %)</p></td>
-<td class="text-right"><p>14.9 (23 %)</p></td>
-<td class="text-right"><p>65.3</p></td>
-<td class="text-right"><p>0.0151</p></td>
-<td class="text-right"><p>0.764</p></td>
+<tr class="row-odd"><td class="text-right"><p><span class="math notranslate nohighlight">\(0.10\)</span> less aversion</p></td>
+<td class="text-right"><p>0.99</p></td>
+<td class="text-right"><p>4.10</p></td>
+<td class="text-right"><p>1.54</p></td>
+<td class="text-right"><p>6.64</p></td>
+<td class="text-right"><p>0.0180</p></td>
+<td class="text-right"><p>0.760</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>neutrality</strong></p></td>
-<td class="text-right"><p>5.6 (12 %)</p></td>
-<td class="text-right"><p>31.6 (68 %)</p></td>
-<td class="text-right"><p>9.3 (20 %)</p></td>
-<td class="text-right"><p>46.5</p></td>
-<td class="text-right"><p>0.0075</p></td>
-<td class="text-right"><p>0.773</p></td>
+<tr class="row-even"><td class="text-right"><p><span class="math notranslate nohighlight">\(0.05\)</span> more aversion</p></td>
+<td class="text-right"><p>1.65</p></td>
+<td class="text-right"><p>6.07</p></td>
+<td class="text-right"><p>1.68</p></td>
+<td class="text-right"><p>9.40</p></td>
+<td class="text-right"><p>0.0344</p></td>
+<td class="text-right"><p>0.742</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <!-- ——— Reproduction instructions ——— -->
 <div style="margin:0.8rem 0 0.2rem;">
-To reproduce Table 4 in the paper, run the shell scripts provided below.
+To reproduce Table 6 in the paper, run the shell scripts provided below.
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./conduction/Postdamage_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/Postdamage_sub_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/Predamage_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_prepare_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_simulate_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_plot_composite_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>finer_grid
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>finer_grid
+bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>finer_grid
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
+bash<span class="w"> </span>./sbatch/feymannkacs_simulate.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
+bash<span class="w"> </span>./sbatch/feymannkacs_plot_composite.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
+
+bash<span class="w"> </span>./sbatch/update_results.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--main-only
 </pre></div>
 </div>
-<p>After the run finishes, the program prints to the job-outs Graph_Simulate_prepare file: <code class="docutils literal notranslate"><span class="pre">$C_0/N_0</span> <span class="pre">=</span> <span class="pre">...$</span></code>, <code class="docutils literal notranslate"><span class="pre">$I^k_0</span> <span class="pre">/</span> <span class="pre">(\alpha</span> <span class="pre">K</span> <span class="pre">(1</span> <span class="pre">-</span> <span class="pre">\phi_0(A)^{\phi_1}))</span> <span class="pre">=</span> <span class="pre">...$</span></code>, and <code class="docutils literal notranslate"><span class="pre">$I^r_0</span> <span class="pre">/</span> <span class="pre">(\alpha</span> <span class="pre">K</span> <span class="pre">(1</span> <span class="pre">-</span> <span class="pre">\phi_0(A)^{\phi_1}))</span> <span class="pre">=</span> <span class="pre">...$</span></code>; Graph_Simulate_plot file: <code class="docutils literal notranslate"><span class="pre">$RHS</span> <span class="pre">=</span> <span class="pre">...$</span></code>, <code class="docutils literal notranslate"><span class="pre">$i</span> <span class="pre">=</span> <span class="pre">...$</span></code>, <code class="docutils literal notranslate"><span class="pre">$ii</span> <span class="pre">=</span> <span class="pre">...$</span></code>, and <code class="docutils literal notranslate"><span class="pre">$iii</span> <span class="pre">=</span> <span class="pre">...$</span></code>. To obtain the values reported in Table 4, scale the flow terms and the sum by the printed <span class="math notranslate nohighlight">\(C_0/N_0\)</span> and <span class="math notranslate nohighlight">\(\delta = 0.01\)</span>.</p>
+<p>After the run finishes, the composite job-out for each <span class="math notranslate nohighlight">\(\xi_m\)</span> prints a <code class="docutils literal notranslate"><span class="pre">Scaled</span> <span class="pre">flow</span> <span class="pre">decomposition</span></code> block with <code class="docutils literal notranslate"><span class="pre">Flow</span> <span class="pre">I</span></code>, <code class="docutils literal notranslate"><span class="pre">Flow</span> <span class="pre">II</span></code>, <code class="docutils literal notranslate"><span class="pre">Flow</span> <span class="pre">III</span></code>, and <code class="docutils literal notranslate"><span class="pre">Sum</span></code>, already scaled by <span class="math notranslate nohighlight">\(C_0/N_0\)</span> and <span class="math notranslate nohighlight">\(\delta\)</span>. The investment columns are printed by the prepare job as <code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">R&amp;D</span> <span class="pre">share</span> <span class="pre">of</span> <span class="pre">gross</span> <span class="pre">output</span></code> and <code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">capital-investment</span> <span class="pre">share</span> <span class="pre">of</span> <span class="pre">gross</span> <span class="pre">output</span></code>.</p>
 <p>Source scripts:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/Postdamage_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/Postdamage_sub_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_sub_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/Postdamage_sub_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Predamage_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/FeymannKacs_prepare_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_prepare_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/FeymannKacs_simulate_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_simulate_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/FeymannKacs_plot_composite_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_plot_composite_NewPlug.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage_sub.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage_sub.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_prepare.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_prepare.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_simulate.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_simulate.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_plot_composite.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_plot_composite.sh</span></code></strong></a></p></li>
 </ul>
 </section>
-<section id="state-contributions-to-the-social-value-of-r-d">
-<h2><span class="section-number">4.3. </span>State contributions to the social value of R&amp;D <a href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/python/FeymannKacs_simulate_NewPlug.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#state-contributions-to-the-social-value-of-r-d" title="Link to this heading">#</a></h2>
-<p>Since each flow term can be decomposed into three state-specific components—<span class="math notranslate nohighlight">\(\hat{k}\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(\hat{r}\)</span>, we can isolate the contribution of each state variable to the social value of R&amp;D.</p>
+<section id="state-contributions-to-the-social-value-of-r-d-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a">
+<h2><span class="section-number">4.3. </span>State contributions to the social value of R&amp;D <a href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_simulate.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#state-contributions-to-the-social-value-of-r-d-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a" title="Permalink to this heading">#</a></h2>
+<p>Marginal changes in both capital states contribute to the outcomes reported in Table 6 for SVRD. The marginal valuations can be decomposed by horizon, analogous to the measurements from impulse-response analyses. The left panel reports flow ii decompositions, and the right panel displays flow iii decompositions.</p>
+<!--
 <div style="
      display:flex;
      gap:18px;
@@ -597,96 +646,131 @@ bash<span class="w"> </span>./conduction/FeymannKacs_plot_composite_NewPlug.sh<s
        alt="more aversion"
        style="width:250px; height:auto;">
 </div>
+-->
+<div style="
+     display:flex;
+     gap:18px;
+     justify-content:center;
+     align-items:flex-start;
+     flex-wrap:wrap;
+">
+  <figure style="margin:0; width:340px;">
+    <img src="../_static/paper/Figure10_tech_only_lambda_jacobian_baseline_allxi_Technology_flow_ii.png"
+         alt="flow ii contribution to the SVRD"
+         style="width:100%; height:auto;">
+    <figcaption style="text-align:center; font-size:0.85em;">(a) Horizon decomposition of the flow ii contribution to the SVRDs</figcaption>
+  </figure>
+  <figure style="margin:0; width:340px;">
+    <img src="../_static/paper/Figure10_tech_only_lambda_jacobian_baseline_allxi_Technology_flow_iii.png"
+         alt="flow iii contribution to the SVRD"
+         style="width:100%; height:auto;">
+    <figcaption style="text-align:center; font-size:0.85em;">(b) Horizon decomposition of the flow iii contribution to the SVRDs</figcaption>
+  </figure>
+</div>
 <!-- ——— Reproduction instructions ——— -->
 <div style="margin:0.8rem 0 0.2rem;">
-To reproduce Figure 11 in the paper, run the shell scripts provided below.
+To reproduce Figure 10 in the paper, run the shell scripts provided below.
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./conduction/Postdamage_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/Postdamage_sub_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/Predamage_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_prepare_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_simulate_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_plot_composite_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>finer_grid
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>finer_grid
+bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>finer_grid
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
+bash<span class="w"> </span>./sbatch/feymannkacs_simulate.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
+bash<span class="w"> </span>./sbatch/feymannkacs_plot_composite.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
+
+bash<span class="w"> </span>./sbatch/update_results.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--main-only
 </pre></div>
 </div>
-<p>After the run finishes, you should have an output file named in a pattern similar to
-<code class="docutils literal notranslate"><span class="pre">one_jump_pre_post_aversion__less</span> <span class="pre">aversion_Technology_varrho_746.67_Decom_by_state_flow.png</span></code>.</p>
+<p>After the run finishes, you should have output files named
+<code class="docutils literal notranslate"><span class="pre">tech_only_lambda_jacobian_distorted_allxi_Technology_flow_ii.png</span></code> and
+<code class="docutils literal notranslate"><span class="pre">tech_only_lambda_jacobian_distorted_allxi_Technology_flow_iii.png</span></code> under <code class="docutils literal notranslate"><span class="pre">output/figures/&lt;tech_only_dataset&gt;/feymannkacs_plot_composite/</span></code> (the copies in <code class="docutils literal notranslate"><span class="pre">results_in_paper/</span></code> keep the earlier <code class="docutils literal notranslate"><span class="pre">lambda_jacobian_baseline</span></code> file names).</p>
 <p>Source scripts:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/Postdamage_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/Postdamage_sub_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_sub_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/Postdamage_sub_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Predamage_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/FeymannKacs_prepare_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_prepare_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/FeymannKacs_simulate_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_simulate_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/FeymannKacs_plot_composite_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_plot_composite_NewPlug.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage_sub.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage_sub.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_prepare.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_prepare.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_simulate.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_simulate.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_plot_composite.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_plot_composite.sh</span></code></strong></a></p></li>
 </ul>
 </section>
-<section id="non-monotonic-impact-of-xi-on-the-social-value-of-r-d">
-<h2><span class="section-number">4.4. </span>Non-monotonic impact of <span class="math notranslate nohighlight">\(\xi\)</span> on the Social Value of R&amp;D <a href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/python/FeymannKacs_prepare_NewPlug.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#non-monotonic-impact-of-xi-on-the-social-value-of-r-d" title="Link to this heading">#</a></h2>
+<section id="non-monotonic-impact-of-xi-m-on-the-social-value-of-r-d-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-prepare-py-class-code-link-target-blank-rel-noopener-a">
+<h2><span class="section-number">4.4. </span>Non-monotonic impact of <span class="math notranslate nohighlight">\(\xi_m\)</span> on the Social Value of R&amp;D <a href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_prepare.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#non-monotonic-impact-of-xi-m-on-the-social-value-of-r-d-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-prepare-py-class-code-link-target-blank-rel-noopener-a" title="Permalink to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head text-right"><p>knowledge stock valuation</p></th>
+<tr class="row-odd"><th class="head text-right"><p><span class="math notranslate nohighlight">\(\xi_m\)</span></p></th>
+<th class="head text-right"><p>SVRD</p></th>
 <th class="head text-right"><p>R&amp;D investment / output</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>ξ = ∞</p></td>
-<td class="text-right"><p>44.6</p></td>
-<td class="text-right"><p>0.0075</p></td>
+<tr class="row-even"><td class="text-right"><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+<td class="text-right"><p>4.26</p></td>
+<td class="text-right"><p>0.0079</p></td>
 </tr>
-<tr class="row-odd"><td><p>ξ = 0.10</p></td>
-<td class="text-right"><p>63.4</p></td>
-<td class="text-right"><p>0.0151</p></td>
+<tr class="row-odd"><td class="text-right"><p><span class="math notranslate nohighlight">\(0.10\)</span></p></td>
+<td class="text-right"><p>6.44</p></td>
+<td class="text-right"><p>0.0180</p></td>
 </tr>
-<tr class="row-even"><td><p>ξ = 0.05</p></td>
-<td class="text-right"><p>87.9</p></td>
-<td class="text-right"><p>0.0284</p></td>
+<tr class="row-even"><td class="text-right"><p><span class="math notranslate nohighlight">\(0.05\)</span></p></td>
+<td class="text-right"><p>8.90</p></td>
+<td class="text-right"><p>0.0344</p></td>
 </tr>
-<tr class="row-odd"><td><p>ξ = 0.01</p></td>
-<td class="text-right"><p>88.3</p></td>
-<td class="text-right"><p>0.0300</p></td>
+<tr class="row-odd"><td class="text-right"><p><span class="math notranslate nohighlight">\(0.02\)</span></p></td>
+<td class="text-right"><p>9.92</p></td>
+<td class="text-right"><p>0.0426</p></td>
 </tr>
-<tr class="row-even"><td><p>ξ = 0.009</p></td>
-<td class="text-right"><p>82.6</p></td>
-<td class="text-right"><p>0.0256</p></td>
+<tr class="row-even"><td class="text-right"><p><span class="math notranslate nohighlight">\(0.015\)</span></p></td>
+<td class="text-right"><p>9.35</p></td>
+<td class="text-right"><p>0.0379</p></td>
 </tr>
-<tr class="row-odd"><td><p>ξ = 0.008</p></td>
-<td class="text-right"><p>75.0</p></td>
-<td class="text-right"><p>0.0212</p></td>
+<tr class="row-odd"><td class="text-right"><p><span class="math notranslate nohighlight">\(0.01\)</span></p></td>
+<td class="text-right"><p>8.21</p></td>
+<td class="text-right"><p>0.0292</p></td>
 </tr>
-<tr class="row-even"><td><p>ξ = 0.007</p></td>
-<td class="text-right"><p>66.4</p></td>
-<td class="text-right"><p>0.0166</p></td>
+<tr class="row-even"><td class="text-right"><p><span class="math notranslate nohighlight">\(0.009\)</span></p></td>
+<td class="text-right"><p>7.85</p></td>
+<td class="text-right"><p>0.0268</p></td>
 </tr>
-<tr class="row-odd"><td><p>ξ = 0.006</p></td>
-<td class="text-right"><p>56.2</p></td>
-<td class="text-right"><p>0.0119</p></td>
+<tr class="row-odd"><td class="text-right"><p><span class="math notranslate nohighlight">\(0.008\)</span></p></td>
+<td class="text-right"><p>7.44</p></td>
+<td class="text-right"><p>0.0240</p></td>
 </tr>
-<tr class="row-even"><td><p>ξ = 0.005</p></td>
-<td class="text-right"><p>44.4</p></td>
-<td class="text-right"><p>0.0072</p></td>
+<tr class="row-even"><td class="text-right"><p><span class="math notranslate nohighlight">\(0.007\)</span></p></td>
+<td class="text-right"><p>7.02</p></td>
+<td class="text-right"><p>0.0214</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><span class="math notranslate nohighlight">\(0.006\)</span></p></td>
+<td class="text-right"><p>6.55</p></td>
+<td class="text-right"><p>0.0186</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><span class="math notranslate nohighlight">\(0.005\)</span></p></td>
+<td class="text-right"><p>5.56</p></td>
+<td class="text-right"><p>0.0134</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <!-- ——— Reproduction instructions ——— -->
 <div style="margin:0.8rem 0 0.2rem;">
-To reproduce Table 5 in the paper, run the shell scripts provided below.
+To reproduce Table 21 in the paper, run the shell scripts provided below.
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./conduction/Postdamage_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/Postdamage_sub_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/Predamage_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_prepare_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>finer_grid
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>finer_grid
+bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>finer_grid
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--xi-t-values<span class="w"> </span><span class="m">0</span>.01,0.009,0.008,0.007,0.006,0.005<span class="w"> </span>--warm-xi-t<span class="w"> </span><span class="m">0</span>.05<span class="w"> </span><span class="m">0</span><span class="w"> </span>i
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--xi-t-values<span class="w"> </span><span class="m">100000</span>.,0.1,0.05,0.02,0.015,0.01,0.009,0.008,0.007,0.006,0.005
+
+bash<span class="w"> </span>./sbatch/update_results.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--main-only
 </pre></div>
 </div>
-<p>After the run finishes, the program prints to the job-outs Graph_Simulate_prepare file: <code class="docutils literal notranslate"><span class="pre">dV_dx3_0</span> <span class="pre">*</span> <span class="pre">C_0</span> <span class="pre">/</span> <span class="pre">(N_0</span> <span class="pre">*</span> <span class="pre">delta)</span> <span class="pre">=</span> <span class="pre">...$</span></code>.</p>
+<p>After the run finishes, each prepare job-out prints <code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">dV/dlogR</span></code>, <code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">consumption/value</span> <span class="pre">scale</span></code>, and <code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">R&amp;D</span> <span class="pre">share</span> <span class="pre">of</span> <span class="pre">gross</span> <span class="pre">output</span></code>.</p>
 <p>Source scripts:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/Postdamage_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/Postdamage_sub_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_sub_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/Postdamage_sub_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Predamage_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/FeymannKacs_prepare_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_prepare_NewPlug.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage_sub.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage_sub.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_prepare.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_prepare.sh</span></code></strong></a></p></li>
 </ul>
 </section>
 </section>
@@ -695,8 +779,8 @@ bash<span class="w"> </span>./conduction/FeymannKacs_prepare_NewPlug.sh<span cla
     {
         requestKernel: true,
         binderOptions: {
-            repo: "zhaoyang8/mitigation_book",
-            ref: "live",
+            repo: "lphansen/mitigation_book",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -735,7 +819,7 @@ bash<span class="w"> </span>./conduction/FeymannKacs_prepare_NewPlug.sh<span cla
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Real Options Application</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Application in real options theory <a href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/appendix_illustrations.py" class="code-link" target="_blank" rel="noopener"></a></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -756,9 +840,9 @@ bash<span class="w"> </span>./conduction/FeymannKacs_prepare_NewPlug.sh<span cla
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-formulation">4.1. Mathematical Formulation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-contributions-to-the-social-value-of-r-d">4.2. Flow contributions to the social value of R&amp;D <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/python/FeymannKacs_simulate_NewPlug.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-contributions-to-the-social-value-of-r-d">4.3. State contributions to the social value of R&amp;D <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/python/FeymannKacs_simulate_NewPlug.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-monotonic-impact-of-xi-on-the-social-value-of-r-d">4.4. Non-monotonic impact of <span class="math notranslate nohighlight">\(\xi\)</span> on the Social Value of R&amp;D <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/python/FeymannKacs_prepare_NewPlug.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-contributions-to-the-social-value-of-r-d-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a">4.2. Flow contributions to the social value of R&amp;D <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_simulate.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-contributions-to-the-social-value-of-r-d-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a">4.3. State contributions to the social value of R&amp;D <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_simulate.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-monotonic-impact-of-xi-m-on-the-social-value-of-r-d-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-prepare-py-class-code-link-target-blank-rel-noopener-a">4.4. Non-monotonic impact of <span class="math notranslate nohighlight">\(\xi_m\)</span> on the Social Value of R&amp;D <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_prepare.py" rel="noopener" target="_blank"></a></a></li>
 </ul>
   </nav></div>
 
@@ -781,6 +865,13 @@ By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
   <div class="footer-item">
     
 
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
   </div>
   
   <div class="footer-item">
@@ -789,9 +880,6 @@ By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
   
   <div class="footer-item">
     
-<div class="extra_footer">
-  Notebook site — Zhaoyang Xu
-</div>
   </div>
   
 </div>

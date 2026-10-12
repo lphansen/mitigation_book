@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>3. Stochastic Simulation &#8212; mitigation project</title>
   
@@ -28,44 +29,48 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=47c1c39d" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/03_stochastic_simulation';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="icon" href="../_static/mfr.png"/>
+    <link rel="shortcut icon" href="../_static/mfr.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4. Value Decomposition" href="04_value_decomposition.html" />
@@ -166,18 +171,7 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Uncertainty, Social Valuation, and Climate Change Policy</span></p>
 <ul class="current nav bd-sidenav">
@@ -185,7 +179,7 @@
 <li class="toctree-l1"><a class="reference internal" href="02_worstcase_distributions.html">2. Worst-case distributions</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Stochastic Simulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04_value_decomposition.html">4. Value Decomposition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_real_options.html">5. Real Options Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_real_options.html">5. Application in real options theory <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/appendix_illustrations.py" rel="noopener" target="_blank"></a></a></li>
 </ul>
 
     </div>
@@ -215,9 +209,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -240,16 +234,16 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/zhaoyang8/mitigation_book/live?urlpath=tree/docs/notebooks/03_stochastic_simulation.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/lphansen/mitigation_book/main?urlpath=tree/docs/notebooks/03_stochastic_simulation.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch on Binder"
+   title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+    <img src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -258,16 +252,16 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/zhaoyang8/mitigation_book/blob/live/docs/notebooks/03_stochastic_simulation.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/lphansen/mitigation_book/blob/main/docs/notebooks/03_stochastic_simulation.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch on Colab"
+   title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+    <img src="../_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -307,7 +301,7 @@
       
       
       
-      <li><a href="https://github.com/zhaoyang8/mitigation_book" target="_blank"
+      <li><a href="https://github.com/lphansen/mitigation_book" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -324,7 +318,7 @@
       
       
       
-      <li><a href="https://github.com/zhaoyang8/mitigation_book/edit/live/docs/notebooks/03_stochastic_simulation.ipynb" target="_blank"
+      <li><a href="https://github.com/lphansen/mitigation_book/edit/main/docs/notebooks/03_stochastic_simulation.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -341,7 +335,7 @@
       
       
       
-      <li><a href="https://github.com/zhaoyang8/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/03_stochastic_simulation.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/lphansen/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/03_stochastic_simulation.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -442,9 +436,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -474,9 +468,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-entropy-terms">3.1.6. Relative entropy terms</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#svrd-and-scgw">3.2. SVRD and SCGW <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/DateValueReport_Table.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-pathways">3.3. Stochastic pathways <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/StocasticTrajectories_plot.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#responses-to-damage-curve-information">3.4. Responses to damage-curve information <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/StocasticTrajectories_plot.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#svrd-and-scgw-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-datevaluereport-table-py-class-code-link-target-blank-rel-noopener-a">3.2. SVRD and SCGW <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/datevaluereport_table.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-pathways-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-stochastic-trajectories-plot-py-class-code-link-target-blank-rel-noopener-a">3.3. Stochastic pathways <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/stochastic_trajectories_plot.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#responses-to-damage-curve-information-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-experiments-no-jump-temperature-figure7-panels-export-py-class-code-link-target-blank-rel-noopener-a">3.4. Responses to damage-curve information <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/experiments/no_jump_temperature/figure7_panels/export.py" rel="noopener" target="_blank"></a></a></li>
 </ul>
             </nav>
         </div>
@@ -489,11 +483,11 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="stochastic-simulation">
-<h1><span class="section-number">3. </span>Stochastic Simulation<a class="headerlink" href="#stochastic-simulation" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3. </span>Stochastic Simulation<a class="headerlink" href="#stochastic-simulation" title="Permalink to this heading">#</a></h1>
 <section id="code-variable-glossary">
-<h2><span class="section-number">3.1. </span>Code variable Glossary<a class="headerlink" href="#code-variable-glossary" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.1. </span>Code variable Glossary<a class="headerlink" href="#code-variable-glossary" title="Permalink to this heading">#</a></h2>
 <section id="economic-variables">
-<h3><span class="section-number">3.1.1. </span>Economic variables<a class="headerlink" href="#economic-variables" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.1.1. </span>Economic variables<a class="headerlink" href="#economic-variables" title="Permalink to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Symbol</p></th>
@@ -512,7 +506,7 @@ document.write(`
 <p>where <span class="math notranslate nohighlight">\(B_t  \overset{\mathrm{def}}{=}   \left(1 - \frac {{\mathcal E}_t}{\beta \alpha K_t}  \right){\mathbf 1}_{\{{\mathcal E}_t  &lt; \beta \alpha K_t\} }\)</span>.</p>
 </section>
 <section id="social-value-variables">
-<h3><span class="section-number">3.1.2. </span>Social value variables<a class="headerlink" href="#social-value-variables" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.1.2. </span>Social value variables<a class="headerlink" href="#social-value-variables" title="Permalink to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Symbol</p></th>
@@ -531,7 +525,7 @@ document.write(`
 </div>
 </section>
 <section id="value-functions">
-<h3><span class="section-number">3.1.3. </span>Value functions<a class="headerlink" href="#value-functions" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.1.3. </span>Value functions<a class="headerlink" href="#value-functions" title="Permalink to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Symbol</p></th>
@@ -539,10 +533,10 @@ document.write(`
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">vt</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">V_current_path</span></code></p></td>
 <td><p>Value function pre–tech jump</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">v_post_techt</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">V_tech_path</span></code></p></td>
 <td><p>Value function post–tech jump</p></td>
 </tr>
 </tbody>
@@ -550,7 +544,7 @@ document.write(`
 </div>
 </section>
 <section id="distortions">
-<h3><span class="section-number">3.1.4. </span>Distortions<a class="headerlink" href="#distortions" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.1.4. </span>Distortions<a class="headerlink" href="#distortions" title="Permalink to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Symbol</p></th>
@@ -558,27 +552,27 @@ document.write(`
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ht</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">h_y_path</span></code></p></td>
 <td><p>Temp‑anomaly adjustment <span class="math notranslate nohighlight">\(h_y\)</span></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">hkt</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">h_k_path</span></code></p></td>
 <td><p>Capital adjustment <span class="math notranslate nohighlight">\(h_k\)</span></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">hjt</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">h_r_path</span></code></p></td>
 <td><p>Knowledge‑capital adjustment <span class="math notranslate nohighlight">\(h_r\)</span></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">gt_dmg</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">g_damage_path</span></code></p></td>
 <td><p>Damage jump adjustment <span class="math notranslate nohighlight">\(g_\ell\)</span></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gt_tech</span></code></p></td>
-<td><p>Tech jump adjustment <span class="math notranslate nohighlight">\(f_L\)</span></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">g_tech_path</span></code></p></td>
+<td><p>Tech jump adjustment <span class="math notranslate nohighlight">\(g^L\)</span></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
 <section id="probability-variables">
-<h3><span class="section-number">3.1.5. </span>Probability variables<a class="headerlink" href="#probability-variables" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.1.5. </span>Probability variables<a class="headerlink" href="#probability-variables" title="Permalink to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Symbol</p></th>
@@ -587,23 +581,23 @@ document.write(`
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">distorted_damage_prob</span></code></p></td>
-<td><p>Distorted damage‑jump probability <span class="math notranslate nohighlight">\(J_\ell\,g_\ell\)</span></p></td>
+<td><p>Cumulative probability of a damage jump under the distorted intensities, <span class="math notranslate nohighlight">\(1-\exp\!\left[-\int_0^t\sum_\ell \mathcal J^\ell(X_s)g_s^\ell\,ds\right]\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">distorted_tech_prob</span></code></p></td>
-<td><p>Distorted tech‑jump probability <span class="math notranslate nohighlight">\(J_L\,f_L\)</span></p></td>
+<td><p>Cumulative probability of a technology jump under the distorted intensity, <span class="math notranslate nohighlight">\(1-\exp\!\left[-\int_0^t\mathcal J^L(X_s)g_s^L\,ds\right]\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">true_tech_prob</span></code></p></td>
-<td><p>True tech‑jump probability <span class="math notranslate nohighlight">\(J_L\)</span></p></td>
+<td><p>Baseline cumulative probability of a technology jump, <span class="math notranslate nohighlight">\(1-\exp\!\left[-\int_0^t\mathcal J^L(X_s)\,ds\right]\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">true_damage_prob</span></code></p></td>
-<td><p>True damage‑jump probability <span class="math notranslate nohighlight">\(J_\ell\)</span></p></td>
+<td><p>Baseline cumulative probability of a damage jump, <span class="math notranslate nohighlight">\(1-\exp\!\left[-\int_0^t\sum_\ell\mathcal J^\ell(X_s)\,ds\right]\)</span></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
 <section id="relative-entropy-terms">
-<h3><span class="section-number">3.1.6. </span>Relative entropy terms<a class="headerlink" href="#relative-entropy-terms" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.1.6. </span>Relative entropy terms<a class="headerlink" href="#relative-entropy-terms" title="Permalink to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Term</p></th>
@@ -614,78 +608,80 @@ document.write(`
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RelativeEntropy_hk</span></code></p></td>
 <td><p><span class="math notranslate nohighlight">\(\tfrac{1}{2}\,\xi_k\,h_k^2\)</span></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RelativeEntropy_hY</span></code></p></td>
-<td><p><span class="math notranslate nohighlight">\(\tfrac{1}{2}\,\xi_c\,h_t^2\)</span></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RelativeEntropy_hy</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\tfrac{1}{2}\,\xi_y\,h_y^2\)</span></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RelativeEntropy_hj</span></code></p></td>
-<td><p><span class="math notranslate nohighlight">\(\tfrac{1}{2}\,\xi_j\,h_j^2\)</span></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RelativeEntropy_hr</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\tfrac{1}{2}\,\xi_r\,h_r^2\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RelativeEntropy_TechJump</span></code></p></td>
-<td><p><span class="math notranslate nohighlight">\(\xi_j J_L(1-f+f\log f)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\xi_t \mathcal{J}^L(1-g^L+g^L\log g^L)\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RelativeEntropy_DamageJump</span></code></p></td>
-<td><p><span class="math notranslate nohighlight">\(\xi_d \sum_\ell J_\ell(1-g_\ell+g_\ell\log g_\ell)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\xi_d \sum_\ell \mathcal{J}^\ell(1-g_\ell+g_\ell\log g_\ell)\)</span></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
 </section>
-<section id="svrd-and-scgw">
-<h2><span class="section-number">3.2. </span>SVRD and SCGW <a href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/DateValueReport_Table.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#svrd-and-scgw" title="Link to this heading">#</a></h2>
+<section id="svrd-and-scgw-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-datevaluereport-table-py-class-code-link-target-blank-rel-noopener-a">
+<h2><span class="section-number">3.2. </span>SVRD and SCGW <a href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/datevaluereport_table.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#svrd-and-scgw-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-datevaluereport-table-py-class-code-link-target-blank-rel-noopener-a" title="Permalink to this heading">#</a></h2>
 <p>By definition,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
-    SVRD &amp;= \frac{\left(\frac{dV}{d\hat{r}}\right)_0  \frac{C_0}{N_0}}{\delta}\\
+    SVRD &amp;= \frac{1}{R_0}
+\left(\frac{\partial V}{\partial\hat r}\right)_0
+\frac{C_0}{N_0\delta}.\\
     SCGW &amp;= \frac{-\left(\frac{dV}{dy}\right)_0 \frac{C_0}{N_0}}{\delta}
 \end{align*}
 \end{split}\]</div>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Uncertainty channel</strong></p></th>
-<th class="head"><p>SVRD <br> (<span class="math notranslate nohighlight">\(\xi=0.1\)</span>)</p></th>
-<th class="head"><p>SVRD <br> (<span class="math notranslate nohighlight">\(\xi=0.05\)</span>)</p></th>
-<th class="head"><p>R&amp;D investment / output <br> (<span class="math notranslate nohighlight">\(\xi = 0.1\)</span>)</p></th>
-<th class="head"><p>R&amp;D investment / output <br> (<span class="math notranslate nohighlight">\(\xi = 0.05\)</span>)</p></th>
+<th class="head text-right"><p>SVRD <br> (<span class="math notranslate nohighlight">\(\xi_m=0.1\)</span>)</p></th>
+<th class="head text-right"><p>SVRD <br> (<span class="math notranslate nohighlight">\(\xi_m=0.05\)</span>)</p></th>
+<th class="head text-right"><p>R&amp;D investment / output <br> (<span class="math notranslate nohighlight">\(\xi_m=0.1\)</span>)</p></th>
+<th class="head text-right"><p>R&amp;D investment / output <br> (<span class="math notranslate nohighlight">\(\xi_m=0.05\)</span>)</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>baseline (<span class="math notranslate nohighlight">\(\xi = \infty\)</span>)</p></td>
-<td><p>41.1 (66%)</p></td>
-<td><p>41.1 (43%)</p></td>
-<td><p>0.0063</p></td>
-<td><p>0.0063</p></td>
+<tr class="row-even"><td><p>baseline (<span class="math notranslate nohighlight">\(\xi_m = \infty\)</span>)</p></td>
+<td class="text-right"><p>3.91 (60%)</p></td>
+<td class="text-right"><p>3.91 (38%)</p></td>
+<td class="text-right"><p>0.0066</p></td>
+<td class="text-right"><p>0.0066</p></td>
 </tr>
 <tr class="row-odd"><td><p>climate uncertainty</p></td>
-<td><p>42.0 (68%)</p></td>
-<td><p>43.0 (45%)</p></td>
-<td><p>0.0066</p></td>
-<td><p>0.0068</p></td>
+<td class="text-right"><p>4.01 (61%)</p></td>
+<td class="text-right"><p>4.10 (40%)</p></td>
+<td class="text-right"><p>0.0070</p></td>
+<td class="text-right"><p>0.0073</p></td>
 </tr>
 <tr class="row-even"><td><p>damage uncertainty</p></td>
-<td><p>42.4 (68%)</p></td>
-<td><p>43.7 (46%)</p></td>
-<td><p>0.0067</p></td>
-<td><p>0.0071</p></td>
+<td class="text-right"><p>4.06 (62%)</p></td>
+<td class="text-right"><p>4.20 (41%)</p></td>
+<td class="text-right"><p>0.0072</p></td>
+<td class="text-right"><p>0.0076</p></td>
 </tr>
 <tr class="row-odd"><td><p>productivity uncertainty</p></td>
-<td><p>40.3 (65%)</p></td>
-<td><p>39.6 (42%)</p></td>
-<td><p>0.0061</p></td>
-<td><p>0.0058</p></td>
+<td class="text-right"><p>3.83 (59%)</p></td>
+<td class="text-right"><p>3.76 (36%)</p></td>
+<td class="text-right"><p>0.0064</p></td>
+<td class="text-right"><p>0.0061</p></td>
 </tr>
 <tr class="row-even"><td><p>technology uncertainty</p></td>
-<td><p>57.6 (93%)</p></td>
-<td><p>77.5 (82%)</p></td>
-<td><p>0.0123</p></td>
-<td><p>0.0223</p></td>
+<td class="text-right"><p>5.93 (91%)</p></td>
+<td class="text-right"><p>8.26 (80%)</p></td>
+<td class="text-right"><p>0.0153</p></td>
+<td class="text-right"><p>0.0296</p></td>
 </tr>
 <tr class="row-odd"><td><p>all channels</p></td>
-<td><p>62.2</p></td>
-<td><p>95.0</p></td>
-<td><p>0.0144</p></td>
-<td><p>0.0335</p></td>
+<td class="text-right"><p>6.52</p></td>
+<td class="text-right"><p>10.36</p></td>
+<td class="text-right"><p>0.0185</p></td>
+<td class="text-right"><p>0.0465</p></td>
 </tr>
 </tbody>
 </table>
@@ -693,87 +689,96 @@ document.write(`
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Uncertainty channel</strong></p></th>
-<th class="head"><p>SCGW<br>(<span class="math notranslate nohighlight">\(\xi = 0.1\)</span>)</p></th>
-<th class="head"><p>SCGW<br>(<span class="math notranslate nohighlight">\(\xi = 0.05\)</span>)</p></th>
-<th class="head"><p>Emissions<br>(<span class="math notranslate nohighlight">\(\xi = 0.1\)</span>)</p></th>
-<th class="head"><p>Emissions<br>(<span class="math notranslate nohighlight">\(\xi = 0.05\)</span>)</p></th>
+<th class="head text-right"><p>SCGW <br> (<span class="math notranslate nohighlight">\(\xi_m=0.1\)</span>)</p></th>
+<th class="head text-right"><p>SCGW <br> (<span class="math notranslate nohighlight">\(\xi_m=0.05\)</span>)</p></th>
+<th class="head text-right"><p>emissions <br> (<span class="math notranslate nohighlight">\(\xi_m=0.1\)</span>)</p></th>
+<th class="head text-right"><p>emissions <br> (<span class="math notranslate nohighlight">\(\xi_m=0.05\)</span>)</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>baseline (<span class="math notranslate nohighlight">\(\xi = \infty\)</span>)</p></td>
-<td><p>54.4 (58%)</p></td>
-<td><p>54.4 (29%)</p></td>
-<td><p>9.32</p></td>
-<td><p>9.32</p></td>
+<tr class="row-even"><td><p>baseline (<span class="math notranslate nohighlight">\(\xi_m = \infty\)</span>)</p></td>
+<td class="text-right"><p>60.5 (51%)</p></td>
+<td class="text-right"><p>60.5 (23%)</p></td>
+<td class="text-right"><p>9.26</p></td>
+<td class="text-right"><p>9.26</p></td>
 </tr>
 <tr class="row-odd"><td><p>climate uncertainty</p></td>
-<td><p>55.7 (59%)</p></td>
-<td><p>56.9 (30%)</p></td>
-<td><p>9.30</p></td>
-<td><p>9.29</p></td>
+<td class="text-right"><p>62.1 (52%)</p></td>
+<td class="text-right"><p>63.5 (25%)</p></td>
+<td class="text-right"><p>9.25</p></td>
+<td class="text-right"><p>9.23</p></td>
 </tr>
 <tr class="row-even"><td><p>damage uncertainty</p></td>
-<td><p>56.8 (60%)</p></td>
-<td><p>59.2 (32%)</p></td>
-<td><p>9.29</p></td>
-<td><p>9.27</p></td>
+<td class="text-right"><p>63.6 (54%)</p></td>
+<td class="text-right"><p>66.6 (26%)</p></td>
+<td class="text-right"><p>9.24</p></td>
+<td class="text-right"><p>9.21</p></td>
 </tr>
 <tr class="row-odd"><td><p>productivity uncertainty</p></td>
-<td><p>54.0 (57%)</p></td>
-<td><p>53.4 (29%)</p></td>
-<td><p>9.32</p></td>
-<td><p>9.32</p></td>
+<td class="text-right"><p>59.9 (50%)</p></td>
+<td class="text-right"><p>59.3 (23%)</p></td>
+<td class="text-right"><p>9.27</p></td>
+<td class="text-right"><p>9.27</p></td>
 </tr>
 <tr class="row-even"><td><p>technology uncertainty</p></td>
-<td><p>83.8 (89%)</p></td>
-<td><p>133.0 (71%)</p></td>
-<td><p>9.09</p></td>
-<td><p>8.79</p></td>
+<td class="text-right"><p>103.0 (87%)</p></td>
+<td class="text-right"><p>174.1 (67%)</p></td>
+<td class="text-right"><p>8.96</p></td>
+<td class="text-right"><p>8.58</p></td>
 </tr>
 <tr class="row-odd"><td><p>all channels</p></td>
-<td><p>94.2</p></td>
-<td><p>186.8</p></td>
-<td><p>9.01</p></td>
-<td><p>8.47</p></td>
+<td class="text-right"><p>118.9</p></td>
+<td class="text-right"><p>258.9</p></td>
+<td class="text-right"><p>8.85</p></td>
+<td class="text-right"><p>8.15</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <!-- ——— Reproduction instructions ——— -->
 <div style="margin:0.8rem 0 0.2rem;">
-  To reproduce Table 2 and Table 3 in the paper, run the shell scripts provided below.
+  To reproduce Table 1 and Table 2 in the paper, run the shell scripts provided below.
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./conduction/Postdamage.sh<span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/Postdamage_sub.sh<span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/Predamage.sh<span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/ZeroShockTrajectories_simulate.sh<span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">3</span>
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">3</span>
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span><span class="m">3</span>
 
-bash<span class="w"> </span>./conduction/Postdamage.sh<span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/Postdamage_sub.sh<span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/Predamage.sh<span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/ZeroShockTrajectories_simulate.sh<span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
+bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline<span class="w"> </span>baseline_xia
 
-bash<span class="w"> </span>./conduction/Postdamage.sh<span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/Postdamage_sub.sh<span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/Predamage.sh<span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/ZeroShockTrajectories_simulate.sh<span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
+bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline<span class="w"> </span>non_climate_channels
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>non_climate_channels<span class="w"> </span><span class="s2">"0-19"</span><span class="w"> </span>i
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline<span class="w"> </span>non_climate_channels
+bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline<span class="w"> </span>climate_channels
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>climate_channels<span class="w"> </span><span class="s2">"0-19"</span><span class="w"> </span>i
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline<span class="w"> </span>climate_channels
 
-bash<span class="w"> </span>./conduction/DateValueReport_table.sh
+bash<span class="w"> </span>./sbatch/zeroshock_trajectories_simulate.sh<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="nb">false</span><span class="w"> </span><span class="nb">false</span>
+bash<span class="w"> </span>./sbatch/zeroshock_trajectories_simulate.sh<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>non_climate_channels
+bash<span class="w"> </span>./sbatch/zeroshock_trajectories_simulate.sh<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>climate_channels
+
+bash<span class="w"> </span>./sbatch/datevaluereport_table.sh<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
+
+bash<span class="w"> </span>./sbatch/update_results.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
 </pre></div>
 </div>
-<p>After the run finishes, the program prints to the job-outs Graph_Table file: <code class="docutils literal notranslate"><span class="pre">MATRIX</span> <span class="pre">scrd</span></code> and <code class="docutils literal notranslate"><span class="pre">MATRIX</span> <span class="pre">scgw</span></code>. To obtain the values reported in Table 2 and Table 3, divide the columns corresponding to scrd and scgw by <span class="math notranslate nohighlight">\(N_0 = 1.0046\)</span>.</p>
+<p>After the run finishes, the report writes <code class="docutils literal notranslate"><span class="pre">matrix_scrd_latex.tex</span></code> and <code class="docutils literal notranslate"><span class="pre">matrix_scgw_latex.tex</span></code> under <code class="docutils literal notranslate"><span class="pre">output/tables/&lt;dataset&gt;/datevaluereport_table/</span></code>. These already contain the values reported in Table 1 and Table 2 (the SVRD columns are divided by <span class="math notranslate nohighlight">\(N_0 R_0\)</span> and the SCGW columns by <span class="math notranslate nohighlight">\(N_0\)</span>), and the job-out prints the underlying <code class="docutils literal notranslate"><span class="pre">MATRIX</span> <span class="pre">scrd</span></code> and <code class="docutils literal notranslate"><span class="pre">MATRIX</span> <span class="pre">scgw</span></code> values.</p>
 <p>Source scripts:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage_sub.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_sub.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Predamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">Predamage.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/ZeroShockTrajectories_simulate.sh"><strong><code class="docutils literal notranslate"><span class="pre">ZeroShockTrajectories_simulate.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/DateValueReport_table.sh"><strong><code class="docutils literal notranslate"><span class="pre">DateValueReport_table.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage_sub.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage_sub.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/predamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">predamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/zeroshock_trajectories_simulate.sh"><strong><code class="docutils literal notranslate"><span class="pre">zeroshock_trajectories_simulate.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/datevaluereport_table.sh"><strong><code class="docutils literal notranslate"><span class="pre">datevaluereport_table.sh</span></code></strong></a></p></li>
 </ul>
 </section>
-<section id="stochastic-pathways">
-<h2><span class="section-number">3.3. </span>Stochastic pathways <a href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/StocasticTrajectories_plot.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#stochastic-pathways" title="Link to this heading">#</a></h2>
-<p>Figure 7 gives four stochastic pathways for the robustly optimal choice of R&amp;D investment and emissions. The simulations are not intended to be typical but rather are chosen to illustrate some of the possible outcomes. The pathways were generated using the baseline probabilities with the investment and emissions decision rules computed under the less averse specification.</p>
+<section id="stochastic-pathways-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-stochastic-trajectories-plot-py-class-code-link-target-blank-rel-noopener-a">
+<h2><span class="section-number">3.3. </span>Stochastic pathways <a href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/stochastic_trajectories_plot.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#stochastic-pathways-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-stochastic-trajectories-plot-py-class-code-link-target-blank-rel-noopener-a" title="Permalink to this heading">#</a></h2>
+<p>Figure 3 gives four stochastic pathways for the robustly optimal choice of R&amp;D investment and emissions. The simulations are chosen to illustrate a range of possible outcomes, rather than to represent typical trajectories. The pathways were generated using the baseline probabilities with the investment and emissions decision rules computed under the less averse specification.</p>
 <div style="
      display:flex;
      gap:18px;
@@ -781,88 +786,120 @@ bash<span class="w"> </span>./conduction/DateValueReport_table.sh
      align-items:center;
      flex-wrap:wrap;
 ">
-  <img src="../_static/20_damage/path_investment_RD.png"
+  <img src="../_static/paper/Figure3_rd_investment_paths.png"
        alt="more aversion"
        style="width:350px; height:auto;">
-  <img src="../_static/20_damage/path_emission.png"
+  <img src="../_static/paper/Figure3_emissions_paths.png"
        alt="less aversion"
        style="width:350px; height:auto;">
 </div>
-<iframe
-  id="plotly-div"
-  src="../_static/investment_RD_paths_Aversion Intensity_rho=1.0_delta=0.01.html"
-  width="100%"
-  height="500"
-  style="border:none;"
-></iframe>
-<iframe
-  id="plotly-div"
-  src="../_static/emissions_paths_Aversion Intensity_rho=1.0_delta=0.01.html"
-  width="100%"
-  height="500"
-  style="border:none;"
-></iframe>
 <!-- ——— Reproduction instructions ——— -->
 <div style="margin:0.8rem 0 0.2rem;">
-  To reproduce Figure 7 in the paper, run the shell scripts provided below.
+  To reproduce Figure 3 in the paper, run the shell scripts provided below.
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./conduction/Postdamage.sh<span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/Postdamage_sub.sh<span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/Predamage.sh<span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/StocasticTrajectories_simulate.sh<span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span>
-bash<span class="w"> </span>./conduction/StocasticTrajectories_plot.sh<span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">3</span>
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">3</span>
+bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline<span class="w"> </span>baseline_xia
+bash<span class="w"> </span>./sbatch/stochastic_trajectories_simulate.sh<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">199</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">2</span>
+bash<span class="w"> </span>./sbatch/stochastic_trajectories_plot.sh<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">2</span>
 </pre></div>
 </div>
 <p>After the run finishes, you should have an output file named in a pattern similar to
-<code class="docutils literal notranslate"><span class="pre">path_investment_RD_Aversion</span> <span class="pre">Intensity_rho=1.0_delta=0.01.png</span></code> and
-<code class="docutils literal notranslate"><span class="pre">path_emission_Aversion</span> <span class="pre">Intensity_rho=1.0_delta=0.01.png</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">rd_investment_paths.png</span></code> and <code class="docutils literal notranslate"><span class="pre">emissions_paths.png</span></code> under
+<code class="docutils literal notranslate"><span class="pre">output/figures/&lt;dataset&gt;/stochastic_trajectories_plot/</span></code>.</p>
 <p>Source scripts:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage_sub.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_sub.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Predamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">Predamage.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/StocasticTrajectories_simulate.sh"><strong><code class="docutils literal notranslate"><span class="pre">StocasticTrajectories_simulate.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/StocasticTrajectories_plot.sh"><strong><code class="docutils literal notranslate"><span class="pre">StocasticTrajectories_plot.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage_sub.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage_sub.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/predamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">predamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/stochastic_trajectories_simulate.sh"><strong><code class="docutils literal notranslate"><span class="pre">stochastic_trajectories_simulate.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/stochastic_trajectories_plot.sh"><strong><code class="docutils literal notranslate"><span class="pre">stochastic_trajectories_plot.sh</span></code></strong></a></p></li>
 </ul>
 </section>
-<section id="responses-to-damage-curve-information">
-<h2><span class="section-number">3.4. </span>Responses to damage-curve information <a href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/StocasticTrajectories_plot.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#responses-to-damage-curve-information" title="Link to this heading">#</a></h2>
-<p>Figure 8 gives densities for the “before and after” emissions and R&amp;D investment responses to knowledge of any of the collection of potential damage curve realizations.</p>
+<section id="responses-to-damage-curve-information-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-experiments-no-jump-temperature-figure7-panels-export-py-class-code-link-target-blank-rel-noopener-a">
+<h2><span class="section-number">3.4. </span>Responses to damage-curve information <a href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/experiments/no_jump_temperature/figure7_panels/export.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#responses-to-damage-curve-information-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-experiments-no-jump-temperature-figure7-panels-export-py-class-code-link-target-blank-rel-noopener-a" title="Permalink to this heading">#</a></h2>
+<p>Figure 7 and Table 4 of the paper give the “before and after” emissions and R&amp;D investment responses to a damage information event. For the sake of illustration, the figure and table consider two different state configurations at the time when the event occurs. In both cases we assume the event occurs at a temperature anomaly of two degrees Celsius (<span class="math notranslate nohighlight">\(\hat{y} = 2\)</span>). We set capital stock and the knowledge stock to be the medians assuming no jump of any kind takes place in prior periods. We report results for the baseline specification and the less aversion specification (<span class="math notranslate nohighlight">\(\xi_m = .1\)</span>). The dashed lines give the pre-event emissions and R&amp;D investments, and smoothed densities show post-event responses across potential damage curvatures.</p>
 <div style="
      display:flex;
      gap:18px;
      justify-content:center;
-     align-items:center;
+     align-items:flex-start;
      flex-wrap:wrap;
 ">
-  <img src="../_static/20_damage/investmentRD_damage_id1.png"
-       alt="more aversion"
-       style="width:350px; height:auto;">
-  <img src="../_static/20_damage/emission_damage_id1.png"
-       alt="less aversion"
-       style="width:350px; height:auto;">
+  <figure style="margin:0; width:350px; text-align:center;">
+    <img src="../_static/paper/Figure7_emissions_respective_states.png"
+         alt="Emissions before and after a damage information event"
+         style="width:100%; height:auto;">
+    <figcaption>(a) Emissions</figcaption>
+  </figure>
+  <figure style="margin:0; width:350px; text-align:center;">
+    <img src="../_static/paper/Figure7_rd_respective_states.png"
+         alt="R&D investment before and after a damage information event"
+         style="width:100%; height:auto;">
+    <figcaption>(b) R&D investment</figcaption>
+  </figure>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\xi_m\)</span></p></th>
+<th class="head text-right"><p>emissions (GtC) <br> pre-event</p></th>
+<th class="head text-right"><p>emissions (GtC) <br> post-event</p></th>
+<th class="head text-right"><p>R&amp;D investment / output <br> pre-event</p></th>
+<th class="head text-right"><p>R&amp;D investment / output <br> post-event</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+<td class="text-right"><p>17.8</p></td>
+<td class="text-right"><p>15.8</p></td>
+<td class="text-right"><p>0.017</p></td>
+<td class="text-right"><p>0.024</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>(14.6, 18.9)</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>(0.002, 0.038)</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(0.1\)</span></p></td>
+<td class="text-right"><p>17.2</p></td>
+<td class="text-right"><p>14.9</p></td>
+<td class="text-right"><p>0.039</p></td>
+<td class="text-right"><p>0.045</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>(12.9, 19.0)</p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p>(0.001, 0.083)</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <!-- ——— Reproduction instructions ——— -->
 <div style="margin:0.8rem 0 0.2rem;">
-  To reproduce Figure 8 in the paper, run the shell scripts provided below.
+  To reproduce Figure 7 and Table 4 in the paper, run the shell scripts provided below, each after the previous job has finished. The policy values at the two fixed states are stored in `output/experiments/no_jump_temperature/two_states_2c/control_values.csv`.
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./conduction/Postdamage.sh<span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/Postdamage_sub.sh<span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/Predamage.sh<span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/StocasticTrajectories_simulate.sh<span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span>
-bash<span class="w"> </span>./conduction/StocasticTrajectories_plot.sh<span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>sbatch/experiments/no_jump_temperature/submit_damage_density_panels.sh<span class="w"> </span>--ratio
+bash<span class="w"> </span>sbatch/experiments/no_jump_temperature/submit_damage_density_panels.sh<span class="w"> </span>--respective-states
+
+bash<span class="w"> </span>sbatch/update_results.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--figure7-panels-only
+bash<span class="w"> </span>sbatch/update_results.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--table4-only
 </pre></div>
 </div>
-<p>After the run finishes, you should have an output file named in a pattern similar to
-<code class="docutils literal notranslate"><span class="pre">path_investment_RD.png</span></code> and
-<code class="docutils literal notranslate"><span class="pre">emission_damage_id1.png</span></code>.</p>
+<p>After the run finishes, under <code class="docutils literal notranslate"><span class="pre">output/experiments/no_jump_temperature/figure7_panels/</span></code> you should have the Figure 7 panels <code class="docutils literal notranslate"><span class="pre">respective_states/no_dots/emissions_respective_states.png</span></code> and <code class="docutils literal notranslate"><span class="pre">respective_states/no_dots/rd_respective_states.png</span></code>, the Figure 12 panels in <code class="docutils literal notranslate"><span class="pre">ratio/no_dots/</span></code>, and the tables <code class="docutils literal notranslate"><span class="pre">ratio/paper_pre_post.tex</span></code> (Table 4) and <code class="docutils literal notranslate"><span class="pre">ratio/paper_two_state_pre_post.tex</span></code> (Table 32).</p>
 <p>Source scripts:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage_sub.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_sub.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Predamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">Predamage.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/StocasticTrajectories_simulate.sh"><strong><code class="docutils literal notranslate"><span class="pre">StocasticTrajectories_simulate.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/StocasticTrajectories_plot.sh"><strong><code class="docutils literal notranslate"><span class="pre">StocasticTrajectories_plot.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/experiments/no_jump_temperature/submit_damage_density_panels.sh"><strong><code class="docutils literal notranslate"><span class="pre">submit_damage_density_panels.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/update_results.sh"><strong><code class="docutils literal notranslate"><span class="pre">update_results.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/experiments/no_jump_temperature/figure7_panels/export_ratio.py"><strong><code class="docutils literal notranslate"><span class="pre">export_ratio.py</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/experiments/no_jump_temperature/figure7_panels/respective_states.py"><strong><code class="docutils literal notranslate"><span class="pre">respective_states.py</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/experiments/no_jump_temperature/figure7_panels/export.py"><strong><code class="docutils literal notranslate"><span class="pre">export.py</span></code></strong></a></p></li>
 </ul>
 </section>
 </section>
@@ -871,8 +908,8 @@ bash<span class="w"> </span>./conduction/StocasticTrajectories_plot.sh<span clas
     {
         requestKernel: true,
         binderOptions: {
-            repo: "zhaoyang8/mitigation_book",
-            ref: "live",
+            repo: "lphansen/mitigation_book",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -940,9 +977,9 @@ bash<span class="w"> </span>./conduction/StocasticTrajectories_plot.sh<span clas
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-entropy-terms">3.1.6. Relative entropy terms</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#svrd-and-scgw">3.2. SVRD and SCGW <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/DateValueReport_Table.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-pathways">3.3. Stochastic pathways <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/StocasticTrajectories_plot.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#responses-to-damage-curve-information">3.4. Responses to damage-curve information <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/StocasticTrajectories_plot.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#svrd-and-scgw-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-datevaluereport-table-py-class-code-link-target-blank-rel-noopener-a">3.2. SVRD and SCGW <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/datevaluereport_table.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-pathways-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-stochastic-trajectories-plot-py-class-code-link-target-blank-rel-noopener-a">3.3. Stochastic pathways <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/stochastic_trajectories_plot.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#responses-to-damage-curve-information-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-experiments-no-jump-temperature-figure7-panels-export-py-class-code-link-target-blank-rel-noopener-a">3.4. Responses to damage-curve information <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/experiments/no_jump_temperature/figure7_panels/export.py" rel="noopener" target="_blank"></a></a></li>
 </ul>
   </nav></div>
 
@@ -965,6 +1002,13 @@ By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
   <div class="footer-item">
     
 
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
   </div>
   
   <div class="footer-item">
@@ -973,9 +1017,6 @@ By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
   
   <div class="footer-item">
     
-<div class="extra_footer">
-  Notebook site — Zhaoyang Xu
-</div>
   </div>
   
 </div>

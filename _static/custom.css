@@ -30,3 +30,136 @@ div.sidebar-scroll a.code-link,
 div.table-of-contents a.code-link {
   display: none;
 }
+
+/* Match the published site's markdown table styling. */
+.bd-content table.docutils {
+  border: 1px solid var(--pst-color-border, #dfe2e5) !important;
+}
+
+.bd-content table.docutils thead tr,
+.bd-content table.docutils thead tr > th,
+.bd-content table.docutils th.head {
+  background-color: #f3f4f5 !important;
+}
+
+.bd-content table.docutils thead {
+  border-bottom: 2px solid #176de8 !important;
+}
+
+.bd-content table.docutils tbody tr.row-even,
+.bd-content table.docutils tbody tr.row-even > th,
+.bd-content table.docutils tbody tr.row-even > td {
+  background-color: #f3f4f5 !important;
+}
+
+.bd-content table.docutils tbody tr.row-odd,
+.bd-content table.docutils tbody tr.row-odd > th,
+.bd-content table.docutils tbody tr.row-odd > td {
+  background-color: #fff !important;
+}
+
+.bd-content table.table {
+  border: 1px solid var(--pst-color-border, #dfe2e5) !important;
+}
+
+.bd-content table.table thead,
+.bd-content table.table thead tr,
+.bd-content table.table thead tr > th {
+  background-color: #f3f4f5 !important;
+}
+
+.bd-content table.table thead {
+  border-bottom: 2px solid #176de8 !important;
+}
+
+.bd-content table.table tbody tr.row-even,
+.bd-content table.table tbody tr.row-even > th,
+.bd-content table.table tbody tr.row-even > td,
+.bd-content table.table tbody tr:nth-child(odd),
+.bd-content table.table tbody tr:nth-child(odd) > th,
+.bd-content table.table tbody tr:nth-child(odd) > td {
+  background-color: #f3f4f5 !important;
+  --bs-table-bg: #f3f4f5 !important;
+}
+
+.bd-content table.table tbody tr.row-odd,
+.bd-content table.table tbody tr.row-odd > th,
+.bd-content table.table tbody tr.row-odd > td,
+.bd-content table.table tbody tr:nth-child(even),
+.bd-content table.table tbody tr:nth-child(even) > th,
+.bd-content table.table tbody tr:nth-child(even) > td {
+  background-color: #fff !important;
+  --bs-table-bg: #fff !important;
+}
+
+.bd-content table.docutils tbody tr:hover,
+.bd-content table.docutils tbody tr:hover > th,
+.bd-content table.docutils tbody tr:hover > td,
+.bd-content table.table tbody tr:hover,
+.bd-content table.table tbody tr:hover > th,
+.bd-content table.table tbody tr:hover > td {
+  background-color: var(--pst-color-table-row-hover-bg, #e9ecef) !important;
+  --bs-table-bg: var(--pst-color-table-row-hover-bg, #e9ecef) !important;
+  --bs-table-bg-state: var(--pst-color-table-row-hover-bg, #e9ecef) !important;
+}
+
+/* Loosen article text and list spacing. */
+.bd-content .bd-article p,
+.bd-content .bd-article li {
+  line-height: 1.5;
+}
+
+.bd-content .bd-article ul,
+.bd-content .bd-article ol {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bd-content .bd-article li + li {
+  margin-top: 0.5rem;
+}
+
+.bd-content .bd-article li > p {
+  margin-bottom: 0.5rem;
+}
+
+/* Loosen article heading spacing. */
+.bd-content .bd-article h1 {
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.bd-content .bd-article h2 {
+  line-height: 1.5;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bd-content .bd-article h3 {
+  line-height: 1.2;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bd-content .bd-article h2 + h3 {
+  margin-top: 1rem;
+}
+
+/* Loosen the primary sidebar and page contents spacing. */
+.bd-sidebar-primary nav.bd-links li > a {
+  line-height: 1.5;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.bd-sidebar-secondary .toc-entry > .nav-link,
+.bd-content .bd-article .section-nav .toc-entry > .nav-link {
+  line-height: 1.4;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.bd-sidebar-secondary .section-nav,
+.bd-content .bd-article .section-nav {
+  row-gap: 0.25rem;
+}

@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>2. Worst-case distributions &#8212; mitigation project</title>
   
@@ -28,44 +29,48 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=47c1c39d" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02_worstcase_distributions';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="icon" href="../_static/mfr.png"/>
+    <link rel="shortcut icon" href="../_static/mfr.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. Stochastic Simulation" href="03_stochastic_simulation.html" />
@@ -166,18 +171,7 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Uncertainty, Social Valuation, and Climate Change Policy</span></p>
 <ul class="current nav bd-sidenav">
@@ -185,7 +179,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Worst-case distributions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_stochastic_simulation.html">3. Stochastic Simulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04_value_decomposition.html">4. Value Decomposition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_real_options.html">5. Real Options Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_real_options.html">5. Application in real options theory <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/appendix_illustrations.py" rel="noopener" target="_blank"></a></a></li>
 </ul>
 
     </div>
@@ -215,9 +209,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -240,16 +234,16 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/zhaoyang8/mitigation_book/live?urlpath=tree/docs/notebooks/02_worstcase_distributions.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/lphansen/mitigation_book/main?urlpath=tree/docs/notebooks/02_worstcase_distributions.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch on Binder"
+   title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+    <img src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -258,16 +252,16 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/zhaoyang8/mitigation_book/blob/live/docs/notebooks/02_worstcase_distributions.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/lphansen/mitigation_book/blob/main/docs/notebooks/02_worstcase_distributions.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch on Colab"
+   title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+    <img src="../_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -307,7 +301,7 @@
       
       
       
-      <li><a href="https://github.com/zhaoyang8/mitigation_book" target="_blank"
+      <li><a href="https://github.com/lphansen/mitigation_book" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -324,7 +318,7 @@
       
       
       
-      <li><a href="https://github.com/zhaoyang8/mitigation_book/edit/live/docs/notebooks/02_worstcase_distributions.ipynb" target="_blank"
+      <li><a href="https://github.com/lphansen/mitigation_book/edit/main/docs/notebooks/02_worstcase_distributions.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -341,7 +335,7 @@
       
       
       
-      <li><a href="https://github.com/zhaoyang8/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/02_worstcase_distributions.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/lphansen/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/02_worstcase_distributions.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -442,9 +436,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -465,10 +459,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drift-distortions">2.1. Drift distortions <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/FeymannKacs_prepare_NewPlug.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distorted-density-for-climate-models">2.2. Distorted density for climate models <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/ZeroShockTrajectories_simulate.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distorted-density-for-the-time-of-the-first-jump">2.3. Distorted density for the time of the first jump  <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/FeymannKacs_simulate_NewPlug.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distorted-probabilities-across-the-alternative-damage-curves">2.4. Distorted probabilities across the alternative damage curves  <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/FeymannKacs_simulate_NewPlug.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drift-distortions-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-prepare-py-class-code-link-target-blank-rel-noopener-a">2.1. Drift distortions <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_prepare.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distorted-density-for-climate-models-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-zeroshock-trajectories-simulate-py-class-code-link-target-blank-rel-noopener-a">2.2. Distorted density for climate models <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/zeroshock_trajectories_simulate.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distorted-density-for-the-time-of-the-first-jump-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a">2.3. Distorted density for the time of the first jump  <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_simulate.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distorted-probabilities-across-the-alternative-damage-curves-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a">2.4. Distorted probabilities across the alternative damage curves  <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_simulate.py" rel="noopener" target="_blank"></a></a></li>
 </ul>
             </nav>
         </div>
@@ -481,9 +475,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="worst-case-distributions">
-<h1><span class="section-number">2. </span>Worst-case distributions<a class="headerlink" href="#worst-case-distributions" title="Link to this heading">#</a></h1>
-<section id="drift-distortions">
-<h2><span class="section-number">2.1. </span>Drift distortions <a href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/FeymannKacs_prepare_NewPlug.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#drift-distortions" title="Link to this heading">#</a></h2>
+<h1><span class="section-number">2. </span>Worst-case distributions<a class="headerlink" href="#worst-case-distributions" title="Permalink to this heading">#</a></h1>
+<section id="drift-distortions-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-prepare-py-class-code-link-target-blank-rel-noopener-a">
+<h2><span class="section-number">2.1. </span>Drift distortions <a href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_prepare.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#drift-distortions-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-prepare-py-class-code-link-target-blank-rel-noopener-a" title="Permalink to this heading">#</a></h2>
 <p>After solving the HJB equations, we can immediately get drift distortions for capital stock evolution and the knowledge stock evolution at the initial time period:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -493,59 +487,63 @@ document.write(`
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>more aversion (<span class="math notranslate nohighlight">\(\xi = .05\)</span>)</p></td>
-<td><p>-0.184</p></td>
-<td><p>-0.008</p></td>
+<tr class="row-even"><td><p>less aversion (<span class="math notranslate nohighlight">\(\xi_m = .1\)</span>)</p></td>
+<td><p>-0.094</p></td>
+<td><p>-0.004</p></td>
 </tr>
-<tr class="row-odd"><td><p>less aversion (<span class="math notranslate nohighlight">\(\xi = .1\)</span>)</p></td>
-<td><p>-0.096</p></td>
-<td><p>-0.003</p></td>
+<tr class="row-odd"><td><p>more aversion (<span class="math notranslate nohighlight">\(\xi_m = .05\)</span>)</p></td>
+<td><p>-0.178</p></td>
+<td><p>-0.011</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <!-- ——— Reproduction instructions ——— -->
 <div style="margin:0.8rem 0 0.2rem;">
-To reproduce Table 1 in the paper, run the shell scripts provided below.
+To reproduce Table 3 in the paper, run the shell scripts provided below.
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./conduction/Postdamage_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/Postdamage_sub_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/Predamage_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_prepare_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">3</span>
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">3</span>
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span><span class="m">3</span>
+
+bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline<span class="w"> </span>baseline_xia
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>baseline_xia
+
+bash<span class="w"> </span>./sbatch/update_results.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--full-model-drift-only
 </pre></div>
 </div>
-<p>After the run finishes, the program prints to the job-outs Graph_Simulate_prepare file: <code class="docutils literal notranslate"><span class="pre">$h_k(X0)</span> <span class="pre">=</span> <span class="pre">...$</span></code> and <code class="docutils literal notranslate"><span class="pre">$h_k(X0)</span> <span class="pre">=</span> <span class="pre">...$</span></code>.</p>
+<p>After the run finishes, the prepare job prints <code class="docutils literal notranslate"><span class="pre">h_k(X0)</span> <span class="pre">=</span> <span class="pre">...</span></code> and <code class="docutils literal notranslate"><span class="pre">h_r(X0)</span> <span class="pre">=</span> <span class="pre">...</span></code> to its job-out under <code class="docutils literal notranslate"><span class="pre">job-outs/&lt;dataset&gt;/feymannkacs_prepare/</span></code>.</p>
 <p>Source scripts:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage_sub_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_sub_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage_sub_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Predamage_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/FeymannKacs_prepare_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_prepare_NewPlug.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage_sub.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage_sub.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/predamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">predamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_prepare.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_prepare.sh</span></code></strong></a></p></li>
 </ul>
 </section>
-<section id="distorted-density-for-climate-models">
-<h2><span class="section-number">2.2. </span>Distorted density for climate models <a href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/ZeroShockTrajectories_simulate.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#distorted-density-for-climate-models" title="Link to this heading">#</a></h2>
-<p>The decision-maker has a baseline probability <span class="math notranslate nohighlight">\(dP_t(\theta)\)</span> for each time instant, <span class="math notranslate nohighlight">\(t\)</span>, and makes an adjustment for ambiguity by solving</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\min_{q,\;\int_\Theta q(\theta)\,dP_t(\theta)=1}\;
-      &amp;\;\chi \int_\Theta q(\theta)\,\log q(\theta)\,dP_t(\theta) \\
-\text{s.t. }\;&amp;
-      \int_\Theta \mu\!\bigl[X_t,\Phi^{\ast}(X_t)\bigr]\,
-               q(\theta)\,dP_t(\theta)=\bar h(X_t),
-\end{aligned}
-\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\Phi^{\ast}\)</span> is the robustly optimal solution and <span class="math notranslate nohighlight">\(\bar h\)</span> is deduced from a preference specification with misspecification aversion.
-The minimizing density takes the form of</p>
+<section id="distorted-density-for-climate-models-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-zeroshock-trajectories-simulate-py-class-code-link-target-blank-rel-noopener-a">
+<h2><span class="section-number">2.2. </span>Distorted density for climate models <a href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/zeroshock_trajectories_simulate.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#distorted-density-for-climate-models-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-zeroshock-trajectories-simulate-py-class-code-link-target-blank-rel-noopener-a" title="Permalink to this heading">#</a></h2>
+<p>The decision-maker has a baseline probability <span class="math notranslate nohighlight">\(dP_t(\theta)\)</span> that weights each of the 144 climate models equally at every time instant, <span class="math notranslate nohighlight">\(t\)</span>, and makes an adjustment for ambiguity by solving Problem 3.2 of the paper:</p>
 <div class="math notranslate nohighlight">
 \[
-q_t^{\ast}(\theta)
-\;\propto\;
-\exp\!\Bigl[-\zeta\,\mu\!\bigl(X_t,a^{\ast}(X_t)\bigr)\Bigr],
-\qquad
-\text{with }\zeta\text{ chosen so the constraint holds}.
+\min_{Q_t \ge 0,\; \int_\Theta Q_t(\theta)\,dP_t(\theta)=1}\;
+\frac{\partial V}{\partial y}(X_t)\,\mathcal{E}_t \int_\Theta \theta\,Q_t(\theta)\,dP_t(\theta)
+\;+\;
+\xi_a \int_\Theta Q_t(\theta)\,\log Q_t(\theta)\,dP_t(\theta)
 \]</div>
+<p>with the minimizing relative density given by an exponential tilt:</p>
+<div class="math notranslate nohighlight">
+\[
+Q_t^{\ast}(\theta)
+\;\propto\;
+\exp\!\Bigl[-\frac{1}{\xi_a}\,\frac{\partial V}{\partial y}(X_t)\,\mathcal{E}_t\,\theta\Bigr].
+\]</div>
+<!--
 <div style="
      display:flex;
      gap:18px;
@@ -560,59 +558,81 @@ q_t^{\ast}(\theta)
        alt="less aversion"
        style="width:350px; height:auto;">
 </div>
+-->
+<div style="
+     display:flex;
+     justify-content:center;
+     align-items:center;
+">
+  <img src="../_static/paper/Figure4_climate_model_relative_weights_year-0.png"
+       alt="Uncertainty-adjusted relative densities for climate models"
+       style="width:700px; max-width:100%; height:auto;">
+</div>
 <!-- ——— Reproduction instructions ——— -->
 <div style="margin:0.8rem 0 0.2rem;">
-  To reproduce Figure 3 in the paper, run the shell scripts provided below.
+  To reproduce Figure 4 in the paper, run the shell scripts provided below.
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./conduction/Postdamage.sh<span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/Postdamage_sub.sh<span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/Predamage.sh<span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
-bash<span class="w"> </span>./conduction/ZeroShockTrajectories_simulate.sh<span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span>
-bash<span class="w"> </span>./conduction/ZeroShockTrajectories_plot.sh<span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">3</span>
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">3</span>
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span><span class="m">3</span>
+
+bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline<span class="w"> </span>baseline_xia
+bash<span class="w"> </span>./sbatch/zeroshock_trajectories_simulate.sh<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="nb">false</span><span class="w"> </span><span class="nb">false</span>
+bash<span class="w"> </span>./sbatch/zeroshock_trajectories_plot.sh<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
+
+bash<span class="w"> </span>./sbatch/update_results.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
 </pre></div>
 </div>
 <p>After the run finishes, you should have an output file named in a pattern similar to
-<code class="docutils literal notranslate"><span class="pre">ClimateSensitivity_pmean_0,xic=0.100Aversion</span> <span class="pre">Intensityless</span> <span class="pre">aversion_rho=1.0_delta=0.01_phi0=0.5.png</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">climate_model_relative_weights_year-0.png</span></code> under <code class="docutils literal notranslate"><span class="pre">output/figures/&lt;dataset&gt;/zeroshock_trajectories_plot/</span></code>.</p>
 <p>Source scripts:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage_sub.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_sub.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Predamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">Predamage.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/ZeroShockTrajectories_simulate.sh"><strong><code class="docutils literal notranslate"><span class="pre">ZeroShockTrajectories_simulate.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/ZeroShockTrajectories_plot.sh"><strong><code class="docutils literal notranslate"><span class="pre">ZeroShockTrajectories_plot.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage_sub.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage_sub.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/predamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">predamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/zeroshock_trajectories_simulate.sh"><strong><code class="docutils literal notranslate"><span class="pre">zeroshock_trajectories_simulate.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/zeroshock_trajectories_plot.sh"><strong><code class="docutils literal notranslate"><span class="pre">zeroshock_trajectories_plot.sh</span></code></strong></a></p></li>
 </ul>
 </section>
-<section id="distorted-density-for-the-time-of-the-first-jump">
-<h2><span class="section-number">2.3. </span>Distorted density for the time of the first jump  <a href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/FeymannKacs_simulate_NewPlug.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#distorted-density-for-the-time-of-the-first-jump" title="Link to this heading">#</a></h2>
-<p>By conditioning first on the state-variable history, we find that the probability that a jump has occurred by time <span class="math notranslate nohighlight">\(t\)</span> is</p>
+<section id="distorted-density-for-the-time-of-the-first-jump-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a">
+<h2><span class="section-number">2.3. </span>Distorted density for the time of the first jump  <a href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_simulate.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#distorted-density-for-the-time-of-the-first-jump-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a" title="Permalink to this heading">#</a></h2>
+<p>By conditioning first on the state-variable history, we find that the probability that a jump has occurred by time <span class="math notranslate nohighlight">\(t\)</span> under the uncertainty-adjusted probabilities is</p>
 <div class="math notranslate nohighlight">
 \[
-F_t \;=\; 1 - \exp\!\Bigl[ - \sum_{\ell=1}^{L} \int_{0}^{t} 
-        \mathcal J^{\ell}\!\bigl(X_\tau\bigr)\, d\tau \Bigr],
+F_t \;=\; 1 - \exp\!\Bigl[ - \int_{0}^{t} \sum_{\ell=1}^{L}
+        G^{*\ell}_\tau\,\mathcal J^{\ell}\!\bigl(X_\tau\bigr)\, d\tau \Bigr],
 \]</div>
-<p>which increases in <span class="math notranslate nohighlight">\(t\)</span>.<br />
+<p>which increases in <span class="math notranslate nohighlight">\(t\)</span>.
 The implied density obtained by differentiating with respect to <span class="math notranslate nohighlight">\(t\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[
-f_t \;=\; \sum_{\ell=1}^{L} \mathcal J^{\ell}(X_t)\,
-        \exp\!\Bigl[ - \int_{0}^{t} \mathcal J^{\ell}\!\bigl(X_\tau\bigr)\, d\tau \Bigr].
+f_t \;=\; \sum_{\ell=1}^{L} G^{*\ell}_t\,\mathcal J^{\ell}(X_t)\,
+        \exp\!\Bigl[ - \int_{0}^{t} \sum_{\hat\ell=1}^{L}
+        G^{*\hat\ell}_\tau\,\mathcal J^{\hat\ell}\!\bigl(X_\tau\bigr)\, d\tau \Bigr].
 \]</div>
-<p>We express <span class="math notranslate nohighlight">\(f\)</span> as</p>
+<p>We unpack this density by jump type,</p>
 <div class="math notranslate nohighlight">
 \[
-f_t \;=\; \sum_{\ell=1}^{L} f^{\ell}(t),
+f_t \;=\; \sum_{\ell=1}^{L} f_t^{\ell},
 \]</div>
 <p>where</p>
 <div class="math notranslate nohighlight">
 \[
-f_t^{\ell} \overset{\mathrm{def}}{=} \mathcal J^{\ell}(X_t)\,
-\exp\!\Bigl[ - \sum_{\ell=1}^{L} \int_{0}^{t} 
-            \mathcal J^{\ell}\!\bigl(X_\tau\bigr)\, d\tau \Bigr].
+f_t^{\ell} \overset{\mathrm{def}}{=} G^{*\ell}_t\,\mathcal J^{\ell}(X_t)\,
+\exp\!\Bigl[ - \int_{0}^{t} \sum_{\hat\ell=1}^{L}
+            G^{*\hat\ell}_\tau\,\mathcal J^{\hat\ell}\!\bigl(X_\tau\bigr)\, d\tau \Bigr],
+\qquad \ell = 1,\dots,L.
 \]</div>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
 1 tech jump + 20 damage jumps</label><div class="sd-tab-content docutils">
+<!--
 <div style="
      display:flex;
      gap:18px;
@@ -624,6 +644,7 @@ f_t^{\ell} \overset{\mathrm{def}}{=} \mathcal J^{\ell}(X_t)\,
        alt="more aversion"
        style="width:350px; height:auto;">
 </div>
+-->
 <div style="
      display:flex;
      gap:18px;
@@ -631,41 +652,49 @@ f_t^{\ell} \overset{\mathrm{def}}{=} \mathcal J^{\ell}(X_t)\,
      align-items:center;
      flex-wrap:wrap;
 ">
-  <img src="../_static/20_damage/20_damage_tech_jump_time.png"
+  <img src="../_static/paper/Figure5_all_channel_on_0.1lambda_jacobian_distorted_CompositeTechnology0.083_Discount_nodeltadt_tech_Processs_dt.png"
        alt="more aversion"
        style="width:350px; height:auto;">
-  <img src="../_static/20_damage/20_damage_damage_jump_time.png"
+  <img src="../_static/paper/Figure5_all_channel_on_0.1lambda_jacobian_distorted_CompositeTechnology0.083_Discount_nodeltadt_damage_Processs_dt.png"
        alt="less aversion"
        style="width:350px; height:auto;">
 </div>
 <!-- ——— Reproduction instructions ——— -->
 <div style="margin:0.8rem 0 0.2rem;">
-To reproduce Figure 4 and Figure 5 in the paper, run the shell scripts provided below.
+To reproduce Figure 5 in the paper, run the shell scripts provided below.
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./conduction/Postdamage_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/Postdamage_sub_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/Predamage_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_prepare_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_simulate_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_plot_composite_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">3</span>
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">3</span>
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span><span class="m">3</span>
+
+bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline<span class="w"> </span>baseline_xia
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>baseline_xia
+bash<span class="w"> </span>./sbatch/feymannkacs_simulate.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>Technology
+bash<span class="w"> </span>./sbatch/feymannkacs_plot_composite.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>Technology
+
+bash<span class="w"> </span>./sbatch/update_results.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--full-model-composite-only
 </pre></div>
 </div>
 <p>After the run finishes, you should have output files named in a pattern similar to
-<code class="docutils literal notranslate"><span class="pre">all_channel_on_0.1CompositeTechnology0.083_Discount_nodeltadt_Processs_dt.pdf</span></code>,
-<code class="docutils literal notranslate"><span class="pre">all_channel_on_0.1CompositeTechnology0.083_Discount_nodeltadt_tech_Processs_dt.pdf</span></code>,
-<code class="docutils literal notranslate"><span class="pre">all_channel_on_0.1CompositeTechnology0.083_Discount_nodeltadt_damage_Processs_dt.pdf</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">all_channel_on_0.1lambda_jacobian_distorted_CompositeTechnology0.083_Discount_nodeltadt_tech_Processs_dt.png</span></code> and
+<code class="docutils literal notranslate"><span class="pre">all_channel_on_0.1lambda_jacobian_distorted_CompositeTechnology0.083_Discount_nodeltadt_damage_Processs_dt.png</span></code> under <code class="docutils literal notranslate"><span class="pre">output/figures/&lt;dataset&gt;/feymannkacs_plot_composite/</span></code>.</p>
 <p>Source scripts:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage_sub_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_sub_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage_sub_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Predamage_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/FeymannKacs_prepare_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_prepare_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/FeymannKacs_simulate_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_simulate_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/FeymannKacs_plot_composite_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_plot_composite_NewPlug.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage_sub.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage_sub.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/predamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">predamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_prepare.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_prepare.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_simulate.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_simulate.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_plot_composite.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_plot_composite.sh</span></code></strong></a></p></li>
 </ul>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
 1 tech jump</label><div class="sd-tab-content docutils">
 <div style="
      display:flex;
@@ -674,39 +703,43 @@ bash<span class="w"> </span>./conduction/FeymannKacs_plot_composite_NewPlug.sh<s
      align-items:center;
      flex-wrap:wrap;
 ">
-  <img src="../_static/0_damage/0_damage_tech_jump_time.png"
+  <img src="../_static/paper/Figure9_tech_only_lambda_jacobian_baseline_allxi_Technology_technology_density.png"
        alt="more aversion"
        style="width:350px; height:auto;">
 </div>
 <!-- ——— Reproduction instructions ——— -->
 <div style="margin:0.8rem 0 0.2rem;">
-To reproduce Figure 10 in the paper, run the shell scripts provided below.
+To reproduce Figure 9 in the paper, run the shell scripts provided below.
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./conduction/Postdamage_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/Postdamage_sub_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/Predamage_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_prepare_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_simulate_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_plot_composite_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>finer_grid
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>finer_grid
+bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>finer_grid
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
+bash<span class="w"> </span>./sbatch/feymannkacs_simulate.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
+bash<span class="w"> </span>./sbatch/feymannkacs_plot_composite.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution
+
+bash<span class="w"> </span>./sbatch/update_results.sh<span class="w"> </span>--model<span class="w"> </span>tech_only<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--main-only
 </pre></div>
 </div>
 <p>When the run finishes you should have output files named in a pattern similar to
-<code class="docutils literal notranslate"><span class="pre">one_jump_pre_post_aversion_CompositeTechnology0.083_Discount_nodeltadt_tech_Processs_dt.pdf</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">tech_only_lambda_jacobian_distorted_allxi_Technology_technology_density.png</span></code> under <code class="docutils literal notranslate"><span class="pre">output/figures/&lt;tech_only_dataset&gt;/feymannkacs_plot_composite/</span></code> (the copy in <code class="docutils literal notranslate"><span class="pre">results_in_paper/</span></code> keeps the earlier <code class="docutils literal notranslate"><span class="pre">lambda_jacobian_baseline</span></code> file name).</p>
 <p>Source scripts:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/Postdamage_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/Postdamage_sub_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_sub_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/Postdamage_sub_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Predamage_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/FeymannKacs_prepare_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_prepare_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/FeymannKacs_simulate_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_simulate_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/FeymannKacs_plot_composite_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_plot_composite_NewPlug.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage_sub.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage_sub.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/predamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">predamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_prepare.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_prepare.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_simulate.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_simulate.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_plot_composite.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_plot_composite.sh</span></code></strong></a></p></li>
 </ul>
 </div>
 </div>
 </section>
-<section id="distorted-probabilities-across-the-alternative-damage-curves">
-<h2><span class="section-number">2.4. </span>Distorted probabilities across the alternative damage curves  <a href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/FeymannKacs_simulate_NewPlug.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#distorted-probabilities-across-the-alternative-damage-curves" title="Link to this heading">#</a></h2>
+<section id="distorted-probabilities-across-the-alternative-damage-curves-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a">
+<h2><span class="section-number">2.4. </span>Distorted probabilities across the alternative damage curves  <a href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_simulate.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#distorted-probabilities-across-the-alternative-damage-curves-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a" title="Permalink to this heading">#</a></h2>
 <p>Since there are multiple damage-curve realizations, we report how misspecification aversion shifts the weights of the unknown damage curve parameter, <span class="math notranslate nohighlight">\(\lambda_3\)</span>.</p>
+<!--
 <div style="
      display:flex;
      gap:18px;
@@ -721,28 +754,49 @@ bash<span class="w"> </span>./conduction/FeymannKacs_plot_composite_NewPlug.sh<s
        alt="less aversion"
        style="width:350px; height:auto;">
 </div>
+-->
+<div style="
+     display:flex;
+     gap:18px;
+     justify-content:center;
+     align-items:center;
+     flex-wrap:wrap;
+">
+  <img src="../_static/paper/Figure6_all_channel_on_0.1lambda_jacobian_distorted_Technologydamage_curve_year_splines_0_allxi.png"
+       alt="more aversion"
+       style="width:700px; max-width:100%; height:auto;">
+</div>
 <!-- ——— Reproduction instructions ——— -->
 <div style="margin:0.8rem 0 0.2rem;">
 To reproduce Figure 6 in the paper, run the shell scripts provided below.
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./conduction/Postdamage_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/Postdamage_sub_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/Predamage_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_prepare_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_simulate_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
-bash<span class="w"> </span>./conduction/FeymannKacs_plot_composite_NewPlug.sh<span class="w"> </span><span class="s2">&quot;4&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">3</span>
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">3</span>
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span><span class="m">3</span>
+
+bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline<span class="w"> </span>baseline_xia
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>baseline_xia
+bash<span class="w"> </span>./sbatch/feymannkacs_simulate.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>Technology
+bash<span class="w"> </span>./sbatch/feymannkacs_plot_composite.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>Technology
+
+bash<span class="w"> </span>./sbatch/update_results.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--full-model-composite-only
 </pre></div>
 </div>
-<p>After the run finishes, you should have output files named in a pattern similar to
-<code class="docutils literal notranslate"><span class="pre">all_channel_on_0.1less</span> <span class="pre">aversionTechnologydamage_curve_year_splines_0.png</span></code>.</p>
+<p>After the run finishes, you should have output files named in a pattern similar to<br />
+<code class="docutils literal notranslate"><span class="pre">all_channel_on_0.1lambda_jacobian_distorted_Technologydamage_curve_year_splines_0_allxi.png</span></code> under <code class="docutils literal notranslate"><span class="pre">output/figures/&lt;dataset&gt;/feymannkacs_plot_composite/</span></code>.</p>
 <p>Source scripts:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage_sub_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_sub_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/Postdamage_sub_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Predamage_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/FeymannKacs_prepare_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_prepare_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/FeymannKacs_simulate_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_simulate_NewPlug.sh</span></code></strong></a></p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/FeymannKacs_plot_composite_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">FeymannKacs_plot_composite_NewPlug.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage_sub.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage_sub.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/predamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">predamage.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_prepare.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_prepare.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_simulate.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_simulate.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/feymannkacs_plot_composite.sh"><strong><code class="docutils literal notranslate"><span class="pre">feymannkacs_plot_composite.sh</span></code></strong></a></p></li>
 </ul>
 </section>
 </section>
@@ -751,8 +805,8 @@ bash<span class="w"> </span>./conduction/FeymannKacs_plot_composite_NewPlug.sh<s
     {
         requestKernel: true,
         binderOptions: {
-            repo: "zhaoyang8/mitigation_book",
-            ref: "live",
+            repo: "lphansen/mitigation_book",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -811,10 +865,10 @@ bash<span class="w"> </span>./conduction/FeymannKacs_plot_composite_NewPlug.sh<s
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drift-distortions">2.1. Drift distortions <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/FeymannKacs_prepare_NewPlug.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distorted-density-for-climate-models">2.2. Distorted density for climate models <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/ZeroShockTrajectories_simulate.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distorted-density-for-the-time-of-the-first-jump">2.3. Distorted density for the time of the first jump  <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/FeymannKacs_simulate_NewPlug.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distorted-probabilities-across-the-alternative-damage-curves">2.4. Distorted probabilities across the alternative damage curves  <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/FeymannKacs_simulate_NewPlug.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drift-distortions-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-prepare-py-class-code-link-target-blank-rel-noopener-a">2.1. Drift distortions <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_prepare.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distorted-density-for-climate-models-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-zeroshock-trajectories-simulate-py-class-code-link-target-blank-rel-noopener-a">2.2. Distorted density for climate models <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/zeroshock_trajectories_simulate.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distorted-density-for-the-time-of-the-first-jump-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a">2.3. Distorted density for the time of the first jump  <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_simulate.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distorted-probabilities-across-the-alternative-damage-curves-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-feymannkacs-simulate-py-class-code-link-target-blank-rel-noopener-a">2.4. Distorted probabilities across the alternative damage curves  <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/feymannkacs_simulate.py" rel="noopener" target="_blank"></a></a></li>
 </ul>
   </nav></div>
 
@@ -837,6 +891,13 @@ By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
   <div class="footer-item">
     
 
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
   </div>
   
   <div class="footer-item">
@@ -845,9 +906,6 @@ By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
   
   <div class="footer-item">
     
-<div class="extra_footer">
-  Notebook site — Zhaoyang Xu
-</div>
   </div>
   
 </div>

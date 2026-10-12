@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1. Economic model and HJB equations &#8212; mitigation project</title>
   
@@ -28,44 +29,48 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=47c1c39d" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/01_HJB';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="icon" href="../_static/mfr.png"/>
+    <link rel="shortcut icon" href="../_static/mfr.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. Worst-case distributions" href="02_worstcase_distributions.html" />
@@ -166,18 +171,7 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Uncertainty, Social Valuation, and Climate Change Policy</span></p>
 <ul class="current nav bd-sidenav">
@@ -185,7 +179,7 @@
 <li class="toctree-l1"><a class="reference internal" href="02_worstcase_distributions.html">2. Worst-case distributions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_stochastic_simulation.html">3. Stochastic Simulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04_value_decomposition.html">4. Value Decomposition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_real_options.html">5. Application in real options theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_real_options.html">5. Application in real options theory <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/appendix_illustrations.py" rel="noopener" target="_blank"></a></a></li>
 </ul>
 
     </div>
@@ -215,9 +209,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -240,16 +234,16 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/zhaoyang8/mitigation_book/live?urlpath=tree/docs/notebooks/01_HJB.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/lphansen/mitigation_book/main?urlpath=tree/docs/notebooks/01_HJB.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch on Binder"
+   title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+    <img src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -258,16 +252,16 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/zhaoyang8/mitigation_book/blob/live/docs/notebooks/01_HJB.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/lphansen/mitigation_book/blob/main/docs/notebooks/01_HJB.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch on Colab"
+   title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+    <img src="../_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -307,7 +301,7 @@
       
       
       
-      <li><a href="https://github.com/zhaoyang8/mitigation_book" target="_blank"
+      <li><a href="https://github.com/lphansen/mitigation_book" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -324,7 +318,7 @@
       
       
       
-      <li><a href="https://github.com/zhaoyang8/mitigation_book/edit/live/docs/notebooks/01_HJB.ipynb" target="_blank"
+      <li><a href="https://github.com/lphansen/mitigation_book/edit/main/docs/notebooks/01_HJB.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -341,7 +335,7 @@
       
       
       
-      <li><a href="https://github.com/zhaoyang8/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/01_HJB.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/lphansen/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/01_HJB.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -442,9 +436,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -465,15 +459,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-specification">1.1. Model specification <a id="model-spec"></a></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-specification-a-id-model-spec-a">1.1. Model specification <a id="model-spec"></a></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#state-variables">1.1.1. State variables</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#damage-function">1.1.2. Damage function <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/frequency_plot.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#damage-function-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-frequency-plot-py-class-code-link-target-blank-rel-noopener-a">1.1.2. Damage function <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/frequency_plot.py" rel="noopener" target="_blank"></a></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensity-function">1.1.3. Intensity function</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controls">1.1.4. Controls</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#misspecifications">1.1.5. Misspecifications</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hamiltonjacobibellman-equations">1.2. Hamilton–Jacobi–Bellman Equations <a id="hjb"></a></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hamiltonjacobibellman-equations-a-id-hjb-a">1.2. Hamilton–Jacobi–Bellman Equations <a id="hjb"></a></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-tech-post-damage">1.2.1. Post-Tech, Post-Damage</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-tech-pre-damage">1.2.2. Post-Tech, Pre-Damage</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-tech-post-damage">1.2.3. Pre-Tech, Post-Damage</a></li>
@@ -481,10 +475,10 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-method">1.3. Computational method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#policy-iteration">1.3.1. Policy iteration <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/src/PostSolver_new_rho1.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-rules-for-phi-and-gamma-at-policy-improvement-steps">1.3.2. Updating rules for <span class="math notranslate nohighlight">\(\Phi\)</span> and <span class="math notranslate nohighlight">\(\Gamma\)</span> at policy-improvement steps <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/src/PreSolver_CRS2_new_rho1.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#policy-iteration-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-src-postsolver-new-rho1-py-class-code-link-target-blank-rel-noopener-a">1.3.1. Policy iteration <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/src/postsolver_new_rho1.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-rules-for-phi-and-gamma-at-policy-improvement-steps-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-src-presolver-crs2-new-rho1-py-class-code-link-target-blank-rel-noopener-a">1.3.2. Updating rules for <span class="math notranslate nohighlight">\(\Phi\)</span> and <span class="math notranslate nohighlight">\(\Gamma\)</span> at policy-improvement steps <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/src/presolver_crs2_new_rho1.py" rel="noopener" target="_blank"></a></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-linear-pde-at-the-policy-evaluation-step">1.3.3. Solving the linear PDE at the policy-evaluation step</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-difference-scheme">1.3.4. Finite-difference scheme <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/src/Utility.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-difference-scheme-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-src-utility-py-class-code-link-target-blank-rel-noopener-a">1.3.4. Finite-difference scheme <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/src/utility.py" rel="noopener" target="_blank"></a></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">1.4. Solution</a><ul class="nav section-nav flex-column">
@@ -504,11 +498,11 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="economic-model-and-hjb-equations">
-<h1><span class="section-number">1. </span>Economic model and HJB equations<a class="headerlink" href="#economic-model-and-hjb-equations" title="Link to this heading">#</a></h1>
-<section id="model-specification">
-<h2><span class="section-number">1.1. </span>Model specification <a id="model-spec"></a><a class="headerlink" href="#model-specification" title="Link to this heading">#</a></h2>
+<h1><span class="section-number">1. </span>Economic model and HJB equations<a class="headerlink" href="#economic-model-and-hjb-equations" title="Permalink to this heading">#</a></h1>
+<section id="model-specification-a-id-model-spec-a">
+<h2><span class="section-number">1.1. </span>Model specification <a id="model-spec"></a><a class="headerlink" href="#model-specification-a-id-model-spec-a" title="Permalink to this heading">#</a></h2>
 <section id="state-variables">
-<h3><span class="section-number">1.1.1. </span>State variables<a class="headerlink" href="#state-variables" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.1.1. </span>State variables<a class="headerlink" href="#state-variables" title="Permalink to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Symbol</p></th>
@@ -523,7 +517,7 @@ document.write(`
 </tr>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(Y_t\)</span></p></td>
 <td><p>Temperature anomaly</p></td>
-<td><p><span class="math notranslate nohighlight">\(\displaystyle dY_t = \mathcal{E}_t\big[\bar{\theta}\,dt + \varsigma\,dW_t\big]\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\displaystyle dY_t = \mathcal{E}_t\big[\theta\,dt + \varsigma\,dW_t\big]\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\hat{r}_t = \log(R_t)\)</span></p></td>
 <td><p>R&amp;D capital</p></td>
@@ -534,8 +528,8 @@ document.write(`
 </div>
 <p><span class="math notranslate nohighlight">\(W_t\)</span> is a standard Brownian motion.</p>
 </section>
-<section id="damage-function">
-<h3><span class="section-number">1.1.2. </span>Damage function <a href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/frequency_plot.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#damage-function" title="Link to this heading">#</a></h3>
+<section id="damage-function-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-frequency-plot-py-class-code-link-target-blank-rel-noopener-a">
+<h3><span class="section-number">1.1.2. </span>Damage function <a href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/frequency_plot.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#damage-function-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-frequency-plot-py-class-code-link-target-blank-rel-noopener-a" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \frac{d \hat{n}}{dy} =
@@ -565,31 +559,31 @@ document.write(`
 ></iframe>
 <!-- ——— Reproduction instructions ——— -->
 <div style="margin:0.8rem 0 0.2rem;">
-To reproduce Figure 2 and Figure 9 in the paper, run the shell scripts provided below.
+To reproduce Figure 1, Figure 2, and Figure 8 in the paper, run the shell scripts provided below.
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./conduction/baseline_plot.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./sbatch/baseline_plot.sh
 </pre></div>
 </div>
-<p>After the run finishes, you should have an output file named in a pattern similar to
-<code class="docutils literal notranslate"><span class="pre">Temperature</span> <span class="pre">Anomaly.png</span></code> and <code class="docutils literal notranslate"><span class="pre">Temperature</span> <span class="pre">Anomaly</span> <span class="pre">weighted.png</span></code>.</p>
+<p>After the run finishes, you should have output files named
+<code class="docutils literal notranslate"><span class="pre">Climate_Sensitivity.png</span></code>, <code class="docutils literal notranslate"><span class="pre">Temperature</span> <span class="pre">Anomaly.png</span></code>, and <code class="docutils literal notranslate"><span class="pre">Temperature</span> <span class="pre">Anomaly</span> <span class="pre">weighted.png</span></code> under <code class="docutils literal notranslate"><span class="pre">output/figures/&lt;dataset&gt;/baseline_plot/</span></code>.</p>
 <p>Source scripts:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/conduction/baseline_plot.sh"><strong><code class="docutils literal notranslate"><span class="pre">baseline_plot.sh</span></code></strong></a></p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/baseline_plot.sh"><strong><code class="docutils literal notranslate"><span class="pre">baseline_plot.sh</span></code></strong></a></p></li>
 </ul>
 </section>
 <section id="intensity-function">
-<h3><span class="section-number">1.1.3. </span>Intensity function<a class="headerlink" href="#intensity-function" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.1.3. </span>Intensity function<a class="headerlink" href="#intensity-function" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \mathcal{J}^n(y) = 
 \begin{cases}
 0, &amp; \text{if } 0 \le y \le \underline{y} \\
-\mathsf{r}_0 \exp\left[ 
-\frac{\mathsf{r}_1}{2} (y - \underline{y})^2 + 
-\frac{\mathsf{r}_2}{2} (y - \overline{y})^{-2}
+\mathsf{d}_0 \exp\left[ 
+\frac{\mathsf{d}_1}{2} (y - \underline{y})^2 + 
+\frac{\mathsf{d}_2}{2} (y - \overline{y})^{-2}
 \right] - 
-\mathsf{r}_0 \exp\left[ 
-\frac{\mathsf{r}_2}{2} (\underline{y} - \overline{y})^{-2}
+\mathsf{d}_0 \exp\left[ 
+\frac{\mathsf{d}_2}{2} (\underline{y} - \overline{y})^{-2}
 \right], &amp; \text{if } \underline{y} &lt; y &lt; \overline{y}
 \end{cases}
 \end{split}\]</div>
@@ -600,9 +594,19 @@ To reproduce Figure 2 and Figure 9 in the paper, run the shell scripts provided 
   height="420"
   style="display:block; margin:0 auto; border:none;"
 ></iframe>
+<p>Given that a damage information event takes place, each of the <span class="math notranslate nohighlight">\(L-1\)</span> damage curves is realized with equal probability, so curve <span class="math notranslate nohighlight">\(\ell\)</span> has intensity</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{J}^{\ell}(y) = \frac{1}{L-1}\,\mathcal{J}^n(y), \qquad \ell = 1, 2, \dots, L-1.
+\]</div>
+<p>The technology jump intensity is proportional to the stock of knowledge,</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{J}^{L}(R_t) = \chi R_t
+\]</div>
 </section>
 <section id="controls">
-<h3><span class="section-number">1.1.4. </span>Controls<a class="headerlink" href="#controls" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.1.4. </span>Controls<a class="headerlink" href="#controls" title="Permalink to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Symbol</p></th>
@@ -624,7 +628,7 @@ To reproduce Figure 2 and Figure 9 in the paper, run the shell scripts provided 
 </div>
 </section>
 <section id="misspecifications">
-<h3><span class="section-number">1.1.5. </span>Misspecifications<a class="headerlink" href="#misspecifications" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.1.5. </span>Misspecifications<a class="headerlink" href="#misspecifications" title="Permalink to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Symbol</p></th>
@@ -637,13 +641,13 @@ To reproduce Figure 2 and Figure 9 in the paper, run the shell scripts provided 
 <td><p>Capital</p></td>
 <td><p>Brownian motion misspecification of <span class="math notranslate nohighlight">\(K_t\)</span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(h_y\)</span></p></td>
-<td><p>Climate</p></td>
-<td><p>Brownian motion misspecification of <span class="math notranslate nohighlight">\(Y_t\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(h_r\)</span></p></td>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(h_r\)</span></p></td>
 <td><p>Knowledge</p></td>
 <td><p>Brownian motion misspecification of <span class="math notranslate nohighlight">\(R_t\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(q(\theta)\)</span></p></td>
+<td><p>Climate</p></td>
+<td><p>Robust averaging over the 144 climate models (TCREs <span class="math notranslate nohighlight">\(\theta \in \Theta\)</span>)</p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\{ g^\ell \}_{\ell = 1}^{L-1}\)</span></p></td>
 <td><p>Damage jump</p></td>
@@ -656,11 +660,11 @@ To reproduce Figure 2 and Figure 9 in the paper, run the shell scripts provided 
 </tbody>
 </table>
 </div>
-<p>Robustness is governed by <span class="math notranslate nohighlight">\(\{\xi_k, \xi_c, \xi_r, \xi_d, \xi_g\}\)</span> — one for each uncertainty channel.</p>
+<p>Robustness is governed by two penalty parameters: <span class="math notranslate nohighlight">\(\xi_m\)</span>, shared by the Brownian and jump misspecification channels, and <span class="math notranslate nohighlight">\({\xi_a} \)</span> for the robust averaging across climate models.</p>
 </section>
 </section>
-<section id="hamiltonjacobibellman-equations">
-<h2><span class="section-number">1.2. </span>Hamilton–Jacobi–Bellman Equations <a id="hjb"></a><a class="headerlink" href="#hamiltonjacobibellman-equations" title="Link to this heading">#</a></h2>
+<section id="hamiltonjacobibellman-equations-a-id-hjb-a">
+<h2><span class="section-number">1.2. </span>Hamilton–Jacobi–Bellman Equations <a id="hjb"></a><a class="headerlink" href="#hamiltonjacobibellman-equations-a-id-hjb-a" title="Permalink to this heading">#</a></h2>
 <p>We distinguish four regimes:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -674,7 +678,7 @@ To reproduce Figure 2 and Figure 9 in the paper, run the shell scripts provided 
 <tbody>
 <tr class="row-even"><td><p>(i) Post-Tech, Post-Damage</p></td>
 <td><p>tech ✓, damage ✓</p></td>
-<td><p><span class="math notranslate nohighlight">\(\{\hat{k}\}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\{\hat{k},\, z\}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\{i_k\}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\{h_k\}\)</span></p></td>
 </tr>
@@ -686,237 +690,139 @@ To reproduce Figure 2 and Figure 9 in the paper, run the shell scripts provided 
 </tr>
 <tr class="row-even"><td><p>(iii) Pre-Tech, Post-Damage</p></td>
 <td><p>tech ✗, damage ✓</p></td>
-<td><p><span class="math notranslate nohighlight">\(\{\hat{k},\, y,\, \hat{r}\}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\{\hat{k},\, z,\, \hat{r}\}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\{i_k,\, i_r,\, e\}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\{h_k,\, h_y,\, h_r,\, g^L\}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\{h_k,\, h_r,\, q(\theta),\, g^L\}\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p>(iv) Pre-Tech, Pre-Damage</p></td>
 <td><p>tech ✗, damage ✗</p></td>
 <td><p><span class="math notranslate nohighlight">\(\{\hat{k},\, y,\, \hat{r}\}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\{i_k,\, i_r,\, e\}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\{h_k,\, h_y,\, h_r,\, g^L,\, \{ g^\ell \}_{\ell = 1}^{L-1}\}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\{h_k,\, h_r,\, q(\theta),\, g^L,\, \{ g^\ell \}_{\ell = 1}^{L-1}\}\)</span></p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<p>In the HJB equations below, <span class="math notranslate nohighlight">\(i^k\)</span> and <span class="math notranslate nohighlight">\(i^r\)</span> denote the investment-capital ratios <span class="math notranslate nohighlight">\(I^k/K\)</span> and <span class="math notranslate nohighlight">\(I^r/K\)</span>.</p>
 <p>Define</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
     z &amp;\overset{\mathrm{def}}{=} y - {\hat y} + {\bar y}\\
-   m(z) &amp;\overset{\mathrm{def}}{=} {\hat n}(y) - (\lambda_1{\hat y}+ \frac 1 2 \lambda_2 {\hat y} ^2)\\
-   W^{\ell,L}(\hat{k},z,\hat{r}) &amp;\overset{\mathrm{def}}{=} V^{\ell,L}(\hat{k},y,\hat{r}) + (\lambda_1{\hat y}+ \frac 1 2 \lambda_2 {\hat y} ^2)
+   \hat{m}(z;\ell) &amp;\overset{\mathrm{def}}{=} {\hat n}(y) - (\lambda_1{\hat y}+ \frac 1 2 \lambda_2 {\hat y} ^2)\\
+   W^{\ell,L}(\hat{k},z) &amp;\overset{\mathrm{def}}{=} V^{\ell,L,\hat{y}}(\hat{k},y) + (\lambda_1{\hat y}+ \frac 1 2 \lambda_2 {\hat y} ^2)\\
+   W^{\ell}(\hat{k},z,\hat{r}) &amp;\overset{\mathrm{def}}{=} V^{\ell,\hat{y}}(\hat{k},y,\hat{r}) + (\lambda_1{\hat y}+ \frac 1 2 \lambda_2 {\hat y} ^2)
 \end{align*}
 \end{split}\]</div>
-<p>then</p>
+<p>Then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
-   m(z) &amp;= \lambda_1(y - \hat{y})+{\frac 1 2}\lambda_2 (y - {\hat y} + {\bar y} )^2 + {\frac 1 2}\lambda_3(\ell) (y- \hat y)^2 - {\frac 1 2}\lambda_2(\bar y)^2\\
+   \hat{m}(z;\ell) &amp;= \lambda_1(y - \hat{y})+{\frac 1 2}\lambda_2 (y - {\hat y} + {\bar y} )^2 + {\frac 1 2}\lambda_3(\ell) (y- \hat y)^2 - {\frac 1 2}\lambda_2(\bar y)^2\\
    &amp;= \lambda_1(z-\bar y) +{\frac 1 2}\lambda_2z^2+{\frac 1 2}\lambda_3(\ell)(z-\bar y)^2- {\frac 1 2}\lambda_2(\bar y)^2
 \end{align*}
 \end{split}\]</div>
 <section id="post-tech-post-damage">
-<h3><span class="section-number">1.2.1. </span>Post-Tech, Post-Damage<a class="headerlink" href="#post-tech-post-damage" title="Link to this heading">#</a></h3>
-<p>We can get <span class="math notranslate nohighlight">\(W^{\ell,L}(\hat{k},z,\hat{r})\)</span> from</p>
+<h3><span class="section-number">1.2.1. </span>Post-Tech, Post-Damage<a class="headerlink" href="#post-tech-post-damage" title="Permalink to this heading">#</a></h3>
+<p>We can get <span class="math notranslate nohighlight">\(W^{\ell,L}(\hat{k},z)\)</span> from</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
-0 &amp;= \max_{i^k}\,\min_{h_k}\,
-    \left[\,
-      \delta\log\bigl(\alpha k - i^{k}\bigr)
-      - \delta W^{\ell,L}(\hat{k},z,\hat{r})
-      - \delta m(z)
-    \right] \\
-  &amp;\quad
-    + \frac{\partial W^{\ell,L}}{\partial \hat{k}}(\hat{k},z,\hat{r})
-      \left(
-        -\mu_{k}
-        + \frac{i^{k}}{k}
-        - \frac{\kappa}{2}\!\Bigl(\frac{i^{k}}{k}\Bigr)^{2}
-        - \frac{|\sigma_{k}|^{2}}{2}
-        + \sigma_k\,h_k
-      \right) 
-    + \frac{\partial^2 W^{\ell,L}}{\partial \hat{k}^2}(\hat{k},z,\hat{r})
-      \,\frac{|\sigma_{k}|^{2}}{2}\\
-  &amp;\quad
-    + \frac{\xi_k}{2}\,h_k^2.
+0 = &amp; \max_{i^k}\min_{h^k}\ \delta\log(\alpha - i^k) + \delta\hat{k} - \delta\hat{m}(\cdot;\ell) - \delta W^{\ell,L} + \xi_m\frac{\left|h^k\right|^2}{2} \\
+&amp; + \frac{\partial W^{\ell,L}}{\partial\hat{k}}\left[-\mu_k + i^k - \frac{\kappa}{2}\left(i^k\right)^2 - \frac{|\sigma_k|^2}{2} + \sigma_k h\right] + \frac{\partial^2 W^{\ell,L}}{\partial\hat{k}^2}\frac{|\sigma_k|^2}{2}
 \end{align*}
 \end{split}\]</div>
 </section>
 <section id="post-tech-pre-damage">
-<h3><span class="section-number">1.2.2. </span>Post-Tech, Pre-Damage<a class="headerlink" href="#post-tech-pre-damage" title="Link to this heading">#</a></h3>
-<p>We can get <span class="math notranslate nohighlight">\(V^{L}(\hat{k},y,\hat{r})\)</span> from</p>
+<h3><span class="section-number">1.2.2. </span>Post-Tech, Pre-Damage<a class="headerlink" href="#post-tech-pre-damage" title="Permalink to this heading">#</a></h3>
+<p>We can get <span class="math notranslate nohighlight">\(V^{L}(\hat{k})\)</span> from</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
-0 &amp;= \max_{i^k}\,\min_{h_k}\,
-    \left[
-      \delta \log\!\bigl(\alpha k - i^{k}\bigr)
-      - \delta V^{L}(\hat{k},y,\hat{r})
-      - \delta \hat n(y)
-    \right] \\[6pt]
-  &amp;\quad
-    + \frac{\partial V^{L}}{\partial \hat{k}}(\hat{k},y,\hat{r})
-      \left(
-        -\mu_{k}
-        + \frac{i^{k}}{k}
-        - \frac{\kappa}{2}\!\Bigl(\frac{i^{k}}{k}\Bigr)^{2}
-        - \frac{|\sigma_{k}|^{2}}{2}
-        + \sigma_k\,h_k
-      \right) 
-    + \frac{\partial^2 V^{L}}
-           {\partial \hat{k}\,\partial \hat{k}'}
-      (\hat{k},y,\hat{r})
-      \,\frac{|\sigma_{k}|^{2}}{2}\\[6pt]
-  &amp;\quad
-    + \frac{\xi_k}{2}\,h_k^2.
+0 = &amp; \max_{i^k}\min_{h^k}\ \delta\log(\alpha - i^k) + \delta\hat{k} - \delta\hat{n}(\cdot;\ell) - \delta V^L + \xi_m\frac{\left|h^k\right|^2}{2} \\
+&amp; + \frac{\partial V^L}{\partial\hat{k}}\left[-\mu_k + i^k - \frac{\kappa}{2}\left(i^k\right)^2 - \frac{|\sigma_k|^2}{2} + \sigma_k h\right] + \frac{\partial^2 V^L}{\partial\hat{k}^2}\frac{|\sigma_k|^2}{2},
 \end{align*}
 \end{split}\]</div>
+<p>It can be solved with the same guess-and-verify argument as the previous regime.</p>
 </section>
 <section id="pre-tech-post-damage">
-<h3><span class="section-number">1.2.3. </span>Pre-Tech, Post-Damage<a class="headerlink" href="#pre-tech-post-damage" title="Link to this heading">#</a></h3>
-<p>From Post-Post we know <span class="math notranslate nohighlight">\(W^{\ell,L}(\hat{k},z,\hat{r})\)</span>, then we can get <span class="math notranslate nohighlight">\(W^{\ell}(\hat{k},z,\hat{r})\)</span> from</p>
+<h3><span class="section-number">1.2.3. </span>Pre-Tech, Post-Damage<a class="headerlink" href="#pre-tech-post-damage" title="Permalink to this heading">#</a></h3>
+<p>From Post-Post we know <span class="math notranslate nohighlight">\(W^{\ell,L}(\hat{k},z)\)</span>, then we can get <span class="math notranslate nohighlight">\(W^{\ell}(\hat{k},z,\hat{r})\)</span> from</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
-0 &amp;= \max_{i^k,\,i^r,\,e}\;\min_{h,\,g^{L}}\;
-    \Bigl[
-      \delta \log\!\bigl(\alpha k - i^{k} - i^{r}
-        - \alpha k\,\phi_0\,(1 - \frac{e}{\beta \alpha k})^{\phi_1}
-      \bigr)
-      - \delta W^{\ell}(\hat{k},z,\hat{r})
-      - \delta m(z)
-    \Bigr] \\[6pt]
-  &amp;\quad
-    + \frac{\partial W^{\ell}}{\partial \hat{k}}(\hat{k},z,\hat{r})
-      \Bigl(
-        -\mu_{k}
-        + \frac{i^{k}}{k}
-        - \frac{\kappa}{2}\!\bigl(\frac{i^{k}}{k}\bigr)^{2}
-        - \frac{|\sigma_{k}|^{2}}{2}
-        + \sigma_{k}\,h
-      \Bigr)
-    + \frac{\partial^2 W^{\ell}}{\partial \hat{k}\,\partial \hat{k}'}(\hat{k},z,\hat{r})
-      \,\frac{|\sigma_{k}|^{2}}{2} \\[6pt]
-  &amp;\quad
-    + \frac{\partial W^{\ell}}{\partial y}(\hat{k},z,\hat{r})
-      \;e\;\bigl(\bar{\theta} + \varsigma\,h\bigr)
-    + \frac{\partial^2 W^{\ell}}{\partial y\,\partial y'}(\hat{k},z,\hat{r})
-      \;\frac{|\varsigma|^{2}}{2}\,e^{2} \\[6pt]
-  &amp;\quad
-    + \frac{\partial W^{\ell}}{\partial \hat{r}}(\hat{k},z,\hat{r})
-      \Bigl(
-        -\zeta
-        + \psi_{0}\,(i^{r})^{\psi_{1}}\,e^{-\psi_{1}\hat{r}}
-        - \frac{|\sigma_{r}|^{2}}{2}
-        + \sigma_{r}\,h
-      \Bigr)
-    + \frac{\partial^2 W^{\ell}}{\partial \hat{r}\,\partial \hat{r}'}(\hat{k},z,\hat{r})
-      \,\frac{|\sigma_{r}|^{2}}{2} \\[6pt]
-  &amp;\quad
-    + \mathcal{J}^{L}\,g^{L}\,
-      \bigl[\,W^{\ell,L}(\hat{k},z,\hat{r}) - W^{\ell}(\hat{k},z,\hat{r})\bigr]
-    + \xi\,\mathcal{J}^{L}\,\bigl[\,1 - g^{L} + g^{L}\log g^{L}\bigr] \\[6pt]
-  &amp;\quad
-    + \frac{\xi}{2}\,h' h
+0 = &amp; \max_{i^k, i^r, e}\ \min_{h, q(\theta), g^L}\ \delta\log\left[\alpha - i^k - i^r - \alpha\phi_0\left(1 - \frac{e}{\beta\alpha k}\right)^{\phi_1}\right] + \delta\hat{k} - \delta\hat{m}(z;\ell) - \delta W^\ell(\hat{k}, z, \hat{r}) \\
+&amp; + \frac{\partial W^\ell}{\partial\hat{k}}(\hat{k}, z, \hat{r})\left[-\mu_k + i^k - \frac{\kappa}{2}\left(i^k\right)^2 - \frac{|\sigma_k|^2}{2} + \sigma_k h\right] + \frac{\partial^2 W^\ell}{\partial\hat{k}\,\partial\hat{k}'}(\hat{k}, z, \hat{r})\frac{|\sigma_k|^2}{2} \\
+&amp; + \frac{\partial W^\ell}{\partial y}(\hat{k}, z, \hat{r})\,e\left[\sum_{\theta\in\Theta}\theta q(\theta)\right] + \frac{\partial^2 W^\ell}{\partial y\,\partial y'}(\hat{k}, z, \hat{r})\frac{|\varsigma|^2}{2}e^2 \\
+&amp; + \frac{\partial W^\ell}{\partial\hat{r}}(\hat{k}, z, \hat{r})\left[-\zeta + \psi_0 (i^r)^{\psi_1}\exp\left(-\psi_1\left(\hat{r} - \hat{k}\right)\right) - \frac{|\sigma_r|^2}{2} + \sigma_r h\right] + \frac{\partial^2 W^\ell}{\partial\hat{r}\,\partial\hat{r}'}(\hat{k}, z, \hat{r})\frac{|\sigma_r|^2}{2} \\
+&amp; + \mathcal{J}^L g^L\left[W^{\ell,L}(\hat{k}, z, \hat{r}) - W^\ell(\hat{k}, z, \hat{r})\right] + \xi_m\mathcal{J}^L\left[1 - g^L + g^L\log g^L\right] + \frac{\xi_m}{2}h'h + \xi_a\sum_{\theta\in\Theta} q(\theta)\log\left(\frac{q(\theta)}{p(\theta)}\right).
 \end{align*}
 \end{split}\]</div>
+<p>As a second step, the post-damage, pre-technology value function follows as</p>
+<div class="math notranslate nohighlight">
+\[
+V^{\ell,\hat{y}}(\hat{k},y,\hat{r}) = W^{\ell}(\hat{k},\, y-\hat{y}+\bar{y},\, \hat{r}) - \left(\lambda_1{\hat y}+ \frac 1 2 \lambda_2 {\hat y}^2\right).
+\]</div>
 </section>
 <section id="pre-tech-pre-damage">
-<h3><span class="section-number">1.2.4. </span>Pre-Tech, Pre-Damage<a class="headerlink" href="#pre-tech-pre-damage" title="Link to this heading">#</a></h3>
-<p>From Post-Pre we know <span class="math notranslate nohighlight">\(V^{L}(\hat{k},y,\hat{r})\)</span>,
-from Pre-Post we know <span class="math notranslate nohighlight">\(W^{\ell}(\hat{k},z,\hat{r})\)</span>, so when <span class="math notranslate nohighlight">\(y=\hat{y}\)</span>, i.e. <span class="math notranslate nohighlight">\(z = \bar{y}\)</span>, we can get</p>
+<h3><span class="section-number">1.2.4. </span>Pre-Tech, Pre-Damage<a class="headerlink" href="#pre-tech-pre-damage" title="Permalink to this heading">#</a></h3>
+<p>The inputs are the post-jump value functions: <span class="math notranslate nohighlight">\(V^{\ell,\hat{y}}\)</span> for <span class="math notranslate nohighlight">\(1 \le \ell \le L-1\)</span> (from Pre-Tech, Post-Damage) and <span class="math notranslate nohighlight">\(V^{L}\)</span> (from Post-Tech, Pre-Damage). Prior to any jump realization, the recursive equation compares the current continuation value with what would happen hypothetically if a jump occurred at the current temperature anomaly <span class="math notranslate nohighlight">\(y\)</span>, so we only need <span class="math notranslate nohighlight">\(V^{\ell,\hat{y}}\)</span> evaluated at <span class="math notranslate nohighlight">\(\hat{y} = y\)</span>. Define</p>
+<div class="math notranslate nohighlight">
+\[
+V^{\ell} \overset{\mathrm{def}}{=} V^{\ell,\hat{y}}\big|_{\hat{y}=y}, \qquad \ell = 1,\dots,L-1.
+\]</div>
+<p>The complete HJB equation for <span class="math notranslate nohighlight">\(V(\hat{k},y,\hat{r})\)</span>, with <span class="math notranslate nohighlight">\(V^{L}\)</span> entering as the <span class="math notranslate nohighlight">\(\ell = L\)</span> term, is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
-0 &amp;= \max_{i^k,\,i^r,\,e}\;\min_{h,\,g^{\ell}}\;
-    \Bigl[
-      \delta \log\!\bigl(\alpha k - i^k - i^r
-        - \alpha k\,\phi_0\,(1 - \frac{e}{\beta \alpha k})^{\phi_1}
-      \bigr)
-      - \delta V(\hat{k},\hat{y},\hat{r})
-      - \delta \hat n(\hat{y})
-    \Bigr] \\[6pt]
-  &amp;\quad
-    + \frac{\partial V}{\partial \hat{k}}(\hat{k},\hat{y},\hat{r})
-      \Bigl(
-        -\mu_{k}
-        + \frac{i^k}{k}
-        - \frac{\kappa}{2}\!\bigl(\frac{i^k}{k}\bigr)^{2}
-        - \frac{|\sigma_k|^2}{2}
-        + \sigma_k\,h
-      \Bigr)
-    + \frac{\partial^2 V}{\partial \hat{k}\,\partial \hat{k}'}(\hat{k},\hat{y},\hat{r})
-      \,\frac{|\sigma_k|^2}{2} \\[6pt]
-  &amp;\quad
-    + \frac{\partial V}{\partial y}(\hat{k},\hat{y},\hat{r})
-      \;e\;\bigl(\bar{\theta} + \varsigma\,h\bigr)
-    + \frac{\partial^2 V}{\partial y\,\partial y'}(\hat{k},\hat{y},\hat{r})
-      \;\frac{|\varsigma|^2}{2}\,e^2 \\[6pt]
-  &amp;\quad
-    + \frac{\partial V}{\partial \hat{r}}(\hat{k},\hat{y},\hat{r})
-      \Bigl(
-        -\zeta
-        + \psi_{0}\,(i^r)^{\psi_{1}}\,e^{-\psi_{1}\hat{r}}
-        - \frac{|\sigma_r|^2}{2}
-        + \sigma_r\,h
-      \Bigr)
-    + \frac{\partial^2 V}{\partial \hat{r}\,\partial \hat{r}'}(\hat{k},\hat{y},\hat{r})
-      \,\frac{|\sigma_r|^2}{2} \\[6pt]
-  &amp;\quad
-    + \sum_{\ell=1}^{L}\mathcal{J}^{\ell}\,g^{\ell}\,
-      \bigl[V^{\ell}(\hat{k},\hat{y},\hat{r}) - V(\hat{k},\hat{y},\hat{r})\bigr]
-    + \xi \sum_{\ell=1}^{L}\mathcal{J}^{\ell}
-      \bigl[\,1 - g^{\ell} + g^{\ell}\log g^{\ell}\bigr] \\[6pt]
-  &amp;\quad
-    + \frac{\xi}{2}\,h' h
+0 = &amp; \max_{i^k, i^r, e}\ \min_{h, q(\theta), g^\ell, g^L}\ \delta\log\left[\alpha - i^k - i^r - \alpha\phi_0\left(1 - \frac{e}{\beta\alpha k}\right)^{\phi_1}\right] + \delta\hat{k} - \delta\hat{n}(y) - \delta V(\hat{k}, y, \hat{r}) \\
+&amp; + \frac{\partial V}{\partial\hat{k}}(\hat{k}, y, \hat{r})\left[-\mu_k + i^k - \frac{\kappa}{2}\left(i^k\right)^2 - \frac{|\sigma_k|^2}{2} + \sigma_k h\right] + \frac{\partial^2 V}{\partial\hat{k}\,\partial\hat{k}'}(\hat{k}, y, \hat{r})\frac{|\sigma_k|^2}{2} \\
+&amp; + \frac{\partial V}{\partial y}(\hat{k}, y, \hat{r})\,e\left[\sum_{\theta\in\Theta}\theta q(\theta)\right] + \frac{\partial^2 V}{\partial y\,\partial y'}(\hat{k}, y, \hat{r})\frac{|\varsigma|^2}{2}e^2 \\
+&amp; + \frac{\partial V}{\partial\hat{r}}(\hat{k}, y, \hat{r})\left[-\zeta + \psi_0 (i^r)^{\psi_1}\exp\left(-\psi_1\left(\hat{r} - \hat{k}\right)\right) - \frac{|\sigma_r|^2}{2} + \sigma_r h\right] + \frac{\partial^2 V}{\partial\hat{r}\,\partial\hat{r}'}(\hat{k}, y, \hat{r})\frac{|\sigma_r|^2}{2} \\
+&amp; + \sum_{\ell=1}^L \mathcal{J}^\ell g^\ell\left[V^\ell(\hat{k}, y, \hat{r}) - V(\hat{k}, y, \hat{r})\right] + \xi_m\sum_{\ell=1}^L \mathcal{J}^\ell\left[1 - g^\ell + g^\ell\log g^\ell\right] + \frac{\xi_m}{2}h'h + \xi_a\sum_{\theta\in\Theta} q(\theta)\log\left(\frac{q(\theta)}{p(\theta)}\right).
 \end{align*}
 \end{split}\]</div>
 </section>
 </section>
 <section id="computational-method">
-<h2><span class="section-number">1.3. </span>Computational method<a class="headerlink" href="#computational-method" title="Link to this heading">#</a></h2>
-<section id="policy-iteration">
-<h3><span class="section-number">1.3.1. </span>Policy iteration <a href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/src/PostSolver_new_rho1.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#policy-iteration" title="Link to this heading">#</a></h3>
+<h2><span class="section-number">1.3. </span>Computational method<a class="headerlink" href="#computational-method" title="Permalink to this heading">#</a></h2>
+<section id="policy-iteration-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-src-postsolver-new-rho1-py-class-code-link-target-blank-rel-noopener-a">
+<h3><span class="section-number">1.3.1. </span>Policy iteration <a href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/src/postsolver_new_rho1.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#policy-iteration-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-src-postsolver-new-rho1-py-class-code-link-target-blank-rel-noopener-a" title="Permalink to this heading">#</a></h3>
 <p>For simplicity, denote the state space, control set, and distortion set by</p>
 <div class="math notranslate nohighlight">
 \[
 X = \{\log k,\, y,\, \log r\}, \qquad
-\Phi = \{ i^k,\, i^j,\, \mathcal{E}\}, \qquad
-\Gamma = \{ h^k,\, h^y,\, h^r,\, g^\ell\}.
+\Phi = \{ i^k,\, i^r,\, \mathcal{E}\}, \qquad
+\Gamma = \{ h^k,\, h^r,\, q(\theta),\, g^\ell,\, g^L\}.
 \]</div>
 <p>The value function <span class="math notranslate nohighlight">\(\hat{v}(X)\)</span> depends on the state <span class="math notranslate nohighlight">\(X\)</span>.</p>
-<p><strong>Input:</strong> initial guess <span class="math notranslate nohighlight">\(\hat{v}^0\)</span>; tolerance <span class="math notranslate nohighlight">\(\epsilon = 10^{-7}; pseudo‑time‑step = 0.1\)</span><br />
+<p><strong>Input:</strong> initial guesses <span class="math notranslate nohighlight">\(\hat{v}^0\)</span>, <span class="math notranslate nohighlight">\(\Phi^0\)</span>, <span class="math notranslate nohighlight">\(\Gamma^0\)</span> and values for <span class="math notranslate nohighlight">\(\Delta\tau\)</span>, <span class="math notranslate nohighlight">\(\varepsilon_{relax}\)</span>, <span class="math notranslate nohighlight">\(\epsilon_{KSP}\)</span>, <span class="math notranslate nohighlight">\(\epsilon_{outer}\)</span>, <span class="math notranslate nohighlight">\(N_{max}\)</span><br />
 <strong>Output:</strong> optimal value function <span class="math notranslate nohighlight">\(\hat{v}^{*}\)</span></p>
 <ol class="arabic simple">
-<li><p><strong>Initialise</strong> <span class="math notranslate nohighlight">\(\hat{v}\leftarrow \hat{v}^0\)</span>.</p></li>
+<li><p><strong>Initialise</strong> <span class="math notranslate nohighlight">\(\hat{v}\leftarrow \hat{v}^0\)</span>.</p></li>
 <li><p><strong>Repeat</strong></p>
 <ol class="arabic simple">
-<li><p><strong>Step 1 (controls).</strong> Compute optimal actions <span class="math notranslate nohighlight">\(\Phi^{*}\)</span> from the maximisation first-order conditions using <span class="math notranslate nohighlight">\((\hat{v},\Phi,\Gamma)\)</span>.</p></li>
+<li><p><strong>Step 1 (controls).</strong> Compute optimal actions <span class="math notranslate nohighlight">\(\Phi^{*}\)</span> from the maximisation first-order conditions using <span class="math notranslate nohighlight">\((\hat{v},\Phi,\Gamma)\)</span>. Update using the numerical relaxation scheme with weight <span class="math notranslate nohighlight">\(\varepsilon_{relax}\)</span>.</p></li>
 <li><p><strong>Step 2 (distortions).</strong> Compute optimal probability distortions <span class="math notranslate nohighlight">\(\Gamma^{*}\)</span> from the minimisation first-order conditions using <span class="math notranslate nohighlight">\((\hat{v},\Phi^{*},\Gamma)\)</span>.</p></li>
 <li><p><strong>Step 3 (value update).</strong> Obtain a provisional value <span class="math notranslate nohighlight">\(\hat{v}^{\text{new}}\)</span> by solving (conditionally) the HJB PDE with a false-transient method, given <span class="math notranslate nohighlight">\((\hat{v},\Phi^{*},\Gamma^{*})\)</span>.</p></li>
-<li><p><strong>Step 4.</strong> Set <span class="math notranslate nohighlight">\(\hat{v}\leftarrow\hat{v}^{\text{new}},\;\Phi\leftarrow\Phi^{*},\;\Gamma\leftarrow\Gamma^{*}\)</span>.</p></li>
+<li><p><strong>Step 4.</strong> Set <span class="math notranslate nohighlight">\(\hat{v}^{prior}\leftarrow\hat{v},\;\hat{v}\leftarrow\hat{v}^{\text{new}},\;\Phi\leftarrow\Phi^{*},\;\Gamma\leftarrow\Gamma^{*}\)</span>.</p></li>
 </ol>
 </li>
-<li><p><strong>Until</strong> <span class="math notranslate nohighlight">\(\lVert \hat{v}^{\text{new}}-\hat{v}\rVert &lt; \epsilon\)</span>.</p></li>
+<li><p><strong>Until</strong> <span class="math notranslate nohighlight">\(\left\|\dfrac{\hat{v}^{\text{new}}-\hat{v}^{prior}}{\Delta\tau}\right\|_\infty \le \epsilon_{outer}\)</span> or <span class="math notranslate nohighlight">\(N \ge N_{max}\)</span>.</p></li>
 </ol>
 </section>
-<section id="updating-rules-for-phi-and-gamma-at-policy-improvement-steps">
-<h3><span class="section-number">1.3.2. </span>Updating rules for <span class="math notranslate nohighlight">\(\Phi\)</span> and <span class="math notranslate nohighlight">\(\Gamma\)</span> at policy-improvement steps <a href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/src/PreSolver_CRS2_new_rho1.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#updating-rules-for-phi-and-gamma-at-policy-improvement-steps" title="Link to this heading">#</a></h3>
-<p>When solving HJB equations we typically face non-linear first-order conditions
-that have no closed-form solution.<br />
-An interior <strong>cobweb</strong> loop is therefore embedded inside Algorithm 1:</p>
-<ol class="arabic simple">
-<li><p>Start from an initial guess for a control variable.</p></li>
-<li><p>Compute the residuals in the first-order condition.</p></li>
-<li><p>Update the control based on the residuals (optionally with relaxation).</p></li>
-<li><p>Repeat until the control converges.</p></li>
-</ol>
+<section id="updating-rules-for-phi-and-gamma-at-policy-improvement-steps-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-src-presolver-crs2-new-rho1-py-class-code-link-target-blank-rel-noopener-a">
+<h3><span class="section-number">1.3.2. </span>Updating rules for <span class="math notranslate nohighlight">\(\Phi\)</span> and <span class="math notranslate nohighlight">\(\Gamma\)</span> at policy-improvement steps <a href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/src/presolver_crs2_new_rho1.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#updating-rules-for-phi-and-gamma-at-policy-improvement-steps-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-src-presolver-crs2-new-rho1-py-class-code-link-target-blank-rel-noopener-a" title="Permalink to this heading">#</a></h3>
+<p>In solving HJB equations, we often encounter complex, highly non-linear equations for our optimal control choices that do not admit analytical solutions. To address this challenge, we implement a numerical relaxation updating scheme. The relaxation weight <span class="math notranslate nohighlight">\(\varepsilon\)</span> determines the updating rate of the control vector <span class="math notranslate nohighlight">\(\Phi\)</span>. The control vector is updated according to</p>
+<div class="math notranslate nohighlight">
+\[
+\Phi_{n+1} = \varepsilon_{relax}\,\Phi^* + (1 - \varepsilon_{relax})\,\Phi_n
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Phi_{n+1}\)</span> is the next iteration’s optimal control vector, <span class="math notranslate nohighlight">\(\Phi^*\)</span> is the updating optimal control vector value using the current value function solution, and <span class="math notranslate nohighlight">\(\Phi_n\)</span> is the previous iteration’s optimal control vector.</p>
 <p>Every probability distortion arising from misspecification aversion does possess a closed-form expression in terms of <span class="math notranslate nohighlight">\(\hat{v}\)</span> and its derivatives, so those quantities are updated directly whenever <span class="math notranslate nohighlight">\(\hat{v}\)</span> is updated.</p>
 </section>
 <section id="solving-the-linear-pde-at-the-policy-evaluation-step">
-<h3><span class="section-number">1.3.3. </span>Solving the linear PDE at the policy-evaluation step<a class="headerlink" href="#solving-the-linear-pde-at-the-policy-evaluation-step" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.3.3. </span>Solving the linear PDE at the policy-evaluation step<a class="headerlink" href="#solving-the-linear-pde-at-the-policy-evaluation-step" title="Permalink to this heading">#</a></h3>
 <p>To update the value function we solve a <strong>conditionally linear</strong> PDE implicitly. A false-transient time dimension is introduced to stabilise the non-linear HJB; implicit time-stepping continues until the artificial time derivative converges
 to zero. Sparse linear systems arising at each step are solved with PETSc’s stabilised Bi-CG method and an ILU preconditioner.</p>
 <p>The HJB can be written as</p>
@@ -958,10 +864,11 @@ V^{0}(x)+
 \Bigr]\Delta t ,
 \]</div>
 <p>then solve the resulting linear system with Bi-CG-Stab.</p>
-<p>See <a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/README.md"><strong><code class="docutils literal notranslate"><span class="pre">PETSc</span></code></strong></a> for PETSc setup.</p>
+<p>See <a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/README.md"><strong><code class="docutils literal notranslate"><span class="pre">PETSc</span></code></strong></a> for PETSc setup.</p>
 </section>
-<section id="finite-difference-scheme">
-<h3><span class="section-number">1.3.4. </span>Finite-difference scheme <a href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/src/Utility.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#finite-difference-scheme" title="Link to this heading">#</a></h3>
+<section id="finite-difference-scheme-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-src-utility-py-class-code-link-target-blank-rel-noopener-a">
+<h3><span class="section-number">1.3.4. </span>Finite-difference scheme <a href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/src/utility.py" class="code-link" target="_blank" rel="noopener"></a><a class="headerlink" href="#finite-difference-scheme-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-src-utility-py-class-code-link-target-blank-rel-noopener-a" title="Permalink to this heading">#</a></h3>
+<p>For computing the derivative terms used to evaluate the optimal controls:</p>
 <ul>
 <li><p><strong>Interior points</strong> — central differences</p>
 <div class="math notranslate nohighlight">
@@ -997,15 +904,29 @@ V^{0}(x)+
 </section>
 </section>
 <section id="solution">
-<h2><span class="section-number">1.4. </span>Solution<a class="headerlink" href="#solution" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.4. </span>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h2>
 <p>Production runs are scripted:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/Postdamage_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage.sh</span></code></strong></a> – solves post‑damage regimes with random initialization</p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/Postdamage_sub_NewPlug.sh"><strong><code class="docutils literal notranslate"><span class="pre">Postdamage_sub.sh</span></code></strong></a> – grid‑refinement loop to accelerate convergence</p></li>
-<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_one/conduction/Predamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">Predamage.sh</span></code></strong></a> – solves pre‑damage regimes</p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage.sh</span></code></strong></a> – solves post‑damage regimes from a cold start</p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/postdamage_sub.sh"><strong><code class="docutils literal notranslate"><span class="pre">postdamage_sub.sh</span></code></strong></a> – continues the post‑damage solves from a converged warm start</p></li>
+<li><p><a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/sbatch/predamage.sh"><strong><code class="docutils literal notranslate"><span class="pre">predamage.sh</span></code></strong></a> – solves pre‑damage regimes</p></li>
 </ul>
+<p>For the full model, <span class="math notranslate nohighlight">\(\xi_a\)</span> is calibrated by iteration on the Coarse grid: the post- and pre-damage solves and the prepare step are repeated (case <code class="docutils literal notranslate"><span class="pre">3</span></code>) until the change in the calibrated <span class="math notranslate nohighlight">\(\xi_a\)</span> is below <span class="math notranslate nohighlight">\(10^{-7}\)</span>. The results reported in the paper use the Fine grid (<code class="docutils literal notranslate"><span class="pre">--grid-profile</span> <span class="pre">double_resolution</span></code>), which is solved next and initialized from the converged Coarse solutions. Commands without <code class="docutils literal notranslate"><span class="pre">--grid-profile</span> <span class="pre">double_resolution</span></code> reproduce the Coarse results, which differ slightly from the paper. The full command lists are in <a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/manifest_replication/master_HJB.sh"><code class="docutils literal notranslate"><span class="pre">manifest_replication/master_HJB.sh</span></code></a> and <a class="reference external" href="https://github.com/korito1416/two-capital-climate-change/blob/main/manifest_replication/master_post_HJB.sh"><code class="docutils literal notranslate"><span class="pre">manifest_replication/master_post_HJB.sh</span></code></a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span><span class="m">1</span>
+bash<span class="w"> </span>./sbatch/postdamage_sub.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">3</span>
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>calibrating_xia<span class="w"> </span><span class="m">3</span>
+bash<span class="w"> </span>./sbatch/feymannkacs_prepare.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span><span class="m">3</span>
+
+bash<span class="w"> </span>./sbatch/postdamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline
+bash<span class="w"> </span>./sbatch/predamage.sh<span class="w"> </span>--model<span class="w"> </span>full_model<span class="w"> </span>--grid-profile<span class="w"> </span>double_resolution<span class="w"> </span>--initial-guess-grid-profile<span class="w"> </span>baseline<span class="w"> </span>baseline_xia
+</pre></div>
+</div>
+<p>The two sets of surfaces below are the value function derivatives of the technology jump only model (Section 9 of the paper) on the Fine grid, sliced at the initial log capital.</p>
 <section id="frac-partial-v-partial-logr">
-<h3><span class="section-number">1.4.1. </span><span class="math notranslate nohighlight">\(\frac{\partial V}{\partial logR}\)</span><a class="headerlink" href="#frac-partial-v-partial-logr" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.4.1. </span><span class="math notranslate nohighlight">\(\frac{\partial V}{\partial logR}\)</span><a class="headerlink" href="#frac-partial-v-partial-logr" title="Permalink to this heading">#</a></h3>
 <style>
   .btn-group {
     display: inline-flex;
@@ -1066,7 +987,7 @@ V^{0}(x)+
 </script>
 </section>
 <section id="frac-partial-v-partial-y">
-<h3><span class="section-number">1.4.2. </span><span class="math notranslate nohighlight">\(\frac{\partial V}{\partial Y}\)</span><a class="headerlink" href="#frac-partial-v-partial-y" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.4.2. </span><span class="math notranslate nohighlight">\(\frac{\partial V}{\partial Y}\)</span><a class="headerlink" href="#frac-partial-v-partial-y" title="Permalink to this heading">#</a></h3>
 <style>
   /* button bar & plot box (re‑use safely; identical rules are fine) */
   .btn-group {
@@ -1140,8 +1061,8 @@ V^{0}(x)+
     {
         requestKernel: true,
         binderOptions: {
-            repo: "zhaoyang8/mitigation_book",
-            ref: "live",
+            repo: "lphansen/mitigation_book",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1200,15 +1121,15 @@ V^{0}(x)+
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-specification">1.1. Model specification <a id="model-spec"></a></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-specification-a-id-model-spec-a">1.1. Model specification <a id="model-spec"></a></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#state-variables">1.1.1. State variables</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#damage-function">1.1.2. Damage function <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/frequency_plot.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#damage-function-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-frequency-plot-py-class-code-link-target-blank-rel-noopener-a">1.1.2. Damage function <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/frequency_plot.py" rel="noopener" target="_blank"></a></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensity-function">1.1.3. Intensity function</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controls">1.1.4. Controls</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#misspecifications">1.1.5. Misspecifications</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hamiltonjacobibellman-equations">1.2. Hamilton–Jacobi–Bellman Equations <a id="hjb"></a></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hamiltonjacobibellman-equations-a-id-hjb-a">1.2. Hamilton–Jacobi–Bellman Equations <a id="hjb"></a></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-tech-post-damage">1.2.1. Post-Tech, Post-Damage</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-tech-pre-damage">1.2.2. Post-Tech, Pre-Damage</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-tech-post-damage">1.2.3. Pre-Tech, Post-Damage</a></li>
@@ -1216,10 +1137,10 @@ V^{0}(x)+
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-method">1.3. Computational method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#policy-iteration">1.3.1. Policy iteration <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/src/PostSolver_new_rho1.py" rel="noopener" target="_blank"></a></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-rules-for-phi-and-gamma-at-policy-improvement-steps">1.3.2. Updating rules for <span class="math notranslate nohighlight">\(\Phi\)</span> and <span class="math notranslate nohighlight">\(\Gamma\)</span> at policy-improvement steps <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/src/PreSolver_CRS2_new_rho1.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#policy-iteration-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-src-postsolver-new-rho1-py-class-code-link-target-blank-rel-noopener-a">1.3.1. Policy iteration <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/src/postsolver_new_rho1.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-rules-for-phi-and-gamma-at-policy-improvement-steps-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-src-presolver-crs2-new-rho1-py-class-code-link-target-blank-rel-noopener-a">1.3.2. Updating rules for <span class="math notranslate nohighlight">\(\Phi\)</span> and <span class="math notranslate nohighlight">\(\Gamma\)</span> at policy-improvement steps <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/src/presolver_crs2_new_rho1.py" rel="noopener" target="_blank"></a></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-linear-pde-at-the-policy-evaluation-step">1.3.3. Solving the linear PDE at the policy-evaluation step</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-difference-scheme">1.3.4. Finite-difference scheme <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/new_model_boundary/python/src/Utility.py" rel="noopener" target="_blank"></a></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-difference-scheme-a-href-https-github-com-korito1416-two-capital-climate-change-blob-main-python-src-utility-py-class-code-link-target-blank-rel-noopener-a">1.3.4. Finite-difference scheme <a class="code-link" href="https://github.com/korito1416/two-capital-climate-change/blob/main/python/src/utility.py" rel="noopener" target="_blank"></a></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">1.4. Solution</a><ul class="nav section-nav flex-column">
@@ -1249,6 +1170,13 @@ By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
   <div class="footer-item">
     
 
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
   </div>
   
   <div class="footer-item">
@@ -1257,9 +1185,6 @@ By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
   
   <div class="footer-item">
     
-<div class="extra_footer">
-  Notebook site — Zhaoyang Xu
-</div>
   </div>
   
 </div>
