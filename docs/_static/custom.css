@@ -32,6 +32,7 @@ div.table-of-contents a.code-link {
 }
 
 /* Match the published site's markdown table styling. */
+/* Row colors follow the theme so tables stay readable in dark mode. */
 .bd-content table.docutils {
   border: 1px solid var(--pst-color-border, #dfe2e5) !important;
 }
@@ -39,7 +40,7 @@ div.table-of-contents a.code-link {
 .bd-content table.docutils thead tr,
 .bd-content table.docutils thead tr > th,
 .bd-content table.docutils th.head {
-  background-color: #f3f4f5 !important;
+  background-color: var(--pst-color-surface, #f3f4f5) !important;
 }
 
 .bd-content table.docutils thead {
@@ -49,13 +50,13 @@ div.table-of-contents a.code-link {
 .bd-content table.docutils tbody tr.row-even,
 .bd-content table.docutils tbody tr.row-even > th,
 .bd-content table.docutils tbody tr.row-even > td {
-  background-color: #f3f4f5 !important;
+  background-color: var(--pst-color-surface, #f3f4f5) !important;
 }
 
 .bd-content table.docutils tbody tr.row-odd,
 .bd-content table.docutils tbody tr.row-odd > th,
 .bd-content table.docutils tbody tr.row-odd > td {
-  background-color: #fff !important;
+  background-color: var(--pst-color-background, #fff) !important;
 }
 
 .bd-content table.table {
@@ -65,7 +66,7 @@ div.table-of-contents a.code-link {
 .bd-content table.table thead,
 .bd-content table.table thead tr,
 .bd-content table.table thead tr > th {
-  background-color: #f3f4f5 !important;
+  background-color: var(--pst-color-surface, #f3f4f5) !important;
 }
 
 .bd-content table.table thead {
@@ -78,8 +79,8 @@ div.table-of-contents a.code-link {
 .bd-content table.table tbody tr:nth-child(odd),
 .bd-content table.table tbody tr:nth-child(odd) > th,
 .bd-content table.table tbody tr:nth-child(odd) > td {
-  background-color: #f3f4f5 !important;
-  --bs-table-bg: #f3f4f5 !important;
+  background-color: var(--pst-color-surface, #f3f4f5) !important;
+  --bs-table-bg: var(--pst-color-surface, #f3f4f5) !important;
 }
 
 .bd-content table.table tbody tr.row-odd,
@@ -88,8 +89,8 @@ div.table-of-contents a.code-link {
 .bd-content table.table tbody tr:nth-child(even),
 .bd-content table.table tbody tr:nth-child(even) > th,
 .bd-content table.table tbody tr:nth-child(even) > td {
-  background-color: #fff !important;
-  --bs-table-bg: #fff !important;
+  background-color: var(--pst-color-background, #fff) !important;
+  --bs-table-bg: var(--pst-color-background, #fff) !important;
 }
 
 .bd-content table.docutils tbody tr:hover,
