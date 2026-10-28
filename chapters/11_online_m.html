@@ -1,0 +1,679 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>M. Sensitivity analysis details: IES &#8212; Uncertainty, Social Valuation, and Climate Change Policy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/phi0_rd_data.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/11_online_m';</script>
+    <link rel="shortcut icon" href="../_static/mfr.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="N. Sensitivity analysis details: (\(\phi_0, \psi_0, \chi\))" href="12_online_n.html" />
+    <link rel="prev" title="10. Comparison to a real options formulation" href="10_real_options.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mfr.png" class="logo__image only-light" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>
+    <script>document.write(`<img src="../_static/mfr.png" class="logo__image only-dark" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_example_economy.html">1. Example economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_confronting_uncertainty.html">2. Confronting uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_hjb_equations.html">3. HJB Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_computational_method.html">4. Computational method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_first_order_conditions.html">5. First-order conditions and stochastic simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_uncertainty_assessments.html">6. Uncertainty assessments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_acting_now_or_waiting.html">7. Acting now or waiting?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_marginal_valuations.html">8. Marginal valuations as asset prices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_technology_only.html">9. A simplified model with only technology jumps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_real_options.html">10. Comparison to a real options formulation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Online appendices</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">M. Sensitivity analysis details: IES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_online_n.html">N. Sensitivity analysis details: (<span class="math notranslate nohighlight">\(\phi_0, \psi_0, \chi\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_online_o.html">O. HJB Equations with 2 Technology Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_online_p.html">P. Damage function jump intensity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/edit/main/docs/chapters/11_online_m.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fchapters/11_online_m.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/11_online_m.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>M. Sensitivity analysis details: IES</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="m-sensitivity-analysis-details-ies">
+<h1>M. Sensitivity analysis details: IES<a class="headerlink" href="#m-sensitivity-analysis-details-ies" title="Permalink to this heading">#</a></h1>
+<p>From Appendix B of the paper:</p>
+<p>We adopt a recursive representation of preferences in continuous time for the planner extended to allow <span class="math notranslate nohighlight">\(\rho \ne 1.\)</span> We start by forming the continuation value for each calendar date as follows:</p>
+<div class="math notranslate nohighlight">
+\[
+\exp(V_t) = \left( \delta \int_0^\infty \exp( - \delta \tau)  \left(C_{t+\tau}/N_{t+\tau} \right)^{1-\rho} d \tau
+\right)^{\frac 1 {1-\rho}}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\exp(V)\)</span> gives an ordinally equivalent representation of preferences since <span class="math notranslate nohighlight">\(\exp(\cdot)\)</span> is an increasing function.</p>
+<p>From Appendix F of the paper:</p>
+<p>To reduce the extensive computational cost of calculating the sensitivity analysis outcomes, we use a coarse grid resolution rather than the fine grid resolution applied for our main analysis. As shown in <a class="reference internal" href="04_computational_method.html"><span class="doc std std-doc">Appendix G</span></a>, this grid choice has no impact on the qualitative implications of the model solutions, and only minor quantitative impacts that are most noticeable in the more risk aversion case.</p>
+<p><a class="reference internal" href="#table-19"><span class="std std-ref">Table 19</span></a> shows the results for two alternative specifications of the IES that differ from unity: higher (<span class="math notranslate nohighlight">\(\rho = 3/4\)</span>) and lower (<span class="math notranslate nohighlight">\(\rho = 4/3\)</span>) IES scenarios. As expected from growth models, investments in both types of capital relative to output are higher when the elasticity is greater (<span class="math notranslate nohighlight">\(\rho\)</span> is smaller). Conversely, emissions decrease when the elasticity is greater (<span class="math notranslate nohighlight">\(\rho\)</span> is smaller).</p>
+<div class="pst-scrollable-table-container" id="table-19">
+<table class="table grouped-header">
+<thead>
+<tr><th rowspan="2"><span class="math notranslate nohighlight">\(\xi_m\)</span></th><th class="group-head" colspan="3">R&amp;D investment</th><th class="group-head" colspan="3">Capital investment</th><th class="group-head" colspan="3">Emissions</th></tr>
+<tr><th><span class="math notranslate nohighlight">\(\rho=3/4\)</span></th><th><span class="math notranslate nohighlight">\(\rho=1\)</span></th><th><span class="math notranslate nohighlight">\(\rho=4/3\)</span></th><th><span class="math notranslate nohighlight">\(\rho=3/4\)</span></th><th><span class="math notranslate nohighlight">\(\rho=1\)</span></th><th><span class="math notranslate nohighlight">\(\rho=4/3\)</span></th><th><span class="math notranslate nohighlight">\(\rho=3/4\)</span></th><th><span class="math notranslate nohighlight">\(\rho=1\)</span></th><th><span class="math notranslate nohighlight">\(\rho=4/3\)</span></th></tr>
+</thead>
+<tbody>
+<tr><td><span class="math notranslate nohighlight">\(\infty\)</span></td><td>0.014</td><td>0.007</td><td>0.003</td><td>0.878</td><td>0.773</td><td>0.702</td><td>9.104</td><td>9.265</td><td>9.377</td></tr>
+<tr><td>0.1</td><td>0.034</td><td>0.018</td><td>0.009</td><td>0.855</td><td>0.760</td><td>0.696</td><td>8.626</td><td>8.852</td><td>9.041</td></tr>
+<tr><td>0.05</td><td>0.075</td><td>0.044</td><td>0.024</td><td>0.809</td><td>0.730</td><td>0.679</td><td>7.829</td><td>8.169</td><td>8.471</td></tr>
+</tbody>
+</table>
+</div>
+<p>Table 19: Initial investments and emissions for different specifications of the IES. R&amp;D and capital investment are reported as ratios relative to total output. Outcomes are shown for the three different values of the aversion parameter <span class="math notranslate nohighlight">\(\xi_m\)</span> in the respective rows.</p>
+<p><a class="reference internal" href="#table-20"><span class="std std-ref">Table 20</span></a> shows the social value of the R&amp;D stock and the social cost of global warming for <span class="math notranslate nohighlight">\(\rho = 3/4\)</span>, <span class="math notranslate nohighlight">\(\rho = 1\)</span>, and <span class="math notranslate nohighlight">\(\rho = 4/3.\)</span> The magnitude of the social valuations of the corresponding state variables increases when the elasticity is greater (<span class="math notranslate nohighlight">\(\rho\)</span> is smaller).</p>
+<div class="pst-scrollable-table-container"><table class="table" id="table-20">
+<thead>
+<tr class="row-odd"><th class="head"><p>Inverse IES</p></th>
+<th class="head text-center"><p>SVRD</p></th>
+<th class="head text-center"><p>SCGW</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\rho=3/4\)</span></p></td>
+<td class="text-center"><p>8.83</p></td>
+<td class="text-center"><p>161.16</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\rho=1\)</span></p></td>
+<td class="text-center"><p>6.48</p></td>
+<td class="text-center"><p>119.75</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\rho=4/3\)</span></p></td>
+<td class="text-center"><p>4.67</p></td>
+<td class="text-center"><p>89.66</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 20: Social values at the initial time period for less aversion to misspecification uncertainty.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="table-35">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\rho\)</span></p></th>
+<th class="head text-center"><p>SVRD</p></th>
+<th class="head text-center"><p>SCGW</p></th>
+<th class="head text-center"><p>R&amp;D investment</p></th>
+<th class="head text-center"><p>capital investment</p></th>
+<th class="head text-center"><p>emissions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.75</p></td>
+<td class="text-center"><p>5.62</p></td>
+<td class="text-center"><p>81.95</p></td>
+<td class="text-center"><p>0.0137</p></td>
+<td class="text-center"><p>0.8781</p></td>
+<td class="text-center"><p>9.1039</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td class="text-center"><p>3.90</p></td>
+<td class="text-center"><p>60.63</p></td>
+<td class="text-center"><p>0.0066</p></td>
+<td class="text-center"><p>0.7730</p></td>
+<td class="text-center"><p>9.2645</p></td>
+</tr>
+<tr class="row-even"><td><p>1.33</p></td>
+<td class="text-center"><p>2.76</p></td>
+<td class="text-center"><p>47.55</p></td>
+<td class="text-center"><p>0.0033</p></td>
+<td class="text-center"><p>0.7022</p></td>
+<td class="text-center"><p>9.3774</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 35: Simulation results across IES values for <span class="math notranslate nohighlight">\(\xi_m = \infty\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table" id="table-36">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\rho\)</span></p></th>
+<th class="head text-center"><p>SVRD</p></th>
+<th class="head text-center"><p>SCGW</p></th>
+<th class="head text-center"><p>R&amp;D investment</p></th>
+<th class="head text-center"><p>capital investment</p></th>
+<th class="head text-center"><p>emissions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.75</p></td>
+<td class="text-center"><p>8.83</p></td>
+<td class="text-center"><p>161.16</p></td>
+<td class="text-center"><p>0.0338</p></td>
+<td class="text-center"><p>0.8550</p></td>
+<td class="text-center"><p>8.6261</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td class="text-center"><p>6.48</p></td>
+<td class="text-center"><p>119.75</p></td>
+<td class="text-center"><p>0.0183</p></td>
+<td class="text-center"><p>0.7598</p></td>
+<td class="text-center"><p>8.8517</p></td>
+</tr>
+<tr class="row-even"><td><p>1.33</p></td>
+<td class="text-center"><p>4.67</p></td>
+<td class="text-center"><p>89.66</p></td>
+<td class="text-center"><p>0.0095</p></td>
+<td class="text-center"><p>0.6958</p></td>
+<td class="text-center"><p>9.0414</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 36: Simulation results across IES values for <span class="math notranslate nohighlight">\(\xi_m = .1\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table" id="table-37">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\rho\)</span></p></th>
+<th class="head text-center"><p>SVRD</p></th>
+<th class="head text-center"><p>SCGW</p></th>
+<th class="head text-center"><p>R&amp;D investment</p></th>
+<th class="head text-center"><p>capital investment</p></th>
+<th class="head text-center"><p>emissions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.75</p></td>
+<td class="text-center"><p>13.16</p></td>
+<td class="text-center"><p>341.81</p></td>
+<td class="text-center"><p>0.0751</p></td>
+<td class="text-center"><p>0.8086</p></td>
+<td class="text-center"><p>7.8291</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td class="text-center"><p>10.05</p></td>
+<td class="text-center"><p>254.64</p></td>
+<td class="text-center"><p>0.0438</p></td>
+<td class="text-center"><p>0.7300</p></td>
+<td class="text-center"><p>8.1693</p></td>
+</tr>
+<tr class="row-even"><td><p>1.33</p></td>
+<td class="text-center"><p>7.49</p></td>
+<td class="text-center"><p>187.79</p></td>
+<td class="text-center"><p>0.0244</p></td>
+<td class="text-center"><p>0.6785</p></td>
+<td class="text-center"><p>8.4711</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 37: Simulation results across IES values for <span class="math notranslate nohighlight">\(\xi_m = .05\)</span></p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "lphansen/mitigation_book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="10_real_options.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Comparison to a real options formulation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="12_online_n.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">N. Sensitivity analysis details: (<span class="math notranslate nohighlight">\(\phi_0, \psi_0, \chi\)</span>)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

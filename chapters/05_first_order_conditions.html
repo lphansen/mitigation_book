@@ -1,0 +1,629 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>5. First-order conditions and stochastic simulations &#8212; Uncertainty, Social Valuation, and Climate Change Policy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/phi0_rd_data.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/05_first_order_conditions';</script>
+    <link rel="shortcut icon" href="../_static/mfr.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Uncertainty assessments" href="06_uncertainty_assessments.html" />
+    <link rel="prev" title="4. Computational method" href="04_computational_method.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mfr.png" class="logo__image only-light" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>
+    <script>document.write(`<img src="../_static/mfr.png" class="logo__image only-dark" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_example_economy.html">1. Example economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_confronting_uncertainty.html">2. Confronting uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_hjb_equations.html">3. HJB Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_computational_method.html">4. Computational method</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. First-order conditions and stochastic simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_uncertainty_assessments.html">6. Uncertainty assessments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_acting_now_or_waiting.html">7. Acting now or waiting?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_marginal_valuations.html">8. Marginal valuations as asset prices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_technology_only.html">9. A simplified model with only technology jumps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_real_options.html">10. Comparison to a real options formulation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Online appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11_online_m.html">M. Sensitivity analysis details: IES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_online_n.html">N. Sensitivity analysis details: (<span class="math notranslate nohighlight">\(\phi_0, \psi_0, \chi\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_online_o.html">O. HJB Equations with 2 Technology Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_online_p.html">P. Damage function jump intensity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/edit/main/docs/chapters/05_first_order_conditions.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fchapters/05_first_order_conditions.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/05_first_order_conditions.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>First-order conditions and stochastic simulations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-conditions-for-robustly-optimal-policies">5.1. First-order conditions for robustly optimal policies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-simulations">5.2. Stochastic simulations</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="first-order-conditions-and-stochastic-simulations">
+<h1><span class="section-number">5. </span>First-order conditions and stochastic simulations<a class="headerlink" href="#first-order-conditions-and-stochastic-simulations" title="Permalink to this heading">#</a></h1>
+<section id="first-order-conditions-for-robustly-optimal-policies">
+<span id="first-order"></span><h2><span class="section-number">5.1. </span>First-order conditions for robustly optimal policies<a class="headerlink" href="#first-order-conditions-for-robustly-optimal-policies" title="Permalink to this heading">#</a></h2>
+<p>In addition to <span class="math notranslate nohighlight">\(CO_2\)</span> emissions, the social planner has two investment opportunities to consider in our setup: investment in new capital and investment in R&amp;D. We now investigate the first-order conditions prior to the realization of either the technology discovery or the damage information event. The first-order conditions for all three controls have a central role for the partial derivative of the value function with respect to an endogenous state, the logarithm of capital, the logarithm of the knowledge stock, or temperature.</p>
+<p>The first-order conditions for investment in new capital are</p>
+<div class="math notranslate nohighlight">
+\[
+\frac 1 {K_t} \left[ \frac {\partial { V}}{ \partial {\hat k} } (X_t)\right] \left(1 - \kappa \, \frac {I_t^k}{K_t} \right) - \delta \, \left(\frac {1} {C_t}\right) = 0,
+\]</div>
+<p>where the initial division by <span class="math notranslate nohighlight">\(K_t\)</span> occurs because of our choice of <span class="math notranslate nohighlight">\(\log K_t\)</span> as a state variable. Thus, we obtain the formula for the investment-capital ratio:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac {I_t^k}{K_t} = \frac 1 \kappa - \frac 1 \kappa \left(\frac{\delta K_t} {C_t \left[\frac {\partial {V}}{ \partial {\hat k} } (X_t)\right] } \right),
+\]</div>
+<p>where the term in brackets on the far right of this formula, when scaled by <span class="math notranslate nohighlight">\(N_t\)</span>, is the reciprocal of “Q” from the theory of investment expressed in units of damage consumption.</p>
+<p>The first-order conditions for the socially efficient R&amp;D investment are</p>
+<div class="math notranslate nohighlight">
+\[
+\frac {\partial {V}}{ \partial {\hat r} } (X_t) \psi_0 \psi_1 \left( {I_t^r} \right)^{\psi_1-1} (R_t)^{-\psi_1} - \left(\frac {\delta} {C_t} \right) = 0 . \tag{11}
+\]</div>
+<p>Thus</p>
+<div class="math notranslate nohighlight">
+\[
+\frac {I_t^r}{R_t} = \left(\psi_0 \psi_1 \right)^{\frac 1 {1 - \psi_1}} \left(\frac {C_t \left[\frac {\partial {V}}{ \partial {\hat r} } (X_t)\right] } {\delta R_t} \right)^\frac 1 {1 - \psi_1}.
+\]</div>
+<p>where the term on the far right in brackets, when scaled by <span class="math notranslate nohighlight">\(1/N_t\)</span>, is what we will refer to as the social value of the knowledge stock of R&amp;D (SVRD). It is quantified by the marginal value of the knowledge stock and expressed in units of (damaged) consumption.</p>
+<p>The first-order conditions for emissions depend on the uncertainty-adjusted dynamics for temperature:</p>
+<div class="math notranslate nohighlight">
+\[
+\left[ \frac {\partial {V}} {\partial y} (X_t) \right] {\tilde \theta_t^*} + {\mathcal E}_t \left[ \frac {\partial^2 { V}(X_t)}{\partial y^2 } \right]|\varsigma|^2 + \left(\frac \delta {C_t} \right) \frac {\phi_0 \phi_1} {\beta } \left( {B_t}\right)^{\phi_1 - 1}{\bf 1}_{\{ {\mathcal E}_t \le \beta \alpha K_t\} } =0
+\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[
+\tilde \theta_t^* = \int_\Theta \theta Q_t^*(\theta) dP_t(\theta)
+\]</div>
+<p>provided there is a nonnegative solution for emissions. Otherwise, emissions are zero. This equation continues to hold if we divide the terms by marginal utility of damaged consumption, <span class="math notranslate nohighlight">\(\delta N_t/C_t\)</span>. The implied social cost of carbon (SCC) is</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac {C_t} {\delta N_t}\right) \left(\left[ -\frac {\partial {V}} {\partial y} (X_t) {\tilde \theta_t^*} \right] - {\mathcal E}_t \left[ \frac {\partial^2 { V}(X_t)}{\partial y^2 } \right]|\varsigma|^2 \right) , \tag{12}
+\]</div>
+<p>and the social benefit is</p>
+<div class="math notranslate nohighlight">
+\[
+{ \frac{1}{N_t}} \left(\frac {\phi_0 \phi_1} {\beta} \right) \left( {B_t} \right)^{\phi_1 - 1}{\bf 1}_{\{ {\mathcal E}_t \le \beta \alpha K_t\} },
+\]</div>
+<p>both expressed in terms of damage-adjusted consumption as the numeraire. Going forward, we refer to</p>
+<div class="math notranslate nohighlight">
+\[
+- \left(\frac {C_t} {\delta N_t}\right) \left[\frac {\partial {V}} {\partial y} (X_t) \right]
+\]</div>
+<p>as the social cost of global warming (SCGW), which is a central input into the SCC.</p>
+<p>These marginal formulas are evaluated at the socially efficient allocation as is required for deducing the Pigouvian taxation, and they depend on the presumed ambiguity aversion. Notice also that the SCC (12) includes an explicit volatility adjustment because emissions in our model alter the local exposure to Brownian motion risk.</p>
+<p>We report investment as a ratio to output, where our measure of output is <span class="math notranslate nohighlight">\(\alpha K\)</span> for a given capital realization <span class="math notranslate nohighlight">\(K\)</span>. This measure deliberately abstracts from the energy input in production. Because energy use is the source of the externality, we report the resulting emissions separately rather than incorporating an abatement adjustment into output.</p>
+</section>
+<section id="stochastic-simulations">
+<span id="simulations"></span><h2><span class="section-number">5.2. </span>Stochastic simulations<a class="headerlink" href="#stochastic-simulations" title="Permalink to this heading">#</a></h2>
+<p><a class="reference internal" href="#fig-3"><span class="std std-ref">Figure 3</span></a> gives four stochastic pathways for the robustly optimal choice of R&amp;D investment and emissions. The simulations are chosen to illustrate a range of possible outcomes, rather than to represent typical trajectories. The pathways were generated using the baseline probabilities with the investment and emissions decision rules computed under a choice of <span class="math notranslate nohighlight">\(\xi_m\)</span> that we refer to as the less averse specification.</p>
+<div id="fig-3" style="
+     display:flex;
+     gap:18px;
+     justify-content:center;
+     align-items:flex-start;
+     flex-wrap:wrap;
+">
+  <figure style="margin:0; width:340px; max-width:100%;">
+    <img src="../_static/paper/Figure3_rd_investment_paths.png"
+         alt="Four illustrative simulated stochastic pathways for R&amp;D investment as a fraction of output"
+         style="width:100%; height:auto;">
+    <figcaption style="text-align:center; font-size:0.85em;">(a) R&amp;D investment-output ratio</figcaption>
+  </figure>
+  <figure style="margin:0; width:340px; max-width:100%;">
+    <img src="../_static/paper/Figure3_emissions_paths.png"
+         alt="Four illustrative simulated stochastic pathways for emissions in gigatons of carbon (GtC)"
+         style="width:100%; height:auto;">
+    <figcaption style="text-align:center; font-size:0.85em;">(b) Emissions</figcaption>
+  </figure>
+</div>
+<p>Figure 3: Illustrative stochastic pathways computed with baseline probabilities and controls given by the <span class="math notranslate nohighlight">\(\xi_m=.1\)</span>, or less uncertainty aversion, specification. Panel (a) shows the robustly optimal R&amp;D investment choices expressed as ratio of output abstracting from the energy input (<span class="math notranslate nohighlight">\(\alpha K\)</span>) for the stochastic simulation pathways. Panel (b) shows the robustly optimal emissions choices for the stochastic simulation pathways. Path 1 (dark blue) is a case with no jumps. Path 2 (red) is a case with a technology jump at year 14. Path 3 (green) is a case with a damage curvature jump (<span class="math notranslate nohighlight">\(\lambda_3=.053\)</span>) at year 34. Path 4 (light blue) is a case with a damage curvature jump (<span class="math notranslate nohighlight">\(\lambda_3=.298\)</span>) at year 36.</p>
+<p>On path 3, the news about damage curvature at the jump date is good (a low value of <span class="math notranslate nohighlight">\(\lambda_3\)</span>), and the path for R&amp;D investment shows a substantial drop. Along path 4, the news about damage curvature is bad (a high value of <span class="math notranslate nohighlight">\(\lambda_3\)</span>), and there is a prominent increase in R&amp;D investment, presumably because of the forthcoming pronounced damages.</p>
+<p>With the exception of the path 2 technological breakthrough, the emissions responses depicted in Panel (b) of <a class="reference internal" href="#fig-3"><span class="std std-ref">Figure 3</span></a> are more muted than the R&amp;D investment responses. When there is good news about damages, as in path 3, we see a negligible impact on emissions. In contrast, for path 4, when there is a bad news realization about damages, there is a notable drop in emissions.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "lphansen/mitigation_book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="04_computational_method.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Computational method</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="06_uncertainty_assessments.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Uncertainty assessments</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-conditions-for-robustly-optimal-policies">5.1. First-order conditions for robustly optimal policies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-simulations">5.2. Stochastic simulations</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

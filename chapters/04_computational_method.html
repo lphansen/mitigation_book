@@ -1,0 +1,1087 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>4. Computational method &#8212; Uncertainty, Social Valuation, and Climate Change Policy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/phi0_rd_data.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/04_computational_method';</script>
+    <link rel="shortcut icon" href="../_static/mfr.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. First-order conditions and stochastic simulations" href="05_first_order_conditions.html" />
+    <link rel="prev" title="3. HJB Equations" href="03_hjb_equations.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mfr.png" class="logo__image only-light" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>
+    <script>document.write(`<img src="../_static/mfr.png" class="logo__image only-dark" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_example_economy.html">1. Example economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_confronting_uncertainty.html">2. Confronting uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_hjb_equations.html">3. HJB Equations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Computational method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_first_order_conditions.html">5. First-order conditions and stochastic simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_uncertainty_assessments.html">6. Uncertainty assessments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_acting_now_or_waiting.html">7. Acting now or waiting?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_marginal_valuations.html">8. Marginal valuations as asset prices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_technology_only.html">9. A simplified model with only technology jumps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_real_options.html">10. Comparison to a real options formulation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Online appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11_online_m.html">M. Sensitivity analysis details: IES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_online_n.html">N. Sensitivity analysis details: (<span class="math notranslate nohighlight">\(\phi_0, \psi_0, \chi\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_online_o.html">O. HJB Equations with 2 Technology Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_online_p.html">P. Damage function jump intensity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/edit/main/docs/chapters/04_computational_method.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fchapters/04_computational_method.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/04_computational_method.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Computational method</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#policy-iteration">4.1. Policy iteration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-rules-for-phi-and-gamma-at-policy-improvement-steps">4.2. Updating rules for <span class="math notranslate nohighlight">\(\Phi\)</span> and <span class="math notranslate nohighlight">\(\Gamma\)</span> at policy improvement steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-linear-pde-equation-at-the-policy-evaluation-step">4.3. Solving the linear PDE equation at the policy evaluation step</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-differences-scheme">4.4. Finite-differences scheme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-conditions">4.5. Boundary Conditions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameters-and-numerical-accuracy">4.6. Hyperparameters and numerical accuracy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#value-function-derivatives">4.7. Value function derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frac-partial-v-partial-hat-r">4.7.1. <span class="math notranslate nohighlight">\(\frac{\partial V}{\partial \hat{r}}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frac-partial-v-partial-y">4.7.2. <span class="math notranslate nohighlight">\(\frac{\partial V}{\partial y}\)</span></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="computational-method">
+<h1><span class="section-number">4. </span>Computational method<a class="headerlink" href="#computational-method" title="Permalink to this heading">#</a></h1>
+<p>This page is Appendix G of the paper.</p>
+<section id="policy-iteration">
+<span id="id1"></span><h2><span class="section-number">4.1. </span>Policy iteration<a class="headerlink" href="#policy-iteration" title="Permalink to this heading">#</a></h2>
+<p>For simplicity, we denote the state space, control set, and distortion set by:</p>
+<div class="math notranslate nohighlight">
+\[
+X = \{\log k, y, \log r \}, \qquad \Phi = \{ i^k, i^r, \mathcal{E} \}, \qquad \Gamma = \{ h, q(\theta), g^\ell \} .
+\]</div>
+<p>State variables, controls, and distortions that are not applicable to an HJB equation at a particular jump state are omitted. The value function <span class="math notranslate nohighlight">\(\hat{v}(X)\)</span> depends on the state <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>A pseudo-code of the numerical algorithm for solving the HJB equation via policy iteration is given in Algorithm 1. The algorithm involves an iterative process that alternates between policy improvement and policy evaluation steps.</p>
+<hr class="docutils" />
+<p><strong>Algorithm 1</strong> Solving the HJB equation via policy iteration.<br />
+<strong>Input:</strong> Initial guesses <span class="math notranslate nohighlight">\(\hat{v}^0\)</span>, <span class="math notranslate nohighlight">\(\Phi^0\)</span>, <span class="math notranslate nohighlight">\(\Gamma^0\)</span>; values for <span class="math notranslate nohighlight">\(\Delta \tau\)</span>, <span class="math notranslate nohighlight">\(\varepsilon_{relax}\)</span>, <span class="math notranslate nohighlight">\(\epsilon_{KSP}\)</span>, <span class="math notranslate nohighlight">\(\epsilon_{outer}\)</span>, <span class="math notranslate nohighlight">\(N_{max}\)</span><br />
+<strong>Output:</strong> Optimal value function <span class="math notranslate nohighlight">\(\hat{v}^*\)</span><br />
+ <span class="math notranslate nohighlight">\(\hat{v} \gets \hat{v}^0\)</span><br />
+ <strong>Repeat</strong><br />
+  Step 1: Compute optimal actions <span class="math notranslate nohighlight">\(\Phi^*\)</span> from the first-order condition of the maximization problem using <span class="math notranslate nohighlight">\(\hat{v}\)</span>, <span class="math notranslate nohighlight">\(\Phi\)</span>, <span class="math notranslate nohighlight">\(\Gamma\)</span>. Update using numerical relaxation scheme with weight <span class="math notranslate nohighlight">\(\varepsilon_{relax}\)</span>.<br />
+  Step 2: Compute optimal probability distortions <span class="math notranslate nohighlight">\(\Gamma^*\)</span> from the first-order condition of the minimization problem using <span class="math notranslate nohighlight">\(\hat{v}\)</span>, <span class="math notranslate nohighlight">\(\Phi^*\)</span>, <span class="math notranslate nohighlight">\(\Gamma\)</span>.<br />
+  Step 3: Update the value function <span class="math notranslate nohighlight">\(\hat{v}^*\)</span> by solving (conditionally) the HJB PDE with a false transient method. <span class="math notranslate nohighlight">\(\hat{v}\)</span>, <span class="math notranslate nohighlight">\(\Phi^*\)</span>, <span class="math notranslate nohighlight">\(\Gamma^*\)</span> are used in the PDE. Convergence tolerance given by <span class="math notranslate nohighlight">\(\epsilon_{KSP}\)</span>.<br />
+  Step 4: <span class="math notranslate nohighlight">\(\hat{v}^{prior} \gets \hat{v} \quad \hat{v} \gets \hat{v}^* \quad \Phi \gets \Phi^* \quad \Gamma \gets \Gamma^*\)</span><br />
+ <strong>Until</strong> <span class="math notranslate nohighlight">\(\left\|\frac{\hat{v}^* - \hat{v}^{prior}}{\Delta\tau}\right\|_\infty \le \epsilon_{outer}\)</span> or <span class="math notranslate nohighlight">\(N \ge N_{max}\)</span></p>
+<hr class="docutils" />
+</section>
+<section id="updating-rules-for-phi-and-gamma-at-policy-improvement-steps">
+<span id="updating-rules"></span><h2><span class="section-number">4.2. </span>Updating rules for <span class="math notranslate nohighlight">\(\Phi\)</span> and <span class="math notranslate nohighlight">\(\Gamma\)</span> at policy improvement steps<a class="headerlink" href="#updating-rules-for-phi-and-gamma-at-policy-improvement-steps" title="Permalink to this heading">#</a></h2>
+<p>In solving HJB equations, we often encounter complex, highly non-linear equations for our optimal control choices that do not admit analytical solutions. To address this challenge, we implement a numerical relaxation updating scheme. The relaxation weight <span class="math notranslate nohighlight">\(\varepsilon\)</span> determines the updating rate of the control vector <span class="math notranslate nohighlight">\(\Phi\)</span>. The control vector is updated according to</p>
+<div class="math notranslate nohighlight">
+\[
+\Phi_{n+1} = \varepsilon_{relax} \Phi^* + (1 - \varepsilon_{relax}) \Phi_n
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Phi_{n+1}\)</span> is the next iteration’s optimal control vector, <span class="math notranslate nohighlight">\(\Phi^*\)</span> is the updating optimal control vector value using the current value function solution, and <span class="math notranslate nohighlight">\(\Phi_n\)</span> is the previous iteration’s optimal control vector. The control updating is embedded in the outer policy/false-transient iteration. For emissions, the implementation also compares feasible stationary and boundary candidates before applying the relaxation update.</p>
+<p>We note that every probability distortion from misspecification aversion has an analytical expression as a function of the value function and its derivatives. These can be computed and plugged in directly to the HJB expressions, and the iterative process for the HJB equation solution updates these values as the value function is updated until convergence is achieved.</p>
+</section>
+<section id="solving-the-linear-pde-equation-at-the-policy-evaluation-step">
+<span id="linear-pde"></span><h2><span class="section-number">4.3. </span>Solving the linear PDE equation at the policy evaluation step<a class="headerlink" href="#solving-the-linear-pde-equation-at-the-policy-evaluation-step" title="Permalink to this heading">#</a></h2>
+<p>Updating value functions, given the state variables, controls, and distortions, is done by solving the linear PDE implicitly. To mitigate the potential instability of the non-linear HJB, we add a false transient (time) dimension and iterate the solution with an implicit time stepping procedure until the false time derivative converges to zero. In addition, we solve the linear system using a stabilized Bi-Conjugate Gradient solver with the ILU preconditioner provided by PETSc, a widely used software library developed by researchers at Argonne National laboratory to efficiently solve sparse linear/nonlinear systems.</p>
+<p>First, note that we can write the HJB equation from our model using the following form:</p>
+<div class="math notranslate nohighlight">
+\[
+A \hat{v}
++B_{\hat{k}} \frac{\partial \hat{v}}{\partial \hat{k}}
++B_{y}\frac{\partial \hat{v}}{\partial y}
++B_{\hat{r}} \frac{\partial \hat{v}}{\partial \hat{r}}
++C_{\hat{k}} \frac{\partial^2 \hat{v}}{\partial \hat{k} \, \partial \hat{k}'}
++C_{y} \frac{\partial^2 \hat{v}}{\partial y \, \partial y'}
++C_{\hat{r}} \frac{\partial^2 \hat{v}}{\partial \hat{r} \, \partial \hat{r}'}
++D =0.
+\]</div>
+<p>More generally, our system can be expressed in the conditionally linear form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+0 &amp;= V_t(x) + \mathbb{A}(x;V,V_x,V_{xx})V(x) + \mathbb{B}(x;V,V_x,V_{xx})V_x(x) \\
+&amp; \quad + \frac{1}{2}tr[\mathbb{C}(x;V,V_x,V_{xx})'V_{xx}(x)\mathbb{C}(x;V,V_x,V_{xx})] + \mathbb{D}(x;V,V_x,V_{xx})
+\end{align*}
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(x\)</span> is our state variable vector, <span class="math notranslate nohighlight">\(V_x(x)=\frac{\partial V}{\partial x}(x)\)</span> and <span class="math notranslate nohighlight">\(V_{xx}(x)=\frac{\partial^2 V}{\partial x \partial x'}(x)\)</span> are used for notational simplicity. The solution is obtained by finding a <span class="math notranslate nohighlight">\(V(x)\)</span> such that the HJB equality, first-order condition, and <span class="math notranslate nohighlight">\(V_t(x) = 0\)</span> hold. Conditional on an initial guess, <span class="math notranslate nohighlight">\(V^0(x)\)</span>, we calculate the coefficients <span class="math notranslate nohighlight">\(\mathbb{A}, \mathbb{B}, \mathbb{C}\)</span> and <span class="math notranslate nohighlight">\(\mathbb{D}\)</span> based on the flow utility and the evolution of the state variables. We substitute the calculated coefficients, rearrange the terms, and apply a backward finite difference to <span class="math notranslate nohighlight">\(V^0_t(x)\)</span> to obtain the final expression</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\hat{V}(x) &amp;= V^0(x) + [ \mathbb{A}(x,V^0,V^0_x,V^0_{xx})\hat{V}(x) + \mathbb{B}(x,V^0,V^0_x,V^0_{xx})\hat{V}_x(x) \\
+&amp; \quad + \frac{1}{2}tr[\mathbb{C}(x,V^0,V^0_x,V^0_{xx})'\hat{V}_{xx}(x)\mathbb{C}(x,V^0,V^0_x,V^0_{xx})] + \mathbb{D}(x,V^0,{V^0_x},V^0_{xx}) ] \Delta t .
+\end{align*}
+\end{split}\]</div>
+<p>We solve numerically for <span class="math notranslate nohighlight">\(\hat{V}(x)\)</span> from this linear HJB system using the Preconditioned Bi-Conjugate Gradient Stabilized (BCGS) Krylov subspace (KSP) method from van der Vorst (1992), with ILU preconditioner.</p>
+<p>The relative KSP residual tolerance statistic used to determine convergence of the solution for the linear system is given by</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\left\|P^{-1}(AV_n - b)\right\|_2}{\left\|P^{-1}(AV_0 - b)\right\|_2} \le \epsilon_{KSP},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(P^{-1}\)</span> represents the ILU pre-conditioner and <span class="math notranslate nohighlight">\(AV=b\)</span> represents the conditional linear system for a given value function <span class="math notranslate nohighlight">\(V\)</span>. The implementation of this step terminates when this statistic is less than <span class="math notranslate nohighlight">\(\epsilon_{KSP}\)</span>.</p>
+<p>The false-transient residual is the statistic used to determine convergence for the “outer loop” of the algorithm. This statistic is computed as</p>
+<div class="math notranslate nohighlight">
+\[
+\left\|\frac{(V^{n+1}-V^n)}{\Delta\tau}\right\|_\infty \le \epsilon_{outer}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(V^{n+1}\)</span> is the next iteration’s value function, <span class="math notranslate nohighlight">\(V^n\)</span> is the previous iteration’s value function, and <span class="math notranslate nohighlight">\(\Delta \tau\)</span> is the false transient step size. The implementation of this step terminates when this statistic is less than <span class="math notranslate nohighlight">\(\epsilon_{outer}\)</span> or when the stated maximum iteration count is reached.</p>
+</section>
+<section id="finite-differences-scheme">
+<span id="finite-differences"></span><h2><span class="section-number">4.4. </span>Finite-differences scheme<a class="headerlink" href="#finite-differences-scheme" title="Permalink to this heading">#</a></h2>
+<p>For calculating first- and second-order derivatives used to compute optimal controls, we use central differences at all interior points in the state space. At boundary points corresponding to the minimum state values we use forward differences, and at the maximum boundary values we apply backward differences. The benefit of using central differences is that they provide greater accuracy in approximating derivatives than one-sided differences, while also leading to faster convergence in iterative numerical algorithms when the algorithm converges.</p>
+<p>Central differences, however, can generate spurious oscillations. Therefore, for each of our drift terms <span class="math notranslate nohighlight">\(\mathbb{B}_n(x;V,V_x,V_{xx})V_{x_n}(x)\)</span>, where <span class="math notranslate nohighlight">\(x_n \in \{\hat{k}, y, \hat{r}\}\)</span>, we use an implicit upwind finite-difference scheme that selects forward or backward differences depending on the sign of <span class="math notranslate nohighlight">\(\mathbb{B}_n\)</span>. This is implemented in the matrix assembly step for the PetSc solver by switching which neighbor enters the stencil based on the sign of <span class="math notranslate nohighlight">\(\mathbb{B}_n\)</span>. This yields a monotone discretization of the first-order part of the HJB operator at interior grid points. The second derivatives are approximated with central differences at all interior points in the state space, forward differences at minimum boundary values, and backward differences at maximum boundary values. The controls used in policy evaluation are computed from the model’s first-order conditions using the derivative approximations described above.</p>
+<p>Finally, we note two additional features that improve the numerical stability of our algorithm. First, our model includes non-trivial volatility terms, which help disperse local truncation errors. Second, we use relatively small time steps for the false-transient terms in our algorithm, which help dampen spurious oscillations and feedback loops. Together with the implicit upwind finite-difference scheme, these features promote numerical stability.</p>
+</section>
+<section id="boundary-conditions">
+<span id="id2"></span><h2><span class="section-number">4.5. </span>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this heading">#</a></h2>
+<p>Boundary conditions in our algorithm come in two forms. First, the specification of the damage information event introduces an explicit “physical” or “economic” boundary value at <span class="math notranslate nohighlight">\(\bar{y}\)</span> in the form of a value matching condition. The value matching condition is given by the robust (certainty equivalent) boundary aggregation of the <span class="math notranslate nohighlight">\(L-1\)</span> post-damage curvature jump continuation values</p>
+<div class="math notranslate nohighlight">
+\[
+V = -\xi_m \log \left[ \frac{1}{L-1} \sum_{\ell=1}^{L-1} \exp \left( -\frac{V^{\ell}}{\xi_m} \right) \right],
+\]</div>
+<p>which is achieved in the limit as the jump intensity goes to infinity. Numerically, this condition can be approximated by imposing a large (but finite) value of the damage information event arrival rate while maintaining the robust jump terms in the HJB equation. We use this approximation of the true value matching condition for the pre-damage curvature jump settings based on the values of the post-jump value function at <span class="math notranslate nohighlight">\(\bar{y}\)</span> across the <span class="math notranslate nohighlight">\(\hat{k}\)</span> and <span class="math notranslate nohighlight">\(\hat{r}\)</span> dimensions of the state space.</p>
+<p>Along the remaining boundaries of the state space, there are no obvious “physical” or “economic” boundary conditions to impose. Therefore, with the PDE operator discretized up to the boundary, we use the “natural” one-sided finite difference closure implied by our upwind finite-difference scheme at all remaining boundary points of the state space. Specifically, we apply forward differences at boundary points corresponding to the minimum state values and backward differences while at the maximum boundary values for both first- and second-order derivatives. To test the potential impact of these boundary conditions on the achieved numerical solutions, we informally explore different grid sizes and bounds on the state space and find essentially no change in the outcomes for these sensitivity analyses.</p>
+</section>
+<section id="hyperparameters-and-numerical-accuracy">
+<span id="numerical-accuracy"></span><h2><span class="section-number">4.6. </span>Hyperparameters and numerical accuracy<a class="headerlink" href="#hyperparameters-and-numerical-accuracy" title="Permalink to this heading">#</a></h2>
+<p><a class="reference internal" href="#table-24"><span class="std std-ref">Table 24</span></a> shows the state variable domain space, the number of grid points used within the state domain, and the discretization step size along the state and false transient domains. <a class="reference internal" href="#table-25"><span class="std std-ref">Table 25</span></a> provides the values used for the relaxation weight, the relative KSP residual tolerance, the false-transient residual tolerance, and the maximum iterations for each scenario. The “initial” and “warm” designations indicate the value-function initialization type. “Initial” denotes the first solve using the stage-specific initialization implemented by the solver: the default state-dependent guess for <span class="math notranslate nohighlight">\(W^{\ell}\)</span> and the mean of the post-damage continuation values for <span class="math notranslate nohighlight">\(V\)</span>. “Warm” denotes initialization from an existing solution for the corresponding equation on the same grid. We note that the post-technology jump cases <span class="math notranslate nohighlight">\(W^{\ell,L}\)</span> and <span class="math notranslate nohighlight">\(V^L\)</span> have analytic solutions which we use in our main results. Thus, we do not include these cases in Tables <a class="reference internal" href="#table-24"><span class="std std-ref">24</span></a> and <a class="reference internal" href="#table-25"><span class="std std-ref">25</span></a> as no false-transient step size, relaxation weight, KSP residual tolerance, outer stopping tolerance, or maximum iterations are needed in those settings. The state domain, grid points, and grid spacing used to compute the numerical solutions for those settings match the pre-technology jump counterparts (<span class="math notranslate nohighlight">\(W^{\ell,L}\)</span> uses the same values as <span class="math notranslate nohighlight">\(W^\ell\)</span> and <span class="math notranslate nohighlight">\(V^L\)</span> uses the same values as <span class="math notranslate nohighlight">\(V\)</span>). Importantly, the reported values reflect the choice of a broad state space domain with sufficient discretization to derive accurate numerical solutions.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="table-24">
+<thead>
+<tr class="row-odd"><th class="head"><p>Value Function</p></th>
+<th class="head text-center"><p>State domain <span class="math notranslate nohighlight">\([\hat{k}] \times [Y/z] \times [\hat{r}]\)</span></p></th>
+<th class="head text-center"><p>Grid points <span class="math notranslate nohighlight">\(n_{\hat{k}} \times n_Y/n_z \times n_{\hat{r}}\)</span></p></th>
+<th class="head text-center"><p>Grid spacing <span class="math notranslate nohighlight">\((\Delta \hat{k},\Delta Y/\Delta z,\Delta \hat{r})\)</span></p></th>
+<th class="head text-center"><p>False-transient step <span class="math notranslate nohighlight">\((\Delta \tau)\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(W^\ell\)</span> (initial)</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\([4,9]\times[0,5]\times[1,8]\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(51\times201\times71\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\((0.1,0.025,0.1)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(0.1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(W^\ell\)</span> (warm start)</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\([4,9]\times[0,5]\times[1,8]\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(51\times201\times71\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\((0.1,0.025,0.1)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(0.025\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(V\)</span> (initial and warm)</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\([4,9]\times[0,2.5]\times[1,8]\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(51\times101\times71\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\((0.1,0.025,0.1)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(0.05\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 24: Numerical discretization criteria. Reported values are for the full-model baseline-parameter solutions. The middle entries for columns 2-4 are denoted by the labels <span class="math notranslate nohighlight">\(Y/z\)</span>, <span class="math notranslate nohighlight">\(n_Y/n_z\)</span>, and <span class="math notranslate nohighlight">\(\Delta Y/\Delta z\)</span> to reflect that the post-damage state vector is <span class="math notranslate nohighlight">\((\log K,z,\log R)\)</span>, while the pre-damage state vector is <span class="math notranslate nohighlight">\((\log K,Y,\log R)\)</span>.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="table-25">
+<thead>
+<tr class="row-odd"><th class="head"><p>Value Function</p></th>
+<th class="head text-center"><p>Relaxation weight <span class="math notranslate nohighlight">\((\varepsilon)\)</span></p></th>
+<th class="head text-center"><p>KSP residual tolerance <span class="math notranslate nohighlight">\((\epsilon_{KSP})\)</span></p></th>
+<th class="head text-center"><p>Outer stopping tolerance <span class="math notranslate nohighlight">\((\epsilon_{outer})\)</span></p></th>
+<th class="head text-center"><p>Maximum iterations</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(W^\ell\)</span> (initial)</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(0.1\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(10^{-13}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(10^{-7}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(10{,}000\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(W^\ell\)</span> (warm start)</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(0.025\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(10^{-13}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(10^{-7}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(100{,}000\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(V\)</span> (initial and warm)</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(0.05\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(10^{-13}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(10^{-7}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(50{,}000\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 25: Numerical convergence criteria. Reported values are for the full-model baseline-parameter solutions. Post- and pre-damage state vectors are given by <span class="math notranslate nohighlight">\((\log K,z,\log R)\)</span> and <span class="math notranslate nohighlight">\((\log K,Y,\log R)\)</span>, respectively.</p>
+<p><a class="reference internal" href="#table-26"><span class="std std-ref">Table 26</span></a> shows the number of equations corresponding to each type of value function solved, the maximum absolute KSP residual, the maximum false-transient residual, and the maximum reported outer iterations. Note that the maximum absolute KSP residual provided by PETSc that we report can exceed or be significantly smaller than the relative KSP residual tolerance that is used as the stopping criteria statistic. The central takeaway from these reported values is that each of these outcomes demonstrates a high level of accuracy achieved in deriving our solutions, emphasizing reliability of the numerical solutions we have computed.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="table-26">
+<thead>
+<tr class="row-odd"><th class="head"><p>Value Function</p></th>
+<th class="head text-center"><p>Number of equations</p></th>
+<th class="head text-center"><p>Max absolute KSP residual norm</p></th>
+<th class="head text-center"><p>Max false-transient residual</p></th>
+<th class="head text-center"><p>Max outer iterations</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(W^\ell\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(60\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(2.78\times10^{-10}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(9.9994\times10^{-8}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(16{,}027\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(V\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(3\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(2.75\times10^{-10}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(9.9922\times10^{-8}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(5{,}410\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 26: Convergence diagnostics and residuals. Reported values are for the full-model baseline-parameter solutions, including the uncertainty-neutral, less-aversion, and more-aversion specifications. The post-damage curvature jump row contains 20 damage curvature specifications for each aversion specification. The pre-damage curvature jump row contains one equation per aversion specification and incorporates all 20 post-damage curvature jump continuation values. Post- and pre-damage state vectors are given by <span class="math notranslate nohighlight">\((\log K,z,\log R)\)</span> and <span class="math notranslate nohighlight">\((\log K,Y,\log R)\)</span>, respectively.</p>
+<p>Tables <a class="reference internal" href="#table-27"><span class="std std-ref">27</span></a> - <a class="reference internal" href="#table-28"><span class="std std-ref">28</span></a> provide details for additional accuracy results via a grid-refinement check. For these tests, we compare social valuation, optimal control, and value function outcomes across state space grid resolutions. <a class="reference internal" href="#table-27"><span class="std std-ref">Table 27</span></a> summarizes the two different grid specifications used in this comparison. The grid used in the main body of the paper is <span class="math notranslate nohighlight">\((n_{\hat{k}}, n_z, n_{\hat{r}}) = (51,201,71)\)</span> for the post-damage curvature jump state and <span class="math notranslate nohighlight">\((n_{\hat{k}}, n_Y, n_{\hat{r}}) = (51,101,71)\)</span> for the pre-damage curvature jump state. We compare these results, referred to as the fine grid resolution case, with those for a coarse grid resolution with corresponding grids of <span class="math notranslate nohighlight">\((n_{\hat{k}}, n_z, n_{\hat{r}}) = (26,101,36)\)</span> for the post-damage curvature jump state and <span class="math notranslate nohighlight">\((n_{\hat{k}}, n_Y, n_{\hat{r}}) = (26,51,36)\)</span> for the pre-damage curvature jump state.</p>
+<div class="pst-scrollable-table-container" id="table-27">
+<table class="table grouped-header">
+<thead>
+<tr><th rowspan="2">Grid specification</th><th class="group-head" colspan="2">post-damage jump</th><th class="group-head" colspan="2">pre-damage jump</th></tr>
+<tr><th><span class="math notranslate nohighlight">\(n_{\hat{k}}\times n_Y/n_z\times n_{\hat r}\)</span></th><th>grid scaling</th><th><span class="math notranslate nohighlight">\(n_{\hat{k}}\times n_Y/n_z\times n_{\hat r}\)</span></th><th>grid scaling</th></tr>
+</thead>
+<tbody>
+<tr><td>coarse resolution</td><td><span class="math notranslate nohighlight">\(26\times101\times36\)</span></td><td><span class="math notranslate nohighlight">\(1.00\times\)</span></td><td><span class="math notranslate nohighlight">\(26\times51\times36\)</span></td><td><span class="math notranslate nohighlight">\(1.00\times\)</span></td></tr>
+<tr><td>fine resolution</td><td><span class="math notranslate nohighlight">\(51\times201\times71\)</span></td><td><span class="math notranslate nohighlight">\(7.70\times\)</span></td><td><span class="math notranslate nohighlight">\(51\times101\times71\)</span></td><td><span class="math notranslate nohighlight">\(7.66\times\)</span></td></tr>
+</tbody>
+</table>
+</div>
+<p>Table 27: State variable grids used in the refinement exercise. Grid sizes are reported as the total number of nodes used along each dimension when solving the HJB equation. Grid scaling is the number of total nodes relative to the original grid size.</p>
+<p><a class="reference internal" href="#table-28"><span class="std std-ref">Table 28</span></a> provides the value function, social valuation, and optimal control results for the two grid specifications. The magnitudes for differences in the value function outcomes are very modest, ranging between <span class="math notranslate nohighlight">\(.02\%\)</span> and <span class="math notranslate nohighlight">\(.14\%\)</span>. The differences in social valuations and controls across grid resolutions are also relatively small, though somewhat larger than the value function outcomes. For the SVRD and SCGW, the differences range between <span class="math notranslate nohighlight">\(.15\%\)</span> and <span class="math notranslate nohighlight">\(3.01\%\)</span> in absolute value. For R&amp;D investment and emissions, the differences range between <span class="math notranslate nohighlight">\(.02\%\)</span> and <span class="math notranslate nohighlight">\(6.13\%\)</span> in absolute value. The slightly larger differences reflect the impact of needing numerical derivatives to compute the social valuation and optimal control outcomes from the value function solutions. These results show that the grid choice for our model results provides a high level of accuracy for all of the main outcomes derived from our numerical solutions.</p>
+<p id="table-28"><strong>(a) Coarse grid resolution</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\xi_m\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(V(X_0)\)</span></p></th>
+<th class="head text-center"><p>SVRD</p></th>
+<th class="head text-center"><p>R&amp;D investment</p></th>
+<th class="head text-center"><p>SCGW</p></th>
+<th class="head text-center"><p>emissions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+<td class="text-center"><p>4.87</p></td>
+<td class="text-center"><p>3.90</p></td>
+<td class="text-center"><p>0.0066</p></td>
+<td class="text-center"><p>60.6</p></td>
+<td class="text-center"><p>9.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.1</p></td>
+<td class="text-center"><p>4.78</p></td>
+<td class="text-center"><p>6.48</p></td>
+<td class="text-center"><p>0.0183</p></td>
+<td class="text-center"><p>119.7</p></td>
+<td class="text-center"><p>8.85</p></td>
+</tr>
+<tr class="row-even"><td><p>0.05</p></td>
+<td class="text-center"><p>4.64</p></td>
+<td class="text-center"><p>10.05</p></td>
+<td class="text-center"><p>0.0438</p></td>
+<td class="text-center"><p>254.6</p></td>
+<td class="text-center"><p>8.17</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>(b) Fine grid resolution</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\xi_m\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(V(X_0)\)</span></p></th>
+<th class="head text-center"><p>SVRD</p></th>
+<th class="head text-center"><p>R&amp;D investment</p></th>
+<th class="head text-center"><p>SCGW</p></th>
+<th class="head text-center"><p>emissions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+<td class="text-center"><p>4.87</p></td>
+<td class="text-center"><p>3.91</p></td>
+<td class="text-center"><p>0.0066</p></td>
+<td class="text-center"><p>60.5</p></td>
+<td class="text-center"><p>9.26</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(0.1\)</span></p></td>
+<td class="text-center"><p>4.79</p></td>
+<td class="text-center"><p>6.52</p></td>
+<td class="text-center"><p>0.0185</p></td>
+<td class="text-center"><p>118.9</p></td>
+<td class="text-center"><p>8.85</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(0.05\)</span></p></td>
+<td class="text-center"><p>4.65</p></td>
+<td class="text-center"><p>10.36</p></td>
+<td class="text-center"><p>0.0465</p></td>
+<td class="text-center"><p>258.9</p></td>
+<td class="text-center"><p>8.15</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 28: Grid-refinement comparisons of key model outcomes. Panel 28a shows the results using the coarse grid resolution. Panel 28b shows the results using the fine grid resolution. Column 1 identifies the uncertainty aversion cases considered: baseline (<span class="math notranslate nohighlight">\(\xi_m = \infty\)</span>), less aversion (<span class="math notranslate nohighlight">\(\xi_m = .1\)</span>), and more aversion (<span class="math notranslate nohighlight">\(\xi_m = .05\)</span>). Columns 2-6 show the value function, the SVRD, R&amp;D investment-to-output ratio, the SCGW, and emissions, respectively, evaluated at the initial state variable vector <span class="math notranslate nohighlight">\(X_0\)</span>.</p>
+<p>Our final accuracy check comes from evaluating the two methods used to compute our marginal social valuations. The first method is a “direct” computation using the finite-difference derivative of the HJB value function at the initial state, computed on the HJB solution grid. The second method is an “indirect” calculation based on the Monte Carlo evaluation of the marginal valuation formula given by</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial V}{\partial x}(X_0)\cdot\Lambda_0
+\;=\;
+\widetilde{E}\!\left[\int_0^{\infty} \mathrm{Dis}_t\,\big(\Lambda_t\cdot \mathrm{Scf}_t\big) dt
+\;\Big|\; X_0,\Lambda_0\right].
+\]</div>
+<p>Summing over the flow i, ii and iii terms computed in this manner, and normalizing by marginal utility, we get an expression in the same units as our direct method. While the two methods are identical mathematically, the second method carries additional numerical errors from</p>
+<ul class="simple">
+<li><p>i) numerical derivative approximation (e.g., finite differences and grid discretization)</p></li>
+<li><p>ii) simulation-based approximation (e.g., time discretization and finite time boundary)</p></li>
+<li><p>iii) Monte Carlo sampling (e.g., sampling noise from finite stochastic pathways)</p></li>
+</ul>
+<p>We first note that the Monte Carlo standard errors, computed from the cross-sectional dispersion of the simulation pathways, are sufficiently small (<span class="math notranslate nohighlight">\(0.002\)</span>–<span class="math notranslate nohighlight">\(0.006\)</span>) as to be inconsequential for the overall numerical error. To evaluate the “numerical derivatives” errors, we again use grid refinement to compare outcomes across specifications. If the gap between the indirect and direct methods is driven by derivative approximation, enhanced state variable grid resolution refinement should systematically shrink the difference between the results from the two specifications. We therefore compute the social valuations based on the indirect and direct methods using the two grid resolutions outlined in <a class="reference internal" href="#table-27"><span class="std std-ref">Table 27</span></a> for each specification. As the fine grid solution has <span class="math notranslate nohighlight">\(2.0 \times\)</span> the number of nodes along each dimension as the coarse grid solution, the first-order discretization errors should roughly halve between the coarse- and fine-grid solutions.</p>
+<p id="table-29"><strong>(a) Technology jump only model</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\xi_m\)</span></p></th>
+<th class="head"><p>grid</p></th>
+<th class="head text-center"><p>indirect SVRD</p></th>
+<th class="head text-center"><p>direct SVRD</p></th>
+<th class="head text-center"><p>absolute gap</p></th>
+<th class="head text-center"><p>relative gap</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+<td><p>coarse</p></td>
+<td class="text-center"><p>4.39</p></td>
+<td class="text-center"><p>4.27</p></td>
+<td class="text-center"><p>0.12</p></td>
+<td class="text-center"><p>2.87%</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.1</p></td>
+<td><p>coarse</p></td>
+<td class="text-center"><p>6.82</p></td>
+<td class="text-center"><p>6.41</p></td>
+<td class="text-center"><p>0.40</p></td>
+<td class="text-center"><p>6.28%</p></td>
+</tr>
+<tr class="row-even"><td><p>0.05</p></td>
+<td><p>coarse</p></td>
+<td class="text-center"><p>9.67</p></td>
+<td class="text-center"><p>8.70</p></td>
+<td class="text-center"><p>0.97</p></td>
+<td class="text-center"><p>11.13%</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+<td><p>fine</p></td>
+<td class="text-center"><p>4.32</p></td>
+<td class="text-center"><p>4.26</p></td>
+<td class="text-center"><p>0.05</p></td>
+<td class="text-center"><p>1.21%</p></td>
+</tr>
+<tr class="row-even"><td><p>0.1</p></td>
+<td><p>fine</p></td>
+<td class="text-center"><p>6.64</p></td>
+<td class="text-center"><p>6.44</p></td>
+<td class="text-center"><p>0.19</p></td>
+<td class="text-center"><p>2.99%</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.05</p></td>
+<td><p>fine</p></td>
+<td class="text-center"><p>9.40</p></td>
+<td class="text-center"><p>8.90</p></td>
+<td class="text-center"><p>0.50</p></td>
+<td class="text-center"><p>5.63%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>(b) Full baseline model</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\xi_m\)</span></p></th>
+<th class="head"><p>grid</p></th>
+<th class="head text-center"><p>indirect SVRD</p></th>
+<th class="head text-center"><p>direct SVRD</p></th>
+<th class="head text-center"><p>absolute gap</p></th>
+<th class="head text-center"><p>relative gap</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+<td><p>coarse</p></td>
+<td class="text-center"><p>4.01</p></td>
+<td class="text-center"><p>3.90</p></td>
+<td class="text-center"><p>0.11</p></td>
+<td class="text-center"><p>2.79%</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(0.1\)</span></p></td>
+<td><p>coarse</p></td>
+<td class="text-center"><p>6.80</p></td>
+<td class="text-center"><p>6.48</p></td>
+<td class="text-center"><p>0.32</p></td>
+<td class="text-center"><p>4.87%</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(0.05\)</span></p></td>
+<td><p>coarse</p></td>
+<td class="text-center"><p>10.83</p></td>
+<td class="text-center"><p>10.05</p></td>
+<td class="text-center"><p>0.77</p></td>
+<td class="text-center"><p>7.70%</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+<td><p>fine</p></td>
+<td class="text-center"><p>3.95</p></td>
+<td class="text-center"><p>3.91</p></td>
+<td class="text-center"><p>0.04</p></td>
+<td class="text-center"><p>1.11%</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(0.1\)</span></p></td>
+<td><p>fine</p></td>
+<td class="text-center"><p>6.66</p></td>
+<td class="text-center"><p>6.52</p></td>
+<td class="text-center"><p>0.14</p></td>
+<td class="text-center"><p>2.19%</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(0.05\)</span></p></td>
+<td><p>fine</p></td>
+<td class="text-center"><p>10.78</p></td>
+<td class="text-center"><p>10.36</p></td>
+<td class="text-center"><p>0.42</p></td>
+<td class="text-center"><p>4.07%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 29: Grid-refinement comparisons of indirect and direct SVRD calculations across various model specifications. Panel 29a shows the results for the technology jump only model. Panel 29b shows the results for the full baseline model. Column 1 identifies the uncertainty aversion cases considered: baseline (<span class="math notranslate nohighlight">\(\xi_m = \infty\)</span>), less aversion (<span class="math notranslate nohighlight">\(\xi_m = .1\)</span>), and more aversion (<span class="math notranslate nohighlight">\(\xi_m = .05\)</span>). Column 2 identifies the state space grid cases considered. Columns 3 and 4 give the indirect and direct SVRD values, respectively. Columns 5 and 6 give the absolute and relative gap in valuations, respectively.</p>
+<p><a class="reference internal" href="#table-29"><span class="std std-ref">Table 29</span></a> shows the results of our grid-refinement audit of the numerical discrepancies between the “direct” and “indirect” social valuation calculations for the technology jump only and full model specifications. The top panel, 29a, shows the outcomes for the technology jump only model. The bottom panel, 29b, shows the outcomes for the full model. Note that an accurate characterization of the grid refinement effect across methods requires an additional adjustment for the full model setting. Because the full model includes the damage information event, simulations are terminated at the sooner of the temperature anomaly threshold <span class="math notranslate nohighlight">\(\bar{y}\)</span> or year 65, whichever comes first. This differs from the technology only jump model, for which we terminate the simulations at 120 years. This introduces a small negative terminal value error for the indirect method in the full model. We adjust for this error in the full model calculation under the indirect method by adding an interpolated value gradient term at the final simulation point. While overall this additional error is quite small, without this adjustment the grid refinement can appear to make the error gap worse in the baseline uncertainty aversion case because of the offsetting signs of the error term components. The grid refinement comparison across methods highlights the following main outcomes:</p>
+<ul class="simple">
+<li><p>Halving the grid spacing roughly halves the gap, consistent with first-order discretization error.</p></li>
+<li><p>The valuation gap between methods grows as <span class="math notranslate nohighlight">\(\xi_m\)</span> falls, coinciding with evaluating enhanced nonlinearities from uncertainty aversion on the same grid generating larger approximation errors.</p></li>
+<li><p>The direct derivative valuations move by at most <span class="math notranslate nohighlight">\(3.0\%\)</span> across grids, highlighting that most of the improvement in valuation discrepancy is coming from the indirect method errors.</p></li>
+</ul>
+<p>While grid-refinement generates clear improvement in the numerical discrepancies across methods, we investigate the remaining errors to better understand the sources of numerical inaccuracies. We calculate implied derivative approximation errors from the “indirect” method by computing and aggregating up the point-wise residual derivative errors along each step of the simulation-based marginal social valuation construction. Removing this residual derivative approximation error captures nearly all of the remaining error. Therefore, the remaining errors after accounting for numerical derivative approximation (<span class="math notranslate nohighlight">\(-0.16\%\)</span> to <span class="math notranslate nohighlight">\(-0.30\%\)</span>) must pertain to sources such as monthly Euler step for simulations, interpolation of outcomes to off-grid points, the evaluation of the terminal term at the last monthly node rather than at the exact boundary-crossing time, and right-endpoint accumulation of the jump-augmented discounting term.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="table-30">
+<thead>
+<tr class="row-odd"><th class="head"><p>error source</p></th>
+<th class="head"><p>nature</p></th>
+<th class="head"><p>error size</p></th>
+<th class="head"><p>behavior</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>numerical derivative approximation</p></td>
+<td><p>discretization error in the FK representation</p></td>
+<td><p><span class="math notranslate nohighlight">\(\approx 1\%\)</span> (<span class="math notranslate nohighlight">\(\xi_m=\infty\)</span>); <span class="math notranslate nohighlight">\(\approx 2\%\)</span>–<span class="math notranslate nohighlight">\(5\%\)</span> (finite <span class="math notranslate nohighlight">\(\xi_m\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span> halves when grid spacing halves; grows as <span class="math notranslate nohighlight">\(\xi_m\)</span> falls</p></td>
+</tr>
+<tr class="row-odd"><td><p>time discretization, boundary approximation</p></td>
+<td><p>residual numerical errors</p></td>
+<td><p><span class="math notranslate nohighlight">\(\lesssim 0.3\%\)</span></p></td>
+<td><p>small but statistically distinguishable from zero</p></td>
+</tr>
+<tr class="row-even"><td><p>Monte Carlo sampling</p></td>
+<td><p>random error</p></td>
+<td><p><span class="math notranslate nohighlight">\(\approx 0.05\)</span>–<span class="math notranslate nohighlight">\(0.07\%\)</span> (s.e.)</p></td>
+<td><p>falls as <span class="math notranslate nohighlight">\(1/\sqrt{N}\)</span>; irrelevant</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 30: Decomposition of the direct-vs-indirect discrepancy for the full model with fine grid resolution.</p>
+<p>We characterize the nature and magnitude of these different error components in <a class="reference internal" href="#table-30"><span class="std std-ref">Table 30</span></a>. Altogether, our characterization of the numerical errors highlights two key results. First, our numerical results appear to have a high level of accuracy. Second, neither the ordering of the social valuations across <span class="math notranslate nohighlight">\(\xi_m\)</span> nor the relative importance of the three flows in our decompositions is affected by remaining numerical errors.</p>
+</section>
+<section id="value-function-derivatives">
+<span id="value-derivatives"></span><h2><span class="section-number">4.7. </span>Value function derivatives<a class="headerlink" href="#value-function-derivatives" title="Permalink to this heading">#</a></h2>
+<p>The two sets of surfaces below are supplemental results that are not in the paper. They show the derivatives of the value function <span class="math notranslate nohighlight">\(V\)</span> with respect to <span class="math notranslate nohighlight">\(\hat{r}\)</span> and <span class="math notranslate nohighlight">\(y\)</span> for the technology jump only model (<a class="reference internal" href="09_technology_only.html"><span class="doc std std-doc">A simplified model with only technology jumps</span></a>) on the Fine grid, sliced at the initial log capital, for <span class="math notranslate nohighlight">\(\xi_m = \infty\)</span>, <span class="math notranslate nohighlight">\(.1\)</span> and <span class="math notranslate nohighlight">\(.05\)</span>. The axes labeled logR and Y show <span class="math notranslate nohighlight">\(\hat{r} = \log R\)</span> and <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<style>
+  .surface-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: 1em;
+  }
+  .surface-buttons button {
+    padding: 0.5em 1em;
+    border: 2px solid #007acc;
+    border-radius: 0.5em;
+    background: white;
+    color: #007acc;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .surface-buttons button.active,
+  .surface-buttons button:hover {
+    background: #007acc;
+    color: white;
+  }
+</style><section id="frac-partial-v-partial-hat-r">
+<h3><span class="section-number">4.7.1. </span><span class="math notranslate nohighlight">\(\frac{\partial V}{\partial \hat{r}}\)</span><a class="headerlink" href="#frac-partial-v-partial-hat-r" title="Permalink to this heading">#</a></h3>
+<div class="surface-switch">
+  <div class="surface-buttons">
+    <button type="button" data-case="inf" class="active">baseline (ξ<sub>m</sub> = ∞)</button>
+    <button type="button" data-case="0.1">less aversion (ξ<sub>m</sub> = .1)</button>
+    <button type="button" data-case="0.05">more aversion (ξ<sub>m</sub> = .05)</button>
+  </div>
+  <div class="surface-pane" data-case="inf">
+    <iframe src="../_static/df_V_m3_surface_xik1e+05.html" title="Derivative of V with respect to log R for ξm = ∞" width="100%" height="470" style="border:none;"></iframe>
+  </div>
+  <div class="surface-pane" data-case="0.1" style="display:none;">
+    <iframe src="../_static/df_V_m3_surface_xik0.1.html" title="Derivative of V with respect to log R for ξm = .1" width="100%" height="470" style="border:none;"></iframe>
+  </div>
+  <div class="surface-pane" data-case="0.05" style="display:none;">
+    <iframe src="../_static/df_V_m3_surface_xik0.05.html" title="Derivative of V with respect to log R for ξm = .05" width="100%" height="470" style="border:none;"></iframe>
+  </div>
+</div>
+</section>
+<section id="frac-partial-v-partial-y">
+<h3><span class="section-number">4.7.2. </span><span class="math notranslate nohighlight">\(\frac{\partial V}{\partial y}\)</span><a class="headerlink" href="#frac-partial-v-partial-y" title="Permalink to this heading">#</a></h3>
+<div class="surface-switch">
+  <div class="surface-buttons">
+    <button type="button" data-case="inf" class="active">baseline (ξ<sub>m</sub> = ∞)</button>
+    <button type="button" data-case="0.1">less aversion (ξ<sub>m</sub> = .1)</button>
+    <button type="button" data-case="0.05">more aversion (ξ<sub>m</sub> = .05)</button>
+  </div>
+  <div class="surface-pane" data-case="inf">
+    <iframe src="../_static/df_V_m2_surface_xik1e+05.html" title="Derivative of V with respect to y for ξm = ∞" width="100%" height="470" style="border:none;"></iframe>
+  </div>
+  <div class="surface-pane" data-case="0.1" style="display:none;">
+    <iframe src="../_static/df_V_m2_surface_xik0.1.html" title="Derivative of V with respect to y for ξm = .1" width="100%" height="470" style="border:none;"></iframe>
+  </div>
+  <div class="surface-pane" data-case="0.05" style="display:none;">
+    <iframe src="../_static/df_V_m2_surface_xik0.05.html" title="Derivative of V with respect to y for ξm = .05" width="100%" height="470" style="border:none;"></iframe>
+  </div>
+</div>
+<script>
+  document.querySelectorAll(".surface-switch").forEach(function (group) {
+    var buttons = group.querySelectorAll(".surface-buttons button");
+    var panes = group.querySelectorAll(".surface-pane");
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        buttons.forEach(function (other) {
+          other.classList.toggle("active", other === button);
+        });
+        panes.forEach(function (pane) {
+          pane.style.display = pane.dataset.case === button.dataset.case ? "block" : "none";
+        });
+      });
+    });
+  });
+</script></section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "lphansen/mitigation_book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03_hjb_equations.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>HJB Equations</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05_first_order_conditions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>First-order conditions and stochastic simulations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#policy-iteration">4.1. Policy iteration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-rules-for-phi-and-gamma-at-policy-improvement-steps">4.2. Updating rules for <span class="math notranslate nohighlight">\(\Phi\)</span> and <span class="math notranslate nohighlight">\(\Gamma\)</span> at policy improvement steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-linear-pde-equation-at-the-policy-evaluation-step">4.3. Solving the linear PDE equation at the policy evaluation step</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-differences-scheme">4.4. Finite-differences scheme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-conditions">4.5. Boundary Conditions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameters-and-numerical-accuracy">4.6. Hyperparameters and numerical accuracy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#value-function-derivatives">4.7. Value function derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frac-partial-v-partial-hat-r">4.7.1. <span class="math notranslate nohighlight">\(\frac{\partial V}{\partial \hat{r}}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frac-partial-v-partial-y">4.7.2. <span class="math notranslate nohighlight">\(\frac{\partial V}{\partial y}\)</span></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,692 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>10. Comparison to a real options formulation &#8212; Uncertainty, Social Valuation, and Climate Change Policy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/phi0_rd_data.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/10_real_options';</script>
+    <link rel="shortcut icon" href="../_static/mfr.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="M. Sensitivity analysis details: IES" href="11_online_m.html" />
+    <link rel="prev" title="9. A simplified model with only technology jumps" href="09_technology_only.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mfr.png" class="logo__image only-light" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>
+    <script>document.write(`<img src="../_static/mfr.png" class="logo__image only-dark" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_example_economy.html">1. Example economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_confronting_uncertainty.html">2. Confronting uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_hjb_equations.html">3. HJB Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_computational_method.html">4. Computational method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_first_order_conditions.html">5. First-order conditions and stochastic simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_uncertainty_assessments.html">6. Uncertainty assessments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_acting_now_or_waiting.html">7. Acting now or waiting?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_marginal_valuations.html">8. Marginal valuations as asset prices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_technology_only.html">9. A simplified model with only technology jumps</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Comparison to a real options formulation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Online appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11_online_m.html">M. Sensitivity analysis details: IES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_online_n.html">N. Sensitivity analysis details: (<span class="math notranslate nohighlight">\(\phi_0, \psi_0, \chi\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_online_o.html">O. HJB Equations with 2 Technology Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_online_p.html">P. Damage function jump intensity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/edit/main/docs/chapters/10_real_options.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fchapters/10_real_options.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/10_real_options.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Comparison to a real options formulation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-payoff-model">10.1. Discrete-payoff model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-payoff-model">10.2. Flow-payoff model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-thresholds">10.3. Exercise thresholds</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="comparison-to-a-real-options-formulation">
+<h1><span class="section-number">10. </span>Comparison to a real options formulation<a class="headerlink" href="#comparison-to-a-real-options-formulation" title="Permalink to this heading">#</a></h1>
+<p>This page is Appendix L of the paper.</p>
+<p>As we noted in Section 10 of the paper, there are similarities, but also differences, in our R&amp;D investment problem and a real options problem.</p>
+<p>The decision-maker decides when to exercise the option with a known cost of doing so. Other than access to this stochastic payoff, the decision-maker can invest in a riskless technology. In the first specification, exercising the option provides a discrete payoff. In the second specification, exercising the option entitles the decision maker with access to a stochastic flow. To support our investigation, we make the two payoffs comparable by scaling the flow so that the present values of the discrete payoff and flow payoff processes are the same in the absence of uncertainty about the payoff dynamics.</p>
+<section id="discrete-payoff-model">
+<span id="discrete-payoff"></span><h2><span class="section-number">10.1. </span>Discrete-payoff model<a class="headerlink" href="#discrete-payoff-model" title="Permalink to this heading">#</a></h2>
+<p>Consider a robust counterpart to Model I in <span id="id1"><a class="reference internal" href="../reference.html#cite-miaowang-2007" title="Jianjun Miao and Neng Wang. Investment, consumption, and hedging under incomplete markets. Journal of Financial Economics, 86(3):608-642, 2007. URL: https://www.sciencedirect.com/science/article/pii/S0304405X07001225, doi:https://doi.org/10.1016/j.jfineco.2006.10.003.">Miao and Wang (2007)</a></span>. We let the utility be linear in consumption and the income process be:</p>
+<div class="math notranslate nohighlight">
+\[
+dY_t = \nu dt +\sigma dW_t.
+\]</div>
+<p>For purposes of illustration, we set <span class="math notranslate nohighlight">\(\nu = .1\)</span> and <span class="math notranslate nohighlight">\(\sigma = .3\)</span>. When the option is exercised, we assume a payoff equal to the discounted present value (with a constant discount rate <span class="math notranslate nohighlight">\(\delta\)</span>) of current and future <span class="math notranslate nohighlight">\(Y_t\)</span> minus a prespecified cost <span class="math notranslate nohighlight">\(I\)</span>. In our illustration, we set <span class="math notranslate nohighlight">\(I = 10\)</span>. The risk-free rate and subjective rate of discount are the same, which we set as <span class="math notranslate nohighlight">\(\delta = .02\)</span>. We refer to this as the <em>discrete-payoff model</em>.</p>
+<p>The post exercise value function satisfies:</p>
+<div class="math notranslate nohighlight">
+\[
+\max_c - \delta V^0 + \delta c + V^0_w(\delta w - c) = 0,
+\]</div>
+<p>which can be solved by setting <span class="math notranslate nohighlight">\(V^0(w) = \delta w\)</span>. The value function, <span class="math notranslate nohighlight">\(V\)</span>, prior to exercising the option solves the HJB equation:</p>
+<div class="math notranslate nohighlight">
+\[
+\max_c \min_h - \delta V + \delta c + V_w( \delta w - c) + V_y \nu + \sigma h V_y + \frac{\xi_m}{2} h^2 + \frac {\sigma^2}{2} V_{yy} .
+\]</div>
+<p>Guess that <span class="math notranslate nohighlight">\(V(w,y) = \delta[ w + G(y)]\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[
+0= - \delta G + G_y \nu + \frac {\sigma^2} 2 G_{yy} - \frac {\sigma^2 \delta } {2 \xi_m} (G_y)^2 \tag{29}
+\]</div>
+<p>where the minimizing <span class="math notranslate nohighlight">\(h\)</span> solves:</p>
+<div class="math notranslate nohighlight">
+\[
+h^* = - \frac {\sigma} {\xi_m} V_y = - \frac {\sigma \delta } {\xi_m} G_y. \tag{30}
+\]</div>
+<p>The discounted expected value of the option payoff with income realization, <span class="math notranslate nohighlight">\(y\)</span>, is</p>
+<div class="math notranslate nohighlight">
+\[
+\frac 1 \delta y + \frac \nu {\delta^2}
+\]</div>
+<p>obtained by solving the Feynman-Kac equation:</p>
+<div class="math notranslate nohighlight">
+\[
+0 = - \delta F + y + \nu F_y + \frac {\sigma^2} 2 F_{yy}.
+\]</div>
+<p>Thus, value matching gives:</p>
+<div class="math notranslate nohighlight">
+\[
+\delta G({\bar y}) = \bar y + \frac \nu {\delta} - \delta I,
+\]</div>
+<p>and smooth pasting gives</p>
+<div class="math notranslate nohighlight">
+\[
+\delta G_y ({\bar y}) = 1.
+\]</div>
+</section>
+<section id="flow-payoff-model">
+<span id="flow-payoff"></span><h2><span class="section-number">10.2. </span>Flow-payoff model<a class="headerlink" href="#flow-payoff-model" title="Permalink to this heading">#</a></h2>
+<p>We next change the payoff on the investment by letting it be continuous, given by the <span class="math notranslate nohighlight">\(Y\)</span> process. We refer to this as the <em>flow-payoff model.</em> The value function, <span class="math notranslate nohighlight">\(V^o\)</span>, after exercising satisfies the HJB equation:</p>
+<div class="math notranslate nohighlight">
+\[
+\max_c \min_h - \delta V^o + \delta c + V^o_w( \delta w + y - c) + \nu V^o_y + \sigma h V_y^o +{\frac 1 2}\sigma^2 V^o_{yy} + \frac{\xi_m}{2} h^2 = 0.
+\]</div>
+<p>We guess that <span class="math notranslate nohighlight">\(V^o(w,y) = \delta[w + F(y)]\)</span>. With this guess, we solve</p>
+<div class="math notranslate nohighlight">
+\[
+0= - \delta F + y + F_y \nu + \frac {\sigma^2} 2 F_{yy} - \frac {\sigma^2 \delta } {2 \xi_m} (F_y)^2
+\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[
+h^* = - \frac{\sigma}{\xi_m} V^o_y = - \frac{\delta \sigma}{\xi_m} F_y.
+\]</div>
+<p>The solution for <span class="math notranslate nohighlight">\(F\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+F(y) = {\frac 1 \delta} \left[ y + \frac \nu {\delta} - \frac {\sigma^2}{2 \xi_m \delta} \right] ,
+\]</div>
+<p>implying that <span class="math notranslate nohighlight">\(h^* = - \sigma/\xi_m\)</span>.</p>
+<p>As with the discrete-payoff specification, the value function prior to the option being exercised solves (29) with <span class="math notranslate nohighlight">\(V(w,y) = \delta[ w + G(y)]\)</span>. The minimizing <span class="math notranslate nohighlight">\(h^*\)</span> is given by formula (30). The value-matching condition is:</p>
+<div class="math notranslate nohighlight">
+\[
+\delta G({\bar y}) = \delta [F({\bar y}) - I] = \bar y + \frac \nu {\delta} - \frac {\sigma^2}{2 \xi_m \delta } - \delta I
+\]</div>
+<p>and the smooth-pasting condition is:</p>
+<div class="math notranslate nohighlight">
+\[
+\delta G_y({\bar y}) = \delta F_y({\bar y}) = 1 .
+\]</div>
+</section>
+<section id="exercise-thresholds">
+<span id="thresholds"></span><h2><span class="section-number">10.3. </span>Exercise thresholds<a class="headerlink" href="#exercise-thresholds" title="Permalink to this heading">#</a></h2>
+<p>Notice that the value matching condition is the same for both models in the limiting case in which <span class="math notranslate nohighlight">\(\xi_m \rightarrow \infty\)</span>. In both models, the exercise threshold <span class="math notranslate nohighlight">\(\bar y\)</span> satisfies: <span class="math notranslate nohighlight">\(\delta G_y\left( \bar y \right) = 1\)</span> even for <span class="math notranslate nohighlight">\(\xi_m &lt; \infty\)</span>, but, of course, the <span class="math notranslate nohighlight">\(G\)</span> functions are different. <a class="reference internal" href="#fig-13"><span class="std std-ref">Figure 13</span></a> plots the derivatives for each model specification and for alternative values of the robustness parameter, <span class="math notranslate nohighlight">\(\xi_m\)</span>. For the discrete-payoff model, the derivatives decrease with <span class="math notranslate nohighlight">\(\xi_m\)</span>, resulting in higher values of <span class="math notranslate nohighlight">\(y\)</span> when the option is exercised. For the stochastic flow-payoff model the derivatives increase with <span class="math notranslate nohighlight">\(\xi_m\)</span>, resulting in lower values of the threshold <span class="math notranslate nohighlight">\(\bar y\)</span>.</p>
+<div id="fig-13" style="
+     display:flex;
+     gap:18px;
+     justify-content:center;
+     align-items:flex-start;
+     flex-wrap:wrap;
+">
+  <figure style="margin:0; width:340px; max-width:100%;">
+    <img src="../_static/paper/Figure13_model1_derivative.png"
+         alt="Plots of the value function derivatives across different uncertainty aversion values for the discrete-payoff real options model example"
+         style="width:100%; height:auto;">
+    <figcaption style="text-align:center; font-size:0.85em;">(A) discrete-payoff model</figcaption>
+  </figure>
+  <figure style="margin:0; width:340px; max-width:100%;">
+    <img src="../_static/paper/Figure13_model3_derivative.png"
+         alt="Plots of the value function derivatives across different uncertainty aversion values for the flow-payoff real options model example"
+         style="width:100%; height:auto;">
+    <figcaption style="text-align:center; font-size:0.85em;">(B) flow-payoff model</figcaption>
+  </figure>
+</div>
+<p>Figure 13: Plots of <span class="math notranslate nohighlight">\(\delta G_y\)</span> for different values of <span class="math notranslate nohighlight">\(\xi_m\)</span>.</p>
+<p>Consistent with this finding, we report in <a class="reference internal" href="#fig-14"><span class="std std-ref">Figure 14</span></a> that uncertainty aversion has opposite implications for the threshold <span class="math notranslate nohighlight">\(\bar y\)</span> for the two payoff specifications. The implied uncertainty aversion for low values of <span class="math notranslate nohighlight">\(\xi_m\)</span> makes the investor more bullish on the investment for the discrete payoff specification in the sense that there is a lower investment threshold. The outcome gets reversed with the stochastic flow payoff: the investor is less bullish on the investment and exercises the option at a higher threshold with enhanced aversion. By design, the two curves converge when <span class="math notranslate nohighlight">\(\xi_m \rightarrow \infty\)</span>.</p>
+<div id="fig-14" style="display:flex; justify-content:center; align-items:center;">
+  <img src="../_static/paper/Figure14_threshold_plot.png"
+       alt="Exercise threshold solution for each real option example model as a function of the uncertainty aversion parameter"
+       style="width:450px; max-width:100%; height:auto;">
+</div>
+<p>Figure 14: Solution of exercise threshold <span class="math notranslate nohighlight">\(\overline{y}\)</span> for each model as functions of the robustness parameter, <span class="math notranslate nohighlight">\(\xi_m\)</span>.</p>
+<p>We plot the pre-exercise drift distortions <span class="math notranslate nohighlight">\(h^*\)</span> in <a class="reference internal" href="#fig-15"><span class="std std-ref">Figure 15</span></a>. The post-jump distortions are zero for the discrete-payoff specification, and, by the smooth pasting condition, equal to the distortion at the time the option is exercised for the flow-payoff specification. Recall that the <span class="math notranslate nohighlight">\(h^*\)</span>’s are expressed as drifts in a standard Brownian increment. They are not extreme for these illustrations, as the magnitude of the local mean distortion never exceeds ten percent of the standard deviation. The drift distortions prior to exercise are a bit larger in magnitude for the discrete-payoff specification.</p>
+<div id="fig-15" style="
+     display:flex;
+     gap:18px;
+     justify-content:center;
+     align-items:flex-start;
+     flex-wrap:wrap;
+">
+  <figure style="margin:0; width:340px; max-width:100%;">
+    <img src="../_static/paper/Figure15_model1_distortion.png"
+         alt="Plots of the probability distortions across different uncertainty aversion values for the discrete-payoff real options model example"
+         style="width:100%; height:auto;">
+    <figcaption style="text-align:center; font-size:0.85em;">(A) discrete-payoff model</figcaption>
+  </figure>
+  <figure style="margin:0; width:340px; max-width:100%;">
+    <img src="../_static/paper/Figure15_model3_distortion.png"
+         alt="Plots of the probability distortions across different uncertainty aversion values for the flow-payoff real options model example"
+         style="width:100%; height:auto;">
+    <figcaption style="text-align:center; font-size:0.85em;">(B) flow-payoff model</figcaption>
+  </figure>
+</div>
+<p>Figure 15: Plots of <span class="math notranslate nohighlight">\(h^*\)</span> for different values of <span class="math notranslate nohighlight">\(\xi_m\)</span>.</p>
+<p>In both cases, robustness concerns induce more cautious assessments of the payoff prospects. In the discrete-payoff specification, the uncertainty is resolved as soon as the payoff is exercised, increasing the valuation; while in the flow-payoff specification, the post exercise valuation is diminished under robustness concerns because of the continued uncertainty about future payoffs.</p>
+<p>Although there are intriguing similarities between this comparison of real options in different environments and our findings, the investment opportunities are quite different. Rather than an exercise decision, our social planner can make investments that increase the likelihood of a discovery. Uncertainty aversion makes the planner skeptical about the payoff horizon in our analysis. These differences make our uncertainty aversion impact not monotone as displayed in <a class="reference internal" href="09_technology_only.html#table-21"><span class="std std-ref">Table 21</span></a> and in contrast to the real options findings reported in <a class="reference internal" href="#fig-14"><span class="std std-ref">Figure 14</span></a>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "lphansen/mitigation_book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="09_technology_only.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>A simplified model with only technology jumps</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="11_online_m.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">M. Sensitivity analysis details: IES</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-payoff-model">10.1. Discrete-payoff model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-payoff-model">10.2. Flow-payoff model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-thresholds">10.3. Exercise thresholds</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

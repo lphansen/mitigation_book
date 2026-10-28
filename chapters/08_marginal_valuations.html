@@ -1,0 +1,692 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>8. Marginal valuations as asset prices &#8212; Uncertainty, Social Valuation, and Climate Change Policy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/phi0_rd_data.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/08_marginal_valuations';</script>
+    <link rel="shortcut icon" href="../_static/mfr.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9. A simplified model with only technology jumps" href="09_technology_only.html" />
+    <link rel="prev" title="7. Acting now or waiting?" href="07_acting_now_or_waiting.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mfr.png" class="logo__image only-light" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>
+    <script>document.write(`<img src="../_static/mfr.png" class="logo__image only-dark" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_example_economy.html">1. Example economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_confronting_uncertainty.html">2. Confronting uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_hjb_equations.html">3. HJB Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_computational_method.html">4. Computational method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_first_order_conditions.html">5. First-order conditions and stochastic simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_uncertainty_assessments.html">6. Uncertainty assessments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_acting_now_or_waiting.html">7. Acting now or waiting?</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Marginal valuations as asset prices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_technology_only.html">9. A simplified model with only technology jumps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_real_options.html">10. Comparison to a real options formulation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Online appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11_online_m.html">M. Sensitivity analysis details: IES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_online_n.html">N. Sensitivity analysis details: (<span class="math notranslate nohighlight">\(\phi_0, \psi_0, \chi\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_online_o.html">O. HJB Equations with 2 Technology Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_online_p.html">P. Damage function jump intensity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/edit/main/docs/chapters/08_marginal_valuations.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fchapters/08_marginal_valuations.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/08_marginal_valuations.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Marginal valuations as asset prices</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-utility-flow">8.1. Marginal-utility flow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prospective-jump-contributions">8.2. Prospective jump contributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-impact-of-a-jump">8.2.1. Marginal impact of a jump</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-impact-when-there-is-a-jump">8.2.2. Marginal impact when there is a jump</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decompositions">8.3. Decompositions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-enhanced-uncertainty-concerns-induce-a-proactive-r-d-response">8.4. Why do enhanced uncertainty concerns induce a proactive R&amp;D response?</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="marginal-valuations-as-asset-prices">
+<h1><span class="section-number">8. </span>Marginal valuations as asset prices<a class="headerlink" href="#marginal-valuations-as-asset-prices" title="Permalink to this heading">#</a></h1>
+<p>We next describe a type of local sensitivity analysis that helps us interpret some of our main findings using an asset pricing perspective. In terms of an asset pricing analogy, we take an intertemporal cash flow rather than a one-period return perspective when deducing contributions and uncertainty implications to valuations.</p>
+<p>We draw on an approach for representing intertemporal marginal values developed and justified in <span id="id1"><a class="reference internal" href="../reference.html#cite-hansensouganidis-2025" title="Lars Peter Hansen and Panagiotis E. Souganidis. Stochastic responses and impulse response functions. Proceedings of the National Academy of Sciences, 2025.">Hansen and Souganidis (2025)</a></span>. The representations of marginal valuation closely resemble intertemporal cash flow valuation under uncertainty.</p>
+<p>Distinct marginal social valuations emerge in the three sets of first-order conditions for the planner controls: the value of capital <span class="math notranslate nohighlight">\(\left(\frac {\partial V} {\partial k} \right)\)</span>, the value of R&amp;D <span class="math notranslate nohighlight">\(\left(\frac {\partial V} {\partial {r}}\right)\)</span>, and the cost of global warming <span class="math notranslate nohighlight">\(\left(- \frac {\partial V} {\partial y}\right)\)</span>. The asset-pricing type representations of the marginal valuations, expressed in terms of discounted social cash flows, allow us to inspect and deconstruct the contributions to these social valuations. We construct our marginal value representations prior to the first jump occurring.</p>
+<p>The initial jump plays the role of a state-dependent terminal condition with an endogenously determined continuation value conditioned on the jump occurring. This initial jump could be any of the <span class="math notranslate nohighlight">\(L\)</span> possible jump types. Given this perspective, we adjust the discounting to incorporate jump probabilities. The resulting discount rate we use for time <span class="math notranslate nohighlight">\(\tau\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+\delta + \sum_{\ell = 1}^L G^{*\ell}_\tau {\mathcal J}^\ell (X_\tau) .
+\]</div>
+<p>with the date <span class="math notranslate nohighlight">\(t\)</span>, state-dependent discount factor given by:</p>
+<div class="math notranslate nohighlight">
+\[
+Dis_t \overset{\mathrm{def}}{=} \exp\left( - \int_0^t \left[\delta + \sum_{\ell = 1}^L G^{*\ell}_\tau {\mathcal J}^\ell (X_\tau) \right] d \tau \right).
+\]</div>
+<p>Recall that the <span class="math notranslate nohighlight">\(G^{*\ell}_\tau\)</span>’s are the uncertainty adjustment factors for the intensities. The adjustment:</p>
+<div class="math notranslate nohighlight">
+\[
+\exp\left( - \int_0^t \left[\sum_{\ell = 1}^L G^{*\ell}_\tau {\mathcal J}^\ell (X_\tau) \right] d \tau \right). \tag{13}
+\]</div>
+<p>to the subjective discounting gives the probability of there not being a jump until date <span class="math notranslate nohighlight">\(t.\)</span> We include this term in the discount factor <span class="math notranslate nohighlight">\(Dis_t\)</span> so that we can continue to exploit diffusion-based characterizations of marginal valuation.</p>
+<p>The key inputs in this and other related forms of sensitivity analysis are marginal impulse response processes <span class="math notranslate nohighlight">\(\Lambda,\)</span> which give the impacts on the future state vector <span class="math notranslate nohighlight">\(X\)</span> of a marginal change in one of the initial states. When the state dynamics are nonlinear, <span class="math notranslate nohighlight">\(\Lambda\)</span> is stochastic. We refer to it as the stochastic response process, as it is a generalization of the linear impulse responses commonly used in applied macroeconomics. By construction, the process <span class="math notranslate nohighlight">\(\Lambda\)</span> has the same dimensionality as the number of components of <span class="math notranslate nohighlight">\(X\)</span>. It is built so that when we initialize it at a coordinate vector, it gives the responses to an initial change in the corresponding state variable.</p>
+<p>We use the stochastic responses and state-dependent discounting in the marginal-valuation formula:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac {\partial V}{\partial x}(X_0) \cdot \Lambda_0 = \widetilde{\mathbb E} \left[ \int_0^\infty Dis_t \left(\Lambda_t \cdot Scf_t \right) dt \mid X_0, \Lambda_0 \right] \tag{14}
+\]</div>
+<p>where the expectation <span class="math notranslate nohighlight">\(\widetilde{\mathbb E}\)</span> reflects the diffusion dynamics incorporating the minimizing drift distortions, <span class="math notranslate nohighlight">\(H^*\)</span>, implied by robustness. Importantly, this expectation only features the diffusion dynamics and conditions on a jump that does not happen.</p>
+<p>In this asset-pricing type formula, the stochastic flow process measures the impact of an initial change in a state variable as a product of two marginal calculations, loosely motivated by the chain rule:</p>
+<div class="math notranslate nohighlight">
+\[
+\Lambda_t \cdot Scf_t.
+\]</div>
+<p>In this calculation, <span class="math notranslate nohighlight">\(Scf_t\)</span> is a three-dimensional vector with each entry measuring a marginal contribution of a date <span class="math notranslate nohighlight">\(t\)</span> state variable to date <span class="math notranslate nohighlight">\(t\)</span> cash flow. The dot product with <span class="math notranslate nohighlight">\(\Lambda_t\)</span> reflects the stochastic response at date <span class="math notranslate nohighlight">\(t\)</span> to an initial change in one of the state variables, or more generally a linear combination of state variables depending upon the initialization, <span class="math notranslate nohighlight">\(\Lambda_0.\)</span> In light of this construction, we may divide <span class="math notranslate nohighlight">\(\Lambda_t \cdot Scf_t\)</span> into contributions from each of the states since the dot product sums across vector entries. This decomposition shows how the state interdependencies are reflected in the marginal valuations.</p>
+<p>There are three sources of date <span class="math notranslate nohighlight">\(t\)</span> contributions to the stochastic flow vector <span class="math notranslate nohighlight">\(Scf_t:\)</span></p>
+<ul class="simple">
+<li><p>i) marginal utility;</p></li>
+<li><p>ii) marginal impact of a jump;</p></li>
+<li><p>iii) marginal impact when you jump.</p></li>
+</ul>
+<section id="marginal-utility-flow">
+<span id="marginal-utility"></span><h2><span class="section-number">8.1. </span>Marginal-utility flow<a class="headerlink" href="#marginal-utility-flow" title="Permalink to this heading">#</a></h2>
+<p>Flow i measures the impact of a marginal change in a state variable on future contributions to utility after adjusting for damages:</p>
+<div class="math notranslate nohighlight">
+\[
+\textrm{flow i} \overset{\mathrm{def}}{=} \delta \left( \frac {\partial \log c} {\partial x} - \frac {\partial {\hat n}}{\partial x}\right), \tag{15}
+\]</div>
+<p>which is the date <span class="math notranslate nohighlight">\(t\)</span> vector of partial derivatives of the utility of damaged consumption with respect to each state variable, where <span class="math notranslate nohighlight">\(\delta\)</span> is a convenient utility scaling.</p>
+<p>Again using the chain rule, we write the term (15) as the following product:</p>
+<div class="math notranslate nohighlight">
+\[
+\textrm{flow i} = \delta \left[ \frac {\partial \log (c/n) } {\partial (c/n) }\right] \left[\frac {\partial (c/n) } {\partial x} \right] = \delta \left(\frac { n} c \right) \left[\frac {\partial (c/n)} {\partial x} \right] .
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(n = \exp[{\hat n}(y)]\)</span>, and <span class="math notranslate nohighlight">\(c/n\)</span> is the adjusted consumption for damages. The first term on the right is the marginal utility of (damaged) consumption, which appears as the familiar construction of a stochastic discount factor process in asset pricing, while the second term captures the dependence of (damaged) consumption on the state vector.</p>
+</section>
+<section id="prospective-jump-contributions">
+<span id="jump-contributions"></span><h2><span class="section-number">8.2. </span>Prospective jump contributions<a class="headerlink" href="#prospective-jump-contributions" title="Permalink to this heading">#</a></h2>
+<p>Prospective Poisson jumps also introduce cash-flow contributions to this valuation. These additional terms account for state-dependent responses operating through uncertainty in the jump intensity functions and the continuation value functions, as outlined below.</p>
+<section id="marginal-impact-of-a-jump">
+<h3><span class="section-number">8.2.1. </span>Marginal impact of a jump<a class="headerlink" href="#marginal-impact-of-a-jump" title="Permalink to this heading">#</a></h3>
+<p>A marginal change in the state vector in the current time period alters the jump intensities, contributing the following term to the marginal valuation:</p>
+<div class="math notranslate nohighlight">
+\[
+\textrm{flow ii} = \xi_m \sum_{\ell=1}^L {\mathcal J}^\ell\left( 1 - \exp \left[ - {\frac{1}{\xi_m}} \left( V^\ell - V \right) \right] \right) \left(\frac {\partial \log {\mathcal J}^\ell}{\partial x} \right). \tag{16}
+\]</div>
+<p>Specifically, the intensities <span class="math notranslate nohighlight">\({\mathcal J}^\ell\)</span> for <span class="math notranslate nohighlight">\(\ell = 1, 2, ..., L-1\)</span> capture the stochastic dynamics of the prospective damage curvature jumps. These intensities depend only on the temperature, which simplifies the contribution of <span class="math notranslate nohighlight">\(\frac {\partial \log {\mathcal J}^\ell}{\partial x}\)</span> to the marginal impact formula (16). Analogously, <span class="math notranslate nohighlight">\({\mathcal J}^L\)</span> depends only on the knowledge stock. This latter contribution is important for understanding the impacts of uncertainty on investment in R&amp;D. Since the implied dynamical system has interactions over states, a marginal change in the initial period knowledge stock will impact all future states, inducing cross effects in the valuation.</p>
+</section>
+<section id="marginal-impact-when-there-is-a-jump">
+<h3><span class="section-number">8.2.2. </span>Marginal impact when there is a jump<a class="headerlink" href="#marginal-impact-when-there-is-a-jump" title="Permalink to this heading">#</a></h3>
+<p>A marginal change in the state vector in the current time period alters the continuation values conditioned on a jump happening:</p>
+<div class="math notranslate nohighlight">
+\[
+\textrm{flow iii} \overset{\mathrm{def}}{=} \sum_{\ell=1} ^L g^{*\ell} {\mathcal J}^\ell \frac {\partial V^\ell} {\partial x} \tag{17}
+\]</div>
+<p>where the <span class="math notranslate nohighlight">\(g^{*\ell}\)</span>’s are the robust adjustments to the intensities given by:</p>
+<div class="math notranslate nohighlight">
+\[
+g^{*\ell} \overset{\mathrm{def}}{=} \exp \left[ - {\frac{1}{\xi_m}} \left( V^\ell - V \right) \right] \textrm{ where } G^{*\ell}_t = g^{*\ell}(X_t).
+\]</div>
+<p>Notice that this term captures future marginal contributions to valuation as we may deduce post-jump marginal valuation counterparts as reflected in the partial derivatives: <span class="math notranslate nohighlight">\(\frac {\partial V^\ell} {\partial x}\)</span> for the alternative <span class="math notranslate nohighlight">\(\ell\)</span>’s. Once a technology discovery happens, there is no direct marginal contribution of the flow iii term to valuation.</p>
+<p>Notice that the flow ii and flow iii terms include a scaling by the uncertainty-adjusted intensities. This inclusion is consistent with <a class="reference internal" href="06_uncertainty_assessments.html#jump-densities"><span class="std std-ref">formula (23) given in Appendix D</span></a> where these intensities in conjunction with the contribution (13) to the factor, <span class="math notranslate nohighlight">\(Dis_t,\)</span> account for the uncertainty-adjusted jump density.</p>
+</section>
+</section>
+<section id="decompositions">
+<span id="flow-decompositions"></span><h2><span class="section-number">8.3. </span>Decompositions<a class="headerlink" href="#decompositions" title="Permalink to this heading">#</a></h2>
+<p>The integral representation (14) gives a horizon-based decomposition of marginal values. The flow terms open the door to three additional types of additive decompositions: one based on the flow type, another based on the jump type <span class="math notranslate nohighlight">\(\ell\)</span>, and a third on which future values of states are impacted.</p>
+<p><a class="reference internal" href="#table-5"><span class="std std-ref">Table 5</span></a> shows the quantitative importance of the three flow terms for SVRD as well as two additional refinements. The contributions of flow ii, the marginal impact of a jump, and flow iii, the marginal impact when you jump, dominate the direct marginal utility contribution given by flow i. This reflects how important the longer-term contributions of the uncertain jump processes are to the SVRDs.</p>
+<p id="table-5"><strong>(a) SVRD decomposition by potential jump types</strong></p>
+<div class="pst-scrollable-table-container">
+<table class="table grouped-header">
+<thead>
+<tr><th rowspan="2"><span class="math notranslate nohighlight">\(\xi_m\)</span></th><th rowspan="2">flow i</th><th class="group-head" colspan="2">flow ii</th><th class="group-head" colspan="2">flow iii</th></tr>
+<tr><th>damage</th><th>tech</th><th>damage</th><th>tech</th></tr>
+</thead>
+<tbody>
+<tr><td><span class="math notranslate nohighlight">\(\infty\)</span></td><td>0.31</td><td>-0.06</td><td>2.03</td><td>1.20</td><td>0.40</td></tr>
+<tr><td>0.1</td><td>0.73</td><td>-0.22</td><td>2.72</td><td>2.71</td><td>0.62</td></tr>
+<tr><td>0.05</td><td>1.02</td><td>-0.58</td><td>3.35</td><td>6.63</td><td>0.30</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>(b) SVRD decomposition by state variable contributions</strong></p>
+<div class="pst-scrollable-table-container">
+<table class="table grouped-header">
+<thead>
+<tr><th rowspan="2"><span class="math notranslate nohighlight">\(\xi_m\)</span></th><th class="group-head" colspan="2">flow i</th><th rowspan="2">flow ii R&amp;D</th><th class="group-head" colspan="2">flow iii</th></tr>
+<tr><th>capital</th><th>R&amp;D</th><th>capital</th><th>R&amp;D</th></tr>
+</thead>
+<tbody>
+<tr><td><span class="math notranslate nohighlight">\(\infty\)</span></td><td>0.17</td><td>0.14</td><td>2.03</td><td>0.82</td><td>0.80</td></tr>
+<tr><td>0.1</td><td>0.39</td><td>0.35</td><td>2.72</td><td>1.70</td><td>1.65</td></tr>
+<tr><td>0.05</td><td>0.56</td><td>0.47</td><td>3.35</td><td>2.39</td><td>4.57</td></tr>
+</tbody>
+</table>
+</div>
+<p>Table 5: Decompositions of the three flow contributions to the SVRD delineated in Section 8. Panel (a) decomposes the flow contributions by jump types. For the columns labeled “damage,” we aggregate the contributions of all of the possible damage coefficients, <span class="math notranslate nohighlight">\(\lambda_3(\ell),\)</span> for <span class="math notranslate nohighlight">\(1 \le \ell \le L-1\)</span>. We report the technology jump contributions in columns labeled “tech.” Panel (b) decomposes the flow contributions to the SVRD across state variable channels. The temperature anomaly contributions are small and are omitted from this table. The columns labeled “capital” report the contributions operating through the prospective capital stocks, while columns labeled “R&amp;D” report the contributions operating through the prospective R&amp;D knowledge stocks. For both panels, the table shows how these decompositions depend on <span class="math notranslate nohighlight">\(\xi_m.\)</span></p>
+<p>As we see from Panel (a), the flow ii impact on valuation is primarily due to the prospective technology jump. Although flow ii increases with stronger concerns about robustness, such concerns have an even more dramatic impact on flow iii.</p>
+</section>
+<section id="why-do-enhanced-uncertainty-concerns-induce-a-proactive-r-d-response">
+<span id="proactive"></span><h2><span class="section-number">8.4. </span>Why do enhanced uncertainty concerns induce a proactive R&amp;D response?<a class="headerlink" href="#why-do-enhanced-uncertainty-concerns-induce-a-proactive-r-d-response" title="Permalink to this heading">#</a></h2>
+<p>From the first-order conditions for R&amp;D investment in <a class="reference internal" href="05_first_order_conditions.html#first-order"><span class="std std-ref">(11)</span></a>, we see a dependence on the social value of research and development (SVRD) as quantified by the marginal value of the knowledge stock. Consider flow ii of the SVRD as given by (16) to see how uncertainty aversion alters optimal R&amp;D investment. The partial derivative of interest multiplies the robustly adjusted post-jump continuation value contribution:</p>
+<div class="math notranslate nohighlight">
+\[
+{\mathcal J}^L \xi_m \left(1 -\exp \left[ - {\frac{1}{\xi_m}} \left( V^L - V \right) \right] \right) \le {\mathcal J}^L \left(V^L - V\right) . \tag{18}
+\]</div>
+<p>This inequality is a direct implication of the solution to <a class="reference internal" href="02_confronting_uncertainty.html#jump"><span class="std std-ref">Problem 3.3</span></a>. It reflects the planner’s cautious view of the potential success of a green technological innovation being realized and reflects the planner’s <em>reduced</em> incentive to invest in R&amp;D.</p>
+<p>Uncertainty concerns, however, also impact the planner’s view of a technology success should it happen. This is manifested in the robust adjustments to the continuation values, <span class="math notranslate nohighlight">\(V^L\)</span> and <span class="math notranslate nohighlight">\(V\)</span>. Although increasing the uncertainty aversion (decreasing <span class="math notranslate nohighlight">\(\xi_m\)</span>) decreases both <span class="math notranslate nohighlight">\(V^L\)</span> and <span class="math notranslate nohighlight">\(V,\)</span> it has a much greater impact on <span class="math notranslate nohighlight">\(V\)</span> as there is a substantial decrease in the exposure to uncertainty once the new clean technology is in place. This boost in the planner’s payoff to the R&amp;D investment <em>increases</em> the planner’s incentive to invest.</p>
+<p>To summarize, we have isolated two potentially counteracting contributions to the SVRD.</p>
+<ul class="simple">
+<li><p>The uncertainty-adjusted probabilities of a technology discovery assign more weight to distant successes relative to more recent ones as the aversion is enhanced. This carries over to the robust adjustment to the HJB equation as reflected in inequality (18).</p></li>
+<li><p>The endogenously determined net utility outcome from a potential successful discovery, measured by <span class="math notranslate nohighlight">\(V^L - V,\)</span> increases as aversion increases due to a reduction in the pre-jump value function <span class="math notranslate nohighlight">\(V\)</span>. The reduction in <span class="math notranslate nohighlight">\(V\)</span> dominates any reduction in <span class="math notranslate nohighlight">\(V^L\)</span> since, post-jump, there is less exposure to uncertainty.</p></li>
+</ul>
+<p>The first of these makes the R&amp;D investment less attractive and the second one more attractive. Quantitatively, the second channel dominates in our calculations presented so far.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "lphansen/mitigation_book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="07_acting_now_or_waiting.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Acting now or waiting?</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="09_technology_only.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>A simplified model with only technology jumps</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-utility-flow">8.1. Marginal-utility flow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prospective-jump-contributions">8.2. Prospective jump contributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-impact-of-a-jump">8.2.1. Marginal impact of a jump</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-impact-when-there-is-a-jump">8.2.2. Marginal impact when there is a jump</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decompositions">8.3. Decompositions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-enhanced-uncertainty-concerns-induce-a-proactive-r-d-response">8.4. Why do enhanced uncertainty concerns induce a proactive R&amp;D response?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

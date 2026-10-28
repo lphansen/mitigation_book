@@ -1,0 +1,664 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>2. Confronting uncertainty &#8212; Uncertainty, Social Valuation, and Climate Change Policy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/phi0_rd_data.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/02_confronting_uncertainty';</script>
+    <link rel="shortcut icon" href="../_static/mfr.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. HJB Equations" href="03_hjb_equations.html" />
+    <link rel="prev" title="1. Example economy" href="01_example_economy.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mfr.png" class="logo__image only-light" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>
+    <script>document.write(`<img src="../_static/mfr.png" class="logo__image only-dark" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_example_economy.html">1. Example economy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Confronting uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_hjb_equations.html">3. HJB Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_computational_method.html">4. Computational method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_first_order_conditions.html">5. First-order conditions and stochastic simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_uncertainty_assessments.html">6. Uncertainty assessments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_acting_now_or_waiting.html">7. Acting now or waiting?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_marginal_valuations.html">8. Marginal valuations as asset prices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_technology_only.html">9. A simplified model with only technology jumps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_real_options.html">10. Comparison to a real options formulation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Online appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11_online_m.html">M. Sensitivity analysis details: IES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_online_n.html">N. Sensitivity analysis details: (<span class="math notranslate nohighlight">\(\phi_0, \psi_0, \chi\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_online_o.html">O. HJB Equations with 2 Technology Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_online_p.html">P. Damage function jump intensity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/edit/main/docs/chapters/02_confronting_uncertainty.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fchapters/02_confronting_uncertainty.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/02_confronting_uncertainty.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Confronting uncertainty</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brownian-motion-misspecification">2.1. Brownian motion misspecification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-model-averaging">2.2. Robust model averaging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jump-misspecification">2.3. Jump misspecification</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="confronting-uncertainty">
+<h1><span class="section-number">2. </span>Confronting uncertainty<a class="headerlink" href="#confronting-uncertainty" title="Permalink to this heading">#</a></h1>
+<p>We now analyze the contributions to the planner’s Hamilton–Jacobi–Bellman (HJB) equation that emerge because of aversion to model misspecification. The uncertainty adjustments for model misspecification concerns lead us to replace a recursive maximization problem with a two-player formulation where one player maximizes social well-being and the other adversarial player looks for a baseline model or prior misspecifications with the most unfavorable consequences by solving a minimization problem. The uncertainty aversion of the social planner is reflected in penalties that restrain the adversarial choice. The investigation in this section focuses on the minimizing player and the implications for terms that enter the HJB equation involving the evolution of the value function. The full HJB equations are provided in <a class="reference internal" href="03_hjb_equations.html"><span class="doc std std-doc">Appendix A</span></a> and <a class="reference internal" href="13_online_o.html"><span class="doc std std-doc">Online Appendix O</span></a>.</p>
+<p>We follow <span id="id1"><a class="reference internal" href="../reference.html#cite-andersonhansensargent-2003" title="Evan W Anderson, Lars Peter Hansen, and Thomas J Sargent. A quartet of semigroups for model specification, robustness, prices of risk, and model detection. Journal of the European Economic Association, 1(1):68–123, 2003.">Anderson et al. (2003)</a></span> by entertaining misspecification linked both to the Brownian contribution and to the jump contribution. We use a well-studied construct called relative entropy or Kullback–Leibler divergence scaled by a penalty parameter to quantify misspecification. This divergence is measured as a non-negative expected log-likelihood ratio that we use to limit the search over potential model disparities in the uncertainty analysis.</p>
+<section id="brownian-motion-misspecification">
+<span id="brownian"></span><h2><span class="section-number">2.1. </span>Brownian motion misspecification<a class="headerlink" href="#brownian-motion-misspecification" title="Permalink to this heading">#</a></h2>
+<p>Under a baseline probability specification, <span class="math notranslate nohighlight">\(W \overset{\mathrm{def}}{=} \{ W_t : t \ge 0 \}\)</span> is a multivariate standard Brownian motion, and <span class="math notranslate nohighlight">\(\mathfrak{F} \overset{\mathrm{def}}{=} \{ \mathfrak{F}_t : t \ge 0 \}\)</span> is the corresponding information filtration with <span class="math notranslate nohighlight">\(\mathfrak{F}_t\)</span> generated by information that is realized between dates zero and t, including the Brownian increments.</p>
+<p>As is familiar from derivative claims pricing, positive martingales with expectations equal to one parameterize changes in probability measures. From Girsanov theory, such martingales can be characterized by their implied drift distortions. In particular, under the martingale change in the probability measure, process <span class="math notranslate nohighlight">\(W \overset{\mathrm{def}}{=} \{ W_t : t \ge 0 \}\)</span> instead has a drift <span class="math notranslate nohighlight">\(H \overset{\mathrm{def}}{=} \{ H_t : t \ge 0 \}\)</span>, and hence the increment is</p>
+<div class="math notranslate nohighlight">
+\[
+dW_t = H_t dt + dW^H_t
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(W^H\)</span> is a standard Brownian motion under the change in probability measure. Given the local normality implied by Brownian motions, the corresponding local measure of relative entropy is simply:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{2} H_t \cdot H_t,
+\]</div>
+<p>which we use to penalize search over alternative possible misspecifications.</p>
+<p>Write the stochastic increment of the state vector process <span class="math notranslate nohighlight">\(X\)</span> that is contributed by the Brownian motion as <span class="math notranslate nohighlight">\(\sigma(X_t, A_t) dW_t\)</span>, where <span class="math notranslate nohighlight">\(A_t\)</span> is a decision or action taken at time <span class="math notranslate nohighlight">\(t\)</span>. Then for a hypothetical value function <span class="math notranslate nohighlight">\(V\)</span> and the potential misspecification, we write the value function exposure to the Brownian increment as:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial V}{\partial x'}(X_t) \sigma(X_t, A_t) dW_t =
+\frac{\partial V}{\partial x'}(X_t) \left[ \sigma(X_t, A_t) H_t dt + \sigma(X_t, A_t) dW^H_t \right].
+\]</div>
+<p>Thus, the potential misspecification contributes a drift distortion <span class="math notranslate nohighlight">\(\sigma(X_t, A_t) H_t dt\)</span> to the dynamic evolution of the state vector process X.</p>
+<p>We now introduce a parameter <span class="math notranslate nohighlight">\(\xi_m\)</span> that penalizes the search over possible misspecifications. The penalty parameter <span class="math notranslate nohighlight">\(\xi_m\)</span> restrains the concern for robustness to model misspecification. This leads us to solve the following minimization problem</p>
+<p><strong>Problem 3.1.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\min_{H_t} \frac{\partial V}{\partial x'}(X_t) \sigma(X_t, A_t) H_t + \frac{\xi_m}{2} H_t \cdot H_t
+= - \frac{1}{2 \xi_m} \frac{\partial V}{\partial x'}(X_t) \sigma(X_t, A_t) \sigma(X_t, A_t)' \frac{\partial V}{\partial x}(X_t),
+\]</div>
+<p><em>with the minimizing <span class="math notranslate nohighlight">\(H\)</span> given by:</em></p>
+<div class="math notranslate nohighlight">
+\[
+H_t^* = - \frac{1}{\xi_m} \sigma(X_t, A_t)' \frac{\partial V}{\partial x}(X_t).
+\]</div>
+<p>This minimization problem captures a form of uncertainty aversion or preference for robustness to potential misspecification, analogous to risk aversion. A limiting choice of <span class="math notranslate nohighlight">\(\xi_m \approx \infty\)</span> implies a minimizing choice of <span class="math notranslate nohighlight">\(H_t = 0\)</span>. More generally, small values of <span class="math notranslate nohighlight">\(\xi_m\)</span> imply a high degree of misspecification concerns. The implied drift vector, <span class="math notranslate nohighlight">\(H_t^*\)</span>, has a relatively larger contribution when the value function is more adversely exposed to the Brownian increments. The parameter <span class="math notranslate nohighlight">\(\xi_m\)</span> governs the magnitude of <span class="math notranslate nohighlight">\(H_t^*\)</span>. A smaller value of <span class="math notranslate nohighlight">\(\xi_m\)</span> results in drift adjustments with a larger magnitude. We include the minimizing outcome of Problem 3.1 in the HJB equation.</p>
+</section>
+<section id="robust-model-averaging">
+<span id="robust-averaging"></span><h2><span class="section-number">2.2. </span>Robust model averaging<a class="headerlink" href="#robust-model-averaging" title="Permalink to this heading">#</a></h2>
+<p>The model output histograms that we reported in <a class="reference internal" href="01_example_economy.html#fig-1"><span class="std std-ref">Figure 1</span></a> implicitly assigned equal weights across the models. Let <span class="math notranslate nohighlight">\(\theta\)</span> index a possible TCRE in a set <span class="math notranslate nohighlight">\(\Theta\)</span>, and let <span class="math notranslate nohighlight">\(P_t\)</span> be a baseline probability that assigns weight <span class="math notranslate nohighlight">\(1/144\)</span> to each member of the set. We allow for time dependence in the baseline probability in our notation to allow for recursive learning, although we abstract from this learning in our application. Even when <span class="math notranslate nohighlight">\(P_t\)</span> is time invariant, we will entertain alternative weights that are time varying in our robustness analysis.</p>
+<p>We incorporate concerns about the potential misspecification of these baseline model weights by introducing alternative relative densities <span class="math notranslate nohighlight">\(Q_t(\theta) \ge 0\)</span> that satisfy:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{\Theta} Q_t(\theta) dP_t(\theta) = 1
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q_t dP_t\)</span> gives an alternative weighting across models. With this alternative weighting, we form the model average TCRE as follows:</p>
+<div class="math notranslate nohighlight">
+\[
+\tilde{\theta}_t \overset{\mathrm{def}}{=} \int_\Theta \theta Q_t(\theta) dP_t(\theta)
+\]</div>
+<p>with a baseline outcome <span class="math notranslate nohighlight">\(\bar{\theta}\)</span> obtained by setting <span class="math notranslate nohighlight">\(Q_t = 1\)</span>. The discrepancy between the two temperature evolution drifts is then given by</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{E}_t \left( \tilde{\theta}_t - \bar{\theta}_t \right).
+\]</div>
+<p>We now use a relative entropy measure that is expressed in terms of model weights:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_\Theta Q_t(\theta) \log Q_t(\theta) dP_t(\theta)
+\]</div>
+<p>in conjunction with a penalty parameter <span class="math notranslate nohighlight">\(\xi_a\)</span>. We follow <span id="id2"><a class="reference internal" href="../reference.html#cite-hansenmiao-2018" title="Lars Peter Hansen and Jianjun Miao. Aversion to ambiguity and model misspecification in dynamic stochastic environments. Proceedings of the National Academy of Sciences, 115(37):9163–9168, 2018. URL: http://www.pnas.org/lookup/doi/10.1073/pnas.1811243115, doi:10.1073/pnas.1811243115.">Hansen and Miao (2018)</a></span> by introducing</p>
+<p><strong>Problem 3.2.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+\min_{Q_t,\, \int_\Theta Q_t(\theta) dP_t(\theta) = 1} \hspace{.3cm} &amp; \frac{\partial V}{\partial y}(X_t) \mathcal{E}_t \int_\Theta \theta Q_t(\theta) dP_t(\theta) + \xi_a \int_\Theta Q_t(\theta) \log Q_t(\theta) dP_t(\theta) \cr
+= &amp; \hspace{.3cm} - \xi_a \log \int_\Theta \exp\left[ - \frac{1}{\xi_a} \frac{\partial V}{\partial y}(X_t) \mathcal{E}_t \theta \right] dP_t(\theta), \tag{8}
+\end{align*}
+\]</div>
+<p><em>with a minimizing solution</em></p>
+<div class="math notranslate nohighlight">
+\[
+Q^*_t(\theta) = \frac{\exp\left[ - \frac{1}{\xi_a} \frac{\partial V}{\partial y}(X_t) \mathcal{E}_t \theta \right]}{\int_\Theta \exp\left[ - \frac{1}{\xi_a} \frac{\partial V}{\partial y}(X_t) \mathcal{E}_t \theta \right] dP_t(\theta)}.
+\]</div>
+<p>Notice that the adjustment in the weights in the minimizing solution has an exponential tilt based on the negative of the model-specific value function evolutions:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial V}{\partial y}(X_t) \mathcal{E}_t \theta
+\]</div>
+<p>scaled by <span class="math notranslate nohighlight">\(1/\xi_a\)</span>. With this adjustment, smaller continuation-value increments induce larger model weights.</p>
+<p>The uncertainty aversion adjustment for the model averaging incorporates term (8) into the HJB equation for the policy maker in place of <span class="math notranslate nohighlight">\(\frac{\partial V}{\partial y}(x) e \theta\)</span>, or its simple average over alternative <span class="math notranslate nohighlight">\(\theta\)</span>’s for the different models. In our implementation, we will close down less structured drift distortion for the temperature equation and replace it by this more structured approach.</p>
+</section>
+<section id="jump-misspecification">
+<span id="jump"></span><h2><span class="section-number">2.3. </span>Jump misspecification<a class="headerlink" href="#jump-misspecification" title="Permalink to this heading">#</a></h2>
+<p>The jump probabilities depend on endogenously determined intensities.</p>
+<p>We assume a discrete set of jump states <span class="math notranslate nohighlight">\(\ell = 1,2,..., L\)</span>. Let <span class="math notranslate nohighlight">\(\mathcal{J}^\ell\)</span> denote a state-dependent intensity for a jump of type <span class="math notranslate nohighlight">\(\ell\)</span>. Recall that the jump intensity, <span class="math notranslate nohighlight">\(\mathcal{J}^\ell\)</span>, implies an approximate jump probability, <span class="math notranslate nohighlight">\(\epsilon \mathcal{J}^\ell\)</span>, over a small time increment, <span class="math notranslate nohighlight">\(\epsilon\)</span>. Following a jump of type <span class="math notranslate nohighlight">\(\ell\)</span>, the value function jumps to <span class="math notranslate nohighlight">\(V^\ell\)</span>. In the absence of misspecification concerns, the jump process contributes the following term to the HJB equation for <span class="math notranslate nohighlight">\(V(X)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{\ell = 1}^L \mathcal{J}^\ell(X_t) \left[ V^\ell(X_t) - V(X_t) \right], \tag{9}
+\]</div>
+<p>capturing the jump-risk contribution to the stochastic evolution of the value function.</p>
+<p>To allow for potential misspecification, we introduce non-negative functions <span class="math notranslate nohighlight">\(G_t^\ell\)</span> where the altered jump contributions have intensity <span class="math notranslate nohighlight">\(\mathcal{J}^\ell(X_t) G_t^\ell(X_t)\)</span>. To restrain the exploration of potential misspecification, we introduce a convex cost:</p>
+<div class="math notranslate nohighlight">
+\[
+\xi_m \sum_{\ell=1}^L \mathcal{J}^\ell(X_t) \left[ 1 - G_t^\ell + G^\ell_t \log G^\ell_t \right].
+\]</div>
+<p>The term multiplying <span class="math notranslate nohighlight">\(\xi_m\)</span> is a local (in time) measure of relative entropy or Kullback–Leibler divergence applicable to jump processes. To confront misspecification, we solve:</p>
+<p><strong>Problem 3.3.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+\min_{G^\ell_t \ge 0} \hspace{.3cm} &amp; \sum_{\ell=1}^L \mathcal{J}^\ell(X_t) G^\ell_t \left[ V^\ell(X_t) - V(X_t) \right] + \xi_m \sum_{\ell = 1}^L \mathcal{J}^\ell(X_t) \left[ 1 - G_t^\ell + G^\ell_t \log G^\ell_t \right] \cr
+= &amp; \hspace{.2cm} \xi_m \sum_{\ell=1}^L \mathcal{J}^\ell(X_t) \left[ 1 - \exp \left( - \frac{1}{\xi_m} \left[ V^\ell(X_t) - V(X_t) \right] \right) \right] \tag{10}
+\end{align*}
+\]</div>
+<p><em>with a minimizing solution:</em></p>
+<div class="math notranslate nohighlight">
+\[
+G^{\ell*}_t = \exp \left( - \frac{1}{\xi_m} \left[ V^\ell(X_t) - V(X_t) \right] \right).
+\]</div>
+<p>Notice that the jump intensities increase or decrease depending on whether <span class="math notranslate nohighlight">\(V^\ell(X_t) - V(X_t)\)</span> is negative or positive. The misspecification aversion for the prospective jumps contributes the RHS term from (10) to the policy-maker HJB equation in place of the term given in (9).</p>
+<p>In our example economy, we compute <span class="math notranslate nohighlight">\(V^\ell\)</span>’s by solving value functions conditioned on the damage curvature jumps (<span class="math notranslate nohighlight">\(\ell = 1,2,..., L-1\)</span>) and the technology jump (<span class="math notranslate nohighlight">\(\ell = L\)</span>) using the same baseline intensities for the remaining jump possibilities.</p>
+<p>To implement these specifications of uncertainty aversion or robustness concerns requires that we specify the parameters <span class="math notranslate nohighlight">\(\xi_m\)</span> and <span class="math notranslate nohighlight">\(\xi_a\)</span>. Since the <span class="math notranslate nohighlight">\(\xi_m\)</span> and <span class="math notranslate nohighlight">\(\xi_a\)</span> parameter settings are a feature of planner preferences, as external researchers we see little reason to commit to specific calibrated values. Instead we show implications of multiple specifications and provide some diagnostics that help in assessing their plausibility.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "lphansen/mitigation_book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01_example_economy.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Example economy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="03_hjb_equations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>HJB Equations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brownian-motion-misspecification">2.1. Brownian motion misspecification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-model-averaging">2.2. Robust model averaging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jump-misspecification">2.3. Jump misspecification</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

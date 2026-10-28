@@ -1,0 +1,749 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>1. Example economy &#8212; Uncertainty, Social Valuation, and Climate Change Policy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/phi0_rd_data.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/01_example_economy';</script>
+    <link rel="shortcut icon" href="../_static/mfr.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Confronting uncertainty" href="02_confronting_uncertainty.html" />
+    <link rel="prev" title="Uncertainty, Social Valuation, and Climate Change Policy" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mfr.png" class="logo__image only-light" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>
+    <script>document.write(`<img src="../_static/mfr.png" class="logo__image only-dark" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Example economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_confronting_uncertainty.html">2. Confronting uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_hjb_equations.html">3. HJB Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_computational_method.html">4. Computational method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_first_order_conditions.html">5. First-order conditions and stochastic simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_uncertainty_assessments.html">6. Uncertainty assessments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_acting_now_or_waiting.html">7. Acting now or waiting?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_marginal_valuations.html">8. Marginal valuations as asset prices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_technology_only.html">9. A simplified model with only technology jumps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_real_options.html">10. Comparison to a real options formulation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Online appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11_online_m.html">M. Sensitivity analysis details: IES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_online_n.html">N. Sensitivity analysis details: (<span class="math notranslate nohighlight">\(\phi_0, \psi_0, \chi\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_online_o.html">O. HJB Equations with 2 Technology Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_online_p.html">P. Damage function jump intensity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/edit/main/docs/chapters/01_example_economy.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fchapters/01_example_economy.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/01_example_economy.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Example economy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#production-and-innovation">1.1. Production and innovation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">1.1.1. Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#productive-capital-evolution">1.1.2. Productive capital evolution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r-d-capital-evolution">1.1.3. R&amp;D capital evolution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#climate-dynamics">1.2. Climate dynamics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damage-functions">1.3. Damage functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensity-function">1.3.1. Intensity function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#range-of-damage-functions">1.3.2. Range of damage functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#social-planner-preferences">1.4. Social planner preferences</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-and-control-variables">1.5. State and control variables</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="example-economy">
+<h1><span class="section-number">1. </span>Example economy<a class="headerlink" href="#example-economy" title="Permalink to this heading">#</a></h1>
+<p>We consider a simple production-based model with an AK production technology along with adjustment costs. Our production framework includes two investment opportunities. While one of the investments is the commonly modeled investment in augmenting a broadly based capital stock, the second is an investment in R&amp;D. Climate change is incorporated via damages induced by global warming. A successful R&amp;D discovery eliminates carbon emissions from production, limiting any additional future climate damages.</p>
+<p>Important components of our model specifications are two types of Poisson events, a <em>damage information event</em> that reveals the economic implications for further increases in global warming and the <em>technology discovery</em>. There are <span class="math notranslate nohighlight">\(L\)</span> possible initial jump realizations, with <span class="math notranslate nohighlight">\(\ell = 1, \ldots, L-1\)</span> pertaining to the damage implications for further increases in global warming and <span class="math notranslate nohighlight">\(L\)</span> denoting the final possible realization pertaining to the technology discovery.</p>
+<p>Our model specification is highly stylized, which makes calibration challenging; but we do intend our computations to be meaningful and revealing. Given the stylized nature of our model specification, a more formal and complete calibration is not feasible. As a consequence, the model outcomes we report should be thought of as illustrations of potentially important mechanisms.</p>
+<section id="production-and-innovation">
+<span id="production"></span><h2><span class="section-number">1.1. </span>Production and innovation<a class="headerlink" href="#production-and-innovation" title="Permalink to this heading">#</a></h2>
+<section id="output">
+<h3><span class="section-number">1.1.1. </span>Output<a class="headerlink" href="#output" title="Permalink to this heading">#</a></h3>
+<p>Output is split between consumption and two different types of investment with distinct intertemporal contributions to production: a conventional capital investment, <span class="math notranslate nohighlight">\(I^k_t\)</span>, and an investment in R&amp;D, <span class="math notranslate nohighlight">\(I^r_t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+C_t + I^k_t + I^r_t = \alpha K_t \left[ 1 - \phi_0 \left( B_t \right)^{\phi_1} \right]
+\]</div>
+<p>for <span class="math notranslate nohighlight">\(\phi_1 \ge 2\)</span> and <span class="math notranslate nohighlight">\(0 \le \phi_0 \le 1\)</span>. Superscripts <span class="math notranslate nohighlight">\(r\)</span> and <span class="math notranslate nohighlight">\(k\)</span> denote investment type. The notation <span class="math notranslate nohighlight">\(B_t\)</span> is defined by</p>
+<div class="math notranslate nohighlight">
+\[
+B_t \overset{\mathrm{def}}{=} \left( 1 - \frac{\mathcal{E}_t}{\beta \alpha K_t} \right) \mathbf{1}_{\{ \mathcal{E}_t \le \beta \alpha K_t \}},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{1}\)</span> is an indicator function that assigns one to the event in the <span class="math notranslate nohighlight">\(\{ \cdot \}\)</span> brackets.</p>
+<p>Emissions <span class="math notranslate nohighlight">\(\mathcal{E}_t\)</span> are a proxy for a “dirty” energy input into production. We restrict the energy input to be nonnegative (<span class="math notranslate nohighlight">\(\mathcal{E}_t \ge 0\)</span>). When emissions fall short of the threshold <span class="math notranslate nohighlight">\(\beta \alpha K_t\)</span>, there is a corresponding convex adjustment in the output given by the right-hand side of the output constraint. For instance, one could imagine a fixed proportions technology for energy and capital, where dirty energy reduction less than the required proportion of capital must be replaced by a clean alternative subject to a convex “abatement cost.” In this case, <span class="math notranslate nohighlight">\(B_t\)</span> is a measure of emissions abatement.</p>
+<p>We feature the case in which <span class="math notranslate nohighlight">\(\phi_1 = 3\)</span>. We suppose initially that <span class="math notranslate nohighlight">\(\phi_0 &gt; 0\)</span> and that at some future point a fully green technology becomes economically viable, in which case <span class="math notranslate nohighlight">\(\phi_0^L = 0\)</span> and dirty energy is no longer needed to produce output.</p>
+</section>
+<section id="productive-capital-evolution">
+<h3><span class="section-number">1.1.2. </span>Productive capital evolution<a class="headerlink" href="#productive-capital-evolution" title="Permalink to this heading">#</a></h3>
+<p>The stock of productive capital, <span class="math notranslate nohighlight">\(K_t\)</span>, evolves as</p>
+<div class="math notranslate nohighlight">
+\[
+dK_t = K_t \left[ -\mu_k + \frac{I^k_t}{K_t} - \frac{\kappa}{2} \left( \frac{I^k_t}{K_t} \right)^2 \right] dt + K_t \sigma_k dW_t,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\sigma_k\)</span> is a row vector with the same dimension as the underlying Brownian motion. The new investment <span class="math notranslate nohighlight">\(I^k_t\)</span> augments the capital stock <span class="math notranslate nohighlight">\(K_t\)</span>, subject to an adjustment cost captured by the curvature parameter <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
+</section>
+<section id="r-d-capital-evolution">
+<h3><span class="section-number">1.1.3. </span>R&amp;D capital evolution<a class="headerlink" href="#r-d-capital-evolution" title="Permalink to this heading">#</a></h3>
+<p>A process <span class="math notranslate nohighlight">\(R\)</span> captures the stock of R&amp;D-induced knowledge capital and evolves as</p>
+<div class="math notranslate nohighlight">
+\[
+dR_t = -\zeta R_t dt + \psi_0 \left( I^r_t \right)^{\psi_1} \left( R_t \right)^{1 - \psi_1} dt + R_t \sigma_r dW_t,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(0 &lt; \psi_1 &lt; 1\)</span> and <span class="math notranslate nohighlight">\(I^r_t\)</span> is an investment in research and development. The parameter <span class="math notranslate nohighlight">\(\zeta\)</span> captures potential depreciation in the stock of knowledge pertinent for future technological progress. The term <span class="math notranslate nohighlight">\(\sigma_r dW_t\)</span> reflects an exogenous stochastic inflow of information on the future likelihood of a technological advance. We impose that <span class="math notranslate nohighlight">\(\sigma_r \cdot \sigma_k = 0\)</span> making the stochastic increments in the two types of capital uncorrelated. The jump intensity for a new discovery <span class="math notranslate nohighlight">\(\mathcal{J}^L(R_t)\)</span> is proportional to the knowledge stock <span class="math notranslate nohighlight">\(R\)</span>. We denote the constant of proportionality by <span class="math notranslate nohighlight">\(\chi\)</span>, so that <span class="math notranslate nohighlight">\(\mathcal{J}^L(R_t) = \chi R_t\)</span>. We refer to the resulting jump as a <em>technology jump</em>.</p>
+</section>
+</section>
+<section id="climate-dynamics">
+<span id="climate"></span><h2><span class="section-number">1.2. </span>Climate dynamics<a class="headerlink" href="#climate-dynamics" title="Permalink to this heading">#</a></h2>
+<p>Here we follow the simplified climate dynamics used in <span id="id1"><a class="reference internal" href="../reference.html#cite-brockxepadadeas-2017" title="W. Brock and A. Xepapadeas. Climate change policy under polar amplification. European Economic Review, 99:263-282, 2017. doi:10.1016/j.euroecorev.2017.06.008.">Brock and Xepapadeas (2017)</a></span> and <a class="reference internal" href="../reference.html#cite-barnettbrockhansen-2022">Barnett, Brock and Hansen (2022)</a>.<span id="id2"></span> Their approach is based on an approximation from the geoscience literature used to support model comparisons. Specifically, <span id="id3"><a class="reference internal" href="../reference.html#cite-matthewsgillettscott-2009" title="H Damon Matthews, Nathan P Gillett, Peter A Stott, and Kirsten Zickfeld. The proportionality of global warming to cumulative carbon emissions. Nature, 459(7248):829–832, 2009. doi:10.1038/nature08047.">Matthews et al. (2009)</a></span> and others have purposefully constructed an approximation for climate model output:</p>
+<div class="math notranslate nohighlight">
+\[
+\textrm{temperature anomaly } (Y_t) \approx \textrm{TCRE } (\theta) \times \textrm{cumulative emissions},
+\]</div>
+<p>where TCRE is an acronym for the <strong>T</strong>ransient <strong>C</strong>limate <strong>R</strong>esponse to cumulative <strong>E</strong>missions.</p>
+<p>Our specific form is given by</p>
+<div class="math notranslate nohighlight">
+\[
+dY_t = \mathcal{E}_t \left[ \theta dt + \varsigma dW_t \right]
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta\)</span> is obtained from the set <span class="math notranslate nohighlight">\(\Theta\)</span> of TCREs implied by alternative climate models. The term <span class="math notranslate nohighlight">\(\varsigma dW_t\)</span> captures short-term climate sensitivity fluctuations. We impose that <span class="math notranslate nohighlight">\(\sigma_k \cdot \varsigma = \sigma_r \cdot \varsigma = 0\)</span> making the stochastic increments in the temperature anomaly and the two types of capital uncorrelated. <a class="reference internal" href="#fig-1"><span class="std std-ref">Figure 1</span></a> gives a smoothed histogram of the <span class="math notranslate nohighlight">\(\theta\)</span>’s used in our computations.</p>
+<div id="fig-1" style="display:flex; justify-content:center; align-items:center;">
+  <img src="../_static/paper/Figure1_Climate_Sensitivity.png"
+       alt="Smoothed density for weighted-average temperature responses to an emissions pulse from 144 different models"
+       style="width:450px; max-width:100%; height:auto;">
+</div>
+<p>Figure 1: Smoothed density for the exponentially weighted (over horizon) responses of temperature to an emissions pulse based on input from 144 different models denoted by <span class="math notranslate nohighlight">\(\theta \in \Theta\)</span> for <span class="math notranslate nohighlight">\(|\Theta| = 144\)</span>. The computations are based on an exponential decay rate matching the discount rate <span class="math notranslate nohighlight">\(\delta = .01\)</span>.</p>
+<p>For baseline probabilities across the alternative climate models, we assign to each model the same subjective probability. For tractability, we abstract from parameter learning, as learning about such parameters is challenging given the underlying model complexities and has been historically slow. Rather than choose a particular <span class="math notranslate nohighlight">\(\theta\)</span>, we use weighted averages of the <span class="math notranslate nohighlight">\(\theta\)</span>’s across the different climate models based on a form of robust model averaging as is described in <a class="reference internal" href="02_confronting_uncertainty.html#robust-averaging"><span class="std std-ref">Confronting uncertainty</span></a>.</p>
+</section>
+<section id="damage-functions">
+<span id="damage"></span><h2><span class="section-number">1.3. </span>Damage functions<a class="headerlink" href="#damage-functions" title="Permalink to this heading">#</a></h2>
+<p>We assume that consumption, <span class="math notranslate nohighlight">\(C_t\)</span>, is diminished proportionately by climate change damages, <span class="math notranslate nohighlight">\(N_t\)</span>. Damages follow a piecewise log quadratic function of the temperature anomaly <span class="math notranslate nohighlight">\(y\)</span>. We assume a <em>damage information event</em> not only reveals the damage curvature for more extreme temperature changes, but it also induces a discrete increase in the logarithmic derivative, <span class="math notranslate nohighlight">\(d\hat{n}/dy\)</span>, in accordance with one of <span class="math notranslate nohighlight">\(L-1\)</span> possible specifications. Formally, the derivative of logarithmic damages <span class="math notranslate nohighlight">\(\hat{n}\)</span> with respect to the temperature anomaly is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{d \hat{n}}{dy} =
+\begin{cases}
+\lambda_1 + \lambda_2 y, &amp; \text{pre damage information event} \\
+\lambda_1 + \lambda_2 \left( y - \hat{y} + \overline{y} \right) + \lambda_3(\ell)(y - \hat{y}), &amp; \text{post damage information event}
+\end{cases}
+\end{split}\]</div>
+<p>for <span class="math notranslate nohighlight">\(\ell = 1, \ldots, L-1\)</span>, where <span class="math notranslate nohighlight">\(\hat{y}\)</span> denotes the temperature anomaly when the damage information event takes place. The threshold <span class="math notranslate nohighlight">\(\overline{y}\)</span> denotes the upper limit on <span class="math notranslate nohighlight">\(\hat{y}\)</span>. The value of <span class="math notranslate nohighlight">\(\lambda_3\)</span> is initially latent, but is subsequently revealed through the realization of a damage information event as captured by <span class="math notranslate nohighlight">\(\lambda_3(\ell)\)</span> and <span class="math notranslate nohighlight">\(\hat{y}\)</span>. Integrating, we construct the log damage function:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\hat{n}(y) =
+\begin{cases}
+\lambda_1 y + \dfrac{\lambda_2}{2} y^2, &amp; \text{pre damage event} \\
+\lambda_1 y + \dfrac{\lambda_2}{2} \hat{y}^2 +
+\dfrac{\lambda_2}{2} (y - \hat{y} + \overline{y})^2 +
+\dfrac{\lambda_3(\ell)}{2} (y - \hat{y})^2 -
+\dfrac{\lambda_2}{2} \overline{y}^2, &amp; \text{post damage event}
+\end{cases}
+\end{split}\]</div>
+<section id="intensity-function">
+<h3><span class="section-number">1.3.1. </span>Intensity function<a class="headerlink" href="#intensity-function" title="Permalink to this heading">#</a></h3>
+<p>The intensity function governing this jump is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathcal{J}^n(y) =
+\begin{cases}
+0, &amp; 0 \le y \le \underline{y} \\
+\mathsf{d}_0 \exp\left[
+\frac{\mathsf{d}_1}{2} (y - \underline{y})^2 +
+\frac{\mathsf{d}_2}{2} (y - \overline{y})^{-2}
+\right] -
+\mathsf{d}_0 \exp\left[
+\frac{\mathsf{d}_2}{2} (\underline{y} - \overline{y})^{-2}
+\right], &amp; \underline{y} &lt; y &lt; \overline{y}
+\end{cases}
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\underline{y}\)</span> denotes the lower bound for when the damage information event can occur. The <span class="math notranslate nohighlight">\({\sf d}_2\)</span> term guarantees that the damage information event occurs prior to the temperature anomaly reaching <span class="math notranslate nohighlight">\(\overline{y}\)</span>.</p>
+<iframe
+  id="plotly-intensity"
+  src="../_static/intensity_interactive.html"
+  title="Intensity function of the damage information event"
+  width="100%"
+  height="500"
+  scrolling="no"
+  style="display:block; margin:0 auto; border:none;"
+></iframe>
+<p>Given that such an event takes place there are <span class="math notranslate nohighlight">\(L-1\)</span> possible damage curves that could be realized, each with equal probability. Curve <span class="math notranslate nohighlight">\(\ell\)</span> has intensity:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{J}^{\ell}(y) = \left( \frac{1}{L-1} \right) \mathcal{J}^n(y), \qquad \ell = 1, 2, \ldots, L-1.
+\]</div>
+<p>We refer to each of these jumps as a damage curvature jump; the damage information event is the collection of these <span class="math notranslate nohighlight">\(L-1\)</span> potential jumps.</p>
+</section>
+<section id="range-of-damage-functions">
+<h3><span class="section-number">1.3.2. </span>Range of damage functions<a class="headerlink" href="#range-of-damage-functions" title="Permalink to this heading">#</a></h3>
+<p><a class="reference internal" href="#fig-2"><span class="std std-ref">Figure 2</span></a> displays the damage functions included in our analysis.</p>
+<iframe
+  id="fig-2"
+  src="../_static/damage_interactive.html"
+  title="Range of possible damages for alternative damage function curvature realizations with jump realizations at temperature anomalies of 1.75 and 2.25 degrees Celsius"
+  width="100%"
+  height="620"
+  scrolling="no"
+  style="display:block; margin:0 auto; border:none;"
+></iframe>
+<p>Figure 2: Range of possible damage functions for two cases with different temperature thresholds. Formally, the vertical axis measures <span class="math notranslate nohighlight">\(\exp(-\hat{n})\)</span>. The solid curves show the average values, and the shaded regions give the range of possible values for <span class="math notranslate nohighlight">\(\exp(-\hat{n})\)</span>, representing the remaining fraction of the economy’s capacity to produce consumption. We constructed this figure for <span class="math notranslate nohighlight">\(\underline{y} = 1.5\)</span> and <span class="math notranslate nohighlight">\(\overline{y} = 2.5\)</span>. The red curve and region show the potential damage functions when the damage information event occurs at <span class="math notranslate nohighlight">\(Y_t = \hat{y} = 1.75\)</span>. The blue curve and region show the potential damage functions when the event occurs at <span class="math notranslate nohighlight">\(Y_t = \hat{y} = 2.25\)</span>.</p>
+<p>The sliders set <span class="math notranslate nohighlight">\(\hat{y}\)</span> for the green case and pick a single damage curve <span class="math notranslate nohighlight">\(\lambda_3(\ell)\)</span>, drawn as a dashed line.</p>
+<p>Notice that an early occurrence of the damage information event is in part “bad news” in our specification due to the more extreme concavity of the damage function, in contrast with a late occurrence.</p>
+</section>
+</section>
+<section id="social-planner-preferences">
+<span id="preferences"></span><h2><span class="section-number">1.4. </span>Social planner preferences<a class="headerlink" href="#social-planner-preferences" title="Permalink to this heading">#</a></h2>
+<p>We adopt a recursive representation of preferences in continuous time for the planner. We start by forming the forward-looking continuation value, <span class="math notranslate nohighlight">\(V_t\)</span>, under risk for each calendar date, <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+V_t &amp;= \delta \int_0^\infty \exp(-\delta u) \mathbb{E} \left[ \left( \log C_{t+u} - \log N_{t+u} \right) \mid \mathfrak{F}_t \right] du \\
+&amp;= \delta \int_0^\tau \exp(-\delta u) \mathbb{E} \left[ \left( \log C_{t+u} - \log N_{t+u} \right) \mid \mathfrak{F}_t \right] du + \exp(-\delta \tau) \mathbb{E} \left( V_{t+\tau} \mid \mathfrak{F}_t \right),
+\end{align*}
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathfrak{F}_t\)</span> reflects the date <span class="math notranslate nohighlight">\(t\)</span> information available to the planner. Thus under risk, the preferences assume logarithmic utility in “damaged consumption”, <span class="math notranslate nohighlight">\(C/N\)</span>. The following differential equation gives the local representation:</p>
+<div class="math notranslate nohighlight">
+\[
+0 = \delta \left( \log C_t - \log N_t - V_t \right) + \lim_{\tau \downarrow 0} \frac{1}{\tau} \left[ \mathbb{E} \left( V_{t+\tau} - V_t \mid \mathfrak{F}_t \right) \right].
+\]</div>
+<p>This equation becomes a Hamilton-Jacobi-Bellman (HJB) equation once we substitute a candidate value function expressed as a function of the state vector.</p>
+<p>The representation deduced in this section assumes a unitary elasticity of substitution which we feature in most of our computations, although we do explore sensitivity to this modeling choice in Appendix F of the paper and in more detail in <a class="reference internal" href="11_online_m.html"><span class="doc std std-doc">Online Appendix M</span></a>.</p>
+</section>
+<section id="state-and-control-variables">
+<span id="model-spec"></span><h2><span class="section-number">1.5. </span>State and control variables<a class="headerlink" href="#state-and-control-variables" title="Permalink to this heading">#</a></h2>
+<p>In our computations that follow, we use the state variables:</p>
+<div class="math notranslate nohighlight">
+\[
+X_t \overset{\mathrm{def}}{=} \begin{bmatrix} \widehat{K}_t, \widehat{R}_t, Y_t \end{bmatrix}', \quad \text{where} \quad \widehat{K}_t \overset{\mathrm{def}}{=} \log K_t, \quad \widehat{R}_t \overset{\mathrm{def}}{=} \log R_t
+\]</div>
+<p>We have three controls:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{I^k_t}{K_t}, \qquad \frac{I^r_t}{K_t}, \qquad \mathcal{E}_t.
+\]</div>
+<p>The first two controls are expressed relative to capital to simplify the numerical analysis. In the social valuation formulas, we use damaged consumption as the numeraire. Consumption prior to damages is determined by the output constraint, and damages are given by:</p>
+<div class="math notranslate nohighlight">
+\[
+N_t = \exp\left[ \hat{n}(Y_t) \right].
+\]</div>
+<p>Consequently, consumption inclusive of damages (damaged consumption) satisfies:</p>
+<div class="math notranslate nohighlight">
+\[
+C^d_t \overset{\mathrm{def}}{=} \frac{C_t}{N_t} = \frac{K_t}{N_t} \left( \alpha \left[ 1 - \phi_0 \left( B_t \right)^{\phi_1} \right] - \frac{I^k_t}{K_t} - \frac{I^r_t}{K_t} \right).
+\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "lphansen/mitigation_book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Uncertainty, Social Valuation, and Climate Change Policy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02_confronting_uncertainty.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Confronting uncertainty</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#production-and-innovation">1.1. Production and innovation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">1.1.1. Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#productive-capital-evolution">1.1.2. Productive capital evolution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r-d-capital-evolution">1.1.3. R&amp;D capital evolution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#climate-dynamics">1.2. Climate dynamics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damage-functions">1.3. Damage functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensity-function">1.3.1. Intensity function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#range-of-damage-functions">1.3.2. Range of damage functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#social-planner-preferences">1.4. Social planner preferences</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-and-control-variables">1.5. State and control variables</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

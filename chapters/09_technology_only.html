@@ -1,0 +1,712 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>9. A simplified model with only technology jumps &#8212; Uncertainty, Social Valuation, and Climate Change Policy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/phi0_rd_data.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/09_technology_only';</script>
+    <link rel="shortcut icon" href="../_static/mfr.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10. Comparison to a real options formulation" href="10_real_options.html" />
+    <link rel="prev" title="8. Marginal valuations as asset prices" href="08_marginal_valuations.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mfr.png" class="logo__image only-light" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>
+    <script>document.write(`<img src="../_static/mfr.png" class="logo__image only-dark" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_example_economy.html">1. Example economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_confronting_uncertainty.html">2. Confronting uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_hjb_equations.html">3. HJB Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_computational_method.html">4. Computational method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_first_order_conditions.html">5. First-order conditions and stochastic simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_uncertainty_assessments.html">6. Uncertainty assessments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_acting_now_or_waiting.html">7. Acting now or waiting?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_marginal_valuations.html">8. Marginal valuations as asset prices</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. A simplified model with only technology jumps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_real_options.html">10. Comparison to a real options formulation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Online appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11_online_m.html">M. Sensitivity analysis details: IES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_online_n.html">N. Sensitivity analysis details: (<span class="math notranslate nohighlight">\(\phi_0, \psi_0, \chi\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_online_o.html">O. HJB Equations with 2 Technology Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_online_p.html">P. Damage function jump intensity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/edit/main/docs/chapters/09_technology_only.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fchapters/09_technology_only.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/09_technology_only.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>A simplified model with only technology jumps</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enhanced-uncertainty-aversion">9.1. Enhanced uncertainty aversion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-step-technology-discovery">9.2. Two-step technology discovery</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uncertainty-aversion-sensitivity">9.3. Uncertainty aversion sensitivity</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="a-simplified-model-with-only-technology-jumps">
+<h1><span class="section-number">9. </span>A simplified model with only technology jumps<a class="headerlink" href="#a-simplified-model-with-only-technology-jumps" title="Permalink to this heading">#</a></h1>
+<p>As a simplified illustration of why the social planner’s R&amp;D investment response is so sensitive to uncertainty concerns, we consider a version of our model focused solely on the potential technology discovery. In this simplified setting, we assume that there is a single known damage curve, i.e. there is no damage information event. The constructed damage curve instead assumes that the additional curvature begins at a temperature anomaly of <span class="math notranslate nohighlight">\(2^{\circ} C\)</span> with a value of <span class="math notranslate nohighlight">\(\lambda_3\)</span> being the baseline average across the set of possible <span class="math notranslate nohighlight">\(\lambda_3(\ell)\)</span>’s. The resulting damage function is shown in <a class="reference internal" href="#fig-8"><span class="std std-ref">Figure 8</span></a>. We also close down uncertainty aversion related to the diffusion contribution and the alternative climate models to further enhance the focus on the prospective technology discovery. We consider two variations of our previous computations. First, we entertain considerably larger specifications of uncertainty aversion (smaller values of <span class="math notranslate nohighlight">\(\xi_m\)</span>). Second, we allow for the technology discovery to occur only partially or in two stages instead of one.</p>
+<div id="fig-8" style="display:flex; justify-content:center; align-items:center;">
+  <img src="../_static/paper/Figure8_Temperature_Anomaly_weighted.png"
+       alt="Plot showing the single damage function in the simplified setting with additional curvature set at the average value and starting at 2.0 degrees Celsius"
+       style="width:450px; max-width:100%; height:auto;">
+</div>
+<p>Figure 8: The consumption impact of the single damage function constructed by imposing <span class="math notranslate nohighlight">\({\hat y} = 2\)</span> and the arithmetic average of the <span class="math notranslate nohighlight">\(\lambda_3(\ell)\)</span>’s. Formally, the vertical axis measures <span class="math notranslate nohighlight">\(\exp(-{\hat n})\)</span>. The damages range from no impact on consumption <span class="math notranslate nohighlight">\((1.00)\)</span> for a <span class="math notranslate nohighlight">\(0.0^{\circ}C\)</span> temperature anomaly to a nearly 20% reduction in consumption <span class="math notranslate nohighlight">\((\sim .80)\)</span> for a <span class="math notranslate nohighlight">\(3.5^{\circ}C\)</span> temperature anomaly.</p>
+<section id="enhanced-uncertainty-aversion">
+<span id="enhanced-aversion"></span><h2><span class="section-number">9.1. </span>Enhanced uncertainty aversion<a class="headerlink" href="#enhanced-uncertainty-aversion" title="Permalink to this heading">#</a></h2>
+<p><a class="reference internal" href="#fig-9"><span class="std std-ref">Figure 9</span></a> gives the baseline and two uncertainty-adjusted densities for the timing of the technology jump. This figure shows the delay in the prospective success under the uncertainty-adjusted probability measures. For example, the median in the baseline case is about 34.6 years. The enhanced medians for the less averse and more averse specifications are about 49.4 and 78.8 years, respectively. The uncertainty-adjusted densities make the R&amp;D investment appear <em>less</em> attractive from a social valuation perspective.</p>
+<div id="fig-9" style="display:flex; justify-content:center; align-items:center;">
+  <img src="../_static/paper/Figure9_tech_only_lambda_jacobian_baseline_allxi_Technology_technology_density.png"
+       alt="Jump time densities across uncertainty aversion cases for the technology jump only model"
+       style="width:450px; max-width:100%; height:auto;">
+</div>
+<p>Figure 9: Jump time densities for the technology jump only model, including the baseline specification and uncertainty-adjusted densities for two alternative specifications of uncertainty aversion.</p>
+<p><a class="reference internal" href="#table-6"><span class="std std-ref">Table 6</span></a> reports the three flow contributions to the SVRD for alternative aversions to uncertainty, along with the robustly optimal initial investments for R&amp;D and capital. In this simplified model, we continue to see more R&amp;D investment for greater uncertainty concerns. All three contributions to the SVRD increase with uncertainty concerns, including the flow ii term. In the absence of a damage information event, the flow ii term is now the major contributor to the SVRD, accounting for about two-thirds of overall valuations.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="table-6">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p><span class="math notranslate nohighlight">\(\xi_m\)</span></p></th>
+<th class="head text-center"><p>flow i</p></th>
+<th class="head text-center"><p>flow ii</p></th>
+<th class="head text-center"><p>flow iii</p></th>
+<th class="head text-center"><p>sum</p></th>
+<th class="head text-center"><p>R&amp;D investment</p></th>
+<th class="head text-center"><p>capital investment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+<td class="text-center"><p>0.45</p></td>
+<td class="text-center"><p>2.90</p></td>
+<td class="text-center"><p>0.96</p></td>
+<td class="text-center"><p>4.32</p></td>
+<td class="text-center"><p>0.0079</p></td>
+<td class="text-center"><p>0.771</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>0.1</p></td>
+<td class="text-center"><p>0.99</p></td>
+<td class="text-center"><p>4.10</p></td>
+<td class="text-center"><p>1.54</p></td>
+<td class="text-center"><p>6.64</p></td>
+<td class="text-center"><p>0.0180</p></td>
+<td class="text-center"><p>0.760</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>0.05</p></td>
+<td class="text-center"><p>1.65</p></td>
+<td class="text-center"><p>6.07</p></td>
+<td class="text-center"><p>1.68</p></td>
+<td class="text-center"><p>9.40</p></td>
+<td class="text-center"><p>0.0344</p></td>
+<td class="text-center"><p>0.742</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 6: Flow decomposition of the SVRD and initial investments for the one-jump specification. R&amp;D and capital investment are reported as ratios relative to output abstracting from the energy input (<span class="math notranslate nohighlight">\(\alpha K\)</span>). Outcomes are shown for the three different values of the aversion parameter <span class="math notranslate nohighlight">\(\xi_m\)</span> in the respective rows.</p>
+<p>Marginal changes in both capital states contribute to the outcomes reported in <a class="reference internal" href="#table-6"><span class="std std-ref">Table 6</span></a> for SVRD. As we have seen, the marginal valuations can be decomposed by horizon, analogous to the measurements from impulse-response analyses. We display such horizon-based marginal valuation decompositions in <a class="reference internal" href="#fig-10"><span class="std std-ref">Figure 10</span></a>. The left panel reports flow ii decompositions, and the right panel displays flow iii decompositions.</p>
+<div id="fig-10" style="display:flex; gap:18px; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
+  <figure style="margin:0; width:340px; max-width:100%;">
+    <img src="../_static/paper/Figure10_tech_only_lambda_jacobian_baseline_allxi_Technology_flow_ii.png"
+         alt="Horizon decomposition of the flow ii contribution to the SVRD across uncertainty aversion cases for the technology jump only model"
+         style="width:100%; height:auto;">
+    <figcaption style="text-align:center; font-size:0.85em;">(a) Horizon decomposition of the flow ii contribution to the SVRDs</figcaption>
+  </figure>
+  <figure style="margin:0; width:340px; max-width:100%;">
+    <img src="../_static/paper/Figure10_tech_only_lambda_jacobian_baseline_allxi_Technology_flow_iii.png"
+         alt="Horizon decomposition of the flow iii contribution to the SVRD across uncertainty aversion cases for the technology jump only model"
+         style="width:100%; height:auto;">
+    <figcaption style="text-align:center; font-size:0.85em;">(b) Horizon decomposition of the flow iii contribution to the SVRDs</figcaption>
+  </figure>
+</div>
+<p>Figure 10: Horizon decompositions of the flow contributions for the SVRDs. To convert the marginal value contributions in Panel (a) from <span class="math notranslate nohighlight">\({\hat r}\)</span> to <span class="math notranslate nohighlight">\(r\)</span> and put them in units of the damaged consumption numeraire, we scaled the Panel (a) trajectory by the initial period ratio of damaged consumption to the stock of knowledge. We did the analogous conversion for the Panel (b) trajectory. Each panel plots trajectories under the baseline (<span class="math notranslate nohighlight">\(\xi_m = \infty\)</span>) specification as well as two alternative specifications of uncertainty aversion.</p>
+<p>From the left panel of <a class="reference internal" href="#fig-10"><span class="std std-ref">Figure 10</span></a>, we see that smaller values of <span class="math notranslate nohighlight">\(\xi_m\)</span> (greater uncertainty aversion) lead to greater horizon-specific contributions to the SVRDs except sometimes at very short horizons. As noted in <a class="reference internal" href="08_marginal_valuations.html#proactive"><span class="std std-ref">Section 8.4</span></a>, an increase in the difference <span class="math notranslate nohighlight">\(V^L - V\)</span> gives a counteracting force to the delays in the jump time densities reported in <a class="reference internal" href="#fig-9"><span class="std std-ref">Figure 9</span></a>.</p>
+<p>The horizon decompositions in the right panel of <a class="reference internal" href="#fig-10"><span class="std std-ref">Figure 10</span></a> provide a rather different accounting for flow iii. The marginal continuation-value contribution, <span class="math notranslate nohighlight">\(\frac {\partial V^L}{\partial {\hat k}} = 1\)</span>, is independent of <span class="math notranslate nohighlight">\(\xi_m\)</span> due to the additive separability of <span class="math notranslate nohighlight">\(V^L\)</span>. The distorted jump intensity, however, remains an important contributor to this term. The locations of the peaks in the responses reflect the uncertainty-adjusted jump probabilities, which give more pessimistic assessments to the timing of an R&amp;D success when uncertainty aversion is enhanced.</p>
+<p>Uncertainty in the success date makes the investment less attractive. This force is more than offset by the net payoff to discovery, which increases because an R&amp;D success eliminates an important source of uncertainty. Although the second force dominates in our calculations, this finding turns out to be sensitive to the range of aversions that are considered. <a class="reference internal" href="#fig-11"><span class="std std-ref">Figure 11</span></a> shows that for very high misspecification concerns (high values of <span class="math notranslate nohighlight">\(1/\xi_m\)</span>), the first force can dominate, leading instead to a reduction in the R&amp;D investment. The SVRD follows a similar pattern, which is to be expected given the first-order conditions for R&amp;D investment.</p>
+<div id="fig-11" style="display:flex; justify-content:center; align-items:center;">
+  <img src="../_static/paper/Figure11_rd_investment_vs_inverse_xi.png"
+       alt="Plot of the smoothed cubic spline fit of R&amp;D investment as a function of the inverse of the robustness penalty parameter for the technology jump only model"
+       style="width:450px; max-width:100%; height:auto;">
+</div>
+<p>Figure 11: R&amp;D investment as a function of the inverse of the robustness penalty parameter, <span class="math notranslate nohighlight">\(1/\xi_m\)</span>, for the technology jump only model. In constructing this figure, we first computed R&amp;D investment-to-output ratios for a discrete set of <span class="math notranslate nohighlight">\(\xi_m\)</span>’s, and then we formed the blue curve by taking a smoothed cubic spline fit to the discrete set of computed outcomes.</p>
+</section>
+<section id="two-step-technology-discovery">
+<span id="two-step"></span><h2><span class="section-number">9.2. </span>Two-step technology discovery<a class="headerlink" href="#two-step-technology-discovery" title="Permalink to this heading">#</a></h2>
+<p>Using this simplified model without a damage information event, we next explore the quantitative impact of altering our one-step technology advancement specification. We first entertain a two-step counterpart with three alternative jump intensity functions. In all cases, the first technology jump goes only part of the way to a successful green transition by setting <span class="math notranslate nohighlight">\(\phi_0\)</span> in the output constraint to half of its original value. Only after the second technology jump is the full green transition achieved by setting <span class="math notranslate nohighlight">\(\phi_0\)</span> to zero. Continuing to denote the one-jump model jump intensity as <span class="math notranslate nohighlight">\({\mathcal J}^L\)</span>, we explore the following scenarios:</p>
+<p>i) we use <span class="math notranslate nohighlight">\(2{\mathcal J}^L\)</span> as the intensity for each of the jumps;</p>
+<p>ii) we use <span class="math notranslate nohighlight">\({\mathcal J}^L\)</span> as the intensity for each of the jumps;</p>
+<p>iii) we use <span class="math notranslate nohighlight">\(2{\mathcal J}^L\)</span> as the intensity for each jump, but we reinitialize <span class="math notranslate nohighlight">\(R_t\)</span> for the second jump at <span class="math notranslate nohighlight">\(R_0\)</span>.</p>
+<p>In the third experiment, the initial advancement of the knowledge stock is assumed to be relevant only for the first technology jump, in contrast to the other two two-step specifications. We also include a fourth specification, which uses a one-step technology specification that allows for only a partial success:</p>
+<p>iv) we use <span class="math notranslate nohighlight">\({\mathcal J}^L\)</span> as the intensity with a single jump of <span class="math notranslate nohighlight">\(\phi_0\)</span> to half of its original value;</p>
+<p>Appendix K of the paper and <a class="reference internal" href="13_online_o.html"><span class="doc std std-doc">Online Appendix O</span></a> provide additional results and full details for the model HJB equations.</p>
+<p>In <a class="reference internal" href="#table-7"><span class="std std-ref">Table 7</span></a>, we report the SVRDs and R&amp;D investments relative to total output for each of these alternative jump specifications using <span class="math notranslate nohighlight">\(\xi_m\)</span> equal to .05 and .1 as in our full model. We replicate the qualitative implications of our one-jump specifications, but quantitative magnitudes differ. We view two-jump specification i) as the closest counterpart to the one-jump versions of the model, and find that the baseline R&amp;D investment/output ratios are very similar. While uncertainty aversion continues to lead to higher R&amp;D investments than the baseline case, the increases are more modest than in the one-jump model.</p>
+<p>In comparison to specification ii), the SVRDs and the implied investments are substantially reduced for specification iv). This outcome is to be anticipated because in the absence of a second jump, the rewards to R&amp;D investment are greatly reduced. Nevertheless, the qualitative responses to increased uncertainty aversion remain for the aversions we report.</p>
+<div class="pst-scrollable-table-container" id="table-7">
+<table class="table grouped-header">
+<thead>
+<tr><th rowspan="2"><span class="math notranslate nohighlight">\(\xi_m\)</span></th><th class="group-head" colspan="2">(i)</th><th class="group-head" colspan="2">(ii)</th><th class="group-head" colspan="2">(iii)</th><th class="group-head" colspan="2">(iv)</th></tr>
+<tr><th>SVRD</th><th>R&amp;D inv.</th><th>SVRD</th><th>R&amp;D inv.</th><th>SVRD</th><th>R&amp;D inv.</th><th>SVRD</th><th>R&amp;D inv.</th></tr>
+</thead>
+<tbody>
+<tr><td><span class="math notranslate nohighlight">\(\infty\)</span></td><td>4.39</td><td>0.0084</td><td>5.94</td><td>0.0153</td><td>4.11</td><td>0.0074</td><td>2.71</td><td>0.0032</td></tr>
+<tr><td>0.1</td><td>5.40</td><td>0.0127</td><td>7.40</td><td>0.0238</td><td>6.17</td><td>0.0166</td><td>3.29</td><td>0.0047</td></tr>
+<tr><td>0.05</td><td>6.62</td><td>0.0190</td><td>8.81</td><td>0.0337</td><td>8.63</td><td>0.0323</td><td>4.07</td><td>0.0072</td></tr>
+</tbody>
+</table>
+</div>
+<p>Table 7: Social valuations and initial investments for the alternative technology specifications. R&amp;D investment is reported as a ratio relative to output abstracting from the energy input (<span class="math notranslate nohighlight">\(\alpha K\)</span>). Outcomes are shown for the three different values of the aversion parameter <span class="math notranslate nohighlight">\(\xi_m\)</span> in the respective rows.</p>
+</section>
+<section id="uncertainty-aversion-sensitivity">
+<span id="aversion-sensitivity"></span><h2><span class="section-number">9.3. </span>Uncertainty aversion sensitivity<a class="headerlink" href="#uncertainty-aversion-sensitivity" title="Permalink to this heading">#</a></h2>
+<p>This section is Appendix F.3 of the paper.</p>
+<p>To further detail the model sensitivity to uncertainty aversion, we provide the numerical values for the SVRD and R&amp;D investment outcomes corresponding to <a class="reference internal" href="#fig-11"><span class="std std-ref">Figure 11</span></a>. The numerical values, provided in <a class="reference internal" href="#table-21"><span class="std std-ref">Table 21</span></a>, show the responses to increasing uncertainty aversion (decreasing <span class="math notranslate nohighlight">\(\xi_m\)</span>) for the technology jump only model where the only uncertainty channel is the technology jump channel. The SVRD increases to more than double the baseline case at its maximum, and then diminishes to about 30% higher than the baseline case for the smallest value of <span class="math notranslate nohighlight">\(\xi_m\)</span> that we examine. The R&amp;D investment value rises to nearly <span class="math notranslate nohighlight">\(5.5\)</span> times higher than the baseline case at its maximum, and then decreases to a value just under double the baseline case for the smallest value of <span class="math notranslate nohighlight">\(\xi_m\)</span> that we examine.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="table-21">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\xi_m\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\infty\)</span></p></th>
+<th class="head text-center"><p>0.10</p></th>
+<th class="head text-center"><p>0.05</p></th>
+<th class="head text-center"><p>0.02</p></th>
+<th class="head text-center"><p>0.015</p></th>
+<th class="head text-center"><p>0.01</p></th>
+<th class="head text-center"><p>0.009</p></th>
+<th class="head text-center"><p>0.008</p></th>
+<th class="head text-center"><p>0.007</p></th>
+<th class="head text-center"><p>0.006</p></th>
+<th class="head text-center"><p>0.005</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SVRD</p></td>
+<td class="text-center"><p>4.26</p></td>
+<td class="text-center"><p>6.44</p></td>
+<td class="text-center"><p>8.90</p></td>
+<td class="text-center"><p>9.92</p></td>
+<td class="text-center"><p>9.35</p></td>
+<td class="text-center"><p>8.21</p></td>
+<td class="text-center"><p>7.85</p></td>
+<td class="text-center"><p>7.44</p></td>
+<td class="text-center"><p>7.02</p></td>
+<td class="text-center"><p>6.55</p></td>
+<td class="text-center"><p>5.56</p></td>
+</tr>
+<tr class="row-odd"><td><p>R&amp;D inv.</p></td>
+<td class="text-center"><p>0.0079</p></td>
+<td class="text-center"><p>0.0180</p></td>
+<td class="text-center"><p>0.0344</p></td>
+<td class="text-center"><p>0.0426</p></td>
+<td class="text-center"><p>0.0379</p></td>
+<td class="text-center"><p>0.0292</p></td>
+<td class="text-center"><p>0.0268</p></td>
+<td class="text-center"><p>0.0240</p></td>
+<td class="text-center"><p>0.0214</p></td>
+<td class="text-center"><p>0.0186</p></td>
+<td class="text-center"><p>0.0134</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 21: Social value of R&amp;D (technology jump only) as a function of the robustness parameter, <span class="math notranslate nohighlight">\(\xi_m\)</span>. Row 1 shows the value of <span class="math notranslate nohighlight">\(\xi_m,\)</span> row 2 shows the knowledge stock valuations, and row 3 shows the R&amp;D investment-to-output ratios.</p>
+<p>The implied SVRD totals from this table differ from those reported in <a class="reference internal" href="#table-6"><span class="std std-ref">Table 6</span></a> by between 1.2 and 5.6 percent because of our use of simulation methods to compute the flow decompositions.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "lphansen/mitigation_book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="08_marginal_valuations.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Marginal valuations as asset prices</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="10_real_options.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Comparison to a real options formulation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enhanced-uncertainty-aversion">9.1. Enhanced uncertainty aversion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-step-technology-discovery">9.2. Two-step technology discovery</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uncertainty-aversion-sensitivity">9.3. Uncertainty aversion sensitivity</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

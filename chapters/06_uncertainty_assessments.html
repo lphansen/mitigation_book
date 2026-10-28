@@ -1,0 +1,676 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>6. Uncertainty assessments &#8212; Uncertainty, Social Valuation, and Climate Change Policy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/phi0_rd_data.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/06_uncertainty_assessments';</script>
+    <link rel="shortcut icon" href="../_static/mfr.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Acting now or waiting?" href="07_acting_now_or_waiting.html" />
+    <link rel="prev" title="5. First-order conditions and stochastic simulations" href="05_first_order_conditions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/mfr.png" class="logo__image only-light" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>
+    <script>document.write(`<img src="../_static/mfr.png" class="logo__image only-dark" alt="Uncertainty, Social Valuation, and Climate Change Policy - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_example_economy.html">1. Example economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_confronting_uncertainty.html">2. Confronting uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_hjb_equations.html">3. HJB Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_computational_method.html">4. Computational method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_first_order_conditions.html">5. First-order conditions and stochastic simulations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Uncertainty assessments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_acting_now_or_waiting.html">7. Acting now or waiting?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_marginal_valuations.html">8. Marginal valuations as asset prices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_technology_only.html">9. A simplified model with only technology jumps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_real_options.html">10. Comparison to a real options formulation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Online appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11_online_m.html">M. Sensitivity analysis details: IES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_online_n.html">N. Sensitivity analysis details: (<span class="math notranslate nohighlight">\(\phi_0, \psi_0, \chi\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_online_o.html">O. HJB Equations with 2 Technology Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_online_p.html">P. Damage function jump intensity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/edit/main/docs/chapters/06_uncertainty_assessments.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lphansen/mitigation_book/issues/new?title=Issue%20on%20page%20%2Fchapters/06_uncertainty_assessments.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/06_uncertainty_assessments.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Uncertainty assessments</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uncertainty-deconstruction">6.1. Uncertainty deconstruction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uncertainty-adjusted-probabilities">6.2. Uncertainty-adjusted probabilities</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="uncertainty-assessments">
+<h1><span class="section-number">6. </span>Uncertainty assessments<a class="headerlink" href="#uncertainty-assessments" title="Permalink to this heading">#</a></h1>
+<p>We implement two complementary quantifications of uncertainty impacts. Since our model has multiple channels by which uncertainty can impact policy outcomes, we first consider the uncertainty consequences of the particular channels. We then formally inspect the uncertainty-adjusted probabilities.</p>
+<section id="uncertainty-deconstruction">
+<span id="deconstruction"></span><h2><span class="section-number">6.1. </span>Uncertainty deconstruction<a class="headerlink" href="#uncertainty-deconstruction" title="Permalink to this heading">#</a></h2>
+<p>As we delineate in the introduction of the paper, our model has four channels, each of which has its own distinct uncertainty input. We compare actions and outcomes when we activate each uncertainty channel by itself when solving the adversarial minimization problem to the corresponding actions and outcomes when all channels are activated simultaneously.</p>
+<p>We used two penalization parameters to represent the uncertainty aversion: <span class="math notranslate nohighlight">\(\xi_m\)</span> for misspecification concerns about the stochastic dynamics and <span class="math notranslate nohighlight">\(\xi_a\)</span> for ambiguity in how to weight the alternative climate models. Since the outcome of the model ambiguity gives a counterpart to a drift distortion in the temperature evolution equation, to limit the scope of the sensitivity analysis, we do the following. For a given value of <span class="math notranslate nohighlight">\(\xi_m\)</span>, we choose <span class="math notranslate nohighlight">\(\xi_a\)</span> to match the same magnitude of the drift distortion in the initial time period. In much of what follows we will illustrate results for three specifications of <span class="math notranslate nohighlight">\(\xi_m\)</span> with the following labels or references — <strong>baseline</strong>: <span class="math notranslate nohighlight">\(\xi_m = \infty\)</span>; <strong>less aversion</strong>: <span class="math notranslate nohighlight">\(\xi_m = .1\)</span>; and <strong>more aversion</strong>: <span class="math notranslate nohighlight">\(\xi_m = .05\)</span>. In addition, reported outcomes are computed at the initial time period for our simulations unless otherwise stated. For results reported across time horizons, scaling factors used to compute the outcomes are based on values from the initial simulation time period.</p>
+<p><a class="reference internal" href="#table-1"><span class="std std-ref">Table 1</span></a> gives the uncertainty decompositions for both the uncertainty contributions to the social values of research and development (SVRD) and the corresponding R&amp;D investments for two values of <span class="math notranslate nohighlight">\(\xi_m\)</span>.</p>
+<div class="pst-scrollable-table-container" id="table-1">
+<table class="table grouped-header">
+<thead>
+<tr><th rowspan="2"><strong>Uncertainty channel</strong></th><th class="group-head" colspan="2">SVRD</th><th class="group-head" colspan="2">R&amp;D investment / output</th></tr>
+<tr><th><span class="math notranslate nohighlight">\(\xi_m=0.1\)</span></th><th><span class="math notranslate nohighlight">\(\xi_m=0.05\)</span></th><th><span class="math notranslate nohighlight">\(\xi_m=0.1\)</span></th><th><span class="math notranslate nohighlight">\(\xi_m=0.05\)</span></th></tr>
+</thead>
+<tbody>
+<tr><td>baseline</td><td>3.91 (60%)</td><td>3.91 (38%)</td><td>0.0066</td><td>0.0066</td></tr>
+<tr><td>climate uncertainty</td><td>4.01 (61%)</td><td>4.10 (40%)</td><td>0.0070</td><td>0.0073</td></tr>
+<tr><td>damage uncertainty</td><td>4.06 (62%)</td><td>4.20 (41%)</td><td>0.0072</td><td>0.0076</td></tr>
+<tr><td>productivity uncertainty</td><td>3.83 (59%)</td><td>3.76 (36%)</td><td>0.0064</td><td>0.0061</td></tr>
+<tr><td>technology uncertainty</td><td>5.93 (91%)</td><td>8.26 (80%)</td><td>0.0153</td><td>0.0296</td></tr>
+<tr><td>all channels</td><td>6.52</td><td>10.36</td><td>0.0185</td><td>0.0465</td></tr>
+</tbody>
+</table>
+</div>
+<p>Table 1: The SVRDs and the R&amp;D investment-output ratios when different uncertainty channels are activated. Columns 1 and 3 show outcomes for the less uncertainty aversion case. Columns 2 and 4 show outcomes for the more uncertainty aversion case. Each row shows the outcomes when activating different uncertainty channels: no uncertainty (row 1), climate model only (row 2), damage model only (row 3), capital productivity only (row 4), R&amp;D technology only (row 5), and all channels (row 6). The numbers in the parentheses for the SVRDs are the values in each row as a percentage of the “all channels” outcomes.</p>
+<p>For both the social valuations and the implied actions, technological uncertainty accounts for the bulk of the uncertainty enhancement.</p>
+<p>The R&amp;D investment-output ratios reflect the dominant impact of technology uncertainty, and they <em>increase</em> in response to an enhanced aversion to misspecification uncertainty with one exception. Thus, the planner is more proactive in the R&amp;D investment response when the uncertainty concerns are enhanced. When we activate only the uncertainty concerns about the productivity channel, R&amp;D investment decreases slightly even relative to the baseline case, given the enhanced concerns about the overall productivity.</p>
+<p><a class="reference internal" href="#table-2"><span class="std std-ref">Table 2</span></a> presents the results of the uncertainty decomposition for the SCGW and emissions.</p>
+<div class="pst-scrollable-table-container" id="table-2">
+<table class="table grouped-header">
+<thead>
+<tr><th rowspan="2"><strong>Uncertainty channel</strong></th><th class="group-head" colspan="2">SCGW</th><th class="group-head" colspan="2">emissions</th></tr>
+<tr><th><span class="math notranslate nohighlight">\(\xi_m=0.1\)</span></th><th><span class="math notranslate nohighlight">\(\xi_m=0.05\)</span></th><th><span class="math notranslate nohighlight">\(\xi_m=0.1\)</span></th><th><span class="math notranslate nohighlight">\(\xi_m=0.05\)</span></th></tr>
+</thead>
+<tbody>
+<tr><td>baseline</td><td>60.5 (51%)</td><td>60.5 (23%)</td><td>9.26</td><td>9.26</td></tr>
+<tr><td>climate uncertainty</td><td>62.1 (52%)</td><td>63.5 (25%)</td><td>9.25</td><td>9.23</td></tr>
+<tr><td>damage uncertainty</td><td>63.6 (54%)</td><td>66.6 (26%)</td><td>9.24</td><td>9.21</td></tr>
+<tr><td>productivity uncertainty</td><td>59.9 (50%)</td><td>59.3 (23%)</td><td>9.27</td><td>9.27</td></tr>
+<tr><td>technology uncertainty</td><td>103.0 (87%)</td><td>174.1 (67%)</td><td>8.96</td><td>8.58</td></tr>
+<tr><td>all channels</td><td>118.9</td><td>258.9</td><td>8.85</td><td>8.15</td></tr>
+</tbody>
+</table>
+</div>
+<p>Table 2: The SCGWs and emissions when different uncertainty channels are activated. Columns 1 and 3 show outcomes for the less uncertainty aversion case. Columns 2 and 4 show outcomes for the more uncertainty aversion case. Each row shows the outcomes when activating different uncertainty channels: no uncertainty (row 1), only climate model (row 2), only damage model (row 3), only capital productivity (row 4), only R&amp;D technology (row 5), and all channels (row 6). The numbers in the parentheses for the SCGWs are the values in each row as a percentage of the “all channels” outcomes.</p>
+<p>The patterns are very similar to those reported in <a class="reference internal" href="#table-1"><span class="std std-ref">Table 1</span></a>. The technology channel is again the dominant contributor to the uncertainty responses. Emissions respond proportionately much less than R&amp;D investment in the face of uncertainty concerns.</p>
+</section>
+<section id="uncertainty-adjusted-probabilities">
+<span id="adjusted-probabilities"></span><h2><span class="section-number">6.2. </span>Uncertainty-adjusted probabilities<a class="headerlink" href="#uncertainty-adjusted-probabilities" title="Permalink to this heading">#</a></h2>
+<p>We next consider the implied uncertainty-adjusted probabilities that emerge from our analysis for the alternative sources of uncertainty aversion: Brownian shocks, climate model weights, and Poisson events. These probabilities are the solutions to the minimization problem, evaluated at the solutions to the maximization problem. These should not be viewed as “best-guess” distributions; but rather they are the “worst-case” distributions subject to penalization that are a vehicle by which the planner constructs robustly optimal courses of action. It is straightforward to run our solution code for other values of <span class="math notranslate nohighlight">\(\xi_m\)</span>.</p>
+<p>While it is hard to interpret directly the magnitudes of <span class="math notranslate nohighlight">\(\xi_m\)</span>, we find it valuable to adopt an approach commonly used for robust Bayesian methods by inspecting worst-case probability specifications and isolating where the probability adjustments are most prominent. Formally, this is motivated by an application of the Min-max Theorem, which constructs a single probability specification under which robustly optimal decisions are optimal. In effect, <span class="math notranslate nohighlight">\(\xi_m\)</span> provides a way to assess how consequential the various uncertainty inputs are to the decision problem.</p>
+<p>We start by reporting the drift distortions for the two capital stock processes. These are given in <a class="reference internal" href="#table-3"><span class="std std-ref">Table 3</span></a>.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="table-3">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\xi_m\)</span></p></th>
+<th class="head text-center"><p>capital</p></th>
+<th class="head text-center"><p>knowledge stock</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.1</p></td>
+<td class="text-center"><p>-0.094</p></td>
+<td class="text-center"><p>-0.004</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.05</p></td>
+<td class="text-center"><p>-0.178</p></td>
+<td class="text-center"><p>-0.011</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 3: Drift distortions for capital stock evolution (center column) and the knowledge stock evolution (right column) for less aversion (top row) and more aversion (bottom row).</p>
+<p>The negative drift distortions for capital and the knowledge stock highlight that worst-case concerns tilt towards reduced effectiveness of investment in capital and R&amp;D. The negatives of drift distortions for the capital stock are interpretable as implied shadow Sharpe ratios induced by uncertainty aversion to the exposure of capital to Brownian risk, since the reported distortions are multiplied by the volatility exposure to the productivity shock. The magnitudes of the distortions for the knowledge stock are quantitatively small.</p>
+<p><a class="reference internal" href="#fig-4"><span class="std std-ref">Figure 4</span></a> reports the baseline and uncertainty-adjusted relative probability density functions for two different values of <span class="math notranslate nohighlight">\(\xi_m\)</span> relative to baseline probabilities that equally weight each of the 144 different model outcomes.</p>
+<div id="fig-4" style="display:flex; justify-content:center; align-items:center;">
+  <img src="../_static/paper/Figure4_climate_model_relative_weights_year-0.png"
+       alt="Uncertainty-adjusted relative density plots for 144 climate models for more and less aversion specifications relative to a uniform baseline density"
+       style="width:450px; max-width:100%; height:auto;">
+</div>
+<p>Figure 4: Uncertainty-adjusted densities for <span class="math notranslate nohighlight">\(\theta\)</span>. The baseline and two uncertainty-adjusted densities are relative to a uniform baseline density. The resulting model averages are 1.86 for <span class="math notranslate nohighlight">\(\xi_m = \infty\)</span>, 1.89 for <span class="math notranslate nohighlight">\(\xi_m = .1\)</span>, and 1.97 for <span class="math notranslate nohighlight">\(\xi_m = .05\)</span>.</p>
+<p>By construction, the baseline relative density is constant at a value of one. The two relative densities of interest slope upward to the right, placing more probability on the higher values of <span class="math notranslate nohighlight">\(\theta\)</span>. This implies an increase in the mean. While the relative densities show substantive divergence from unity for values of <span class="math notranslate nohighlight">\(\theta\)</span> near <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(2.5\)</span>, these turn out to be very <em>atypical</em> values of <span class="math notranslate nohighlight">\(\theta\)</span> as we displayed in <a class="reference internal" href="01_example_economy.html#fig-1"><span class="std std-ref">Figure 1</span></a>. As a result, the mean increases are quite modest, as reported in <a class="reference internal" href="#fig-4"><span class="std std-ref">Figure 4</span></a>, especially for <span class="math notranslate nohighlight">\(\xi_m = .1\)</span> (less aversion).</p>
+<p>Our model allows for multiple jumps with state-dependent intensities. We compute the relative contributions for the timing of the first jump. This first jump could be either one of the damage curvature jumps or a technology jump. Using the formulas provided in <a class="reference internal" href="#jump-densities"><span class="std std-ref">Appendix D</span></a>, we report additive decompositions of the jump-time densities (relative to uniform densities) for the damage information event and technology jump contributions. The damage information event aggregates over all possible damage curvature jumps.</p>
+<p id="jump-densities">The following derivation, up to <a class="reference internal" href="#fig-5"><span class="std std-ref">Figure 5</span></a>, is Appendix D of the paper.</p>
+<p>The contributions to the <em>ex ante</em> density (relative to a uniform density) for the first jump time are computed as follows. First, by conditioning on the state variable history, we find that the <em>ex post</em> probability that any of the jumps has occurred in the time period <span class="math notranslate nohighlight">\(t\)</span> to be:</p>
+<div class="math notranslate nohighlight">
+\[
+F_t = 1 - \exp \left[ - \int_0^t \sum_{\ell = 1}^{L} G^{*\ell}_\tau {\mathcal J}^\ell(X_\tau) d\tau \right],
+\]</div>
+<p>which increases in <span class="math notranslate nohighlight">\(t\)</span>. We then compute the probability for any of the jumps occurring by differentiating <span class="math notranslate nohighlight">\(F_t\)</span> with respect to <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+f_t = \sum_{\ell = 1}^{L} G^{*\ell}_t {\mathcal J}^\ell(X_t) \exp \left[ - \int_0^t \sum_{{\hat \ell} = 1}^{L} G_\tau^{*{\hat \ell}} {\mathcal J}^{\hat \ell}(X_\tau) d\tau \right].
+\]</div>
+<p>We unpack this density construction so as to apply to each of the separate jump possibilities,</p>
+<div class="math notranslate nohighlight">
+\[
+f^\ell_t \overset{\mathrm{def}}{=} G_t^{*\ell} {\mathcal J}^\ell(X_t) \exp \left[ - \int_0^t \sum_{{\hat \ell} = 1}^{L} G_\tau^{*{\hat \ell}} {\mathcal J}^{\hat \ell}(X_\tau) d\tau \right], \qquad \ell = 1,...,L \tag{23}
+\]</div>
+<p>which can be viewed as contributions to a density with respect to a uniform measure over the possible time horizons and a uniform measure over discrete states. To obtain the corresponding contributions to the <em>ex ante</em> densities of interest, we take conditional expectations over the future values of the state variables.</p>
+<p><a class="reference internal" href="#fig-5"><span class="std std-ref">Figure 5</span></a> plots the <em>ex ante</em> density contributions for the first jump time.</p>
+<div id="fig-5" style="
+     display:flex;
+     gap:18px;
+     justify-content:center;
+     align-items:flex-start;
+     flex-wrap:wrap;
+">
+  <figure style="margin:0; width:340px; max-width:100%;">
+    <img src="../_static/paper/Figure5_all_channel_on_0.1lambda_jacobian_distorted_CompositeTechnology0.083_Discount_nodeltadt_tech_Processs_dt.png"
+         alt="Additive decomposition of the jump-time densities, contribution of the technology jump"
+         style="width:100%; height:auto;">
+    <figcaption style="text-align:center; font-size:0.85em;">(a) Contribution of technology jump.</figcaption>
+  </figure>
+  <figure style="margin:0; width:340px; max-width:100%;">
+    <img src="../_static/paper/Figure5_all_channel_on_0.1lambda_jacobian_distorted_CompositeTechnology0.083_Discount_nodeltadt_damage_Processs_dt.png"
+         alt="Additive decomposition of the jump-time densities, contribution of the damage information event"
+         style="width:100%; height:auto;">
+    <figcaption style="text-align:center; font-size:0.85em;">(b) Contribution of the damage information event.</figcaption>
+  </figure>
+</div>
+<p>Figure 5: Additive decomposition of the jump-time densities under the baseline probability and uncertainty-adjusted probabilities for two specifications of uncertainty aversion. By design, the density contributions across the two panels sum to one. The technology discovery contribution is 60% for the baseline specification, 42% for less aversion, and 12% for more aversion.</p>
+<p>The jump time density is the sum of these two contributions. Uncertainty aversion pertaining to the technology contribution makes a successful discovery appear more likely to be delayed, reflected in the uncertainty-adjusted density in the left panel. The delayed prospects for success make R&amp;D investment <em>less attractive</em>. Consistent with these probabilistic delays, as we increase the uncertainty aversion, the contribution of the damage information event becomes much higher under the uncertainty-adjusted probability measures.</p>
+<p>Since there are multiple potential damage curves, we report how misspecification aversion shifts the weights of the unknown damage curve parameter, <span class="math notranslate nohighlight">\(\lambda_3\)</span>. The baseline (<span class="math notranslate nohighlight">\(\xi_m=\infty\)</span>) distribution for <span class="math notranslate nohighlight">\(\lambda_3\)</span> is uniform <span class="math notranslate nohighlight">\([0,.33]\)</span>. We used twenty equally spaced discrete support points in our computations. As we see in <a class="reference internal" href="#fig-6"><span class="std std-ref">Figure 6</span></a> the uncertainty-adjusted probabilities are tilted to the right, with a quite extreme shift when <span class="math notranslate nohighlight">\(\xi_m=.05\)</span>. The adjustment <span class="math notranslate nohighlight">\(\xi_m = .1\)</span>, while more modest, is still quite notable. The distributional shifts for the potential damage curvature turn out to be much more consequential than the climate model uncertainty.</p>
+<div id="fig-6" style="display:flex; justify-content:center; align-items:center;">
+  <img src="../_static/paper/Figure6_all_channel_on_0.1lambda_jacobian_distorted_Technologydamage_curve_year_splines_0_allxi.png"
+       alt="Uncertainty-adjusted probabilities across the alternative damage curve possibilities"
+       style="width:450px; max-width:100%; height:auto;">
+</div>
+<p>Figure 6: Uncertainty-adjusted probabilities across the alternative <span class="math notranslate nohighlight">\(\lambda_{3}\)</span>’s for the baseline probabilities and two specifications of uncertainty aversion. The resulting <span class="math notranslate nohighlight">\(\lambda_{3}\)</span> averages are .167 for the baseline specification, .221 for less aversion, and .285 for more aversion.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "lphansen/mitigation_book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="05_first_order_conditions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>First-order conditions and stochastic simulations</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="07_acting_now_or_waiting.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Acting now or waiting?</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uncertainty-deconstruction">6.1. Uncertainty deconstruction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uncertainty-adjusted-probabilities">6.2. Uncertainty-adjusted probabilities</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
