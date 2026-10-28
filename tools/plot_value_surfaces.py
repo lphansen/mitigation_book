@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Draw the value function derivative surfaces shown in chapter 1 of the book.
+"""Draw the value function derivative surfaces shown on the Computational method page of the book.
 
 The surfaces are those of the technology jump only model (Section 9 of the
 paper): the pre-technology value function V(k_hat, y, r_hat) is sliced at the

@@ -32,6 +32,10 @@ Work on `main`. Build into `docs/_build/html`. Publish by copying `docs/_build/h
 │   ├── reference.md         reference page
 │   ├── notebooks/           chapter notebooks
 │   ├── _static/             images, CSS, interactive HTML, static assets
+│   │   ├── paper/           paper figures (from results_in_paper, resized)
+│   │   └── table/           markdown tables generated from the paper tex
+├── tools/
+│   └── sync_tables_from_tex.py   tex table -> markdown generator
 │   └── _build/html/         generated website HTML
 └── binder/                  Binder environment files
 ```
@@ -57,6 +61,39 @@ conda create -n jb015 python=3.10 -y
 conda activate jb015
 python -m pip install -r docs/requirements.txt
 ```
+
+## Paper Source For The Tables
+
+The markdown tables under `docs/_static/table/` are generated from the paper
+tex by `tools/sync_tables_from_tex.py`. The script reads
+`paper/mitigation_main.tex` and `paper/mitigation_appendix.tex`, where `paper/`
+is a gitignored symlink (or copy) of the Overleaf clone:
+
+```bash
+ln -s ../mitigation_paper paper
+python tools/sync_tables_from_tex.py          # rewrite the tables
+python tools/sync_tables_from_tex.py --check  # report stale tables only
+```
+
+`build.sh` runs the sync automatically when `paper/` is present and otherwise
+uses the committed tables.
+
+The interactive value function derivative surfaces in chapter 1
+(`docs/_static/df_V_m{2,3}_surface_xik*.html`) are drawn by
+`tools/plot_value_surfaces.py` from the Fine grid tech-only HJB solutions of the
+replication repository. The script imports the grid builder and the
+finite-difference routine from that repository (`python/src/`), so it needs a
+clone of it and its shared environment:
+
+```bash
+source /project/lhansen/mitigation.sh
+python tools/plot_value_surfaces.py --repo ~/two-capital-climate-change \
+    --solution-dir <tech_only double_resolution dataset>
+```
+
+The paper figures under `docs/_static/paper/` are
+copies of `results_in_paper/Figure*.png` from the paper repository, resized to
+2000 px width.
 
 ## Build Locally
 

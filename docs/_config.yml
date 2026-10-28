@@ -1,7 +1,8 @@
 #######################################################################################
 # Book settings
-title                       : mitigation project
+title                       : Uncertainty, Social Valuation, and Climate Change Policy
 author                      : Michael Barnett, William Brock, Lars Peter Hansen, and Hong Zhang
+copyright                   : "2026"
 logo                        : mfr.png
 only_build_toc_files        : true # Disable building files that aren’t in the Table of Contents
 
@@ -57,7 +58,6 @@ parse:
     - html_admonition
     - html_image
     - linkify
-    - replacements
     - smartquotes
     - substitution
 

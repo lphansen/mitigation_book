@@ -164,3 +164,9 @@ div.table-of-contents a.code-link {
 .bd-content .bd-article .section-nav {
   row-gap: 0.25rem;
 }
+
+/* Let long paths in inline code wrap instead of overflowing the page. */
+.bd-content .bd-article code.literal span.pre {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
