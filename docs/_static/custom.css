@@ -170,3 +170,39 @@ div.table-of-contents a.code-link {
   white-space: normal;
   overflow-wrap: anywhere;
 }
+
+/* Bibliography page: author year entries without the alpha labels, as in
+   the paper. The labels are hidden, not removed, so the citation links of
+   the pages keep their targets. */
+.bd-content .bd-article div.citation > span.label {
+  display: none;
+}
+.bd-content .bd-article div.citation > p {
+  margin-left: 0;
+  padding-left: 2em;
+  text-indent: -2em;
+  margin-bottom: 0.6em;
+}
+
+/* Tables with grouped column headings, written as HTML by
+   tools/sync_tables_from_tex.py (grouped_header): label column left, numbers
+   centered, and a rule under each group label as in the paper. */
+.bd-content table.grouped-header th,
+.bd-content table.grouped-header td {
+  text-align: center;
+}
+.bd-content table.grouped-header thead th {
+  vertical-align: bottom;
+}
+.bd-content table.grouped-header thead tr:first-child th:first-child,
+.bd-content table.grouped-header tbody td:first-child {
+  text-align: left;
+}
+.bd-content table.grouped-header th.group-head {
+  text-align: center;
+  border-bottom: 1px solid var(--pst-color-border);
+}
+.bd-content table.grouped-header td.panel-label {
+  text-align: center;
+}
+

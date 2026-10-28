@@ -52,7 +52,7 @@ where $0 < \psi_1 < 1$ and $I^r_t$ is an investment in research and development.
 (climate)=
 ## Climate dynamics
 
-Here we follow the simplified climate dynamics used in Brock and Xepapadeas (2017) and Barnett, Brock, and Hansen (2022). Their approach is based on an approximation from the geoscience literature used to support model comparisons. Specifically, Matthews, Gillett, Stott, and Zickfeld (2009) and others have purposefully constructed an approximation for climate model output:
+Here we follow the simplified climate dynamics used in {cite:t}`BrockXepadadeas:2017` and <a class="reference internal" href="../reference.html#cite-barnettbrockhansen-2022">Barnett, Brock and Hansen (2022)</a>.{cite:empty}`BarnettBrockHansen:2022` Their approach is based on an approximation from the geoscience literature used to support model comparisons. Specifically, {cite:t}`MatthewsGillettScott:2009` and others have purposefully constructed an approximation for climate model output:
 
 $$
 \textrm{temperature anomaly } (Y_t) \approx \textrm{TCRE } (\theta) \times \textrm{cumulative emissions},
@@ -66,9 +66,11 @@ $$
 dY_t = \mathcal{E}_t \left[ \theta dt + \varsigma dW_t \right]
 $$
 
-where $\theta$ is obtained from the set $\Theta$ of TCREs implied by alternative climate models. The term $\varsigma dW_t$ captures short-term climate sensitivity fluctuations. We impose that $\sigma_k \cdot \varsigma = \sigma_r \cdot \varsigma = 0$ making the stochastic increments in the temperature anomaly and the two types of capital uncorrelated. Figure 1 gives a smoothed histogram of the $\theta$'s used in our computations.
+where $\theta$ is obtained from the set $\Theta$ of TCREs implied by alternative climate models. The term $\varsigma dW_t$ captures short-term climate sensitivity fluctuations. We impose that $\sigma_k \cdot \varsigma = \sigma_r \cdot \varsigma = 0$ making the stochastic increments in the temperature anomaly and the two types of capital uncorrelated. {ref}`Figure 1 <fig-1>` gives a smoothed histogram of the $\theta$'s used in our computations.
 
-<div style="display:flex; justify-content:center; align-items:center;">
+(fig-1)=
+
+<div id="fig-1" style="display:flex; justify-content:center; align-items:center;">
   <img src="../_static/paper/Figure1_Climate_Sensitivity.png"
        alt="Smoothed density for weighted-average temperature responses to an emissions pulse from 144 different models"
        style="width:450px; max-width:100%; height:auto;">
@@ -144,10 +146,12 @@ We refer to each of these jumps as a damage curvature jump; the damage informati
 
 ### Range of damage functions
 
-Figure 2 displays the damage functions included in our analysis.
+{ref}`Figure 2 <fig-2>` displays the damage functions included in our analysis.
+
+(fig-2)=
 
 <iframe
-  id="plotly-damage"
+  id="fig-2"
   src="../_static/damage_interactive.html"
   title="Range of possible damages for alternative damage function curvature realizations with jump realizations at temperature anomalies of 1.75 and 2.25 degrees Celsius"
   width="100%"
@@ -211,6 +215,7 @@ $$
 C^d_t \overset{\mathrm{def}}{=} \frac{C_t}{N_t} = \frac{K_t}{N_t} \left( \alpha \left[ 1 - \phi_0 \left( B_t \right)^{\phi_1} \right] - \frac{I^k_t}{K_t} - \frac{I^r_t}{K_t} \right).
 $$
 
+::::{hidden}
 ## Reproducing the figures
 
 To reproduce Figures 1, 2, and 8, run the script below from the root of the code repository, as described in {ref}`Running the scripts <code-running>`. The script does not need any model solutions.
@@ -224,3 +229,4 @@ After the run finishes, you should have output files named `Climate_Sensitivity.
 Source scripts:
 * `sbatch/baseline_plot.sh`
 * `python/frequency_plot.py`
+::::

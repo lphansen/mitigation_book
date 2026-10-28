@@ -72,9 +72,11 @@ We report investment as a ratio to output, where our measure of output is $\alph
 (simulations)=
 ## Stochastic simulations
 
-Figure 3 gives four stochastic pathways for the robustly optimal choice of R&D investment and emissions. The simulations are chosen to illustrate a range of possible outcomes, rather than to represent typical trajectories. The pathways were generated using the baseline probabilities with the investment and emissions decision rules computed under a choice of $\xi_m$ that we refer to as the less averse specification.
+{ref}`Figure 3 <fig-3>` gives four stochastic pathways for the robustly optimal choice of R&D investment and emissions. The simulations are chosen to illustrate a range of possible outcomes, rather than to represent typical trajectories. The pathways were generated using the baseline probabilities with the investment and emissions decision rules computed under a choice of $\xi_m$ that we refer to as the less averse specification.
 
-<div style="
+(fig-3)=
+
+<div id="fig-3" style="
      display:flex;
      gap:18px;
      justify-content:center;
@@ -99,8 +101,9 @@ Figure 3: Illustrative stochastic pathways computed with baseline probabilities 
 
 On path 3, the news about damage curvature at the jump date is good (a low value of $\lambda_3$), and the path for R&D investment shows a substantial drop. Along path 4, the news about damage curvature is bad (a high value of $\lambda_3$), and there is a prominent increase in R&D investment, presumably because of the forthcoming pronounced damages.
 
-With the exception of the path 2 technological breakthrough, the emissions responses depicted in Panel (b) of Figure 3 are more muted than the R&D investment responses. When there is good news about damages, as in path 3, we see a negligible impact on emissions. In contrast, for path 4, when there is a bad news realization about damages, there is a notable drop in emissions.
+With the exception of the path 2 technological breakthrough, the emissions responses depicted in Panel (b) of {ref}`Figure 3 <fig-3>` are more muted than the R&D investment responses. When there is good news about damages, as in path 3, we see a negligible impact on emissions. In contrast, for path 4, when there is a bad news realization about damages, there is a notable drop in emissions.
 
+::::{hidden}
 ## Reproducing the figure
 
 To reproduce Figure 3, run the scripts below from the root of the code repository after the {ref}`full model solutions <code-full-model>` on the Fine grid have finished. The simulation script submits 200 jobs for each of $\xi_m = \infty$, $.1$ and $.05$ and waits while the queue is full, so run it in a persistent shell such as tmux and start the plot script after all simulation jobs have finished.
@@ -117,3 +120,4 @@ Source scripts:
 * `sbatch/stochastic_trajectories_plot.sh`
 * `python/stochastic_trajectories_simulate.py`
 * `python/stochastic_trajectories_plot.py`
+::::

@@ -2,7 +2,7 @@
 
 We now analyze the contributions to the planner's Hamilton–Jacobi–Bellman (HJB) equation that emerge because of aversion to model misspecification. The uncertainty adjustments for model misspecification concerns lead us to replace a recursive maximization problem with a two-player formulation where one player maximizes social well-being and the other adversarial player looks for a baseline model or prior misspecifications with the most unfavorable consequences by solving a minimization problem. The uncertainty aversion of the social planner is reflected in penalties that restrain the adversarial choice. The investigation in this section focuses on the minimizing player and the implications for terms that enter the HJB equation involving the evolution of the value function. The full HJB equations are provided in [Appendix A](03_hjb_equations.md) and [Online Appendix O](13_online_o.md).
 
-We follow Anderson, Hansen, and Sargent (2003) by entertaining misspecification linked both to the Brownian contribution and to the jump contribution. We use a well-studied construct called relative entropy or Kullback–Leibler divergence scaled by a penalty parameter to quantify misspecification. This divergence is measured as a non-negative expected log-likelihood ratio that we use to limit the search over potential model disparities in the uncertainty analysis.
+We follow {cite:t}`AndersonHansenSargent:2003` by entertaining misspecification linked both to the Brownian contribution and to the jump contribution. We use a well-studied construct called relative entropy or Kullback–Leibler divergence scaled by a penalty parameter to quantify misspecification. This divergence is measured as a non-negative expected log-likelihood ratio that we use to limit the search over potential model disparities in the uncertainty analysis.
 
 (brownian)=
 ## Brownian motion misspecification
@@ -52,7 +52,7 @@ This minimization problem captures a form of uncertainty aversion or preference 
 (robust-averaging)=
 ## Robust model averaging
 
-The model output histograms that we reported in {ref}`Figure 1 <climate>` implicitly assigned equal weights across the models. Let $\theta$ index a possible TCRE in a set $\Theta$, and let $P_t$ be a baseline probability that assigns weight $1/144$ to each member of the set. We allow for time dependence in the baseline probability in our notation to allow for recursive learning, although we abstract from this learning in our application. Even when $P_t$ is time invariant, we will entertain alternative weights that are time varying in our robustness analysis.
+The model output histograms that we reported in {ref}`Figure 1 <fig-1>` implicitly assigned equal weights across the models. Let $\theta$ index a possible TCRE in a set $\Theta$, and let $P_t$ be a baseline probability that assigns weight $1/144$ to each member of the set. We allow for time dependence in the baseline probability in our notation to allow for recursive learning, although we abstract from this learning in our application. Even when $P_t$ is time invariant, we will entertain alternative weights that are time varying in our robustness analysis.
 
 We incorporate concerns about the potential misspecification of these baseline model weights by introducing alternative relative densities $Q_t(\theta) \ge 0$ that satisfy:
 
@@ -78,7 +78,7 @@ $$
 \int_\Theta Q_t(\theta) \log Q_t(\theta) dP_t(\theta)
 $$
 
-in conjunction with a penalty parameter $\xi_a$. We follow Hansen and Miao (2018) by introducing
+in conjunction with a penalty parameter $\xi_a$. We follow {cite:t}`HansenMiao:2018` by introducing
 
 **Problem 3.2.**
 

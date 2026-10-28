@@ -4,16 +4,12 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Model and computational method
-    numbered: true
+  - numbered: true
     chapters:
     - file: chapters/01_example_economy.md
     - file: chapters/02_confronting_uncertainty.md
     - file: chapters/03_hjb_equations.md
     - file: chapters/04_computational_method.md
-  - caption: Results
-    numbered: true
-    chapters:
     - file: chapters/05_first_order_conditions.md
     - file: chapters/06_uncertainty_assessments.md
     - file: chapters/07_acting_now_or_waiting.md
@@ -27,7 +23,7 @@ parts:
     - file: chapters/12_online_n.md
     - file: chapters/13_online_o.md
     - file: chapters/14_online_p.md
-  - caption: Code and replication
+  - caption: References
     numbered: false
     chapters:
-    - file: chapters/15_code_and_replication.md
+    - file: reference.md

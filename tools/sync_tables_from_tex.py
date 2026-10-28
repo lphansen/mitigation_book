@@ -45,6 +45,7 @@ import os
 import re
 import sys
 import difflib
+import html
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAPER_DIR = os.path.join(REPO, "paper")
@@ -75,9 +76,13 @@ OUTDIR = os.path.join(REPO, "docs", "_static", "table")
 #                 (only the data values are then taken from the tex)
 #   row_map       optional {first-cell -> replacement} rewrites, matched on the
 #                 cleaned first cell of each data row
-#   align         optional "left" or "right" for every column, or a list with
-#                 one markdown rule ("---", "---:") per column. Default is
-#                 left first column, right-aligned data columns
+#   align         optional "left", "right" or "center" for every column, or a
+#                 list with one markdown rule ("---", "---:", ":---:") per
+#                 column. Default is left first column, centered data columns
+#   grouped_header  optional True for a two-row header whose first row groups
+#                 columns with \multicolumn: the table is written as an HTML
+#                 table whose group labels span their columns, as printed in
+#                 the paper (header_join and header_override are then unused)
 #   number        optional paper table number. When set, the tex caption is
 #                 appended as "Table <number>: <caption>"
 #   out           output filename under docs/_static/table/
@@ -86,6 +91,7 @@ TABLES = [
         "label": "tab:uncertainty_decompose_RD",
         "tabular": 0,
         "header_rows": 2,
+        "grouped_header": True,
         "number": 1,
         "out": "svrd_rd_decomposition.md",
     },
@@ -93,6 +99,7 @@ TABLES = [
         "label": "tab:uncertainty_decomopose_Temp",  # sic: label typo in tex
         "tabular": 0,
         "header_rows": 2,
+        "grouped_header": True,
         "number": 2,
         "out": "scgw_emissions_decomposition.md",
     },
@@ -105,15 +112,11 @@ TABLES = [
     },
     {
         # paper Table 4, pre-event values and post-event medians at the two
-        # Figure 7 states. The two-row tex header is flattened explicitly.
+        # Figure 7 states
         "label": "tab:quantile_damage",
         "tabular": 0,
         "header_rows": 2,
-        "header_override": ["$\\xi_m$",
-                            "emissions (GtC) <br> pre-event",
-                            "emissions (GtC) <br> post-event",
-                            "R&D investment / output <br> pre-event",
-                            "R&D investment / output <br> post-event"],
+        "grouped_header": True,
         "number": 4,
         "out": "table4_quantile_damage.md",
     },
@@ -127,9 +130,24 @@ TABLES = [
         "header_rows": 2,
         "header_override": ["$\\xi_m$", "flow i", "flow ii", "flow iii",
                             "sum", "R&D investment", "capital investment"],
-        "align": "right",
+        "align": "center",
         "number": 6,
         "out": "flow_decomposition_one_jump.md",
+    },
+    {   # paper Table 19 (appendix F.2), investments and emissions across IES values
+        "label": "tab:IES",
+        "tabular": 0,
+        "header_rows": 2,
+        "grouped_header": True,
+        "number": 19,
+        "out": "table19_ies_investment.md",
+    },
+    {   # paper Table 20 (appendix F.2), social values across IES values
+        "label": "tab:IES_valuation",
+        "tabular": 0,
+        "header_rows": 1,
+        "number": 20,
+        "out": "table20_ies_valuations.md",
     },
     {   # paper Table 21 (appendix), SVRD against xi_m, xi_m across columns
         "label": "table:nonmonotone",
@@ -143,7 +161,7 @@ TABLES = [
         "label": "tab:tech_flow_terms_split",
         "panels": True,
         "header_rows": 2,
-        "header_join": "{g} <br> {s}",
+        "grouped_header": True,
         "number": 5,
         "out": "table5_tech_flow_terms_split.md",
     },
@@ -151,7 +169,7 @@ TABLES = [
         "label": "table:two_jump",
         "tabular": 0,
         "header_rows": 2,
-        "header_join": "{g} <br> {s}",
+        "grouped_header": True,
         "number": 7,
         "out": "table7_two_jump.md",
     },
@@ -180,7 +198,7 @@ TABLES = [
         "label": "tab:grids",
         "tabular": 0,
         "header_rows": 2,
-        "header_join": "{g} <br> {s}",
+        "grouped_header": True,
         "number": 27,
         "out": "table27_grids.md",
     },
@@ -195,7 +213,7 @@ TABLES = [
         "label": "tab:indirect_direct_comp",
         "panels": True,
         "header_rows": 1,
-        "align": ["---", "---"] + ["---:"] * 4,
+        "align": ["---", "---"] + [":---:"] * 4,
         "number": 29,
         "out": "table29_indirect_direct.md",
     },
@@ -213,7 +231,7 @@ TABLES = [
         "after_label": "fig:before_after_two_states",
         "tabular": 0,
         "header_rows": 2,
-        "header_join": "{g} <br> {s}",
+        "grouped_header": True,
         "number": 32,
         "out": "table32_two_states.md",
     },
@@ -448,7 +466,9 @@ def alignment(ncol, mode):
         return ["---"] * ncol
     if mode == "right":
         return ["---:"] * ncol
-    return ["---"] + ["---:"] * (ncol - 1)  # default: label left, data right
+    if mode == "center":
+        return [":---:"] * ncol
+    return ["---"] + [":---:"] * (ncol - 1)  # default: label left, data centered
 
 
 def tabular_to_md(tab, cfg):
@@ -475,6 +495,124 @@ def tabular_to_md(tab, cfg):
                 % (len(cells), ncol, " & ".join(cells)))
         lines.append("| " + " | ".join(cells) + " |")
     return "\n".join(lines) + "\n"
+
+
+# ---- tabular -> HTML (grouped two-row headers) ------------------------------
+def cell_html(text):
+    """Cleaned cell text to HTML.
+
+    Parameters
+    ----------
+    text : str
+        Cell text as returned by clean(): $...$ math, **bold**, *italics*.
+
+    Returns
+    -------
+    str
+        HTML with the math in MathJax spans (the page sections carry the
+        mathjax_ignore class, so bare $...$ inside raw HTML is not typeset).
+    """
+    out = []
+    for part in re.split(r"((?<!\\)\$[^$]*\$)", text):
+        if len(part) > 1 and part.startswith("$") and part.endswith("$"):
+            out.append('<span class="math notranslate nohighlight">\\(%s\\)</span>'
+                       % html.escape(part[1:-1], quote=False))
+        else:
+            part = html.escape(part, quote=False)
+            part = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", part)
+            part = re.sub(r"\*(.+?)\*", r"<em>\1</em>", part)
+            out.append(part)
+    return "".join(out)
+
+
+def grouped_header_html(rows):
+    """The two tex header rows as two HTML rows with spanning group labels.
+
+    A \\multicolumn cell of the first row becomes a group label over its
+    columns, whose labels come from the second row. Any other column gets one
+    cell spanning both rows with whatever label it has.
+
+    Parameters
+    ----------
+    rows : list of str
+        Content rows of the tabular; the first two are the header.
+
+    Returns
+    -------
+    tuple of (str, int)
+        The <thead> HTML and the number of columns.
+    """
+    top, sub = split_cells(rows[0]), split_cells(rows[1])
+    first, second = [], []
+    col = 0
+    for c in top:
+        mc = multicol(c)
+        if mc:
+            span, label = mc
+            first.append('<th class="group-head" colspan="%d">%s</th>'
+                         % (span, cell_html(clean(label))))
+            second.extend('<th>%s</th>' % cell_html(clean(sub[k]))
+                          for k in range(col, col + span))
+            col += span
+        else:
+            label = " ".join(x for x in (clean(c), clean(sub[col])) if x)
+            first.append('<th rowspan="2">%s</th>' % cell_html(label))
+            col += 1
+    thead = ("<thead>\n<tr>%s</tr>\n<tr>%s</tr>\n</thead>"
+             % ("".join(first), "".join(second)))
+    return thead, len(sub)
+
+
+def tabular_to_html(tab, cfg, anchor=None):
+    """Convert a tex tabular with a grouped two-row header to an HTML table.
+
+    The table carries the theme's table classes, so it is styled like the
+    markdown tables, and sits in the theme's horizontal scroll container.
+
+    Parameters
+    ----------
+    tab : str
+        The tex tabular environment.
+    cfg : dict
+        The table configuration (row_map is honored).
+    anchor : str, optional
+        HTML id of the table, the target of the page's links to it. A MyST
+        label before raw HTML gives no id, so the id is written here.
+
+    Returns
+    -------
+    str
+        One raw HTML block without blank lines, followed by a newline.
+    """
+    rows = parse_rows(tab)
+    thead, ncol = grouped_header_html(rows)
+    row_map = cfg.get("row_map", {})
+    body = []
+    for row in rows[2:]:
+        cells = split_cells(row)
+        if len(cells) == 1 and multicol(cells[0]):
+            # a panel label spanning the whole row, e.g. "baseline median state"
+            body.append('<tr><td class="panel-label" colspan="%d"><em>%s</em></td></tr>'
+                        % (ncol, cell_html(clean(multicol(cells[0])[1]))))
+            continue
+        cells = [clean(c) for c in cells]
+        if cells and cells[0] in row_map:
+            cells[0] = row_map[cells[0]]
+        if len(cells) != ncol:
+            die("row with %d cells under a %d column header: %s"
+                % (len(cells), ncol, " & ".join(cells)))
+        body.append("<tr>%s</tr>" % "".join("<td>%s</td>" % cell_html(c) for c in cells))
+    id_attr = ' id="%s"' % anchor if anchor else ""
+    return ('<div class="pst-scrollable-table-container"%s>\n'
+            '<table class="table grouped-header">\n%s\n<tbody>\n%s\n</tbody>\n</table>\n</div>\n'
+            % (id_attr, thead, "\n".join(body)))
+
+
+def tabular_to_output(tab, cfg, anchor=None):
+    """Markdown table, or an HTML table (with id anchor) for a grouped two-row header."""
+    if cfg.get("grouped_header"):
+        return tabular_to_html(tab, cfg, anchor)
+    return tabular_to_md(tab, cfg)
 
 
 # ---- panels and captions --------------------------------------------------
@@ -531,10 +669,12 @@ def generate(paper_dir):
         env = find_table_env(tex, cfg)
         if cfg.get("panels"):
             # the paper prints subtable captions as "(a) ...", "(b) ..."
-            md = "\n".join("**(%s) %s**\n\n%s" % (letter, title, tabular_to_md(tab, cfg))
+            md = "\n".join("**(%s) %s**\n\n%s" % (letter, title, tabular_to_output(tab, cfg))
                            for letter, (title, tab) in zip("abcdefgh", panels(env, name)))
         else:
-            md = tabular_to_md(get_tabular(env, cfg["tabular"], name), cfg)
+            # the pages link to "table-<number>"
+            anchor = "table-%d" % cfg["number"] if "number" in cfg else None
+            md = tabular_to_output(get_tabular(env, cfg["tabular"], name), cfg, anchor)
         if "number" in cfg:
             # the table's own caption, outside any subtable panel
             cap = one_caption(re.sub(SUBENV, "", env, flags=re.S), name)

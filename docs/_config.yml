@@ -67,9 +67,13 @@ sphinx:
     - sphinx_external_toc
     - sphinxcontrib.bibtex
     - sphinx_proof
+  local_extensions:
+    bibstyle: _ext
+    hidden: _ext
   config:
     html_js_files:
     - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    bibtex_reference_style: author_year
-    bibtex_default_style: plain
+    bibtex_reference_style: author_year_round
+    bibtex_default_style: alpha
+    bibtex_cite_id: "cite-{key}"

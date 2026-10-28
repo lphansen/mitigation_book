@@ -31,6 +31,6 @@ Online appendices
 - [O. HJB Equations with 2 Technology Steps](chapters/13_online_o.md)
 - [P. Damage function jump intensity](chapters/14_online_p.md)
 
-Code and replication
+References
 
-- [Code and replication](chapters/15_code_and_replication.md)
+- [Bibliography](reference.md)

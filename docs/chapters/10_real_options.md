@@ -9,7 +9,7 @@ The decision-maker decides when to exercise the option with a known cost of doin
 (discrete-payoff)=
 ## Discrete-payoff model
 
-Consider a robust counterpart to Model I in Miao and Wang (2007). We let the utility be linear in consumption and the income process be:
+Consider a robust counterpart to Model I in {cite:t}`MiaoWang:2007`. We let the utility be linear in consumption and the income process be:
 
 $$
 dY_t = \nu dt +\sigma dW_t.
@@ -109,9 +109,11 @@ $$
 (thresholds)=
 ## Exercise thresholds
 
-Notice that the value matching condition is the same for both models in the limiting case in which $\xi_m \rightarrow \infty$. In both models, the exercise threshold $\bar y$ satisfies: $\delta G_y\left( \bar y \right) = 1$ even for $\xi_m < \infty$, but, of course, the $G$ functions are different. Figure 13 plots the derivatives for each model specification and for alternative values of the robustness parameter, $\xi_m$. For the discrete-payoff model, the derivatives decrease with $\xi_m$, resulting in higher values of $y$ when the option is exercised. For the stochastic flow-payoff model the derivatives increase with $\xi_m$, resulting in lower values of the threshold $\bar y$.
+Notice that the value matching condition is the same for both models in the limiting case in which $\xi_m \rightarrow \infty$. In both models, the exercise threshold $\bar y$ satisfies: $\delta G_y\left( \bar y \right) = 1$ even for $\xi_m < \infty$, but, of course, the $G$ functions are different. {ref}`Figure 13 <fig-13>` plots the derivatives for each model specification and for alternative values of the robustness parameter, $\xi_m$. For the discrete-payoff model, the derivatives decrease with $\xi_m$, resulting in higher values of $y$ when the option is exercised. For the stochastic flow-payoff model the derivatives increase with $\xi_m$, resulting in lower values of the threshold $\bar y$.
 
-<div style="
+(fig-13)=
+
+<div id="fig-13" style="
      display:flex;
      gap:18px;
      justify-content:center;
@@ -134,9 +136,11 @@ Notice that the value matching condition is the same for both models in the limi
 
 Figure 13: Plots of $\delta G_y$ for different values of $\xi_m$.
 
-Consistent with this finding, we report in Figure 14 that uncertainty aversion has opposite implications for the threshold $\bar y$ for the two payoff specifications. The implied uncertainty aversion for low values of $\xi_m$ makes the investor more bullish on the investment for the discrete payoff specification in the sense that there is a lower investment threshold. The outcome gets reversed with the stochastic flow payoff: the investor is less bullish on the investment and exercises the option at a higher threshold with enhanced aversion. By design, the two curves converge when $\xi_m \rightarrow \infty$.
+Consistent with this finding, we report in {ref}`Figure 14 <fig-14>` that uncertainty aversion has opposite implications for the threshold $\bar y$ for the two payoff specifications. The implied uncertainty aversion for low values of $\xi_m$ makes the investor more bullish on the investment for the discrete payoff specification in the sense that there is a lower investment threshold. The outcome gets reversed with the stochastic flow payoff: the investor is less bullish on the investment and exercises the option at a higher threshold with enhanced aversion. By design, the two curves converge when $\xi_m \rightarrow \infty$.
 
-<div style="display:flex; justify-content:center; align-items:center;">
+(fig-14)=
+
+<div id="fig-14" style="display:flex; justify-content:center; align-items:center;">
   <img src="../_static/paper/Figure14_threshold_plot.png"
        alt="Exercise threshold solution for each real option example model as a function of the uncertainty aversion parameter"
        style="width:450px; max-width:100%; height:auto;">
@@ -144,9 +148,11 @@ Consistent with this finding, we report in Figure 14 that uncertainty aversion h
 
 Figure 14: Solution of exercise threshold $\overline{y}$ for each model as functions of the robustness parameter, $\xi_m$.
 
-We plot the pre-exercise drift distortions $h^*$ in Figure 15. The post-jump distortions are zero for the discrete-payoff specification, and, by the smooth pasting condition, equal to the distortion at the time the option is exercised for the flow-payoff specification. Recall that the $h^*$'s are expressed as drifts in a standard Brownian increment. They are not extreme for these illustrations, as the magnitude of the local mean distortion never exceeds ten percent of the standard deviation. The drift distortions prior to exercise are a bit larger in magnitude for the discrete-payoff specification.
+We plot the pre-exercise drift distortions $h^*$ in {ref}`Figure 15 <fig-15>`. The post-jump distortions are zero for the discrete-payoff specification, and, by the smooth pasting condition, equal to the distortion at the time the option is exercised for the flow-payoff specification. Recall that the $h^*$'s are expressed as drifts in a standard Brownian increment. They are not extreme for these illustrations, as the magnitude of the local mean distortion never exceeds ten percent of the standard deviation. The drift distortions prior to exercise are a bit larger in magnitude for the discrete-payoff specification.
 
-<div style="
+(fig-15)=
+
+<div id="fig-15" style="
      display:flex;
      gap:18px;
      justify-content:center;
@@ -171,8 +177,9 @@ Figure 15: Plots of $h^*$ for different values of $\xi_m$.
 
 In both cases, robustness concerns induce more cautious assessments of the payoff prospects. In the discrete-payoff specification, the uncertainty is resolved as soon as the payoff is exercised, increasing the valuation; while in the flow-payoff specification, the post exercise valuation is diminished under robustness concerns because of the continued uncertainty about future payoffs.
 
-Although there are intriguing similarities between this comparison of real options in different environments and our findings, the investment opportunities are quite different. Rather than an exercise decision, our social planner can make investments that increase the likelihood of a discovery. Uncertainty aversion makes the planner skeptical about the payoff horizon in our analysis. These differences make our uncertainty aversion impact not monotone as displayed in {ref}`Table 21 <aversion-sensitivity>` and in contrast to the real options findings reported in Figure 14.
+Although there are intriguing similarities between this comparison of real options in different environments and our findings, the investment opportunities are quite different. Rather than an exercise decision, our social planner can make investments that increase the likelihood of a discovery. Uncertainty aversion makes the planner skeptical about the payoff horizon in our analysis. These differences make our uncertainty aversion impact not monotone as displayed in {ref}`Table 21 <table-21>` and in contrast to the real options findings reported in {ref}`Figure 14 <fig-14>`.
 
+::::{hidden}
 ## Reproducing the figures
 
 To reproduce Figures 13, 14, and 15, run the script below from the root of the code repository, as described in {ref}`Running the scripts <code-running>`. The script does not need any model solutions.
@@ -186,3 +193,4 @@ After the run finishes, you should have output files named `model1_derivative.pn
 Source scripts:
 * `sbatch/appendix_illustrations.sh`
 * `python/appendix_illustrations.py`
+::::

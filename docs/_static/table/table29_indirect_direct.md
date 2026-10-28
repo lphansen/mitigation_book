@@ -1,7 +1,7 @@
 **(a) Technology jump only model**
 
 | $\xi_m$ | grid | indirect SVRD | direct SVRD | absolute gap | relative gap |
-|---|---|---:|---:|---:|---:|
+|---|---|:---:|:---:|:---:|:---:|
 | $\infty$ | coarse | 4.39 | 4.27 | 0.12 | 2.87% |
 | 0.1 | coarse | 6.82 | 6.41 | 0.40 | 6.28% |
 | 0.05 | coarse | 9.67 | 8.70 | 0.97 | 11.13% |
@@ -12,7 +12,7 @@
 **(b) Full baseline model**
 
 | $\xi_m$ | grid | indirect SVRD | direct SVRD | absolute gap | relative gap |
-|---|---|---:|---:|---:|---:|
+|---|---|:---:|:---:|:---:|:---:|
 | $\infty$ | coarse | 4.01 | 3.90 | 0.11 | 2.79% |
 | $0.1$ | coarse | 6.80 | 6.48 | 0.32 | 4.87% |
 | $0.05$ | coarse | 10.83 | 10.05 | 0.77 | 7.70% |

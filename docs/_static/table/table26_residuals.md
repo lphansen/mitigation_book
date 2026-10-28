@@ -1,5 +1,5 @@
 | Value Function | Number of equations | Max absolute KSP residual norm | Max false-transient residual | Max outer iterations |
-|---|---:|---:|---:|---:|
+|---|:---:|:---:|:---:|:---:|
 | $W^\ell$ | $60$ | $2.78\times10^{-10}$ | $9.9994\times10^{-8}$ | $16{,}027$ |
 | $V$ | $3$ | $2.75\times10^{-10}$ | $9.9922\times10^{-8}$ | $5{,}410$ |
 

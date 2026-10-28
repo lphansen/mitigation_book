@@ -2,9 +2,11 @@
 
 Our damage information event reveals the tail of the damage function associated with more extreme warming of the environment. As usual with conditioning, responses depend on which damage curvature is revealed. The responses to this event reflect the uncertainty tradeoff between acting now versus waiting until there is more information. The damages we confront in the future could be very severe or possibly modest, giving a motive for waiting. On the other hand, if they turn out to be severe, it may be very costly to delay all action and an initial response based on this possibility could be prudent.
 
-Figure 7 and Table 4 give the "before and after" emissions and R&D investment responses to a damage information event. For the sake of illustration, the figure and table consider two different state configurations at the time when the event occurs. In both cases we assume the event occurs at a temperature anomaly of two degrees Celsius (${\hat y} = 2$). We set capital stock and the knowledge stock to be the medians assuming no jump of any kind takes place in prior periods. We report results for the baseline specification and the less aversion specification ($\xi_m = .1$). While the capital stock is very similar, the knowledge stock is substantially higher for the second configuration. We report results imposing the corresponding initial conditions when depicting baseline and less aversion results. The dashed lines give the pre-event emissions and R&D investments, and smoothed densities show post-event responses across potential damage curvatures. Table 4 reports the pre-event values and the post-event median value and the minimum and maximum values across potential damage curvatures for R&D investment and emissions responses.
+{ref}`Figure 7 <fig-7>` and {ref}`Table 4 <table-4>` give the "before and after" emissions and R&D investment responses to a damage information event. For the sake of illustration, the figure and table consider two different state configurations at the time when the event occurs. In both cases we assume the event occurs at a temperature anomaly of two degrees Celsius (${\hat y} = 2$). We set capital stock and the knowledge stock to be the medians assuming no jump of any kind takes place in prior periods. We report results for the baseline specification and the less aversion specification ($\xi_m = .1$). While the capital stock is very similar, the knowledge stock is substantially higher for the second configuration. We report results imposing the corresponding initial conditions when depicting baseline and less aversion results. The dashed lines give the pre-event emissions and R&D investments, and smoothed densities show post-event responses across potential damage curvatures. {ref}`Table 4 <table-4>` reports the pre-event values and the post-event median value and the minimum and maximum values across potential damage curvatures for R&D investment and emissions responses.
 
-<div style="
+(fig-7)=
+
+<div id="fig-7" style="
      display:flex;
      gap:18px;
      justify-content:center;
@@ -27,9 +29,11 @@ Figure 7 and Table 4 give the "before and after" emissions and R&D investment re
 
 Figure 7: Robustly optimal emissions and R&D investment choices before and after a damage information event. Each case uses the median capital and knowledge stock values for no-jump simulations at ${\hat y} = 2^\circ$C under the respective uncertainty aversion specification. The median capital and knowledge stock values for the baseline case are $k=1505$ and $r=35$. The median capital and knowledge stock values for the less-aversion case are $k=1508$ and $r=56$. The post-damage information event policies are evaluated at $z=2.5$. Red curves depict the baseline responses and blue curves depict the less-aversion responses. The solid curves are Gaussian kernel densities of the 20 post-damage curvature jump outcomes, with equal weights and Scott's bandwidth multiplied by 0.8. The dashed vertical lines give the outcomes before the damage curvature jump. Emissions are reported in gigatons of carbon (GtC). R&D investment is reported as a ratio relative to output abstracting from the energy input ($\alpha K$).
 
-Panel (a) of Figure 7 and columns 2–3 of Table 4 show the pre- and post-event emissions responses. Not surprisingly, there is considerable heterogeneity in the post-event emissions responses as the reactions become tailored to potential damages induced by more extreme global warming. With the uncertainty concerns ($\xi_m=.1$), Figure 7 shows that the response density shifts to the left. As reported in Table 4, the median post-event responses are substantially lower than the pre-event counterparts showing that there is indeed a "wait-and-see" aspect to our findings for emissions.
+Panel (a) of {ref}`Figure 7 <fig-7>` and columns 2–3 of {ref}`Table 4 <table-4>` show the pre- and post-event emissions responses. Not surprisingly, there is considerable heterogeneity in the post-event emissions responses as the reactions become tailored to potential damages induced by more extreme global warming. With the uncertainty concerns ($\xi_m=.1$), {ref}`Figure 7 <fig-7>` shows that the response density shifts to the left. As reported in {ref}`Table 4 <table-4>`, the median post-event responses are substantially lower than the pre-event counterparts showing that there is indeed a "wait-and-see" aspect to our findings for emissions.
 
-The pre- and post-event R&D investment responses are shown in panel (b) of Figure 7 and columns 4–5 of Table 4. As both the table and figure show, there is a very substantial amount of heterogeneity in the post-event responses, even more so than with emissions. Not only are the median post-event responses higher than the pre-event counterparts, but Figure 7 also shows that the spread in post-event responses is substantially amplified when the planner has uncertainty concerns ($\xi_m=.1$).
+The pre- and post-event R&D investment responses are shown in panel (b) of {ref}`Figure 7 <fig-7>` and columns 4–5 of {ref}`Table 4 <table-4>`. As both the table and figure show, there is a very substantial amount of heterogeneity in the post-event responses, even more so than with emissions. Not only are the median post-event responses higher than the pre-event counterparts, but {ref}`Figure 7 <fig-7>` also shows that the spread in post-event responses is substantially amplified when the planner has uncertainty concerns ($\xi_m=.1$).
+
+(table-4)=
 
 ```{include} ../_static/table/table4_quantile_damage.md
 ```
@@ -39,7 +43,9 @@ The pre- and post-event R&D investment responses are shown in panel (b) of Figur
 
 This section is Appendix I of the paper.
 
-<div style="
+(fig-12)=
+
+<div id="fig-12" style="
      display:flex;
      gap:18px;
      justify-content:center;
@@ -76,9 +82,12 @@ This section is Appendix I of the paper.
 
 Figure 12: Robustly optimal R&D investment and emissions before and after a damage information event for two different state variable scenarios. Each case uses the median capital and knowledge stock values for no-jump simulations at $2^\circ$C. Panels (a) and (c) use the median state values under the baseline solution. Panels (b) and (d) use the median state values under the less-aversion solution. The median capital and knowledge stock values for the baseline case are $k=1505$ and $r=35$. The median capital and knowledge stock values for the less-aversion case are $k=1508$ and $r=56$. The post-damage information event policies are evaluated at $z=2.5$. Red curves depict the baseline responses and blue curves depict the less-aversion responses. The solid curves are Gaussian kernel densities of the 20 post-damage curvature jump outcomes, with equal weights and Scott's bandwidth multiplied by 0.8. The dashed vertical lines give the outcomes before the damage curvature jump. Emissions are reported in gigatons of carbon (GtC). R&D investment is reported as a ratio relative to output abstracting from the energy input ($\alpha K$). For the baseline median state initialization, pre-jump R&D investment is .017 and .065 and emissions are 17.80 GtC and 16.77 GtC under the baseline and less aversion policy responses, respectively. For the less aversion median state initialization, R&D investment is .0081 and .0392 and emissions are 18.11 GtC and 17.19 GtC under the baseline and less aversion policy responses, respectively.
 
+(table-32)=
+
 ```{include} ../_static/table/table32_two_states.md
 ```
 
+::::{hidden}
 ## Reproducing the figures and tables
 
 To reproduce Figures 7 and 12 and Tables 4 and 32, run the scripts below from the root of the code repository, as described in {ref}`Running the scripts <code-running>`. They redraw the figures and rebuild the tables from the policy values stored in `output/experiments/no_jump_temperature/two_states_2c/control_values.csv`. These values were computed from the {ref}`full model solutions <code-full-model>` on the Fine grid and are part of the code repository, so the scripts need no new solves. The experiment that computed them is described in `python/experiments/no_jump_temperature/README.md`, `python/experiments/no_jump_temperature/common_state_neutrality/README.md` and `python/experiments/no_jump_temperature/two_states_2c/README.md`. Each script submits Slurm jobs and returns at once, so start each script only after the jobs of the previous one have finished.
@@ -100,3 +109,4 @@ Source scripts:
 * `python/experiments/no_jump_temperature/figure7_panels/respective_states.py`
 * `python/experiments/no_jump_temperature/figure7_panels/plot.py`
 * `python/experiments/no_jump_temperature/figure7_panels/table.py`
+::::

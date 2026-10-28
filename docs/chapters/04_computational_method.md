@@ -122,25 +122,35 @@ Along the remaining boundaries of the state space, there are no obvious "physica
 (numerical-accuracy)=
 ## Hyperparameters and numerical accuracy
 
-Table 24 shows the state variable domain space, the number of grid points used within the state domain, and the discretization step size along the state and false transient domains. Table 25 provides the values used for the relaxation weight, the relative KSP residual tolerance, the false-transient residual tolerance, and the maximum iterations for each scenario. The "initial" and "warm" designations indicate the value-function initialization type. "Initial" denotes the first solve using the stage-specific initialization implemented by the solver: the default state-dependent guess for $W^{\ell}$ and the mean of the post-damage continuation values for $V$. "Warm" denotes initialization from an existing solution for the corresponding equation on the same grid. We note that the post-technology jump cases $W^{\ell,L}$ and $V^L$ have analytic solutions which we use in our main results. Thus, we do not include these cases in Tables 24 and 25 as no false-transient step size, relaxation weight, KSP residual tolerance, outer stopping tolerance, or maximum iterations are needed in those settings. The state domain, grid points, and grid spacing used to compute the numerical solutions for those settings match the pre-technology jump counterparts ($W^{\ell,L}$ uses the same values as $W^\ell$ and $V^L$ uses the same values as $V$). Importantly, the reported values reflect the choice of a broad state space domain with sufficient discretization to derive accurate numerical solutions.
+{ref}`Table 24 <table-24>` shows the state variable domain space, the number of grid points used within the state domain, and the discretization step size along the state and false transient domains. {ref}`Table 25 <table-25>` provides the values used for the relaxation weight, the relative KSP residual tolerance, the false-transient residual tolerance, and the maximum iterations for each scenario. The "initial" and "warm" designations indicate the value-function initialization type. "Initial" denotes the first solve using the stage-specific initialization implemented by the solver: the default state-dependent guess for $W^{\ell}$ and the mean of the post-damage continuation values for $V$. "Warm" denotes initialization from an existing solution for the corresponding equation on the same grid. We note that the post-technology jump cases $W^{\ell,L}$ and $V^L$ have analytic solutions which we use in our main results. Thus, we do not include these cases in Tables {ref}`24 <table-24>` and {ref}`25 <table-25>` as no false-transient step size, relaxation weight, KSP residual tolerance, outer stopping tolerance, or maximum iterations are needed in those settings. The state domain, grid points, and grid spacing used to compute the numerical solutions for those settings match the pre-technology jump counterparts ($W^{\ell,L}$ uses the same values as $W^\ell$ and $V^L$ uses the same values as $V$). Importantly, the reported values reflect the choice of a broad state space domain with sufficient discretization to derive accurate numerical solutions.
+
+(table-24)=
 
 ```{include} ../_static/table/table24_discretization.md
 ```
 
+(table-25)=
+
 ```{include} ../_static/table/table25_convergence.md
 ```
 
-Table 26 shows the number of equations corresponding to each type of value function solved, the maximum absolute KSP residual, the maximum false-transient residual, and the maximum reported outer iterations. Note that the maximum absolute KSP residual provided by PETSc that we report can exceed or be significantly smaller than the relative KSP residual tolerance that is used as the stopping criteria statistic. The central takeaway from these reported values is that each of these outcomes demonstrates a high level of accuracy achieved in deriving our solutions, emphasizing reliability of the numerical solutions we have computed.
+{ref}`Table 26 <table-26>` shows the number of equations corresponding to each type of value function solved, the maximum absolute KSP residual, the maximum false-transient residual, and the maximum reported outer iterations. Note that the maximum absolute KSP residual provided by PETSc that we report can exceed or be significantly smaller than the relative KSP residual tolerance that is used as the stopping criteria statistic. The central takeaway from these reported values is that each of these outcomes demonstrates a high level of accuracy achieved in deriving our solutions, emphasizing reliability of the numerical solutions we have computed.
+
+(table-26)=
 
 ```{include} ../_static/table/table26_residuals.md
 ```
 
-Tables 27 - 28 provide details for additional accuracy results via a grid-refinement check. For these tests, we compare social valuation, optimal control, and value function outcomes across state space grid resolutions. Table 27 summarizes the two different grid specifications used in this comparison. The grid used in the main body of the paper is $(n_{\hat{k}}, n_z, n_{\hat{r}}) = (51,201,71)$ for the post-damage curvature jump state and $(n_{\hat{k}}, n_Y, n_{\hat{r}}) = (51,101,71)$ for the pre-damage curvature jump state. We compare these results, referred to as the fine grid resolution case, with those for a coarse grid resolution with corresponding grids of $(n_{\hat{k}}, n_z, n_{\hat{r}}) = (26,101,36)$ for the post-damage curvature jump state and $(n_{\hat{k}}, n_Y, n_{\hat{r}}) = (26,51,36)$ for the pre-damage curvature jump state.
+Tables {ref}`27 <table-27>` - {ref}`28 <table-28>` provide details for additional accuracy results via a grid-refinement check. For these tests, we compare social valuation, optimal control, and value function outcomes across state space grid resolutions. {ref}`Table 27 <table-27>` summarizes the two different grid specifications used in this comparison. The grid used in the main body of the paper is $(n_{\hat{k}}, n_z, n_{\hat{r}}) = (51,201,71)$ for the post-damage curvature jump state and $(n_{\hat{k}}, n_Y, n_{\hat{r}}) = (51,101,71)$ for the pre-damage curvature jump state. We compare these results, referred to as the fine grid resolution case, with those for a coarse grid resolution with corresponding grids of $(n_{\hat{k}}, n_z, n_{\hat{r}}) = (26,101,36)$ for the post-damage curvature jump state and $(n_{\hat{k}}, n_Y, n_{\hat{r}}) = (26,51,36)$ for the pre-damage curvature jump state.
+
+(table-27)=
 
 ```{include} ../_static/table/table27_grids.md
 ```
 
-Table 28 provides the value function, social valuation, and optimal control results for the two grid specifications. The magnitudes for differences in the value function outcomes are very modest, ranging between $.02\%$ and $.14\%$. The differences in social valuations and controls across grid resolutions are also relatively small, though somewhat larger than the value function outcomes. For the SVRD and SCGW, the differences range between $.15\%$ and $3.01\%$ in absolute value. For R&D investment and emissions, the differences range between $.02\%$ and $6.13\%$ in absolute value. The slightly larger differences reflect the impact of needing numerical derivatives to compute the social valuation and optimal control outcomes from the value function solutions. These results show that the grid choice for our model results provides a high level of accuracy for all of the main outcomes derived from our numerical solutions.
+{ref}`Table 28 <table-28>` provides the value function, social valuation, and optimal control results for the two grid specifications. The magnitudes for differences in the value function outcomes are very modest, ranging between $.02\%$ and $.14\%$. The differences in social valuations and controls across grid resolutions are also relatively small, though somewhat larger than the value function outcomes. For the SVRD and SCGW, the differences range between $.15\%$ and $3.01\%$ in absolute value. For R&D investment and emissions, the differences range between $.02\%$ and $6.13\%$ in absolute value. The slightly larger differences reflect the impact of needing numerical derivatives to compute the social valuation and optimal control outcomes from the value function solutions. These results show that the grid choice for our model results provides a high level of accuracy for all of the main outcomes derived from our numerical solutions.
+
+(table-28)=
 
 ```{include} ../_static/table/table28_grid_refinement.md
 ```
@@ -160,12 +170,14 @@ Summing over the flow i, ii and iii terms computed in this manner, and normalizi
 * ii) simulation-based approximation (e.g., time discretization and finite time boundary)
 * iii) Monte Carlo sampling (e.g., sampling noise from finite stochastic pathways)
 
-We first note that the Monte Carlo standard errors, computed from the cross-sectional dispersion of the simulation pathways, are sufficiently small ($0.002$–$0.006$) as to be inconsequential for the overall numerical error. To evaluate the "numerical derivatives" errors, we again use grid refinement to compare outcomes across specifications. If the gap between the indirect and direct methods is driven by derivative approximation, enhanced state variable grid resolution refinement should systematically shrink the difference between the results from the two specifications. We therefore compute the social valuations based on the indirect and direct methods using the two grid resolutions outlined in Table 27 for each specification. As the fine grid solution has $2.0 \times$ the number of nodes along each dimension as the coarse grid solution, the first-order discretization errors should roughly halve between the coarse- and fine-grid solutions.
+We first note that the Monte Carlo standard errors, computed from the cross-sectional dispersion of the simulation pathways, are sufficiently small ($0.002$–$0.006$) as to be inconsequential for the overall numerical error. To evaluate the "numerical derivatives" errors, we again use grid refinement to compare outcomes across specifications. If the gap between the indirect and direct methods is driven by derivative approximation, enhanced state variable grid resolution refinement should systematically shrink the difference between the results from the two specifications. We therefore compute the social valuations based on the indirect and direct methods using the two grid resolutions outlined in {ref}`Table 27 <table-27>` for each specification. As the fine grid solution has $2.0 \times$ the number of nodes along each dimension as the coarse grid solution, the first-order discretization errors should roughly halve between the coarse- and fine-grid solutions.
+
+(table-29)=
 
 ```{include} ../_static/table/table29_indirect_direct.md
 ```
 
-Table 29 shows the results of our grid-refinement audit of the numerical discrepancies between the "direct" and "indirect" social valuation calculations for the technology jump only and full model specifications. The top panel, 29a, shows the outcomes for the technology jump only model. The bottom panel, 29b, shows the outcomes for the full model. Note that an accurate characterization of the grid refinement effect across methods requires an additional adjustment for the full model setting. Because the full model includes the damage information event, simulations are terminated at the sooner of the temperature anomaly threshold $\bar{y}$ or year 65, whichever comes first. This differs from the technology only jump model, for which we terminate the simulations at 120 years. This introduces a small negative terminal value error for the indirect method in the full model. We adjust for this error in the full model calculation under the indirect method by adding an interpolated value gradient term at the final simulation point. While overall this additional error is quite small, without this adjustment the grid refinement can appear to make the error gap worse in the baseline uncertainty aversion case because of the offsetting signs of the error term components. The grid refinement comparison across methods highlights the following main outcomes:
+{ref}`Table 29 <table-29>` shows the results of our grid-refinement audit of the numerical discrepancies between the "direct" and "indirect" social valuation calculations for the technology jump only and full model specifications. The top panel, 29a, shows the outcomes for the technology jump only model. The bottom panel, 29b, shows the outcomes for the full model. Note that an accurate characterization of the grid refinement effect across methods requires an additional adjustment for the full model setting. Because the full model includes the damage information event, simulations are terminated at the sooner of the temperature anomaly threshold $\bar{y}$ or year 65, whichever comes first. This differs from the technology only jump model, for which we terminate the simulations at 120 years. This introduces a small negative terminal value error for the indirect method in the full model. We adjust for this error in the full model calculation under the indirect method by adding an interpolated value gradient term at the final simulation point. While overall this additional error is quite small, without this adjustment the grid refinement can appear to make the error gap worse in the baseline uncertainty aversion case because of the offsetting signs of the error term components. The grid refinement comparison across methods highlights the following main outcomes:
 
 * Halving the grid spacing roughly halves the gap, consistent with first-order discretization error.
 
@@ -175,10 +187,12 @@ Table 29 shows the results of our grid-refinement audit of the numerical discrep
 
 While grid-refinement generates clear improvement in the numerical discrepancies across methods, we investigate the remaining errors to better understand the sources of numerical inaccuracies. We calculate implied derivative approximation errors from the "indirect" method by computing and aggregating up the point-wise residual derivative errors along each step of the simulation-based marginal social valuation construction. Removing this residual derivative approximation error captures nearly all of the remaining error. Therefore, the remaining errors after accounting for numerical derivative approximation ($-0.16\%$ to $-0.30\%$) must pertain to sources such as monthly Euler step for simulations, interpolation of outcomes to off-grid points, the evaluation of the terminal term at the last monthly node rather than at the exact boundary-crossing time, and right-endpoint accumulation of the jump-augmented discounting term.
 
+(table-30)=
+
 ```{include} ../_static/table/table30_discrepancy.md
 ```
 
-We characterize the nature and magnitude of these different error components in Table 30. Altogether, our characterization of the numerical errors highlights two key results. First, our numerical results appear to have a high level of accuracy. Second, neither the ordering of the social valuations across $\xi_m$ nor the relative importance of the three flows in our decompositions is affected by remaining numerical errors.
+We characterize the nature and magnitude of these different error components in {ref}`Table 30 <table-30>`. Altogether, our characterization of the numerical errors highlights two key results. First, our numerical results appear to have a high level of accuracy. Second, neither the ordering of the social valuations across $\xi_m$ nor the relative importance of the three flows in our decompositions is affected by remaining numerical errors.
 
 (value-derivatives)=
 ## Value function derivatives
@@ -267,6 +281,7 @@ The two sets of surfaces below are supplemental results that are not in the pape
 </script>
 ```
 
+::::{hidden}
 ## Reproducing the tables
 
 To reproduce Tables 24 to 30, run the scripts below from the root of the code repository after the {ref}`full model solutions <code-full-model>` on the Fine grid, the {ref}`grid comparison runs <code-grid-comparisons>` and the Fine grid simulations of [Uncertainty assessments](06_uncertainty_assessments.md) and [A simplified model with only technology jumps](09_technology_only.md) have finished. Each script submits Slurm jobs and returns at once, so start each script only after the jobs of the previous one have finished. Table 30 also uses the derivative audits kept in the repository under `output/diagnostics/full_model_fk_derivative/double_resolution/`.
@@ -291,3 +306,4 @@ Source scripts:
 * `python/diagnostics/collect_full_model_fk_terminal.py`
 * `sbatch/diagnostics/collect_tech_only_grid_refinement.sh`
 * `python/diagnostics/collect_tech_only_grid_refinement.py`
+::::

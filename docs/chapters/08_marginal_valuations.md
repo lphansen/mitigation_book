@@ -2,7 +2,7 @@
 
 We next describe a type of local sensitivity analysis that helps us interpret some of our main findings using an asset pricing perspective. In terms of an asset pricing analogy, we take an intertemporal cash flow rather than a one-period return perspective when deducing contributions and uncertainty implications to valuations.
 
-We draw on an approach for representing intertemporal marginal values developed and justified in Hansen and Souganidis (2025). The representations of marginal valuation closely resemble intertemporal cash flow valuation under uncertainty.
+We draw on an approach for representing intertemporal marginal values developed and justified in {cite:t}`HansenSouganidis:2025`. The representations of marginal valuation closely resemble intertemporal cash flow valuation under uncertainty.
 
 Distinct marginal social valuations emerge in the three sets of first-order conditions for the planner controls: the value of capital $\left(\frac {\partial V} {\partial k} \right)$, the value of R&D $\left(\frac {\partial V} {\partial {r}}\right)$, and the cost of global warming $\left(- \frac {\partial V} {\partial y}\right)$. The asset-pricing type representations of the marginal valuations, expressed in terms of discounted social cash flows, allow us to inspect and deconstruct the contributions to these social valuations. We construct our marginal value representations prior to the first jump occurring.
 
@@ -107,7 +107,9 @@ Notice that the flow ii and flow iii terms include a scaling by the uncertainty-
 
 The integral representation (14) gives a horizon-based decomposition of marginal values. The flow terms open the door to three additional types of additive decompositions: one based on the flow type, another based on the jump type $\ell$, and a third on which future values of states are impacted.
 
-Table 5 shows the quantitative importance of the three flow terms for SVRD as well as two additional refinements. The contributions of flow ii, the marginal impact of a jump, and flow iii, the marginal impact when you jump, dominate the direct marginal utility contribution given by flow i. This reflects how important the longer-term contributions of the uncertain jump processes are to the SVRDs.
+{ref}`Table 5 <table-5>` shows the quantitative importance of the three flow terms for SVRD as well as two additional refinements. The contributions of flow ii, the marginal impact of a jump, and flow iii, the marginal impact when you jump, dominate the direct marginal utility contribution given by flow i. This reflects how important the longer-term contributions of the uncertain jump processes are to the SVRDs.
+
+(table-5)=
 
 ```{include} ../_static/table/table5_tech_flow_terms_split.md
 ```
@@ -135,6 +137,7 @@ To summarize, we have isolated two potentially counteracting contributions to th
 
 The first of these makes the R&D investment less attractive and the second one more attractive. Quantitatively, the second channel dominates in our calculations presented so far.
 
+::::{hidden}
 ## Reproducing the table
 
 To reproduce Table 5, run the script below from the root of the code repository after the {ref}`full model solutions <code-full-model>` on the Fine grid and the `sbatch/feymannkacs_plot_composite.sh` jobs for Figures 5 and 6 on [Uncertainty assessments](06_uncertainty_assessments.md) have finished.
@@ -149,3 +152,4 @@ Source scripts:
 * `sbatch/update_results.sh`
 * `python/update_results.py`
 * `python/models/full_model/full_model_solve_feymannkacs_plot_composite.py`
+::::

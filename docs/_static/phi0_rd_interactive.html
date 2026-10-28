@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abatement and R&amp;D parameter sensitivity</title>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+<script src="phi0_rd_data.js"></script>
+<style>
+  html, body { margin: 0; height: 100%; background: #ffffff; overflow: hidden;
+               font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+               color: #1f3b4d; }
+  #page { display: flex; flex-direction: column; height: 100%; }
+  #controls { display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: center; padding: 8px 12px 0 12px; font-size: 14px; }
+  .control { display: flex; align-items: center; gap: 8px; }
+  .control-label { font-weight: 600; }
+  select { font-size: 14px; padding: 3px 6px; border: 1px solid #b7c4cc; border-radius: 4px; background: #ffffff; color: #1f3b4d; }
+  .choices { display: inline-flex; border: 1px solid #b7c4cc; border-radius: 4px; overflow: hidden; }
+  .choices button { font-size: 14px; padding: 3px 10px; border: none; border-left: 1px solid #b7c4cc; background: #ffffff; color: #1f3b4d; cursor: pointer; }
+  .choices button:first-child { border-left: none; }
+  .choices button.active { background: #2c6e8f; color: #ffffff; }
+  #plot { flex: 1; min-height: 0; }
+</style>
+</head>
+<body>
+<div id="page">
+  <div id="controls">
+    <label class="control"><span class="control-label">Outcome</span><select id="outcome"></select></label>
+    <div class="control"><span class="control-label">ψ<sub>0</sub></span><span class="choices" id="psi_0"></span></div>
+    <div class="control"><span class="control-label">χ</span><span class="choices" id="chi"></span></div>
+  </div>
+  <div id="plot"></div>
+</div>
+<script>
+// Tables 38 to 40 of the paper (Online Appendix N): outcomes for every
+// combination of phi_0, psi_0 and chi, one table per xi_m. The data come from
+// phi0_rd_data.js, written by tools/phi0_rd_data.py from the generated tables.
+const DATA = PHI0_RD_DATA;
+const XI_M = DATA.xi_m.map(x => x.value);
+const XI_M_LABELS = { "inf": "ξ<sub>m</sub> = ∞", "0.1": "ξ<sub>m</sub> = .1", "0.05": "ξ<sub>m</sub> = .05" };
+const PHI_0 = [0.1, 0.3, 0.5];
+const PHI_0_COLORS = ["rgb(158, 202, 225)", "rgb(66, 146, 198)", "rgb(8, 69, 148)"];
+const PSI_0 = [0.07, 0.11, 0.15];
+const CHI = [0.0014, 0.0009, 0.0007];
+// paper column names, with the decimals the tables print
+const OUTCOME_FORMAT = [".2f", ".4f", ".4f", ".2f"];
+const state = { outcome: 1, psi_0: 0.11, chi: 0.0009 };
+
+// number without the leading zero, as the paper prints parameter values
+const paperNumber = v => String(v).replace(/^0\./, ".");
+
+function value(xi_m, phi_0, psi_0, chi, outcome) {
+  const row = DATA.rows.find(r => r.xi_m === xi_m && r.phi_0 === phi_0 && r.psi_0 === psi_0 && r.chi === chi);
+  return row ? row.values[outcome] : null;
+}
+
+// one line per phi_0 across the three xi_m values
+function traces() {
+  return PHI_0.map((phi_0, k) => ({
+    x: XI_M.map(x => XI_M_LABELS[x]),
+    y: XI_M.map(x => value(x, phi_0, state.psi_0, state.chi, state.outcome)),
+    name: "φ<sub>0</sub> = " + paperNumber(phi_0),
+    mode: "lines+markers",
+    line: { color: PHI_0_COLORS[k], width: 3 },
+    marker: { color: PHI_0_COLORS[k], size: 9 },
+    hovertemplate: "%{x}<br>%{y:" + OUTCOME_FORMAT[state.outcome] + "}<extra>%{fullData.name}</extra>",
+  }));
+}
+
+function draw() {
+  const layout = {
+    margin: { l: 80, r: 20, t: 20, b: 50 },
+    paper_bgcolor: "#ffffff", plot_bgcolor: "#ffffff",
+    font: { size: 14, color: "#1f3b4d" },
+    xaxis: { type: "category", title: { text: "uncertainty aversion" }, showline: true, linecolor: "#b7c4cc" },
+    yaxis: { title: { text: DATA.outcomes[state.outcome] }, tickformat: OUTCOME_FORMAT[state.outcome],
+             gridcolor: "#e3eaef", zeroline: false, showline: true, linecolor: "#b7c4cc" },
+    legend: { orientation: "h", x: 0, y: 1.02, yanchor: "bottom" },
+  };
+  return Plotly.react("plot", traces(), layout, { responsive: true, displaylogo: false });
+}
+
+// a row of buttons that sets one parameter
+function choices(id, values, key) {
+  const box = document.getElementById(id);
+  values.forEach(v => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.textContent = paperNumber(v);
+    b.classList.toggle("active", v === state[key]);
+    b.addEventListener("click", () => {
+      state[key] = v;
+      box.querySelectorAll("button").forEach(o => o.classList.toggle("active", o === b));
+      draw();
+    });
+    box.appendChild(b);
+  });
+}
+
+const select = document.getElementById("outcome");
+DATA.outcomes.forEach((name, i) => {
+  const o = document.createElement("option");
+  o.value = i;
+  o.textContent = name;
+  o.selected = i === state.outcome;
+  select.appendChild(o);
+});
+select.addEventListener("change", () => { state.outcome = Number(select.value); draw(); });
+choices("psi_0", PSI_0, "psi_0");
+choices("chi", CHI, "chi");
+draw();
+</script>
+</body>
+</html>
